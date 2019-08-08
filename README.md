@@ -1,2 +1,2 @@
 # MathematicalRamblingsjs
-Biblioteca de funções, procedimentos e constantes do projeto Mathematical Ramblings.
+Biblioteca de funções, procedimentos e constantes JavaScript do projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
