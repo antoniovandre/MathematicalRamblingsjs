@@ -53,7 +53,7 @@ function antoniovandredecomporfatoresprimos(n, saida)
 		if (Math.abs(n) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(1)
 		else
-			if (Math.abs(n) > antoniovandremaximovalorentrada(1)) // Alterado para a versão GitHub.
+			if (Math.abs(n) > antoniovandremaximovalorentrada(3))
 				return antoniovandremensagenserro(3);
 
 		for (i = 0; i < antoniovandreprimoslength; i++) antoniovandreprimosarr.push(antoniovandreprimos(i));
