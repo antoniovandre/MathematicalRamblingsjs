@@ -42,8 +42,3 @@ self.addEventListener('fetch', function (event) {
   );
 });
 
-self.addEventListener('message', function (event) {
-  var port = event.ports[0];
-  port.postMessage(eval(event.data[0]));
-});
-
