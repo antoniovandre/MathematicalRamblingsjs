@@ -7,12 +7,53 @@ if ('serviceWorker' in navigator)
  }
 </script>
 
-<script src='MathematicalRamblings.js' type='text/javascript'></script>
-
 </head>
 <body>
-Página em desenvolvimento.
+<!--
+
+Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
+
+Calculadora: integral definida, aproximação por soma de Riemann.
+
+-->
+
+Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo, quanto maior, mais preciso, porém mais demorado e computacionalmente mais exigente.
+<br><br>
+Exemplos:
+<br><br>
+Input: "x; 0; 5; 2".
 <br>
-<a href="Javascripts/Mathematical%20Ramblings%20-%2028-02-2020%20-%201.html">Calculadora: integral definida, aproximação por soma de Riemann.</a>
+Output: "12.5".
+<br><br>
+Input: "senh(x + log10(x*x + 2)); -pi; 2.7; 8".
+<br>
+Output: aproximadamente "10.5".
+<br><br>
+<table border="1" width="100%"><tr><td><input type="text" name="entradaintegraldefinidaaproximacaosomariemann" style="width : 100%"></td></tr></table>
+<br>
+<input type="button" onclick="processarintegraldefinidaaproximacaosomariemann()" value="Calcular">
+<br><br>
+Integral definida, aproximação por soma de Riemann:
+<br>
+<table border="1" width="100%"><tr><td><textarea style="width: 100%;overflow-y: scroll;resize: none" name="resultadointegraldefinidaaproximacaosomariemann" id="resultadointegraldefinidaaproximacaosomariemann" readonly style="width : 100%" rows="5"></textarea></td></tr></table>
+<br>
+<table border="1" width="100%"><tr><td><textarea style="width: 100%;overflow-y: scroll;resize: none" name="resultadointegraldefinidaaproximacaosomariemannavisoanexo" id="resultadointegraldefinidaaproximacaosomariemannavisoanexo" readonly style="width : 100%" rows="5"></textarea></td></tr></table>
+
+<script>
+
+document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value = antoniovandreintegraldefinidaaproximacaosomariemann("", -1);
+
+function processarintegraldefinidaaproximacaosomariemann()
+	{
+	var str = document.getElementsByName('entradaintegraldefinidaaproximacaosomariemann');
+	var out = antoniovandreintegraldefinidaaproximacaosomariemann(str[0].value, 0);
+
+	if (antoniovandrecompararstrings(out, "e") == "e")
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = out
+	else
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandreoperadoresfuncoesconstantes(4) + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em x; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
+	}
+
+</script>
 </body>
 </html>
