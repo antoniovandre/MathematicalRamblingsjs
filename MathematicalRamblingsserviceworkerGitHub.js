@@ -4,6 +4,8 @@
 
 // Última atualização: 03-03-2020.
 
+importScripts('MathematicalRamblings.js');
+
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
 var urlsToCache = [
@@ -43,6 +45,4 @@ self.addEventListener('fetch', function (event) {
     )
   );
 });
-
-self.importScripts('MathematicalRamblings.js');
 
