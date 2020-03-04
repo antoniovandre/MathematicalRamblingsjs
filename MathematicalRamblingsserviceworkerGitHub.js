@@ -44,3 +44,5 @@ self.addEventListener('fetch', function (event) {
   );
 });
 
+self.importScripts('MathematicalRamblings.js');
+
