@@ -2,15 +2,13 @@
 
 // Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
 
-// Última atualização: 03-03-2020.
+// Última atualização: 04-03-2020.
 
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
 var urlsToCache = [
   'MathematicalRamblings.js',
 ];
-
-self.importScripts('MathematicalRamblings.js');
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
