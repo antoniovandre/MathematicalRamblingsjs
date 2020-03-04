@@ -1,14 +1,14 @@
-/* Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
+// Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
 
- Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
+// Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
 
- Última atualização: 04-03-2020. */
-
-importScripts('MathematicalRamblings.js');
+// Última atualização: 04-03-2020.
 
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
 var urlsToCache = ['MathematicalRamblings.js'];
+
+self.importScripts('MathematicalRamblings.js');
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
@@ -45,6 +45,7 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('message', function (event) {
-  return eval(event.data);
+  var port = event.ports[0];
+  port.postMessage(eval(event.data[0]));
 });
 
