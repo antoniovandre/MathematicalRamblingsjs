@@ -4,11 +4,11 @@
 
 // Última atualização: 04-03-2020.
 
+importScripts('MathematicalRamblings.js');
+
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
-var urlsToCache = [
-  'MathematicalRamblings.js',
-];
+var urlsToCache = [];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
