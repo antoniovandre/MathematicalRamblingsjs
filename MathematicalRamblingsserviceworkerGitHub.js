@@ -1,8 +1,8 @@
-// Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
+/* Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
 
-// Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
+ Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
 
-// Última atualização: 04-03-2020.
+ Última atualização: 04-03-2020. */
 
 importScripts('MathematicalRamblings.js');
 
