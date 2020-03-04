@@ -5,7 +5,15 @@ Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
 Calculadora: integral definida, aproximação por soma de Riemann.
 
 -->
-<meta charset='UTF-8'/>
+
+<script>
+if ('serviceWorker' in navigator)
+ {
+ navigator.serviceWorker.register('../MathematicalRamblingsserviceworkerGitHub.js').then(function(reg){console.log("Sucesso ao carregar o service worker \"MathematicalRamblingsserviceworkerGitHub.js\".")}).catch(function(err){console.log("Seu navegador possui suporte para service worker, porém ocorreu um erro ao registrar \"MathematicalRamblingsserviceworkerGitHub.js\".")});
+ }
+</script>
+
+<script src="../MathematicalRamblings.js"/>
 
 Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo, quanto maior, mais preciso, porém mais demorado e computacionalmente mais exigente.
 <br><br>
@@ -31,17 +39,17 @@ Integral definida, aproximação por soma de Riemann:
 
 <script>
 
-document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value = navigator.serviceWorker.controller.postMessage("antoniovandreintegraldefinidaaproximacaosomariemann(\"\", -1)");
+document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value =  antoniovandreintegraldefinidaaproximacaosomariemann("", -1);
 
 function processarintegraldefinidaaproximacaosomariemann()
 	{
 	var str = document.getElementsByName('entradaintegraldefinidaaproximacaosomariemann');
-	var out = navigator.serviceWorker.controller.postMessage("antoniovandreintegraldefinidaaproximacaosomariemann(" + str[0].value + ", 0)");
+	var out = antoniovandreintegraldefinidaaproximacaosomariemann(str[0].value, 0);
 
-	if (navigator.serviceWorker.controller.postMessage("antoniovandrecompararstrings(" + out + ", \"e\")") == "e")
+	if (antoniovandrecompararstrings(out, "e") == "e")
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = out
 	else
-		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = navigator.serviceWorker.controller.postMessage("antoniovandreoperadoresfuncoesconstantes(4)") + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em \"x\"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandreoperadoresfuncoesconstantes(4) + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em \"x\"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
 	}
 
 </script>

@@ -8,8 +8,6 @@ var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
 var urlsToCache = ['MathematicalRamblings.js'];
 
-self.importScripts('MathematicalRamblings.js');
-
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
