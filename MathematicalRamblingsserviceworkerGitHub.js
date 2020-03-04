@@ -47,6 +47,6 @@ self.addEventListener('fetch', function (event) {
 });
 
 self.addEventListener('message', function (event) {
-  event.data;
+  return event.data;
 });
 
