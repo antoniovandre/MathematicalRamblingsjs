@@ -1,0 +1,45 @@
+<!--
+
+Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
+
+Calculadora: decomposição em fatores primos. Versão para GitHub.
+
+-->
+
+<script>
+if ('serviceWorker' in navigator)
+ {
+ navigator.serviceWorker.register('../MathematicalRamblingsserviceworkerGitHub.js').then(function(reg){console.log("Sucesso ao carregar o service worker \"MathematicalRamblingsserviceworkerGitHub.js\".")}).catch(function(err){console.log("Seu navegador possui suporte para service worker, porém ocorreu um erro ao registrar \"MathematicalRamblingsserviceworkerGitHub.js\".")});
+ }
+</script>
+
+<script src="../MathematicalRamblings-GitHub.js"></script>
+
+Entre com o número natural a decompor:
+<br><br>
+Exemplo:
+<br><br>
+Input: "2388".
+<br>
+Output: "2^2 x 3 x 199".
+<br><br>
+<table border="1" width="100%"><tr><td><input type="text" name="numerodecomposicaofatoresprimos" style="width : 100%"></td></tr></table>
+<br>
+<input type="button" onclick="processardecomposicaofatoresprimos()" value="Calcular">
+<br><br>
+Decomposição:
+<br>
+<table border="1" width="100%"><tr><td><textarea style="width: 100%;overflow-y: scroll;resize: none" name="decomposicaofatoresprimos" id="decomposicaofatoresprimos" readonly rows="5"></textarea></td></tr></table>
+<script>
+function processardecomposicaofatoresprimos()
+	{
+	var n = document.getElementsByName('numerodecomposicaofatoresprimos');
+	var out = antoniovandredecomporfatoresprimos(n[0].value, 0);
+
+	if (out != "e")
+		document.getElementById('decomposicaofatoresprimos').value = out
+	else
+		document.getElementById('decomposicaofatoresprimos').value = "Erro do JavaScript (não meu) ou entrada inválida. Entre com um número natural não nulo.";
+	}
+</script>
+

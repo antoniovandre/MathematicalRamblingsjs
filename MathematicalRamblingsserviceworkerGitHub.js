@@ -6,7 +6,7 @@
 
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
-var urlsToCache = ['MathematicalRamblings.js'];
+var urlsToCache = ['MathematicalRamblings-GitHub.js'];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(
