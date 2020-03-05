@@ -2,11 +2,16 @@
 
 // Arquivo service worker para "https://antoniovandre.github.io/MathematicalRamblingsjs/".
 
-// Última atualização: 04-03-2020.
+// Última atualização: 05-03-2020.
 
 var CACHE_NAME = 'Mathematical-Ramblings-cache-v1';
 
-var urlsToCache = ['MathematicalRamblings-GitHub.js'];
+var urlsToCache = [
+  'index.html',
+  'MathematicalRamblings-GitHub.js',
+  'Javascripts/Mathematical Ramblings - 03-08-2019 - 2 - GitHub.html',
+  'Javascripts/Mathematical Ramblings - 28-02-2020 - 1 - GitHub.html'
+];
 
 self.addEventListener('install', function (event) {
   event.waitUntil(

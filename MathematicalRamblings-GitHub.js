@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 29-02-2020.
+// Última atualização: 05-03-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -1606,7 +1606,7 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001;
 			break;
 		case 2:
-			return 0.00000000001;
+			return 0.0001;
 			break;
 		default:
 			return "e";
@@ -4229,6 +4229,9 @@ function antoniovandrepolinomiostaylor(str, v, avisoanexo)
 	if (antoniovandrenumeroreal(v.toString()) == "e")
 		return "e";
 
+	if (Math.abs(parseFloat(v)) > antoniovandremaximovalorentrada(1))
+		return antoniovandremensagenserro(1);
+
 	label: for (var i = 0; i < antoniovandrepolinomiostaylorarr.length; i++)
 		if (antoniovandrecompararstrings(str.trim(), antoniovandrepolinomiostaylorarr[i][0]) == 1)
 			{
@@ -4289,7 +4292,11 @@ function antoniovandrepolinomiostaylor(str, v, avisoanexo)
 			return "Uma ou mais funções duplicadas na base de dados.";
 			break;
 		case 1:
+			if (Math.abs(parseFloat(out)) > antoniovandremaximovalorsaida(1))
+				return antoniovandremensagenserro(5);
+
 			return out;
+
 			break;
 		default:
 		}
@@ -4424,12 +4431,19 @@ function log(a, b)
 	if (arguments.length != 2)
 		return "e";
 
+	var la = ln(a);
 	var lb = ln(b);
 
+	if (antoniovandrenumeroreal(la.toString()) == "e")
+		return la;
+
+	if (antoniovandrenumeroreal(lb.toString()) == "e")
+		return lb;
+
 	if (lb != 0)
-		return ln(a) / lb
+		return la / lb
 	else
-		return "e";
+		return "A base do logaritmo deve ser diferente de 1.";
 	}
 
 // Raiz quadrada. Retorna a string "e" se um erro genérico ocorre.
@@ -4439,7 +4453,12 @@ function sqrt(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return exp("0.5 * " + ln(x).toString());
+	var lx = ln(x);
+
+	if (antoniovandrenumeroreal(lx.toString()) == "e")
+		return lx;
+
+	return exp("0.5 * " + lx.toString());
 	}
 
 // Raiz cúbica. Retorna a string "e" se um erro genérico ocorre.
@@ -4449,10 +4468,29 @@ function sqrt3(x)
 	if (arguments.length != 1)
 		return "e";
 
-	if (! (antoniovandrenumerorealnaonegativo(x.toString()) == "e"))
-		return exp("(1/3) * " + ln(x).toString())
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		return sqrt3(eval(x))
 	else
-		return (-1) * exp("(1/3) * " + ln("(-1) * " + x).toString());
+		{
+		if (! (antoniovandrenumerorealnaonegativo(x.toString()) == "e"))
+			{
+			var lx = ln(x);
+
+			if (antoniovandrenumeroreal(lx.toString()) == "e")
+				return lx;
+
+			return exp("(1/3) * " + lx.toString());
+			}
+		else
+			{
+			var lxn = ln("(-1) * " + x);
+
+			if (antoniovandrenumeroreal(lxn.toString()) == "e")
+				return lxn;
+
+			return (-1) * exp("(1/3) * " + lxn.toString());
+			}
+		}
 	}
 
 // Seno. Retorna a string "e" se um erro genérico ocorre.
@@ -4523,7 +4561,7 @@ function tg(x)
 	if (c != 0)
 		return sen(x) / c
 	else
-		return "e";
+		return "O argumento da tangente deve ser diferente de pi/2 + k*pi, com k inteiro.";
 	}
 
 // Cotangente. Retorna a string "e" se um erro genérico ocorre.
@@ -4538,7 +4576,7 @@ function cotg(x)
 	if (s != 0)
 		return cos(x) / s
 	else
-		return "e";
+		return "O argumento da cotangente deve ser diferente de k*pi, com k inteiro.";
 	}
 
 // Secante. Retorna a string "e" se um erro genérico ocorre.
@@ -4553,7 +4591,7 @@ function sec(x)
 	if (c != 0)
 		return 1 / c
 	else
-		return "e";
+		return "O argumento da secante deve ser diferente de pi/2 + k*pi, com k inteiro.";
 	}
 
 // Cossecante. Retorna a string "e" se um erro genérico ocorre.
@@ -4568,7 +4606,7 @@ function cossec(x)
 	if (s != 0)
 		return 1 / s
 	else
-		return "e";
+		return "O argumento da cossecante deve ser diferente de k*pi, com k inteiro.";
 	}
 
 // Arco-seno. Retorna a string "e" se um erro genérico ocorre.
@@ -4650,7 +4688,16 @@ function senh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return (exp(x) - exp((-1) * x)) / 2;
+	var ex = exp(x);
+	var exn =  exp((-1) * x);
+
+	if (antoniovandrenumeroreal(ex.toString()) == "e")
+		return ex;
+
+	if (antoniovandrenumeroreal(exn.toString()) == "e")
+		return exn;
+
+	return (ex - exn) / 2;
 	}
 
 // Cosseno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
@@ -4660,7 +4707,16 @@ function cosh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return (exp(x) + exp((-1) * x)) / 2;
+	var ex = exp(x);
+	var exn =  exp((-1) * x);
+
+	if (antoniovandrenumeroreal(ex.toString()) == "e")
+		return ex;
+
+	if (antoniovandrenumeroreal(exn.toString()) == "e")
+		return exn;
+
+	return (ex + exn) / 2;
 	}
 
 // Tangente hiperbólica. Retorna a string "e" se um erro genérico ocorre.
@@ -4670,7 +4726,16 @@ function tgh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return senh(x) / cosh(x);
+	var shx = senh(x);
+	var chx = cosh(x);
+
+	if (antoniovandrenumeroreal(shx.toString()) == "e")
+		return shx;
+
+	if (antoniovandrenumeroreal(chx.toString()) == "e")
+		return chx;
+
+	return shx / chx;
 	}
 
 // Cotangente hiperbólica. Retorna a string "e" se um erro genérico ocorre.
@@ -4682,10 +4747,13 @@ function cotgh(x)
 
 	var sh = senh(x);
 
+	if (antoniovandrenumeroreal(sh.toString()) == "e")
+		return sh;
+
 	if (sh != 0)
 		return cosh(x) / sh;
 	else
-		return "e";
+		return "O argumento da cotangente hiperbólica deve ser diferente de 0.";
 	}
 
 // Secante hiperbólica. Retorna a string "e" se um erro genérico ocorre.
@@ -4695,7 +4763,12 @@ function sech(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return 1 / cosh(x);
+	var ch = cosh(x);
+
+	if (antoniovandrenumeroreal(ch.toString()) == "e")
+		return ch;
+
+	return 1 / ch;
 	}
 
 // Cossecante hiperbólica. Retorna a string "e" se um erro genérico ocorre.
@@ -4707,10 +4780,13 @@ function cossech(x)
 
 	var sh = senh(x);
 
+	if (antoniovandrenumeroreal(sh.toString()) == "e")
+		return sh;
+
 	if (sh != 0)
 		return 1 / sh;
 	else
-		return "e";
+		return "O argumento da cossecante hiperbólica deve ser diferente de 0.";
 	}
 
 
@@ -4749,7 +4825,27 @@ function antoniovandreexpressaofuncoes(str, avisoanexo)
 		}
 
 	if (antoniovandrenumeroreal(result.toString()) == "e")
-		return "e";
+		{
+		if ((antoniovandrecompararstrings(result, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result, "string") == 1)
+						return result
+					else
+						return "e";
+					}
+				}
+			}
+		}
 
 	return antoniovandreformatarreal(result);
 	}
@@ -5100,7 +5196,27 @@ function antoniovandreintegraldefinidaaproximacaosomariemann(str, avisoanexo)
 			}
 
 		if (antoniovandrenumeroreal(resultpart.toString()) == "e")
-			return "e"
+			{
+			if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
+				return antoniovandremensagenserro(6)
+			else
+				{
+				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
+					return antoniovandremensagenserro(4)
+				else
+					{
+					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
+						return antoniovandremensagenserro(2)
+					else
+						{
+						if (antoniovandrecompararstrings(typeof resultpart, "string") == 1)
+							return resultpart
+						else
+							return "e";
+						}
+					}
+				}
+			}
 		else
 			{
 			if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -5181,7 +5297,27 @@ function antoniovandresomatorio(str, avisoanexo)
 			}
 
 		if (antoniovandrenumeroreal(resultpart.toString()) == "e")
-			return "e"
+			{
+			if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
+				return antoniovandremensagenserro(6)
+			else
+				{
+				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
+					return antoniovandremensagenserro(4)
+				else
+					{
+					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
+						return antoniovandremensagenserro(2)
+					else
+						{
+						if (antoniovandrecompararstrings(typeof resultpart, "string") == 1)
+							return resultpart
+						else
+							return "e";
+						}
+					}
+				}
+			}
 		else
 			{
 			if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -5262,7 +5398,27 @@ function antoniovandreprodutorio(str, avisoanexo)
 			}
 
 		if (antoniovandrenumeroreal(resultpart.toString()) == "e")
-			return "e"
+			{
+			if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
+				return antoniovandremensagenserro(6)
+			else
+				{
+				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
+					return antoniovandremensagenserro(4)
+				else
+					{
+					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
+						return antoniovandremensagenserro(2)
+					else
+						{
+						if (antoniovandrecompararstrings(typeof resultpart, "string") == 1)
+							return resultpart
+						else
+							return "e";
+						}
+					}
+				}
+			}
 		else
 			{
 			if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -5294,7 +5450,7 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 			return [[" ", ""], ["+", "-(-1)*"], ["-", "-"], ["pi", "Math.PI"], ["T", "2*Math.PI"], ["e", "Math.E"], ["Ge11", "6.674184"], ["c", "299792458"], ["he34", "6.62606957"], ["ke23", "1.3806488"], ["NAe-23", "6.022114129"], ["mee31", "9.10938291"], ["mpe27", "1.672621777"], ["qee19", "1.602176565"], ["exp", "exp"], ["potencia", "potencia"], ["modulo", "modulo"], ["ln", "ln"], ["log10", "log10"], ["log2", "log2"], ["log", "log"], ["sqrt", "sqrt"], ["sqrt3", "sqrt3"], ["sen", "sen"], ["cos", "cos"], ["tg", "tg"], ["cotg", "cotg"], ["sec", "sec"], ["cossec", "cossec"], ["arcsen", "arcsen"], ["arccos", "arccos"], ["arctg", "arctg"], ["arccotg", "arccotg"], ["arcsec", "arcsec"], ["arccossec", "arccossec"], ["senh", "senh"], ["cosh", "cosh"], ["tgh", "tgh"], ["cotgh", "cotgh"], ["sech", "sech"], ["cossech", "cossech"], ["fatorial", "fatorial"]];
 			break;
 		case 4:
-			return "Erro do JavaScript (não meu), entrada inválida, ou erro no resultado, como, por exemplo, tomar valores não pertencentes aos domínios de uma ou mais funções, como, por exemplo raiz quadrada de um real negativo. Há também como possíveis erros a entrada ou geração de números de módulo grande demais para serem trabalhados no JavaScript nativo.";
+			return "Erro do JavaScript (não meu) ou entrada inválida.";
 			break;
 		case 5:
 			return "antoniovandrereferenciavariavel";
@@ -5379,7 +5535,27 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		}
 
 	if (antoniovandrenumeroreal(result1.toString()) == "e")
-		return "e"
+		{
+		if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result1, "string") == 1)
+						return result1
+					else
+						return "e";
+					}
+				}
+			}
+		}
 	else
 		{
 		if (Math.abs(result1) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -5387,7 +5563,27 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		}
 
 	if (antoniovandrenumeroreal(result2.toString()) == "e")
-		return "e"
+		{
+		if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result2, "string") == 1)
+						return result2
+					else
+						return "e";
+					}
+				}
+			}
+		}
 	else
 		{
 		if (Math.abs(result2) > parseFloat(antoniovandremaximovalorsaida(1)))
