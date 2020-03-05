@@ -4202,7 +4202,7 @@ function antoniovandreaproximacaotaylor(str)
 
 	if (antoniovandrepolinomio(pol) != "e")
 		{
-		result = parseFloat(parseFloat(antoniovandrevalornumericopolinomio(pol + ", x = " + args[1].toString().trim()).replace(/ /g,'')).toFixed(Math.trunc(Math.log(antoniovandreprecisaoreal(2)) / Math.log(10)) * (-1)));
+		result = parseFloat(parseFloat(antoniovandrevalornumericopolinomio(pol + ", x = " + args[1].toString().trim()).replace(/ /g,'')).toFixed(Math.trunc(Math.log(antoniovandreprecisaoreal(1)) / Math.log(10)) * (-1)));
 
 		if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 			return antoniovandremensagenserro(5);
