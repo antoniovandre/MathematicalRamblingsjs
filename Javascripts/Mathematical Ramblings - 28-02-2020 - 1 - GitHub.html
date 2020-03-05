@@ -6,13 +6,6 @@ Calculadora: integral definida, aproximação por soma de Riemann. Versão para 
 
 -->
 
-<script>
-if ('serviceWorker' in navigator)
- {
- navigator.serviceWorker.register('../MathematicalRamblingsserviceworkerGitHub.js').then(function(reg){console.log("Sucesso ao carregar o service worker \"MathematicalRamblingsserviceworkerGitHub.js\".")}).catch(function(err){console.log("Seu navegador possui suporte para service worker, porém ocorreu um erro ao registrar \"MathematicalRamblingsserviceworkerGitHub.js\".")});
- }
-</script>
-
 <script src="../MathematicalRamblings-GitHub.js"></script>
 
 Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo, quanto maior, mais preciso, porém mais demorado e computacionalmente mais exigente.
