@@ -6,13 +6,17 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 05-03-2020.
+// Última atualização: 06-03-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
 // Início mensagem de inicialização no console.log.
 
 console.log("                                                  \n          .\',;;;,\'.        ..,;;;,..              \n       \':oddolloxxdl,.  .;codollodxo;.            \n     \'lxo:\'.   .\'lxkxo;cxkd:.  .,oxkxc.           \n   .cxd;.        \'dkkkkxo:\'   .lxkkkkd\'           \n  .lxo.          \'dkkkko\'     :xkkkkkl.           \n .lko.           :xkkkx:      \'oxxxd:.        ....\n .;:.           .okkkko.       .....  ......\'\'\'\'\'\'\n                :xkkkx;           ...\'\'\'\'\'\'\'\'\'\'\'\'\'\n               .okkkko.       ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n               ;xkkkx:      ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .okkkko.  ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   ....       ;xkkkx:...\'\'\'\'\'\'\'\'\',cl:,\'\'\'\'\'\'\'\'\'\'\'\'\n .codxd:.    .okkkkd,.\'\'\'\'\'\'\'\'\'\',lxxl,\'\'\'\'\'\'\'\'\'\'\'\'\n\'dkkkkkd\'   .cxkkkko,\'\'\'\'\'\'\'\'\'\',cxxl;\'\'\'\'\'\'\'\'\'\'\'\'\'\n:xkkkkd:.  .:xkkkkkl,\'\'\'\'\'\'\'\',:oxxl,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n,dkkdc.  .\'lxd:lxkkdc,\'\'\'\',;:oxxo:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n ,lxxolccoxo;. .:oxxxdoooodxxdl:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   .,;:::,..  ..\',;:cllllllc;,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n             .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n\nProjeto Mathematical Ramblings. Organização sem fins lucrativos voltada para a pesquisa e educação em Matemática.\n\nmathematicalramblings.blogspot.com\n\nLicença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).\n\nSugestão ou comunicar erro: \"a.vandre.g@gmail.com\".\n\n____________________");
+
+// Versão do MathematicalRamblings.js.
+
+function antoniovandremathematicalramblingsjsversao(){return "06-03-2020";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -685,13 +689,15 @@ function antoniovandremdcsimples(arr)
 		return "e";
 	}
 
-// Redução de fração à forma irredutível. Argumento: string da forma "n / d", onde "n" é o numerador e "d" o denominador, ambos números naturais com "d" diferente de 0. Retorna a string "e" caso ocorra um erro.
+// Redução de fração à forma irredutível. Argumentos: primeiro: string da forma "n / d", onde "n" é o numerador e "d" o denominador, ambos números naturais com "d" diferente de 0; segunto: o tipo de retorno: 0 para string, 1 para array. Retorna a string "e" caso ocorra um erro.
 
-function antoniovandrereduzirfracao(str)
+function antoniovandrereduzirfracao(str, tiporetorno)
 	{
 	var termos = str.split("/");
 	var out;
 	var flag = 0;
+	var rnumerador;
+	var rdenominador;
 
 	if (termos.length != 2)
 		flag = 1
@@ -716,16 +722,40 @@ function antoniovandrereduzirfracao(str)
 					return antoniovandremensagenserro(6);
 
 				if (denominador != 1)
-					out = numerador.toString() + " / " + denominador.toString()
+					{
+					out = numerador.toString() + " / " + denominador.toString();
+					rnumerador = numerador;
+					rdenominador = denominador;
+					}
 				else
+					{
 					out = numerador.toString();
+					rnumerador = numerador;
+					rdenominador = 1;
+					}
 				}
 			else
+				{
 				out = "0";
+				rnumerador = 0;
+				rdenominador = 1;
+				}
 			}
 
 	if (flag == 0)
-		return out
+		{
+		switch (tiporetorno)
+			{
+			case 0:
+				return out;
+				break;
+			case 1:
+				return [rnumerador, rdenominador];
+				break;
+			default:
+				return "e";
+			}
+		}
 	else
 		return "e";
 	}
@@ -4349,7 +4379,12 @@ function potencia(a, b)
 					if ((eval(b) - 1) % 2 == 0)
 						return (-1) * exp(eval(eval(b) * ln(modulo(a))))
 					else
-						return "e";
+						{
+						if (antoniovandrefracaogeratriz(eval(b), 1)[1] % 2 == 0)
+							return "O resultado da potência não é um número real."
+						else
+							return (-1) * exp(eval(eval(b) * ln(modulo(a))))
+						}
 					}
 				}
 			else
@@ -4361,10 +4396,38 @@ function potencia(a, b)
 					if ((b - 1) % 2 == 0)
 						return (-1) * exp(eval(b * ln(modulo(a))))
 					else
-						return "e";
+						{
+						if (antoniovandrefracaogeratriz(b, 1)[1] % 2 == 0)
+							return "O resultado da potência não é um número real."
+						else
+							return (-1) * exp(eval(b * ln(modulo(a))))
+						}
 					}
 				}
 			}
+		}
+	}
+
+// Raiz enésima. Retorna a string "e" se um erro genérico ocorre.
+
+function sqrtn(x, n)
+	{
+	if (arguments.length != 2)
+		return "e";
+
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		{
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return potencia(eval(x), eval(1 / n))
+		else
+			return potencia(eval(x), 1 / n)
+		}
+	else
+		{
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return potencia(x, eval(1 / n))
+		else
+			return potencia(x, 1 / n)
 		}
 	}
 
@@ -4376,7 +4439,14 @@ function modulo(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return Math.abs(eval(x))
+		{
+		var ev = eval(x);
+
+		if (antoniovandrenumeroreal(ev.toString()) == "e")
+			return "O argumento do módulo deve ser um número real."
+		else
+			return Math.abs(ev);
+		}
 	else
 		return Math.abs(x);
 	}
@@ -5441,13 +5511,13 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 	switch (i)
 		{
 		case 1:
-			return "Operadores, funções e constantes disponíveis na base de dados (última atualização: 01-03-2020):\n\n\"+\": operador soma;\n\"-\": operador subtração;\n\"*\": operador multiplicação;\n\"/\": operador divisão;\n\"exp()\": função exponencial base \"e\";\n\"potencia(a, b)\": função potência (\"a\" elevado a \"b\");\n\"modulo()\": função módulo;\n\"ln()\": função logaritmo natural;\n\"log10()\": função logaritmo de base 10;\n\"log2()\": função logaritmo de base 2;\n\"log(a, b)\": função logaritmo (logaritmo de \"a\" na base \"b\");\n\"sqrt()\": função raiz quadrada;\n\"sqrt3()\": função raiz cúbica;\n\"sen()\": função seno;\n\"cos()\": função cosseno;\n\"tg()\": função tangente;\n\"cotg()\": função cotangente;\n\"sec()\": função secante;\n\"cossec()\": função cossecante;\n\"arcsen()\": função arco-seno;\n\"arccos()\": função arco-cosseno;\n\"arctg()\": função arco-tangente;\n\"arccotg()\": função arco-cotangente;\n\"arcsec()\": função arco-secante;\n\"arccossec()\": função arco-cossecante;\n\"senh()\": função seno hiperbólico;\n\"cosh()\": função cosseno hiperbólico;\n\"tgh()\": função tangente hiperbólica;\n\"cotgh()\": função cotangente hiperbólica;\n\"sech()\": função secante hiperbólica;\n\"cossech()\": função cossecante hiperbólica;\n\"fatorial()\": função fatorial;\n\"pi\": constante \"pi\";\n\"T\": constante \"T\" (tal), o dobro de \"pi\";\n\"e\": constante \"e\", base dos logaritmos naturais\;\n\"Ge11\": constante da gravitação universal de Newton, vezes 10^11, no SI;\n\"c\": velocidade da luz no vácuo, no SI;\n\"he34\": constante de Planck, vezes 10^34, no SI;\n\"ke23\": constante de Boltzmann, vezes 10^23, no SI;\n\"NAe-23\": número de Avogadro, vezes 10^(-23);\n\"mee31\": massa do elétron, vezes 10^31, no SI;\n\"mpe27\": massa do próton, vezes 10^27, no SI;\n\"qee19\": carga elementar, vezes 10^19, no SI.\n\nPara algumas funções, os fatores podem retornar como valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
+			return "Operadores, funções e constantes disponíveis na base de dados (última atualização: 06-03-2020):\n\n\"+\": operador soma;\n\"-\": operador subtração;\n\"*\": operador multiplicação;\n\"/\": operador divisão;\n\"exp()\": função exponencial base \"e\";\n\"potencia(a, b)\": função potência (\"a\" elevado a \"b\");\n\"modulo()\": função módulo;\n\"ln()\": função logaritmo natural;\n\"log10()\": função logaritmo de base 10;\n\"log2()\": função logaritmo de base 2;\n\"log(a, b)\": função logaritmo (logaritmo de \"a\" na base \"b\");\n\"sqrt()\": função raiz quadrada;\n\"sqrt3()\": função raiz cúbica;\n\"sqrtn(x, n)\": função raiz enésima de \"x\";\n\"sen()\": função seno;\n\"cos()\": função cosseno;\n\"tg()\": função tangente;\n\"cotg()\": função cotangente;\n\"sec()\": função secante;\n\"cossec()\": função cossecante;\n\"arcsen()\": função arco-seno;\n\"arccos()\": função arco-cosseno;\n\"arctg()\": função arco-tangente;\n\"arccotg()\": função arco-cotangente;\n\"arcsec()\": função arco-secante;\n\"arccossec()\": função arco-cossecante;\n\"senh()\": função seno hiperbólico;\n\"cosh()\": função cosseno hiperbólico;\n\"tgh()\": função tangente hiperbólica;\n\"cotgh()\": função cotangente hiperbólica;\n\"sech()\": função secante hiperbólica;\n\"cossech()\": função cossecante hiperbólica;\n\"fatorial()\": função fatorial;\n\"pi\": constante \"pi\";\n\"T\": constante \"T\" (tal), o dobro de \"pi\";\n\"e\": constante \"e\", base dos logaritmos naturais\;\n\"Ge11\": constante da gravitação universal de Newton, vezes 10^11, no SI;\n\"c\": velocidade da luz no vácuo, no SI;\n\"he34\": constante de Planck, vezes 10^34, no SI;\n\"ke23\": constante de Boltzmann, vezes 10^23, no SI;\n\"NAe-23\": número de Avogadro, vezes 10^(-23);\n\"mee31\": massa do elétron, vezes 10^31, no SI;\n\"mpe27\": massa do próton, vezes 10^27, no SI;\n\"qee19\": carga elementar, vezes 10^19, no SI.\n\nPara algumas funções, os fatores podem retornar como valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
 			break;
 		case 2:
-			return "exp,potencia,modulo,ln,log10,log2,log,sqrt,sqrt3,sen,cos,tg,cotg,sec,cossec,arcsen,arccos,arctg,arccotg,arcsec,arccossec,senh,cosh,tgh,cotgh,sech,cossech,fatorial,pi,T,e,Ge11,c,he34,ke23,NAe-23,mee31,mpe27,qee19";
+			return "exp,potencia,modulo,ln,log10,log2,log,sqrt,sqrt3,sqrtn,sen,cos,tg,cotg,sec,cossec,arcsen,arccos,arctg,arccotg,arcsec,arccossec,senh,cosh,tgh,cotgh,sech,cossech,fatorial,pi,T,e,Ge11,c,he34,ke23,NAe-23,mee31,mpe27,qee19";
 			break;
 		case 3:
-			return [[" ", ""], ["+", "-(-1)*"], ["-", "-"], ["pi", "Math.PI"], ["T", "2*Math.PI"], ["e", "Math.E"], ["Ge11", "6.674184"], ["c", "299792458"], ["he34", "6.62606957"], ["ke23", "1.3806488"], ["NAe-23", "6.022114129"], ["mee31", "9.10938291"], ["mpe27", "1.672621777"], ["qee19", "1.602176565"], ["exp", "exp"], ["potencia", "potencia"], ["modulo", "modulo"], ["ln", "ln"], ["log10", "log10"], ["log2", "log2"], ["log", "log"], ["sqrt", "sqrt"], ["sqrt3", "sqrt3"], ["sen", "sen"], ["cos", "cos"], ["tg", "tg"], ["cotg", "cotg"], ["sec", "sec"], ["cossec", "cossec"], ["arcsen", "arcsen"], ["arccos", "arccos"], ["arctg", "arctg"], ["arccotg", "arccotg"], ["arcsec", "arcsec"], ["arccossec", "arccossec"], ["senh", "senh"], ["cosh", "cosh"], ["tgh", "tgh"], ["cotgh", "cotgh"], ["sech", "sech"], ["cossech", "cossech"], ["fatorial", "fatorial"]];
+			return [[" ", ""], ["+", "-(-1)*"], ["-", "-"], ["pi", "Math.PI"], ["T", "2*Math.PI"], ["e", "Math.E"], ["Ge11", "6.674184"], ["c", "299792458"], ["he34", "6.62606957"], ["ke23", "1.3806488"], ["NAe-23", "6.022114129"], ["mee31", "9.10938291"], ["mpe27", "1.672621777"], ["qee19", "1.602176565"], ["exp", "exp"], ["potencia", "potencia"], ["modulo", "modulo"], ["ln", "ln"], ["log10", "log10"], ["log2", "log2"], ["log", "log"], ["sqrt", "sqrt"], ["sqrt3", "sqrt3"], ["sqrtn", "sqrtn"], ["sen", "sen"], ["cos", "cos"], ["tg", "tg"], ["cotg", "cotg"], ["sec", "sec"], ["cossec", "cossec"], ["arcsen", "arcsen"], ["arccos", "arccos"], ["arctg", "arctg"], ["arccotg", "arccotg"], ["arcsec", "arcsec"], ["arccossec", "arccossec"], ["senh", "senh"], ["cosh", "cosh"], ["tgh", "tgh"], ["cotgh", "cotgh"], ["sech", "sech"], ["cossech", "cossech"], ["fatorial", "fatorial"]];
 			break;
 		case 4:
 			return "Erro do JavaScript (não meu) ou entrada inválida.";
@@ -5596,6 +5666,67 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		return antoniovandremensagenserro(5);
 
 	return antoniovandreformatarreal(result);
+	}
+
+// Fração geratriz. Argumentos: primeiro: um número real; segundo: o tipo de saída: 0 para string, 1 patra array. Retorna a string "e" caso um erro ocorra.
+
+function antoniovandrefracaogeratriz(x, tiporetorno)
+	{
+	var rnum;
+	var num;
+	var lim = antoniovandremaximovalorentrada(1);
+	var i = 1;
+	var i2;
+	var flag;
+	var str;
+	var result = [];
+
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		return "e"
+	else
+		num = parseFloat(x);
+
+	if (Math.abs(num) > parseFloat(antoniovandremaximovalorentrada(1)))
+		return antoniovandremensagenserro(1);
+
+	do
+		{
+		rnum = num * i++;
+		} while (rnum != Math.trunc(rnum) && i < lim);
+
+	if (i == lim)
+		return "Não foi possível encontrar a fração geratriz. Talvez a entrada tenha casas decimais demais.";
+
+	if (Math.abs(parseFloat(rnum)) > parseFloat(antoniovandremaximovalorsaida(1)))
+		return antoniovandremensagenserro(6);
+
+	if (rnum >= 0)
+		flag = 0
+	else
+		flag = 1;
+
+	rnum = Math.abs(rnum);
+
+	i2 = i - 1;
+
+	str = (parseInt(rnum)).toString() + " / " + i2.toString();
+
+	result.push(antoniovandrereduzirfracao(str, 1));
+
+	if (flag == 1)
+		result[0] = (-1) * result[0];
+
+	switch (tiporetorno)
+		{
+		case 0:
+			return result[0][0].toString() + " / " + result[0][1].toString();
+			break;
+		case 1:
+			return result[0];
+			break;
+		default:
+			return "e";
+		}
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
