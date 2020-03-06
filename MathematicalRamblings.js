@@ -5714,7 +5714,7 @@ function antoniovandrefracaogeratriz(x, tiporetorno)
 	result.push(antoniovandrereduzirfracao(str, 1));
 
 	if (flag == 1)
-		result[0] = (-1) * result[0];
+		result[0][0] = (-1) * parseInt(result[0][0]);
 
 	switch (tiporetorno)
 		{
