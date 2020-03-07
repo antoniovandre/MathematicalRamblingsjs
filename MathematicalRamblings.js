@@ -6,17 +6,17 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 06-03-2020.
+// Última atualização: 07-03-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
 // Início mensagem de inicialização no console.log.
 
-console.log("                                                  \n          .\',;;;,\'.        ..,;;;,..              \n       \':oddolloxxdl,.  .;codollodxo;.            \n     \'lxo:\'.   .\'lxkxo;cxkd:.  .,oxkxc.           \n   .cxd;.        \'dkkkkxo:\'   .lxkkkkd\'           \n  .lxo.          \'dkkkko\'     :xkkkkkl.           \n .lko.           :xkkkx:      \'oxxxd:.        ....\n .;:.           .okkkko.       .....  ......\'\'\'\'\'\'\n                :xkkkx;           ...\'\'\'\'\'\'\'\'\'\'\'\'\'\n               .okkkko.       ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n               ;xkkkx:      ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .okkkko.  ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   ....       ;xkkkx:...\'\'\'\'\'\'\'\'\',cl:,\'\'\'\'\'\'\'\'\'\'\'\'\n .codxd:.    .okkkkd,.\'\'\'\'\'\'\'\'\'\',lxxl,\'\'\'\'\'\'\'\'\'\'\'\'\n\'dkkkkkd\'   .cxkkkko,\'\'\'\'\'\'\'\'\'\',cxxl;\'\'\'\'\'\'\'\'\'\'\'\'\'\n:xkkkkd:.  .:xkkkkkl,\'\'\'\'\'\'\'\',:oxxl,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n,dkkdc.  .\'lxd:lxkkdc,\'\'\'\',;:oxxo:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n ,lxxolccoxo;. .:oxxxdoooodxxdl:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   .,;:::,..  ..\',;:cllllllc;,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n             .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n\nProjeto Mathematical Ramblings. Organização sem fins lucrativos voltada para a pesquisa e educação em Matemática.\n\nmathematicalramblings.blogspot.com\n\nLicença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).\n\nSugestão ou comunicar erro: \"a.vandre.g@gmail.com\".\n\n____________________");
+console.log("                                                  \n          .\',;;;,\'.        ..,;;;,..              \n       \':oddolloxxdl,.  .;codollodxo;.            \n     \'lxo:\'.   .\'lxkxo;cxkd:.  .,oxkxc.           \n   .cxd;.        \'dkkkkxo:\'   .lxkkkkd\'           \n  .lxo.          \'dkkkko\'     :xkkkkkl.           \n .lko.           :xkkkx:      \'oxxxd:.        ....\n .;:.           .okkkko.       .....  ......\'\'\'\'\'\'\n                :xkkkx;           ...\'\'\'\'\'\'\'\'\'\'\'\'\'\n               .okkkko.       ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n               ;xkkkx:      ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .okkkko.  ...\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   ....       ;xkkkx:...\'\'\'\'\'\'\'\'\',cl:,\'\'\'\'\'\'\'\'\'\'\'\'\n .codxd:.    .okkkkd,.\'\'\'\'\'\'\'\'\'\',lxxl,\'\'\'\'\'\'\'\'\'\'\'\'\n\'dkkkkkd\'   .cxkkkko,\'\'\'\'\'\'\'\'\'\',cxxl;\'\'\'\'\'\'\'\'\'\'\'\'\'\n:xkkkkd:.  .:xkkkkkl,\'\'\'\'\'\'\'\',:oxxl,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n,dkkdc.  .\'lxd:lxkkdc,\'\'\'\',;:oxxo:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n ,lxxolccoxo;. .:oxxxdoooodxxdl:,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n   .,;:::,..  ..\',;:cllllllc;,\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n              .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n             .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n            .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           ..\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n           .\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\'\n\nProjeto Mathematical Ramblings. Organização sem fins lucrativos voltada para a pesquisa e educação em Matemática.\n\nmathematicalramblings.blogspot.com\n\nLicença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).\n\nSugestão ou comunicar erro: \"a.vandre.g@gmail.com\".\n\nVersão:", antoniovandremathematicalramblingsjsversao(), ".\n\n____________________");
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "06-03-2020";}
+function antoniovandremathematicalramblingsjsversao(){return "07-03-2020";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -4334,7 +4334,7 @@ function antoniovandrepolinomiostaylor(str, v, avisoanexo)
 
 // Exponencial base e. Retorna a string "e" se um erro genérico ocorre.
 
-function exp(x)
+function antoniovandreexp(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4344,6 +4344,8 @@ function exp(x)
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
 
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
+
 		return antoniovandreaproximacaotaylor("exp, " + eval(x).toString());
 		}
 	else
@@ -4352,7 +4354,7 @@ function exp(x)
 
 // Potência, "a" elevado a "b". Retorna a string "e" se um erro genérico ocorre.
 
-function potencia(a, b)
+function antoniovandrepotencia(a, b)
 	{
 	if (arguments.length != 2)
 		return "e";
@@ -4362,10 +4364,14 @@ function potencia(a, b)
 		if (antoniovandreexpressaofuncaovalida(a) == "e")
 			return "e";
 
+		a = antoniovandretraduzirexpressaofuncional(a, 0)
+
 		if (antoniovandrenumeroreal(b.toString()) == "e")
 			{
 			if (antoniovandreexpressaofuncaovalida(b) == "e")
 				return "e";
+
+			b = antoniovandretraduzirexpressaofuncional(b, 0)
 
 			return exp(eval(b.toString()) * ln(eval(a).toString()));
 			}
@@ -4381,6 +4387,8 @@ function potencia(a, b)
 				if (antoniovandreexpressaofuncaovalida(b) == "e")
 					return "e";
 
+				b = antoniovandretraduzirexpressaofuncional(b, 0)
+
 				return exp(eval(b.toString()) * ln(a));
 				}
 			else
@@ -4392,6 +4400,8 @@ function potencia(a, b)
 				{
 				if (antoniovandreexpressaofuncaovalida(b) == "e")
 					return "e";
+
+				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
 				if (eval(b) % 2 == 0)
 					return exp(eval(eval(b) * ln(modulo(a))))
@@ -4431,7 +4441,7 @@ function potencia(a, b)
 
 // Raiz enésima. Retorna a string "e" se um erro genérico ocorre.
 
-function sqrtn(x, n)
+function antoniovandresqrtn(x, n)
 	{
 	if (arguments.length != 2)
 		return "e";
@@ -4441,10 +4451,14 @@ function sqrtn(x, n)
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
 
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
+
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			{
 			if (antoniovandreexpressaofuncaovalida(n) == "e")
 				return "e";
+
+			n = antoniovandretraduzirexpressaofuncional(n, 0)
 
 			return potencia(eval(x), 1 / eval(n));
 			}
@@ -4458,6 +4472,8 @@ function sqrtn(x, n)
 			if (antoniovandreexpressaofuncaovalida(n) == "e")
 				return "e";
 
+			n = antoniovandretraduzirexpressaofuncional(n, 0)
+
 			return potencia(x, 1 / eval(n));
 			}
 		else
@@ -4467,7 +4483,7 @@ function sqrtn(x, n)
 
 // Módulo de um número real. Retorna a string "e" se um erro genérico ocorre.
 
-function modulo(x)
+function antoniovandremodulo(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4476,6 +4492,8 @@ function modulo(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		var ev = eval(x);
 
@@ -4490,7 +4508,7 @@ function modulo(x)
 
 // Logaritmo natural. Retorna a string "e" se um erro genérico ocorre.
 
-function ln(x)
+function antoniovandreln(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4499,6 +4517,8 @@ function ln(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("ln, " + eval(x).toString());
 		}
@@ -4508,7 +4528,7 @@ function ln(x)
 
 // Logaritmo de base 10. Retorna a string "e" se um erro genérico ocorre.
 
-function log10(x)
+function antoniovandrelog10(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4517,6 +4537,8 @@ function log10(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		var n = ln(eval(x));
 
@@ -4538,7 +4560,7 @@ function log10(x)
 
 // Logaritmo de base 2. Retorna a string "e" se um erro genérico ocorre.
 
-function log2(x)
+function antoniovandrelog2(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4547,6 +4569,8 @@ function log2(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		var n = ln(eval(x));
 
@@ -4568,7 +4592,7 @@ function log2(x)
 
 // Logaritmo de "a" na base "b". Retorna a string "e" se um erro genérico ocorre.
 
-function log(a, b)
+function antoniovandrelog(a, b)
 	{
 	if (arguments.length != 2)
 		return "e";
@@ -4577,6 +4601,8 @@ function log(a, b)
 		{
 		if (antoniovandreexpressaofuncaovalida(a) == "e")
 			return "e";
+
+		a = antoniovandretraduzirexpressaofuncional(a, 0)
 
 		var la = ln(eval(a));
 
@@ -4588,6 +4614,8 @@ function log(a, b)
 				{
 				if (antoniovandreexpressaofuncaovalida(b) == "e")
 					return "e";
+
+				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
 				var lb = ln(eval(b));
 
@@ -4620,6 +4648,8 @@ function log(a, b)
 				if (antoniovandreexpressaofuncaovalida(b) == "e")
 					return "e";
 
+				b = antoniovandretraduzirexpressaofuncional(b, 0)
+
 				var lb = ln(eval(b));
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
@@ -4642,7 +4672,7 @@ function log(a, b)
 
 // Raiz quadrada. Retorna a string "e" se um erro genérico ocorre.
 
-function sqrt(x)
+function antoniovandresqrt(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4651,6 +4681,8 @@ function sqrt(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		var lx = ln(eval(x));
 
@@ -4672,7 +4704,7 @@ function sqrt(x)
 
 // Raiz cúbica. Retorna a string "e" se um erro genérico ocorre.
 
-function sqrt3(x)
+function antoniovandresqrt3(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4681,6 +4713,8 @@ function sqrt3(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return sqrt3(eval(x));
 		}
@@ -4709,7 +4743,7 @@ function sqrt3(x)
 
 // Seno. Retorna a string "e" se um erro genérico ocorre.
 
-function sen(x)
+function antoniovandresen(x)
 	{
 	var m = x;
 
@@ -4720,6 +4754,8 @@ function sen(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("sen, " + eval(x).toString());
 		}
@@ -4742,7 +4778,7 @@ function sen(x)
 
 // Cosseno. Retorna a string "e" se um erro genérico ocorre.
 
-function cos(x)
+function antoniovandrecos(x)
 	{
 	var m = x;
 
@@ -4753,6 +4789,8 @@ function cos(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("cos, " + eval(x).toString());
 		}
@@ -4775,7 +4813,7 @@ function cos(x)
 
 // Tangente. Retorna a string "e" se um erro genérico ocorre.
 
-function tg(x)
+function antoniovandretg(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4793,7 +4831,7 @@ function tg(x)
 
 // Cotangente. Retorna a string "e" se um erro genérico ocorre.
 
-function cotg(x)
+function antoniovandrecotg(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4811,7 +4849,7 @@ function cotg(x)
 
 // Secante. Retorna a string "e" se um erro genérico ocorre.
 
-function sec(x)
+function antoniovandresec(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4829,7 +4867,7 @@ function sec(x)
 
 // Cossecante. Retorna a string "e" se um erro genérico ocorre.
 
-function cossec(x)
+function antoniovandrecossec(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4847,7 +4885,7 @@ function cossec(x)
 
 // Arco-seno. Retorna a string "e" se um erro genérico ocorre.
 
-function arcsen(x)
+function antoniovandrearcsen(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4856,6 +4894,8 @@ function arcsen(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("arcsen, " + eval(x).toString());
 		}
@@ -4865,7 +4905,7 @@ function arcsen(x)
 
 // Arco-cosseno. Retorna a string "e" se um erro genérico ocorre.
 
-function arccos(x)
+function antoniovandrearccos(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4874,6 +4914,8 @@ function arccos(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("arccos, " + eval(x).toString());
 		}
@@ -4883,7 +4925,7 @@ function arccos(x)
 
 // Arco-tangente. Retorna a string "e" se um erro genérico ocorre.
 
-function arctg(x)
+function antoniovandrearctg(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4892,6 +4934,8 @@ function arctg(x)
 		{
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
+
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
 		return antoniovandreaproximacaotaylor("arctg, " + eval(x).toString());
 		}
@@ -4901,7 +4945,7 @@ function arctg(x)
 
 // Arco-cotangente. Retorna a string "e" se um erro genérico ocorre.
 
-function arccotg(x)
+function antoniovandrearccotg(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4911,6 +4955,8 @@ function arccotg(x)
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
 
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
+
 		return antoniovandreaproximacaotaylor("arccotg, " + eval(x).toString());
 		}
 	else
@@ -4919,7 +4965,7 @@ function arccotg(x)
 
 // Arco-secante. Retorna a string "e" se um erro genérico ocorre.
 
-function arcsec(x)
+function antoniovandrearcsec(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4929,7 +4975,7 @@ function arcsec(x)
 
 // Arco-cossecante. Retorna a string "e" se um erro genérico ocorre.
 
-function arccossec(x)
+function antoniovandrearccossec(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4939,7 +4985,7 @@ function arccossec(x)
 
 // Seno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
 
-function senh(x)
+function antoniovandresenh(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4958,7 +5004,7 @@ function senh(x)
 
 // Cosseno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
 
-function cosh(x)
+function antoniovandrecosh(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4977,7 +5023,7 @@ function cosh(x)
 
 // Tangente hiperbólica. Retorna a string "e" se um erro genérico ocorre.
 
-function tgh(x)
+function antoniovandretgh(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -4996,7 +5042,7 @@ function tgh(x)
 
 // Cotangente hiperbólica. Retorna a string "e" se um erro genérico ocorre.
 
-function cotgh(x)
+function antoniovandrecotgh(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -5014,7 +5060,7 @@ function cotgh(x)
 
 // Secante hiperbólica. Retorna a string "e" se um erro genérico ocorre.
 
-function sech(x)
+function antoniovandresech(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -5029,7 +5075,7 @@ function sech(x)
 
 // Cossecante hiperbólica. Retorna a string "e" se um erro genérico ocorre.
 
-function cossech(x)
+function antoniovandrecossech(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -5048,7 +5094,7 @@ function cossech(x)
 
 // Fatorial. Retorna a string "e" se um erro genérico ocorre.
 
-function fatorial(x)
+function antoniovandrefatorialescopofuncoes(x)
 	{
 	if (arguments.length != 1)
 		return "e";
@@ -5058,7 +5104,9 @@ function fatorial(x)
 		if (antoniovandreexpressaofuncaovalida(x) == "e")
 			return "e";
 
-		return antoniovandrefatorial(eval(x));
+		x = antoniovandretraduzirexpressaofuncional(x, 0)
+
+		return antoniovandrefatorialescopofuncoes(eval(x));
 		}
 	else
 		return antoniovandrefatorial(x);
@@ -5078,7 +5126,7 @@ function antoniovandreexpressaofuncoes(str, avisoanexo)
 
 	try
 		{
-		result = eval(antoniovandresubstituirstrings(str, antoniovandreoperadoresfuncoesconstantes(3)));
+		result = eval(antoniovandretraduzirexpressaofuncional(str, 0));
 		}
 	catch (error)
 		{
@@ -5394,15 +5442,15 @@ function antoniovandreintegraldefinidaaproximacaosomariemann(str, avisoanexo)
 	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
 		return "e";
 
-	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(inf, antoniovandreoperadoresfuncoesconstantes(2))), antoniovandreremoverstrings(inf, antoniovandreoperadoresfuncoesconstantes(2))) == "e")
+	if (antoniovandreexpressaofuncaovalida(inf) == "e")
 		return "e";
 
-	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(sup, antoniovandreoperadoresfuncoesconstantes(2))), antoniovandreremoverstrings(sup, antoniovandreoperadoresfuncoesconstantes(2))) == "e")
+	if (antoniovandreexpressaofuncaovalida(sup) == "e")
 		return "e";
 
 		try
 			{
-			inf2 = eval(antoniovandresubstituirstrings(inf, antoniovandreoperadoresfuncoesconstantes(3)));
+			inf2 = eval(antoniovandretraduzirexpressaofuncional(inf, 0));
 			}
 		catch (error)
 			{
@@ -5411,7 +5459,7 @@ function antoniovandreintegraldefinidaaproximacaosomariemann(str, avisoanexo)
 
 		try
 			{
-			sup2 = eval(antoniovandresubstituirstrings(sup, antoniovandreoperadoresfuncoesconstantes(3)));
+			sup2 = eval(antoniovandretraduzirexpressaofuncional(sup, 0));
 			}
 		catch (error)
 			{
@@ -5705,10 +5753,10 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 			return "Operadores, funções e constantes disponíveis na base de dados (última atualização: 06-03-2020):\n\n\"+\": operador soma;\n\"-\": operador subtração;\n\"*\": operador multiplicação;\n\"/\": operador divisão;\n\"exp()\": função exponencial base \"e\";\n\"potencia(a, b)\": função potência (\"a\" elevado a \"b\");\n\"modulo()\": função módulo;\n\"ln()\": função logaritmo natural;\n\"log10()\": função logaritmo de base 10;\n\"log2()\": função logaritmo de base 2;\n\"log(a, b)\": função logaritmo (logaritmo de \"a\" na base \"b\");\n\"sqrt()\": função raiz quadrada;\n\"sqrt3()\": função raiz cúbica;\n\"sqrtn(x, n)\": função raiz enésima de \"x\";\n\"sen()\": função seno;\n\"cos()\": função cosseno;\n\"tg()\": função tangente;\n\"cotg()\": função cotangente;\n\"sec()\": função secante;\n\"cossec()\": função cossecante;\n\"arcsen()\": função arco-seno;\n\"arccos()\": função arco-cosseno;\n\"arctg()\": função arco-tangente;\n\"arccotg()\": função arco-cotangente;\n\"arcsec()\": função arco-secante;\n\"arccossec()\": função arco-cossecante;\n\"senh()\": função seno hiperbólico;\n\"cosh()\": função cosseno hiperbólico;\n\"tgh()\": função tangente hiperbólica;\n\"cotgh()\": função cotangente hiperbólica;\n\"sech()\": função secante hiperbólica;\n\"cossech()\": função cossecante hiperbólica;\n\"fatorial()\": função fatorial;\n\"pi\": constante \"pi\";\n\"T\": constante \"T\" (tal), o dobro de \"pi\";\n\"e\": constante \"e\", base dos logaritmos naturais\;\n\"Ge11\": constante da gravitação universal de Newton, vezes 10^11, no SI;\n\"c\": velocidade da luz no vácuo, no SI;\n\"he34\": constante de Planck, vezes 10^34, no SI;\n\"ke23\": constante de Boltzmann, vezes 10^23, no SI;\n\"NAe-23\": número de Avogadro, vezes 10^(-23);\n\"mee31\": massa do elétron, vezes 10^31, no SI;\n\"mpe27\": massa do próton, vezes 10^27, no SI;\n\"qee19\": carga elementar, vezes 10^19, no SI.\n\nPara algumas funções, os fatores podem retornar como valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
 			break;
 		case 2:
-			return "exp,potencia,modulo,ln,log10,log2,log,sqrt,sqrt3,sqrtn,sen,cos,tg,cotg,sec,cossec,arcsen,arccos,arctg,arccotg,arcsec,arccossec,senh,cosh,tgh,cotgh,sech,cossech,fatorial,pi,T,e,Ge11,c,he34,ke23,NAe-23,mee31,mpe27,qee19";
+			return "exp,potencia,modulo,ln,log10,log2,log,sqrt,sqrt3,sqrtn,sen,cos,tg,cotg,sec,cossec,arcsen,arccos,arctg,arccotg,arcsec,arccossec,senh,cosh,tgh,cotgh,sech,cossech,fatorial,antoniovandreexp,antoniovandrepotencia,antoniovandremodulo,antoniovandreln,antoniovandrelog10,antoniovandrelog2,antoniovandrelog,antoniovandresqrt,antoniovandresqrt3,antoniovandresqrtn,antoniovandresen,antoniovandrecos,antoniovandretg,antoniovandrecotg,antoniovandresec,antoniovandrecossec,antoniovandrearcsen,antoniovandrearccos,antoniovandrearctg,antoniovandrearccotg,antoniovandrearcsec,antoniovandrearccossec,antoniovandresenh,antoniovandrecosh,antoniovandretgh,antoniovandrecotgh,antoniovandresech,antoniovandrecossech,antoniovandrefatorial,pi,T,e,Ge11,c,he34,ke23,NAe-23,mee31,mpe27,qee19";
 			break;
 		case 3:
-			return [[" ", ""], ["+", "-(-1)*"], ["-", "-"], ["pi", "Math.PI"], ["T", "2*Math.PI"], ["e", "Math.E"], ["Ge11", "6.674184"], ["c", "299792458"], ["he34", "6.62606957"], ["ke23", "1.3806488"], ["NAe-23", "6.022114129"], ["mee31", "9.10938291"], ["mpe27", "1.672621777"], ["qee19", "1.602176565"], ["exp", "exp"], ["potencia", "potencia"], ["modulo", "modulo"], ["ln", "ln"], ["log10", "log10"], ["log2", "log2"], ["log", "log"], ["sqrt", "sqrt"], ["sqrt3", "sqrt3"], ["sqrtn", "sqrtn"], ["sen", "sen"], ["cos", "cos"], ["tg", "tg"], ["cotg", "cotg"], ["sec", "sec"], ["cossec", "cossec"], ["arcsen", "arcsen"], ["arccos", "arccos"], ["arctg", "arctg"], ["arccotg", "arccotg"], ["arcsec", "arcsec"], ["arccossec", "arccossec"], ["senh", "senh"], ["cosh", "cosh"], ["tgh", "tgh"], ["cotgh", "cotgh"], ["sech", "sech"], ["cossech", "cossech"], ["fatorial", "fatorial"]];
+			return [[" ", ""], ["+", "-(-1)*"], ["-", "-"], ["pi", "Math.PI"], ["T", "2*Math.PI"], ["e", "Math.E"], ["Ge11", "6.674184"], ["c", "299792458"], ["he34", "6.62606957"], ["ke23", "1.3806488"], ["NAe-23", "6.022114129"], ["mee31", "9.10938291"], ["mpe27", "1.672621777"], ["qee19", "1.602176565"], ["exp", "antoniovandreexp"], ["potencia", "antoniovandrepotencia"], ["modulo", "antoniovandremodulo"], ["ln", "antoniovandreln"], ["log10", "antoniovandrelog10"], ["log2", "antoniovandrelog2"], ["log", "antoniovandrelog"], ["sqrt", "antoniovandresqrt"], ["sqrt3", "antoniovandresqrt3"], ["sqrtn", "antoniovandresqrtn"], ["sen", "antoniovandresen"], ["cos", "antoniovandrecos"], ["tg", "antoniovandretg"], ["cotg", "antoniovandrecotg"], ["sec", "antoniovandresec"], ["cossec", "antoniovandrecossec"], ["arcsen", "antoniovandrearcsen"], ["arccos", "antoniovandrearccos"], ["arctg", "antoniovandrearctg"], ["arccotg", "antoniovandrearccotg"], ["arcsec", "antoniovandrearcsec"], ["arccossec", "antoniovandrearccossec"], ["senh", "antoniovandresenh"], ["cosh", "antoniovandrecosh"], ["tgh", "antoniovandretgh"], ["cotgh", "antoniovandrecotgh"], ["sech", "antoniovandresech"], ["cossech", "antoniovandrecossech"], ["fatorial", "antoniovandrefatorialescopofuncoes"], ["antoniovandreexp", "antoniovandreexp"], ["antoniovandrepotencia", "antoniovandrepotencia"], ["antoniovandremodulo", "antoniovandremodulo"], ["antoniovandreln", "antoniovandreln"], ["antoniovandrelog10", "antoniovandrelog10"], ["antoniovandrelog2", "antoniovandrelog2"], ["antoniovandrelog", "antoniovandrelog"], ["antoniovandresqrt", "antoniovandresqrt"], ["antoniovandresqrt3", "antoniovandresqrt3"], ["antoniovandresqrtn", "antoniovandresqrtn"], ["antoniovandresen", "antoniovandresen"], ["antoniovandrecos", "antoniovandrecos"], ["antoniovandretg", "antoniovandretg"], ["antoniovandrecotg", "antoniovandrecotg"], ["antoniovandresec", "antoniovandresec"], ["antoniovandrecossec", "antoniovandrecossec"], ["antoniovandrearcsen", "antoniovandrearcsen"], ["antoniovandrearccos", "antoniovandrearccos"], ["antoniovandrearctg", "antoniovandrearctg"], ["antoniovandrearccotg", "antoniovandrearccotg"], ["antoniovandrearcsec", "antoniovandrearcsec"], ["antoniovandrearccossec", "antoniovandrearccossec"], ["antoniovandresenh", "antoniovandresenh"], ["antoniovandrecosh", "antoniovandrecosh"], ["antoniovandretgh", "antoniovandretgh"], ["antoniovandrecotgh", "antoniovandrecotgh"], ["antoniovandresech", "antoniovandresech"], ["antoniovandrecossech", "antoniovandrecossech"], ["antoniovandrefatorialescopofuncoes", "antoniovandrefatorialescopofuncoes"]];
 			break;
 		case 4:
 			return "Erro do JavaScript (não meu) ou entrada inválida.";
@@ -5749,12 +5797,12 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
 		return "e";
 
-	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(ponto, antoniovandreoperadoresfuncoesconstantes(2))), antoniovandreremoverstrings(ponto, antoniovandreoperadoresfuncoesconstantes(2))) == "e")
+	if (antoniovandreexpressaofuncaovalida(ponto) == "e")
 		return "e";
 
 		try
 			{
-			ponto2 = eval(antoniovandresubstituirstrings(ponto, antoniovandreoperadoresfuncoesconstantes(3)));
+			ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
 			}
 		catch (error)
 			{
@@ -5931,6 +5979,25 @@ function antoniovandreexpressaofuncaovalida(str)
 		return "e"
 	else
 		return 1;
+	}
+
+// Traduzir expressão funcional, convertendo os nomes das funções. Argumentos: primeiro: a string a converter; segundo: 1 para fazer a verificação da validade da expressão ou 0 para não. Retorna a string "e" caso um erro genérico ocorra.
+
+function antoniovandretraduzirexpressaofuncional(str, verificacao)
+	{
+	switch (verificacao)
+		{
+		case 1:
+			if (antoniovandreexpressaofuncaovalida(str) == "e")
+				return "e";
+			break;
+		case 0:
+			break;
+		default:
+			return "e";
+		}
+
+	return antoniovandresubstituirstrings(str, antoniovandreoperadoresfuncoesconstantes(3));
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
