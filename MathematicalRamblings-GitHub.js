@@ -4340,7 +4340,12 @@ function exp(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("exp, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("exp, " + eval(x).toString());
+		}
 	else
 		return antoniovandreaproximacaotaylor("exp, " + x.toString())
 	}
@@ -4354,8 +4359,16 @@ function potencia(a, b)
 
 	if (antoniovandrenumeroreal(a.toString()) == "e")
 		{
+		if (antoniovandreexpressaofuncaovalida(a) == "e")
+			return "e";
+
 		if (antoniovandrenumeroreal(b.toString()) == "e")
-			return exp(eval(b.toString()) * ln(eval(a).toString()))
+			{
+			if (antoniovandreexpressaofuncaovalida(b) == "e")
+				return "e";
+
+			return exp(eval(b.toString()) * ln(eval(a).toString()));
+			}
 		else
 			return exp(eval(b * ln(eval(a).toString())));
 		}
@@ -4364,7 +4377,12 @@ function potencia(a, b)
 		if (a >= 0)
 			{
 			if (antoniovandrenumeroreal(b.toString()) == "e")
-				return exp(eval(b.toString()) * ln(a))
+				{
+				if (antoniovandreexpressaofuncaovalida(b) == "e")
+					return "e";
+
+				return exp(eval(b.toString()) * ln(a));
+				}
 			else
 				return exp(b * ln(a));
 			}
@@ -4372,6 +4390,9 @@ function potencia(a, b)
 			{
 			if (antoniovandrenumeroreal(b.toString()) == "e")
 				{
+				if (antoniovandreexpressaofuncaovalida(b) == "e")
+					return "e";
+
 				if (eval(b) % 2 == 0)
 					return exp(eval(eval(b) * ln(modulo(a))))
 				else
@@ -4417,15 +4438,28 @@ function sqrtn(x, n)
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
 		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
 		if (antoniovandrenumeroreal(n.toString()) == "e")
-			return potencia(eval(x), eval(1 / n))
+			{
+			if (antoniovandreexpressaofuncaovalida(n) == "e")
+				return "e";
+
+			return potencia(eval(x), 1 / eval(n));
+			}
 		else
 			return potencia(eval(x), 1 / n)
 		}
 	else
 		{
 		if (antoniovandrenumeroreal(n.toString()) == "e")
-			return potencia(x, eval(1 / n))
+			{
+			if (antoniovandreexpressaofuncaovalida(n) == "e")
+				return "e";
+
+			return potencia(x, 1 / eval(n));
+			}
 		else
 			return potencia(x, 1 / n)
 		}
@@ -4440,6 +4474,9 @@ function modulo(x)
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
 		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
 		var ev = eval(x);
 
 		if (antoniovandrenumeroreal(ev.toString()) == "e")
@@ -4459,7 +4496,12 @@ function ln(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("ln, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("ln, " + eval(x).toString());
+		}
 	else
 		return antoniovandreaproximacaotaylor("ln, " + x.toString());
 	}
@@ -4468,30 +4510,60 @@ function ln(x)
 
 function log10(x)
 	{
-	var n = ln(x);
-
 	if (arguments.length != 1)
 		return "e";
 
-	if (antoniovandrenumeroreal(n.toString()) == "e")
-		return n
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		var n = ln(eval(x));
+
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			return  n / ln(10);
+		}
 	else
-		return n / ln(10);
+		{
+		var n = ln(x);
+
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			return  n / ln(10);
+		}
 	}
 
 // Logaritmo de base 2. Retorna a string "e" se um erro genérico ocorre.
 
 function log2(x)
 	{
-	var n = ln(x);
-
 	if (arguments.length != 1)
 		return "e";
 
-	if (antoniovandrenumeroreal(n.toString()) == "e")
-		return n
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		var n = ln(eval(x));
+
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			return  n / ln(2);
+		}
 	else
-		return n / ln(2);
+		{
+		var n = ln(x);
+
+		if (antoniovandrenumeroreal(n.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			return  n / ln(2);
+		}
 	}
 
 // Logaritmo de "a" na base "b". Retorna a string "e" se um erro genérico ocorre.
@@ -4501,19 +4573,71 @@ function log(a, b)
 	if (arguments.length != 2)
 		return "e";
 
-	var la = ln(a);
-	var lb = ln(b);
+	if (antoniovandrenumeroreal(a.toString()) == "e")
+		{
+		if (antoniovandreexpressaofuncaovalida(a) == "e")
+			return "e";
 
-	if (antoniovandrenumeroreal(la.toString()) == "e")
-		return la;
+		var la = ln(eval(a));
 
-	if (antoniovandrenumeroreal(lb.toString()) == "e")
-		return lb;
+		if (antoniovandrenumeroreal(la.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			{
+			if (antoniovandrenumeroreal(b.toString()) == "e")
+				{
+				if (antoniovandreexpressaofuncaovalida(b) == "e")
+					return "e";
 
-	if (lb != 0)
-		return la / lb
+				var lb = ln(eval(b));
+
+				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
+					return "A base do logaritmo deve ser real positiva e diferente de 1."
+				else
+					return  la / lb;
+				}
+			else
+				{
+				var lb = ln(b);
+
+				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
+					return "A base do logaritmo deve ser real positiva e diferente de 1."
+				else
+					return  la / lb;
+				}
+			}
+		}
 	else
-		return "A base do logaritmo deve ser diferente de 1.";
+		{
+		var la = ln(a);
+
+		if (antoniovandrenumeroreal(la.toString()) == "e")
+			return "O logaritimando deve ser um número real positivo."
+		else
+			{
+			if (antoniovandrenumeroreal(b.toString()) == "e")
+				{
+				if (antoniovandreexpressaofuncaovalida(b) == "e")
+					return "e";
+
+				var lb = ln(eval(b));
+
+				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
+					return "A base do logaritmo deve ser real positiva e diferente de 1."
+				else
+					return  la / lb;
+				}
+			else
+				{
+				var lb = ln(b);
+
+				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
+					return "A base do logaritmo deve ser real positiva e diferente de 1."
+				else
+					return  la / lb;
+				}
+			}
+		}
 	}
 
 // Raiz quadrada. Retorna a string "e" se um erro genérico ocorre.
@@ -4523,12 +4647,27 @@ function sqrt(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var lx = ln(x);
+	if (antoniovandrenumeroreal(x.toString()) == "e")
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
 
-	if (antoniovandrenumeroreal(lx.toString()) == "e")
-		return lx;
+		var lx = ln(eval(x));
 
-	return exp("0.5 * " + lx.toString());
+		if (antoniovandrenumeroreal(lx.toString()) == "e")
+			return "O radicando deve ser um número real não negativo."
+		else
+			return exp("0.5 * " + lx.toString());
+		}
+	else
+		{
+		var lx = ln(x);
+
+		if (antoniovandrenumeroreal(lx.toString()) == "e")
+			return "O radicando deve ser um número real não negativo."
+		else
+			return exp("0.5 * " + lx.toString());
+		}
 	}
 
 // Raiz cúbica. Retorna a string "e" se um erro genérico ocorre.
@@ -4539,7 +4678,12 @@ function sqrt3(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return sqrt3(eval(x))
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return sqrt3(eval(x));
+		}
 	else
 		{
 		if (! (antoniovandrenumerorealnaonegativo(x.toString()) == "e"))
@@ -4573,7 +4717,12 @@ function sen(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("sen, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("sen, " + eval(x).toString());
+		}
 	else
 		{
 		if (x >= 0)
@@ -4601,7 +4750,12 @@ function cos(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("cos, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("cos, " + eval(x).toString());
+		}
 	else
 		{
 		if (x >= 0)
@@ -4628,6 +4782,9 @@ function tg(x)
 
 	var c = cos(x);
 
+	if (c == "e")
+		return "e";
+
 	if (c != 0)
 		return sen(x) / c
 	else
@@ -4642,6 +4799,9 @@ function cotg(x)
 		return "e";
 
 	var s = sen(x);
+
+	if (s == "e")
+		return "e";
 
 	if (s != 0)
 		return cos(x) / s
@@ -4658,6 +4818,9 @@ function sec(x)
 
 	var c = cos(x);
 
+	if (c == "e")
+		return "e";
+
 	if (c != 0)
 		return 1 / c
 	else
@@ -4673,6 +4836,9 @@ function cossec(x)
 
 	var s = sen(x);
 
+	if (s == "e")
+		return "e";
+
 	if (s != 0)
 		return 1 / s
 	else
@@ -4687,9 +4853,14 @@ function arcsen(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("arcsen, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("arcsen, " + eval(x).toString());
+		}
 	else
-		return antoniovandreaproximacaotaylor("arcsen, " + x.toString())
+		return antoniovandreaproximacaotaylor("arcsen, " + x.toString());
 	}
 
 // Arco-cosseno. Retorna a string "e" se um erro genérico ocorre.
@@ -4700,9 +4871,14 @@ function arccos(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("arccos, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("arccos, " + eval(x).toString());
+		}
 	else
-		return antoniovandreaproximacaotaylor("arccos, " + x.toString())
+		return antoniovandreaproximacaotaylor("arccos, " + x.toString());
 	}
 
 // Arco-tangente. Retorna a string "e" se um erro genérico ocorre.
@@ -4713,9 +4889,14 @@ function arctg(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("arctg, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("arctg, " + eval(x).toString());
+		}
 	else
-		return antoniovandreaproximacaotaylor("arctg, " + x.toString())
+		return antoniovandreaproximacaotaylor("arctg, " + x.toString());
 	}
 
 // Arco-cotangente. Retorna a string "e" se um erro genérico ocorre.
@@ -4726,9 +4907,14 @@ function arccotg(x)
 		return "e";
 
 	if (antoniovandrenumeroreal(x.toString()) == "e")
-		return antoniovandreaproximacaotaylor("arccotg, " + eval(x).toString())
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandreaproximacaotaylor("arccotg, " + eval(x).toString());
+		}
 	else
-		return antoniovandreaproximacaotaylor("arccotg, " + x.toString())
+		return antoniovandreaproximacaotaylor("arccotg, " + x.toString());
 	}
 
 // Arco-secante. Retorna a string "e" se um erro genérico ocorre.
@@ -4868,7 +5054,12 @@ function fatorial(x)
 		return "e";
 
 	if (antoniovandrenumeronatural(x.toString()) == "e")
-		return antoniovandrefatorial(eval(x))
+		{
+		if (antoniovandreexpressaofuncaovalida(x) == "e")
+			return "e";
+
+		return antoniovandrefatorial(eval(x));
+		}
 	else
 		return antoniovandrefatorial(x);
 	}
@@ -4882,7 +5073,7 @@ function antoniovandreexpressaofuncoes(str, avisoanexo)
 	if (avisoanexo == -1)
 		return antoniovandreoperadoresfuncoesconstantes(1);
 
-	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(str, antoniovandreoperadoresfuncoesconstantes(2))), antoniovandreremoverstrings(str, antoniovandreoperadoresfuncoesconstantes(2))) == "e")
+	if (antoniovandreexpressaofuncaovalida(str) == "e")
 		return "e";
 
 	try
@@ -5727,6 +5918,19 @@ function antoniovandrefracaogeratriz(x, tiporetorno)
 		default:
 			return "e";
 		}
+	}
+
+// Avaliar a validade de uma expressão funcional. Retorna 1 caso válida, e a string "e" caso não.
+
+function antoniovandreexpressaofuncaovalida(str)
+	{
+	if (antoniovandrecompararstrings(typeof str, "string") == "e")
+		return "e";
+
+	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(str, antoniovandreoperadoresfuncoesconstantes(2))), antoniovandreremoverstrings(str, antoniovandreoperadoresfuncoesconstantes(2))) == "e")
+		return "e"
+	else
+		return 1;
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
