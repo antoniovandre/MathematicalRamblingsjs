@@ -1241,6 +1241,9 @@ function antoniovandremaximovalorsaida(i)
 		case 1:
 			return 9000000000000000;
 			break;
+		case 2:
+			return 9000000;
+			break;
 		default:
 			return "e";
 		}
@@ -1636,7 +1639,10 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001;
 			break;
 		case 2:
-			return 0.0001;
+			return 0.00001;
+			break;
+		case 3:
+			return 0.001;
 			break;
 		default:
 			return "e";
@@ -4373,10 +4379,10 @@ function antoniovandrepotencia(a, b)
 
 			b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-			return exp(eval(b.toString()) * ln(eval(a).toString()));
+			return antoniovandreexp(eval(b.toString()) * antoniovandreln(eval(a).toString()));
 			}
 		else
-			return exp(eval(b * ln(eval(a).toString())));
+			return antoniovandreexp(eval(b * antoniovandreln(eval(a).toString())));
 		}
 	else
 		{
@@ -4389,10 +4395,10 @@ function antoniovandrepotencia(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				return exp(eval(b.toString()) * ln(a));
+				return antoniovandreexp(eval(b.toString()) * antoniovandreln(a));
 				}
 			else
-				return exp(b * ln(a));
+				return antoniovandreexp(b * antoniovandreln(a));
 			}
 		else
 			{
@@ -4404,34 +4410,34 @@ function antoniovandrepotencia(a, b)
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
 				if (eval(b) % 2 == 0)
-					return exp(eval(eval(b) * ln(modulo(a))))
+					return antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 				else
 					{
 					if ((eval(b) - 1) % 2 == 0)
-						return (-1) * exp(eval(eval(b) * ln(modulo(a))))
+						return (-1) * antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 					else
 						{
 						if (antoniovandrefracaogeratriz(eval(b), 1)[1] % 2 == 0)
 							return "O resultado da potência não é um número real."
 						else
-							return (-1) * exp(eval(eval(b) * ln(modulo(a))))
+							return (-1) * antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 						}
 					}
 				}
 			else
 				{
 				if (b % 2 == 0)
-					return exp(eval(b * ln(modulo(a))))
+					return antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 				else
 					{
 					if ((b - 1) % 2 == 0)
-						return (-1) * exp(eval(b * ln(modulo(a))))
+						return (-1) * antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 					else
 						{
 						if (antoniovandrefracaogeratriz(b, 1)[1] % 2 == 0)
 							return "O resultado da potência não é um número real."
 						else
-							return (-1) * exp(eval(b * ln(modulo(a))))
+							return (-1) * antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 						}
 					}
 				}
@@ -4460,10 +4466,10 @@ function antoniovandresqrtn(x, n)
 
 			n = antoniovandretraduzirexpressaofuncional(n, 0)
 
-			return potencia(eval(x), 1 / eval(n));
+			return antoniovandrepotencia(eval(x), 1 / eval(n));
 			}
 		else
-			return potencia(eval(x), 1 / n)
+			return antoniovandrepotencia(eval(x), 1 / n)
 		}
 	else
 		{
@@ -4474,10 +4480,10 @@ function antoniovandresqrtn(x, n)
 
 			n = antoniovandretraduzirexpressaofuncional(n, 0)
 
-			return potencia(x, 1 / eval(n));
+			return antoniovandrepotencia(x, 1 / eval(n));
 			}
 		else
-			return potencia(x, 1 / n)
+			return antoniovandrepotencia(x, 1 / n)
 		}
 	}
 
@@ -4540,21 +4546,21 @@ function antoniovandrelog10(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var n = ln(eval(x));
+		var n = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(10);
+			return  n / antoniovandreln(10);
 		}
 	else
 		{
-		var n = ln(x);
+		var n = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(10);
+			return  n / antoniovandreln(10);
 		}
 	}
 
@@ -4572,21 +4578,21 @@ function antoniovandrelog2(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var n = ln(eval(x));
+		var n = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(2);
+			return  n / antoniovandreln(2);
 		}
 	else
 		{
-		var n = ln(x);
+		var n = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(2);
+			return  n / antoniovandreln(2);
 		}
 	}
 
@@ -4604,7 +4610,7 @@ function antoniovandrelog(a, b)
 
 		a = antoniovandretraduzirexpressaofuncional(a, 0)
 
-		var la = ln(eval(a));
+		var la = antoniovandreln(eval(a));
 
 		if (antoniovandrenumeroreal(la.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
@@ -4617,7 +4623,7 @@ function antoniovandrelog(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				var lb = ln(eval(b));
+				var lb = antoniovandreln(eval(b));
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4626,7 +4632,7 @@ function antoniovandrelog(a, b)
 				}
 			else
 				{
-				var lb = ln(b);
+				var lb = antoniovandreln(b);
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4637,7 +4643,7 @@ function antoniovandrelog(a, b)
 		}
 	else
 		{
-		var la = ln(a);
+		var la = antoniovandreln(a);
 
 		if (antoniovandrenumeroreal(la.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
@@ -4650,7 +4656,7 @@ function antoniovandrelog(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				var lb = ln(eval(b));
+				var lb = antoniovandreln(eval(b));
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4659,7 +4665,7 @@ function antoniovandrelog(a, b)
 				}
 			else
 				{
-				var lb = ln(b);
+				var lb = antoniovandreln(b);
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4684,21 +4690,21 @@ function antoniovandresqrt(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var lx = ln(eval(x));
+		var lx = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(lx.toString()) == "e")
 			return "O radicando deve ser um número real não negativo."
 		else
-			return exp("0.5 * " + lx.toString());
+			return antoniovandreexp("0.5 * " + lx.toString());
 		}
 	else
 		{
-		var lx = ln(x);
+		var lx = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(lx.toString()) == "e")
 			return "O radicando deve ser um número real não negativo."
 		else
-			return exp("0.5 * " + lx.toString());
+			return antoniovandreexp("0.5 * " + lx.toString());
 		}
 	}
 
@@ -4716,27 +4722,27 @@ function antoniovandresqrt3(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		return sqrt3(eval(x));
+		return antoniovandresqrt3(eval(x));
 		}
 	else
 		{
 		if (! (antoniovandrenumerorealnaonegativo(x.toString()) == "e"))
 			{
-			var lx = ln(x);
+			var lx = antoniovandreln(x);
 
 			if (antoniovandrenumeroreal(lx.toString()) == "e")
 				return lx;
 
-			return exp("(1/3) * " + lx.toString());
+			return antoniovandreexp("(1/3) * " + lx.toString());
 			}
 		else
 			{
-			var lxn = ln("(-1) * " + x);
+			var lxn = antoniovandreln("(-1) * " + x);
 
 			if (antoniovandrenumeroreal(lxn.toString()) == "e")
 				return lxn;
 
-			return (-1) * exp("(1/3) * " + lxn.toString());
+			return (-1) * antoniovandreexp("(1/3) * " + lxn.toString());
 			}
 		}
 	}
@@ -4818,13 +4824,13 @@ function antoniovandretg(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var c = cos(x);
+	var c = antoniovandrecos(x);
 
 	if (c == "e")
 		return "e";
 
 	if (c != 0)
-		return sen(x) / c
+		return antoniovandresen(x) / c
 	else
 		return "O argumento da tangente deve ser diferente de pi/2 + k*pi, com k inteiro.";
 	}
@@ -4836,13 +4842,13 @@ function antoniovandrecotg(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var s = sen(x);
+	var s = antoniovandresen(x);
 
 	if (s == "e")
 		return "e";
 
 	if (s != 0)
-		return cos(x) / s
+		return antoniovandrecos(x) / s
 	else
 		return "O argumento da cotangente deve ser diferente de k*pi, com k inteiro.";
 	}
@@ -4854,7 +4860,7 @@ function antoniovandresec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var c = cos(x);
+	var c = antoniovandrecos(x);
 
 	if (c == "e")
 		return "e";
@@ -4872,7 +4878,7 @@ function antoniovandrecossec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var s = sen(x);
+	var s = antoniovandresen(x);
 
 	if (s == "e")
 		return "e";
@@ -4970,7 +4976,7 @@ function antoniovandrearcsec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return arccos("1 / (" + x + ")");
+	return antoniovandrearccos("1 / (" + x + ")");
 	}
 
 // Arco-cossecante. Retorna a string "e" se um erro genérico ocorre.
@@ -4980,7 +4986,7 @@ function antoniovandrearccossec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return arcsen("1 / (" + x + ")");
+	return antoniovandrearcsen("1 / (" + x + ")");
 	}
 
 // Seno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
@@ -4990,8 +4996,8 @@ function antoniovandresenh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ex = exp(x);
-	var exn =  exp((-1) * x);
+	var ex = antoniovandreexp(x);
+	var exn =  antoniovandreexp((-1) * x);
 
 	if (antoniovandrenumeroreal(ex.toString()) == "e")
 		return ex;
@@ -5009,8 +5015,8 @@ function antoniovandrecosh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ex = exp(x);
-	var exn =  exp((-1) * x);
+	var ex = antoniovandreexp(x);
+	var exn =  antoniovandreexp((-1) * x);
 
 	if (antoniovandrenumeroreal(ex.toString()) == "e")
 		return ex;
@@ -5028,8 +5034,8 @@ function antoniovandretgh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var shx = senh(x);
-	var chx = cosh(x);
+	var shx = antoniovandresenh(x);
+	var chx = antoniovandrecosh(x);
 
 	if (antoniovandrenumeroreal(shx.toString()) == "e")
 		return shx;
@@ -5047,13 +5053,13 @@ function antoniovandrecotgh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var sh = senh(x);
+	var sh = antoniovandresenh(x);
 
 	if (antoniovandrenumeroreal(sh.toString()) == "e")
 		return sh;
 
 	if (sh != 0)
-		return cosh(x) / sh;
+		return antoniovandrecosh(x) / sh;
 	else
 		return "O argumento da cotangente hiperbólica deve ser diferente de 0.";
 	}
@@ -5065,7 +5071,7 @@ function antoniovandresech(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ch = cosh(x);
+	var ch = antoniovandrecosh(x);
 
 	if (antoniovandrenumeroreal(ch.toString()) == "e")
 		return ch;
@@ -5080,7 +5086,7 @@ function antoniovandrecossech(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var sh = senh(x);
+	var sh = antoniovandresenh(x);
 
 	if (antoniovandrenumeroreal(sh.toString()) == "e")
 		return sh;
@@ -5768,7 +5774,7 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 		}
 	}
 
-// Derivada de uma fonção em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; o segundo argumento, se "-1", retorna o aviso anexo.
+// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; o segundo argumento, se "-1", retorna o aviso anexo.
 
 function antoniovandrederivadaemumponto(str, avisoanexo)
 	{
@@ -5998,6 +6004,247 @@ function antoniovandretraduzirexpressaofuncional(str, verificacao)
 		}
 
 	return antoniovandresubstituirstrings(str, antoniovandreoperadoresfuncoesconstantes(3));
+	}
+
+// Limite de uma função contínua. Argumentos: primeiro: uma string, separada por ponto e vírgula ";", onde há a expressão da função, que deve ser na variável "x", o ponto do domínio considerado, e o tipo de cálculo: "definicao" para limite; "esquerda" para limite lateral à esquerda, ou "direita" para limite lateral à direita; e, segundo, -1 para exibir o aviso anexo.
+
+function antoniovandrelimitefuncaocontinua(str, avisoanexo)
+	{
+	var argumentos = str.split(";");
+	var expressao;
+	var expressaopart;
+	var tipo;
+	var tipon;
+	var ponto;
+	var ponto2;
+	var ponto2inf;
+	var ponto2sup;
+	var ponto2infinf;
+	var ponto2supsup;
+	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
+	var listtam;
+	var result1;
+	var result2;
+	var result3;
+	var result4;
+	var result;
+	var flag = 0;
+	var flag1 = 0;
+	var flag2 = 0;
+
+	if (avisoanexo == -1)
+		return antoniovandreoperadoresfuncoesconstantes(1);
+
+	if (argumentos.length != 3)
+		return "e";
+
+	tipo = argumentos[2].trim();
+
+	expressaopart = argumentos[0];
+	ponto = argumentos[1].trim();
+
+	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
+		return "e";
+
+	if (antoniovandreexpressaofuncaovalida(ponto) == "e")
+		return "e";
+
+		try
+			{
+			ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
+			}
+		catch (error)
+			{
+			return "e";
+			}
+
+	if (antoniovandrenumeroreal(ponto2.toString()) == "e")
+		return "e"
+	else
+		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
+			return antoniovandremensagenserro(2);
+
+	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+	ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(3);
+	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+	ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(3);
+
+	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
+
+	for (var i = 0; i < listtam; i++)
+		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
+
+	expressao = antoniovandresubstituirstrings(expressaopart, list);
+
+	try
+		{
+		result = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(result.toString()) == "e")
+		flag = 1;
+
+	try
+		{
+		result1 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2inf.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	try
+		{
+		result2 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2sup.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	try
+		{
+		result3 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2infinf.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	try
+		{
+		result4 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2supsup.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(result1.toString()) == "e")
+		flag1 = 1
+	else
+		{
+		if (Math.abs(result1) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
+		}
+
+	if (antoniovandrenumeroreal(result2.toString()) == "e")
+		flag2 = 1
+	else
+		{
+		if (Math.abs(result2) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
+		}
+
+	if (antoniovandrecompararstrings(tipo, "definicao") == 1)
+		tipon = 0
+	else
+		{
+		if (antoniovandrecompararstrings(tipo, "esquerda") == 1)
+			tipon = 1
+		else
+			{
+			if (antoniovandrecompararstrings(tipo, "direita") == 1)
+				tipon = 2
+			else
+				tipon = -1;
+			}
+		}
+
+	switch (tipon)
+		{
+		case 1:
+			if (flag == 1)
+				{
+				if (flag1 == 0)
+					{
+					if (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))
+						return result1
+					else
+						{
+						if (result1 > 0)
+							return "+ infinito"
+						else
+							{
+							if (result1 < 0)
+								return "- infinito"
+							else
+								return result2;
+							}
+						}
+					}
+				else
+					return "O limite lateral esquerdo no ponto " + ponto + " não existe.";
+				}
+			else
+				return result;
+
+			break;
+		case 2:
+			if (flag == 1)
+				{
+				if (flag2 == 0)
+					{
+					if (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))
+						return result2
+					else
+						{
+						if (result2 > 0)
+							return "+ infinito"
+						else
+							{
+							if (result2 < 0)
+								return "- infinito"
+							else
+								return result2;
+							}
+						}
+					}
+				else
+					return "O limite lateral direito no ponto " + ponto + " não existe.";
+				}
+			else
+				return result;
+
+			break;
+		case 0:
+			if (flag == 1)
+				{
+				if ((flag1 == 0) && (flag2 == 0))
+					{
+					if (Math.abs(result2 - result1) < antoniovandreprecisaoreal(3))
+						return result2;
+					else
+						return "O limite no ponto " + ponto + " não existe.";
+					}
+				else
+					return "O limite no ponto " + ponto + " não existe.";
+				}
+			else
+				return result;
+
+			break;
+		default:
+			return "O tipo de retorno deve ser uma das três opções: \"definicao\", \"esquerda\", ou \"direita\".";
+		}
+	}
+
+// Coeficientes de aplicações globais.
+
+function antoniovandrecoeficientes(i)
+	{
+	switch (i)
+		{
+		case 1:
+			return 10;
+			break;
+		default:
+			return "e";
+		}
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).

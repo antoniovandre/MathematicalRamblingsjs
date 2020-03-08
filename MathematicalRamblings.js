@@ -1241,6 +1241,9 @@ function antoniovandremaximovalorsaida(i)
 		case 1:
 			return 9000000000000000;
 			break;
+		case 2:
+			return 9000000;
+			break;
 		default:
 			return "e";
 		}
@@ -1636,6 +1639,9 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001;
 			break;
 		case 2:
+			return 0.0000000001;
+			break;
+		case 3:
 			return 0.0001;
 			break;
 		default:
@@ -5768,7 +5774,7 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 		}
 	}
 
-// Derivada de uma fonção em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; o segundo argumento, se "-1", retorna o aviso anexo.
+// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; o segundo argumento, se "-1", retorna o aviso anexo.
 
 function antoniovandrederivadaemumponto(str, avisoanexo)
 	{
@@ -5998,6 +6004,201 @@ function antoniovandretraduzirexpressaofuncional(str, verificacao)
 		}
 
 	return antoniovandresubstituirstrings(str, antoniovandreoperadoresfuncoesconstantes(3));
+	}
+
+// Limite de uma função contínua. Argumentos: primeiro: uma string, separada por ponto e vírgula ";", onde há a expressão da função, que deve ser na variável "x", o ponto do domínio considerado, e o tipo de cálculo: 0 para limite; 1 para limite lateral à esquerda, ou 2 para limite lateral à direita; e, segundo, -1 para exibir o aviso anexo.
+
+function antoniovandrelimitefuncaocontinua(str, avisoanexo)
+	{
+	var argumentos = str.split(";");
+	var expressao;
+	var expressaopart;
+	var tipo;
+	var ponto;
+	var ponto2;
+	var ponto2inf;
+	var ponto2sup;
+	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
+	var listtam;
+	var result1;
+	var result2;
+	var result;
+	var flag = 0;
+
+	if (avisoanexo == -1)
+		return antoniovandreoperadoresfuncoesconstantes(1);
+
+	if (argumentos.length != 3)
+		return "e";
+
+	tipo = argumentos[2].trim();
+
+	if (antoniovandrenumeronatural(tipo) == "e")
+		return "O tipo de retorno deve ser uma das três opções: 0, 1, ou 2.";
+
+	expressaopart = argumentos[0];
+	ponto = argumentos[1].trim();
+
+	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
+		return "e";
+
+	if (antoniovandreexpressaofuncaovalida(ponto) == "e")
+		return "e";
+
+		try
+			{
+			ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
+			}
+		catch (error)
+			{
+			return "e";
+			}
+
+	if (antoniovandrenumeroreal(ponto2.toString()) == "e")
+		return "e"
+	else
+		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
+			return antoniovandremensagenserro(2);
+
+	ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
+	ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+
+	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
+
+	for (var i = 0; i < listtam; i++)
+		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
+
+	expressao = antoniovandresubstituirstrings(expressaopart, list);
+
+	try
+		{
+		result = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(result.toString()) == "e")
+		flag = 1;
+
+	try
+		{
+		result1 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2inf.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	try
+		{
+		result2 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2sup.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(result1.toString()) == "e")
+		{
+		if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result1, "string") == 1)
+						return result1
+					else
+						return "e";
+					}
+				}
+			}
+		}
+	else
+		{
+		if (Math.abs(result1) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
+		}
+
+	if (antoniovandrenumeroreal(result2.toString()) == "e")
+		{
+		if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result2, "string") == 1)
+						return result2
+					else
+						return "e";
+					}
+				}
+			}
+		}
+	else
+		{
+		if (Math.abs(result2) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
+		}
+
+	switch (parseInt(tipo))
+		{
+		case 1:
+			if ((result1 > 0) && (flag == 1))
+				return "+ infinito"
+			else
+				{
+				if ((result1 < 0) && (flag == 1))
+					return "- infinito"
+				else
+					return result1;
+				}
+
+			break;
+		case 2:
+			if ((result2 > 0) && (flag == 1))
+				return "+ infinito"
+			else
+				{
+				if ((result2 < 0) && (flag == 1))
+					return "- infinito"
+				else
+					return result2;
+				}
+
+			break;
+		case 0:
+			if (Math.abs(result2 - result1) < antoniovandreprecisaoreal(3))
+				{
+				if ((result1 > 0)  && (flag == 1))
+					return "+ infinito"
+				else
+					if ((result1 < 0)  && (flag == 1))
+						return "- infinito"
+					else
+						return result1;
+				}
+			else
+				return "O limite no ponto " + ponto + " não existe.";
+			break;
+		default:
+			return "O tipo de retorno deve ser uma das três opções: 0, 1, ou 2.";
+		}
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
