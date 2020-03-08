@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 07-03-2020.
+// Última atualização: 08-03-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "07-03-2020";}
+function antoniovandremathematicalramblingsjsversao(){return "08-03-2020";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1636,13 +1636,19 @@ function antoniovandreprecisaoreal(i)
 	switch (i)
 		{
 		case 1:
-			return 0.0000000000000000001;
+			return 0.0000000000000000001; // Utilizada na formatação de números reais no JavaScript.
 			break;
 		case 2:
-			return 0.0000000001;
+			return 0.01; // A variação no domínio das funções para o cálculo de limites e derivadas quando o ponto central não é 0.
 			break;
 		case 3:
-			return 0.0001;
+			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas quando o ponto central é 0.
+			break;
+		case 4:
+			return 0.001; // A margem de erro para resultados nulos das funções.
+			break;
+		case 5:
+			return 0.000001; // Menor valor atribuído ao domínio na matriz dos polinômios de Taylor.
 			break;
 		default:
 			return "e";
@@ -4253,14 +4259,14 @@ function antoniovandreaproximacaotaylor(str)
 
 function antoniovandrepolinomiostaylor(str, v, avisoanexo)
 	{
-	var antoniovandrepolinomiostaylorarr=[["exp",[["i","i"]],[[-10,"antoniovandresomapolinomios(\"0.000045399929763\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000045399929763\" + \", \" + \"x + 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000022699964882\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-7,"antoniovandresomapolinomios(\"0.000911881965555\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000911881965555\" + \", \" + \"x + 7\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000455940982778\" + \", \" + \"x + 7\" + \", \" + \"x + 7\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000151980327592\" + \", \" + \"x + 7\" + \", \" + \"x + 7\" + \", \" + \"x + 7\"))"],[-5,"antoniovandresomapolinomios(\"0.00673794699909\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00673794699909\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00336897349954\" + \", \" + \"x + 5\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00112299116651\" + \", \" + \"x + 5\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-2,"antoniovandresomapolinomios(\"0.135335283237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.135335283237\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0676676416185\" + \", \" + \"x + 2\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0225558805395\" + \", \" + \"x + 2\" + \", \" + \"x + 2\" + \", \" + \"x + 2\"))"],[-1,"antoniovandresomapolinomios(\"0.367879441171\" + \", \" + antoniovandremultiplicarpolinomios(\"0.367879441171\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.183939720586\" + \", \" + \"x + 1\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0613132401952\" + \", \" + \"x + 1\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[0,"\"1 + x + 0.5xx + 0.166666666667xxx\""],[1,"antoniovandresomapolinomios(\"2.71828182846\" + \", \" + antoniovandremultiplicarpolinomios(\"2.71828182846\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"1.35914091423\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.45304697141\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[2,"antoniovandresomapolinomios(\"7.38905609893\" + \", \" + antoniovandremultiplicarpolinomios(\"7.38905609893\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"3.69452804947\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"1.23150934982\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[3,"antoniovandresomapolinomios(\"20.0855369232\" + \", \" + antoniovandremultiplicarpolinomios(\"20.0855369232\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"10.0427684616\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"3.3475894872\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[4,"antoniovandresomapolinomios(\"54.5981500331\" + \", \" + antoniovandremultiplicarpolinomios(\"54.5981500331\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"27.2990750165\" + \", \" + \"x - 4\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"9.09969167218\" + \", \" + \"x - 4\" + \", \" + \"x - 4\" + \", \" + \"x - 4\"))"],[5,"antoniovandresomapolinomios(\"148.413159103\" + \", \" + antoniovandremultiplicarpolinomios(\"148.413159103\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"74.2065795513\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"24.7355265172\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[6,"antoniovandresomapolinomios(\"403.428793493\" + \", \" + antoniovandremultiplicarpolinomios(\"403.428793493\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"201.714396747\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"67.2381322488\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"],[7,"antoniovandresomapolinomios(\"1096.63315843\" + \", \" + antoniovandremultiplicarpolinomios(\"1096.63315843\" + \", \" + \"x - 7\") + \", \" + antoniovandremultiplicarpolinomios(\"548.316579215\" + \", \" + \"x - 7\" + \", \" + \"x - 7\") + \", \" + antoniovandremultiplicarpolinomios(\"182.772193072\" + \", \" + \"x - 7\" + \", \" + \"x - 7\" + \", \" + \"x - 7\"))"],[8,"antoniovandresomapolinomios(\"2980.95798704\" + \", \" + antoniovandremultiplicarpolinomios(\"2980.95798704\" + \", \" + \"x - 8\") + \", \" + antoniovandremultiplicarpolinomios(\"1490.47899352\" + \", \" + \"x - 8\" + \", \" + \"x - 8\") + \", \" + antoniovandremultiplicarpolinomios(\"496.826331173\" + \", \" + \"x - 8\" + \", \" + \"x - 8\" + \", \" + \"x - 8\"))"],[9,"antoniovandresomapolinomios(\"8103.08392758\" + \", \" + antoniovandremultiplicarpolinomios(\"8103.08392758\" + \", \" + \"x - 9\") + \", \" + antoniovandremultiplicarpolinomios(\"4051.54196379\" + \", \" + \"x - 9\" + \", \" + \"x - 9\") + \", \" + antoniovandremultiplicarpolinomios(\"1350.51398793\" + \", \" + \"x - 9\" + \", \" + \"x - 9\" + \", \" + \"x - 9\"))"],[10,"antoniovandresomapolinomios(\"22026.4657948\" + \", \" + antoniovandremultiplicarpolinomios(\"22026.4657948\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"11013.2328974\" + \", \" + \"x - 10\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"3671.07763247\" + \", \" + \"x - 10\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[13,"antoniovandresomapolinomios(\"442413.392009\" + \", \" + antoniovandremultiplicarpolinomios(\"442413.392009\" + \", \" + \"x - 13\") + \", \" + antoniovandremultiplicarpolinomios(\"221206.696005\" + \", \" + \"x - 13\" + \", \" + \"x - 13\") + \", \" + antoniovandremultiplicarpolinomios(\"73735.5653348\" + \", \" + \"x - 13\" + \", \" + \"x - 13\" + \", \" + \"x - 13\"))"],[15,"antoniovandresomapolinomios(\"3269017.37247\" + \", \" + antoniovandremultiplicarpolinomios(\"3269017.37247\" + \", \" + \"x - 15\") + \", \" + antoniovandremultiplicarpolinomios(\"1634508.68623\" + \", \" + \"x - 15\" + \", \" + \"x - 15\") + \", \" + antoniovandremultiplicarpolinomios(\"544836.228745\" + \", \" + \"x - 15\" + \", \" + \"x - 15\" + \", \" + \"x - 15\"))"],[17,"antoniovandresomapolinomios(\"24154952.7536\" + \", \" + antoniovandremultiplicarpolinomios(\"24154952.7536\" + \", \" + \"x - 17\") + \", \" + antoniovandremultiplicarpolinomios(\"12077476.3768\" + \", \" + \"x - 17\" + \", \" + \"x - 17\") + \", \" + antoniovandremultiplicarpolinomios(\"4025825.45893\" + \", \" + \"x - 17\" + \", \" + \"x - 17\" + \", \" + \"x - 17\"))"],[20,"antoniovandresomapolinomios(\"485165195.41\" + \", \" + antoniovandremultiplicarpolinomios(\"485165195.41\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"242582597.705\" + \", \" + \"x - 20\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"80860865.9017\" + \", \" + \"x - 20\" + \", \" + \"x - 20\" + \", \" + \"x - 20\"))"],[22,"antoniovandresomapolinomios(\"3584912846.13\" + \", \" + antoniovandremultiplicarpolinomios(\"3584912846.13\" + \", \" + \"x - 22\") + \", \" + antoniovandremultiplicarpolinomios(\"1792456423.07\" + \", \" + \"x - 22\" + \", \" + \"x - 22\") + \", \" + antoniovandremultiplicarpolinomios(\"597485474.355\" + \", \" + \"x - 22\" + \", \" + \"x - 22\" + \", \" + \"x - 22\"))"],[25,"antoniovandresomapolinomios(\"72004899337.4\" + \", \" + antoniovandremultiplicarpolinomios(\"72004899337.4\" + \", \" + \"x - 25\") + \", \" + antoniovandremultiplicarpolinomios(\"36002449668.7\" + \", \" + \"x - 25\" + \", \" + \"x - 25\") + \", \" + antoniovandremultiplicarpolinomios(\"12000816556.2\" + \", \" + \"x - 25\" + \", \" + \"x - 25\" + \", \" + \"x - 25\"))"],[30,"antoniovandresomapolinomios(\"10686474582000\" + \", \" + antoniovandremultiplicarpolinomios(\"10686474582000\" + \", \" + \"x - 30\"))"]]],["ln",[[antoniovandreprecisaoreal(2),"i"]],[[0.1,"antoniovandresomapolinomios(\"-2.30258509299\" + \", \" + antoniovandremultiplicarpolinomios(\"10\" + \", \" + \"x - 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"-50\" + \", \" + \"x - 0.1\" + \", \" + \"x - 0.1\"))"],[0.25,"antoniovandresomapolinomios(\"-0.69314718056\" + \", \" + antoniovandremultiplicarpolinomios(\"4\" + \", \" + \"x - 0.25\") + \", \" + antoniovandremultiplicarpolinomios(\"-8\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\") + \", \" + antoniovandremultiplicarpolinomios(\"21.3333333333\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\"))"],[0.5,"antoniovandresomapolinomios(\"-0.69314718056\" + \", \" + antoniovandremultiplicarpolinomios(\"2\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-2\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"2.66666666667\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"],[1,"antoniovandresomapolinomios(antoniovandremultiplicarpolinomios(\"1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.333333333333\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"1.60943791243\" + \", \" + antoniovandremultiplicarpolinomios(\"0.2\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.02\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00266666666667\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"2.30258509299\" + \", \" + antoniovandremultiplicarpolinomios(\"0.1\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.005\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[20,"antoniovandresomapolinomios(\"2.99573227355\" + \", \" + antoniovandremultiplicarpolinomios(\"0.05\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00125\" + \", \" + \"x - 20\" + \", \" + \"x - 20\"))"],[50,"antoniovandresomapolinomios(\"3.91202300543\" + \", \" + antoniovandremultiplicarpolinomios(\"0.02\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0002\" + \", \" + \"x - 50\" + \", \" + \"x - 50\"))"],[100,"antoniovandresomapolinomios(\"4.60517018599\" + \", \" + antoniovandremultiplicarpolinomios(\"0.01\" + \", \" + \"x - 100\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00005\" + \", \" + \"x - 100\" + \", \" + \"x - 100\"))"],[150,"antoniovandresomapolinomios(\"5.0106352941\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00666666666667\" + \", \" + \"x - 150\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00002222222222\" + \", \" + \"x - 150\" + \", \" + \"x - 150\"))"],[200,"antoniovandresomapolinomios(\"5.29831736655\" + \", \" + antoniovandremultiplicarpolinomios(\"0.002\" + \", \" + \"x - 200\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000125\" + \", \" + \"x - 200\" + \", \" + \"x - 200\"))"],[300,"antoniovandresomapolinomios(\"5.70378247466\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00333333333333\" + \", \" + \"x - 300\"))"],[400,"antoniovandresomapolinomios(\"5.99146454711\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0025\" + \", \" + \"x - 400\"))"],[500,"antoniovandresomapolinomios(\"6.21460809842\" + \", \" + antoniovandremultiplicarpolinomios(\"0.002\" + \", \" + \"x - 500\"))"],[1000,"antoniovandresomapolinomios(\"6.90775527898\" + \", \" + antoniovandremultiplicarpolinomios(\"0.001\" + \", \" + \"x - 1000\"))"],[1500,"antoniovandresomapolinomios(\"7.31322038709\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000666666666667\" + \", \" + \"x - 1500\"))"],[2000,"antoniovandresomapolinomios(\"7.60090245954\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0005\" + \", \" + \"x - 2000\"))"],[2500,"antoniovandresomapolinomios(\"7.82404601086\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0004\" + \", \" + \"x - 2500\"))"],[5000,"antoniovandresomapolinomios(\"8.51719319142\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0002\" + \", \" + \"x - 5000\"))"],[10000,"antoniovandresomapolinomios(\"9.21034037198\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0001\" + \", \" + \"x - 10000\"))"],[20000,"antoniovandresomapolinomios(\"9.90348755254\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00005\" + \", \" + \"x - 20000\"))"],[50000,"antoniovandresomapolinomios(\"10.8197782844\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00002\" + \", \" + \"x - 50000\"))"],[100000,"antoniovandresomapolinomios(\"11.512925465\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00001\" + \", \" + \"x - 100000\"))"],[500000,"antoniovandresomapolinomios(\"13.1223633774\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000002\" + \", \" + \"x - 500000\"))"],[1000000,"antoniovandresomapolinomios(\"13.815510558\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000001\" + \", \" + \"x - 1000000\"))"]]],["sqrt",[[0,"i"]],[[1,"antoniovandresomapolinomios(\"1\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.125\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0625\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[2,"antoniovandresomapolinomios(\"1.41421356237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.353553390593\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0441941738242\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.011048543456\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[10,"antoniovandresomapolinomios(\"3.16227766017\" + \", \" + antoniovandremultiplicarpolinomios(\"0.158113883008\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00395284707521\" + \", \" + \"x - 10\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000197642353761\" + \", \" + \"x - 10\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"7.07106781187\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0707106781187\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000353553390593\" + \", \" + \"x - 50\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0000035355339059\" + \", \" + \"x - 50\" + \", \" + \"x - 50\" + \", \" + \"x - 50\"))"],[100,"antoniovandresomapolinomios(\"10\" + \", \" + antoniovandremultiplicarpolinomios(\"0.05\" + \", \" + \"x - 100\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000125\" + \", \" + \"x - 100\" + \", \" + \"x - 100\"))"],[500,"antoniovandresomapolinomios(\"22.360679775\" + \", \" + antoniovandremultiplicarpolinomios(\"0.022360679775\" + \", \" + \"x - 500\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000011180339888\" + \", \" + \"x - 500\" + \", \" + \"x - 500\"))"],[1000,"antoniovandresomapolinomios(\"31.6227766017\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0158113883008\" + \", \" + \"x - 1000\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000039528470752\" + \", \" + \"x - 1000\" + \", \" + \"x - 1000\"))"],[1500,"antoniovandresomapolinomios(\"38.7298334621\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0129099444874\" + \", \" + \"x - 1500\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000021516574146\" + \", \" + \"x - 1500\" + \", \" + \"x - 1500\"))"],[2000,"antoniovandresomapolinomios(\"44.72135955\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0111803398875\" + \", \" + \"x - 2000\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000013975424859\" + \", \" + \"x - 2000\" + \", \" + \"x - 2000\"))"],[3000,"antoniovandresomapolinomios(\"54.7722557505\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00912870929175\" + \", \" + \"x - 3000\"))"],[4000,"antoniovandresomapolinomios(\"63.2455532034\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00790569415042\" + \", \" + \"x - 4000\"))"],[5000,"antoniovandresomapolinomios(\"70.7106781187\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00707106781187\" + \", \" + \"x - 5000\"))"],[7500,"antoniovandresomapolinomios(\"86.6025403784\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0057735026919\" + \", \" + \"x - 7500\"))"],[10000,"antoniovandresomapolinomios(\"100\" + \", \" + antoniovandremultiplicarpolinomios(\"0.005\" + \", \" + \"x - 10000\"))"],[15000,"antoniovandresomapolinomios(\"122.474487139\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00408248290464\" + \", \" + \"x - 15000\"))"],[20000,"antoniovandresomapolinomios(\"141.421356237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00353553390593\" + \", \" + \"x - 20000\"))"]]],["sen",[["i","i"]],[[-6,"antoniovandresomapolinomios(\"0.279415498199\" + \", \" + antoniovandremultiplicarpolinomios(\"0.96017028665\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.1397077491\" + \", \" + \"x + 6\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.160028381108\" + \", \" + \"x + 6\" + \", \" + \"x + 6\" + \", \" + \"x + 6\"))"],[-3,"antoniovandresomapolinomios(\"-0.14112000806\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.9899924966\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.07056000403\" + \", \" + \"x + 3\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.164998749433\" + \", \" + \"x + 3\" + \", \" + \"x + 3\" + \", \" + \"x + 3\"))"],[0,"\"x - 0.166666666667xxx\""],[3,"antoniovandresomapolinomios(\"0.14112000806\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.9899924966\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.07056000403\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.164998749433\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[6,"antoniovandresomapolinomios(\"-0.279415498199\" + \", \" + antoniovandremultiplicarpolinomios(\"0.96017028665\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"0.1297077491\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.160028381108\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"]]],["cos",[["i","i"]],[[-6,"antoniovandresomapolinomios(\"0.96017028665\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.279415498199\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.480085143325\" + \", \" + \"x + 6\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0465692496998\" + \", \" + \"x + 6\" + \", \" + \"x + 6\" + \", \" + \"x + 6\"))"],[-3,"antoniovandresomapolinomios(\"-0.9899924966\" + \", \" + antoniovandremultiplicarpolinomios(\"0.14112000806\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.4949962483\" + \", \" + \"x + 3\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0235200013433\" + \", \" + \"x + 3\" + \", \" + \"x + 3\" + \", \" + \"x + 3\"))"],[0,"\"1 - 0.5xx\""],[3,"antoniovandresomapolinomios(\"-0.9899924966\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.14112000806\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.4949962483\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0235200013433\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[6,"antoniovandresomapolinomios(\"0.96017028665\" + \", \" + antoniovandremultiplicarpolinomios(\"0.279415498199\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.480085143325\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0465692496998\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"]]],["arcsen",[[-1,1]],[[-0.5,"antoniovandresomapolinomios(\"0.523598775598\" + \", \" + antoniovandremultiplicarpolinomios(\"1.154700053838\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.342133492853\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\"))"],[0,"\"x + 0.166666666667xxx\""],[0.5,"antoniovandresomapolinomios(\"0.523598775598\" + \", \" + antoniovandremultiplicarpolinomios(\"1.154700053838\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.342133492853\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"]]],["arccos",[[-1,1]],[[-0.5,"antoniovandresomapolinomios(\"2.09439510239\" + \", \" + antoniovandremultiplicarpolinomios(\"-1.15470053838\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.513200239282\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\"))"],[0,"\"1.57079632679 - x + 0.166666666667xx\""],[0.5,"antoniovandresomapolinomios(\"1.0471975512\" + \", \" + antoniovandremultiplicarpolinomios(\"-1.15470053838\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.38490017946\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.513200239282\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"]]],["arctg",[["i","i"]],[[-50,"antoniovandresomapolinomios(\"-1.55079899282\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000399840063974\" + \", \" + \"x + 50\"))"],[-10,"antoniovandresomapolinomios(\"-1.4711276743\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x + 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-5,"antoniovandresomapolinomios(\"-1.37340076695\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00739644970414\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1,"antoniovandresomapolinomios(\"-0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.25\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[0,"\"x\""],[1,"antoniovandresomapolinomios(\"0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.25\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"1.37340076695\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00739644970414\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"1.4711276743\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x - 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"-0.000980296049405\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"1.55079899282\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000399840063974\" + \", \" + \"x - 50\"))"]]],["arccotg",[["i","i"]],[[-50,"antoniovandresomapolinomios(\"3.12159531962\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.000399840063974\" + \", \" + \"x + 50\"))"],[-10,"antoniovandresomapolinomios(\"3.0419240011\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x + 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-5,"antoniovandresomapolinomios(\"2.94419709374\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00739644970414\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1,"antoniovandresomapolinomios(\"2.35619449019\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.25\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[0,"\"1.57079632679 - x\""],[1,"antoniovandresomapolinomios(\"0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.25\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"0.19739555985\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00739644970414\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"0.0996686524912\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.00990099009901\" + \", \" + \"x - 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"0.0199973339732\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.000399840063974\" + \", \" + \"x - 50\"))"]]],["arcsec",[["i",-1],[1,"i"]],[[-5,"antoniovandresomapolinomios(\"1.77215424759\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0408248290464\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00499791753433\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1.5,"antoniovandresomapolinomios(\"2.30052398302\" + \", \" + antoniovandremultiplicarpolinomios(\"0.596284794\" + \", \" + \"x + 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0510204081635\" + \", \" + \"x + 1.5\" + \", \" + \"x + 1.5\"))"],[1.5,"antoniovandresomapolinomios(\"0.841068670568\" + \", \" + antoniovandremultiplicarpolinomios(\"0.596284794\" + \", \" + \"x - 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0510204081635\" + \", \" + \"x - 1.5\" + \", \" + \"x - 1.5\"))"],[5,"antoniovandresomapolinomios(\"1.369438406\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0408248290464\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00499791753433\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"]]],["arccossec",[["i",-1],[1,"i"]],[[-5,"antoniovandresomapolinomios(\"-0.20135792079\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.0408248290464\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00499791753433\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1.5,"antoniovandresomapolinomios(\"-0.729727656227\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.596284794\" + \", \" + \"x + 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0510204081635\" + \", \" + \"x + 1.5\" + \", \" + \"x + 1.5\"))"],[1.5,"antoniovandresomapolinomios(\"0.729727656227\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.596284794\" + \", \" + \"x - 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0510204081635\" + \", \" + \"x - 1.5\" + \", \" + \"x - 1.5\"))"],[5,"antoniovandresomapolinomios(\"0.20135792079\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.0408248290464\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00499791753433\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"]]]];
+	var antoniovandrepolinomiostaylorarr=[["exp",[["i","i"]],[[-10,"antoniovandresomapolinomios(\"0.000045399929763\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000045399929763\" + \", \" + \"x + 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000022699964882\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-7,"antoniovandresomapolinomios(\"0.000911881965555\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000911881965555\" + \", \" + \"x + 7\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000455940982778\" + \", \" + \"x + 7\" + \", \" + \"x + 7\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000151980327592\" + \", \" + \"x + 7\" + \", \" + \"x + 7\" + \", \" + \"x + 7\"))"],[-5,"antoniovandresomapolinomios(\"0.00673794699909\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00673794699909\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00336897349954\" + \", \" + \"x + 5\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00112299116651\" + \", \" + \"x + 5\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-2,"antoniovandresomapolinomios(\"0.135335283237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.135335283237\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0676676416185\" + \", \" + \"x + 2\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0225558805395\" + \", \" + \"x + 2\" + \", \" + \"x + 2\" + \", \" + \"x + 2\"))"],[-1,"antoniovandresomapolinomios(\"0.367879441171\" + \", \" + antoniovandremultiplicarpolinomios(\"0.367879441171\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.183939720586\" + \", \" + \"x + 1\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0613132401952\" + \", \" + \"x + 1\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[(-1) * antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1\" + \", \" + ((-1) * antoniovandreprecisaoreal(5)).toString())"],[0,"\"1\""],[antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1\" + \", \" + (antoniovandreprecisaoreal(5)).toString())"],[1,"antoniovandresomapolinomios(\"2.71828182846\" + \", \" + antoniovandremultiplicarpolinomios(\"2.71828182846\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"1.35914091423\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.45304697141\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[2,"antoniovandresomapolinomios(\"7.38905609893\" + \", \" + antoniovandremultiplicarpolinomios(\"7.38905609893\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"3.69452804947\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"1.23150934982\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[3,"antoniovandresomapolinomios(\"20.0855369232\" + \", \" + antoniovandremultiplicarpolinomios(\"20.0855369232\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"10.0427684616\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"3.3475894872\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[4,"antoniovandresomapolinomios(\"54.5981500331\" + \", \" + antoniovandremultiplicarpolinomios(\"54.5981500331\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"27.2990750165\" + \", \" + \"x - 4\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"9.09969167218\" + \", \" + \"x - 4\" + \", \" + \"x - 4\" + \", \" + \"x - 4\"))"],[5,"antoniovandresomapolinomios(\"148.413159103\" + \", \" + antoniovandremultiplicarpolinomios(\"148.413159103\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"74.2065795513\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"24.7355265172\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[6,"antoniovandresomapolinomios(\"403.428793493\" + \", \" + antoniovandremultiplicarpolinomios(\"403.428793493\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"201.714396747\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"67.2381322488\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"],[7,"antoniovandresomapolinomios(\"1096.63315843\" + \", \" + antoniovandremultiplicarpolinomios(\"1096.63315843\" + \", \" + \"x - 7\") + \", \" + antoniovandremultiplicarpolinomios(\"548.316579215\" + \", \" + \"x - 7\" + \", \" + \"x - 7\") + \", \" + antoniovandremultiplicarpolinomios(\"182.772193072\" + \", \" + \"x - 7\" + \", \" + \"x - 7\" + \", \" + \"x - 7\"))"],[8,"antoniovandresomapolinomios(\"2980.95798704\" + \", \" + antoniovandremultiplicarpolinomios(\"2980.95798704\" + \", \" + \"x - 8\") + \", \" + antoniovandremultiplicarpolinomios(\"1490.47899352\" + \", \" + \"x - 8\" + \", \" + \"x - 8\") + \", \" + antoniovandremultiplicarpolinomios(\"496.826331173\" + \", \" + \"x - 8\" + \", \" + \"x - 8\" + \", \" + \"x - 8\"))"],[9,"antoniovandresomapolinomios(\"8103.08392758\" + \", \" + antoniovandremultiplicarpolinomios(\"8103.08392758\" + \", \" + \"x - 9\") + \", \" + antoniovandremultiplicarpolinomios(\"4051.54196379\" + \", \" + \"x - 9\" + \", \" + \"x - 9\") + \", \" + antoniovandremultiplicarpolinomios(\"1350.51398793\" + \", \" + \"x - 9\" + \", \" + \"x - 9\" + \", \" + \"x - 9\"))"],[10,"antoniovandresomapolinomios(\"22026.4657948\" + \", \" + antoniovandremultiplicarpolinomios(\"22026.4657948\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"11013.2328974\" + \", \" + \"x - 10\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"3671.07763247\" + \", \" + \"x - 10\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[13,"antoniovandresomapolinomios(\"442413.392009\" + \", \" + antoniovandremultiplicarpolinomios(\"442413.392009\" + \", \" + \"x - 13\") + \", \" + antoniovandremultiplicarpolinomios(\"221206.696005\" + \", \" + \"x - 13\" + \", \" + \"x - 13\") + \", \" + antoniovandremultiplicarpolinomios(\"73735.5653348\" + \", \" + \"x - 13\" + \", \" + \"x - 13\" + \", \" + \"x - 13\"))"],[15,"antoniovandresomapolinomios(\"3269017.37247\" + \", \" + antoniovandremultiplicarpolinomios(\"3269017.37247\" + \", \" + \"x - 15\") + \", \" + antoniovandremultiplicarpolinomios(\"1634508.68623\" + \", \" + \"x - 15\" + \", \" + \"x - 15\") + \", \" + antoniovandremultiplicarpolinomios(\"544836.228745\" + \", \" + \"x - 15\" + \", \" + \"x - 15\" + \", \" + \"x - 15\"))"],[17,"antoniovandresomapolinomios(\"24154952.7536\" + \", \" + antoniovandremultiplicarpolinomios(\"24154952.7536\" + \", \" + \"x - 17\") + \", \" + antoniovandremultiplicarpolinomios(\"12077476.3768\" + \", \" + \"x - 17\" + \", \" + \"x - 17\") + \", \" + antoniovandremultiplicarpolinomios(\"4025825.45893\" + \", \" + \"x - 17\" + \", \" + \"x - 17\" + \", \" + \"x - 17\"))"],[20,"antoniovandresomapolinomios(\"485165195.41\" + \", \" + antoniovandremultiplicarpolinomios(\"485165195.41\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"242582597.705\" + \", \" + \"x - 20\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"80860865.9017\" + \", \" + \"x - 20\" + \", \" + \"x - 20\" + \", \" + \"x - 20\"))"],[22,"antoniovandresomapolinomios(\"3584912846.13\" + \", \" + antoniovandremultiplicarpolinomios(\"3584912846.13\" + \", \" + \"x - 22\") + \", \" + antoniovandremultiplicarpolinomios(\"1792456423.07\" + \", \" + \"x - 22\" + \", \" + \"x - 22\") + \", \" + antoniovandremultiplicarpolinomios(\"597485474.355\" + \", \" + \"x - 22\" + \", \" + \"x - 22\" + \", \" + \"x - 22\"))"],[25,"antoniovandresomapolinomios(\"72004899337.4\" + \", \" + antoniovandremultiplicarpolinomios(\"72004899337.4\" + \", \" + \"x - 25\") + \", \" + antoniovandremultiplicarpolinomios(\"36002449668.7\" + \", \" + \"x - 25\" + \", \" + \"x - 25\") + \", \" + antoniovandremultiplicarpolinomios(\"12000816556.2\" + \", \" + \"x - 25\" + \", \" + \"x - 25\" + \", \" + \"x - 25\"))"],[30,"antoniovandresomapolinomios(\"10686474582000\" + \", \" + antoniovandremultiplicarpolinomios(\"10686474582000\" + \", \" + \"x - 30\"))"]]],["ln",[[antoniovandreprecisaoreal(5),"i"]],[[antoniovandreprecisaoreal(5),"((-1) * antoniovandremaximovalorsaida(1)).toString())"],[0.1,"antoniovandresomapolinomios(\"-2.30258509299\" + \", \" + antoniovandremultiplicarpolinomios(\"10\" + \", \" + \"x - 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"-50\" + \", \" + \"x - 0.1\" + \", \" + \"x - 0.1\"))"],[0.25,"antoniovandresomapolinomios(\"-0.69314718056\" + \", \" + antoniovandremultiplicarpolinomios(\"4\" + \", \" + \"x - 0.25\") + \", \" + antoniovandremultiplicarpolinomios(\"-8\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\") + \", \" + antoniovandremultiplicarpolinomios(\"21.3333333333\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\" + \", \" + \"x - 0.25\"))"],[0.5,"antoniovandresomapolinomios(\"-0.69314718056\" + \", \" + antoniovandremultiplicarpolinomios(\"2\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-2\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"2.66666666667\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"],[1,"antoniovandresomapolinomios(antoniovandremultiplicarpolinomios(\"1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.333333333333\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"1.60943791243\" + \", \" + antoniovandremultiplicarpolinomios(\"0.2\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.02\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00266666666667\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"2.30258509299\" + \", \" + antoniovandremultiplicarpolinomios(\"0.1\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.005\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[20,"antoniovandresomapolinomios(\"2.99573227355\" + \", \" + antoniovandremultiplicarpolinomios(\"0.05\" + \", \" + \"x - 20\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00125\" + \", \" + \"x - 20\" + \", \" + \"x - 20\"))"],[50,"antoniovandresomapolinomios(\"3.91202300543\" + \", \" + antoniovandremultiplicarpolinomios(\"0.02\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0002\" + \", \" + \"x - 50\" + \", \" + \"x - 50\"))"],[100,"antoniovandresomapolinomios(\"4.60517018599\" + \", \" + antoniovandremultiplicarpolinomios(\"0.01\" + \", \" + \"x - 100\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00005\" + \", \" + \"x - 100\" + \", \" + \"x - 100\"))"],[150,"antoniovandresomapolinomios(\"5.0106352941\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00666666666667\" + \", \" + \"x - 150\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00002222222222\" + \", \" + \"x - 150\" + \", \" + \"x - 150\"))"],[200,"antoniovandresomapolinomios(\"5.29831736655\" + \", \" + antoniovandremultiplicarpolinomios(\"0.002\" + \", \" + \"x - 200\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000125\" + \", \" + \"x - 200\" + \", \" + \"x - 200\"))"],[300,"antoniovandresomapolinomios(\"5.70378247466\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00333333333333\" + \", \" + \"x - 300\"))"],[400,"antoniovandresomapolinomios(\"5.99146454711\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0025\" + \", \" + \"x - 400\"))"],[500,"antoniovandresomapolinomios(\"6.21460809842\" + \", \" + antoniovandremultiplicarpolinomios(\"0.002\" + \", \" + \"x - 500\"))"],[1000,"antoniovandresomapolinomios(\"6.90775527898\" + \", \" + antoniovandremultiplicarpolinomios(\"0.001\" + \", \" + \"x - 1000\"))"],[1500,"antoniovandresomapolinomios(\"7.31322038709\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000666666666667\" + \", \" + \"x - 1500\"))"],[2000,"antoniovandresomapolinomios(\"7.60090245954\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0005\" + \", \" + \"x - 2000\"))"],[2500,"antoniovandresomapolinomios(\"7.82404601086\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0004\" + \", \" + \"x - 2500\"))"],[5000,"antoniovandresomapolinomios(\"8.51719319142\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0002\" + \", \" + \"x - 5000\"))"],[10000,"antoniovandresomapolinomios(\"9.21034037198\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0001\" + \", \" + \"x - 10000\"))"],[20000,"antoniovandresomapolinomios(\"9.90348755254\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00005\" + \", \" + \"x - 20000\"))"],[50000,"antoniovandresomapolinomios(\"10.8197782844\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00002\" + \", \" + \"x - 50000\"))"],[100000,"antoniovandresomapolinomios(\"11.512925465\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00001\" + \", \" + \"x - 100000\"))"],[500000,"antoniovandresomapolinomios(\"13.1223633774\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000002\" + \", \" + \"x - 500000\"))"],[1000000,"antoniovandresomapolinomios(\"13.815510558\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000001\" + \", \" + \"x - 1000000\"))"]]],["sqrt",[[0,"i"]],[[1,"antoniovandresomapolinomios(\"1\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.125\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0625\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[2,"antoniovandresomapolinomios(\"1.41421356237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.353553390593\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0441941738242\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.011048543456\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[10,"antoniovandresomapolinomios(\"3.16227766017\" + \", \" + antoniovandremultiplicarpolinomios(\"0.158113883008\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00395284707521\" + \", \" + \"x - 10\" + \", \" + \"x - 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000197642353761\" + \", \" + \"x - 10\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"7.07106781187\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0707106781187\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000353553390593\" + \", \" + \"x - 50\" + \", \" + \"x - 50\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0000035355339059\" + \", \" + \"x - 50\" + \", \" + \"x - 50\" + \", \" + \"x - 50\"))"],[100,"antoniovandresomapolinomios(\"10\" + \", \" + antoniovandremultiplicarpolinomios(\"0.05\" + \", \" + \"x - 100\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000125\" + \", \" + \"x - 100\" + \", \" + \"x - 100\"))"],[500,"antoniovandresomapolinomios(\"22.360679775\" + \", \" + antoniovandremultiplicarpolinomios(\"0.022360679775\" + \", \" + \"x - 500\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.000011180339888\" + \", \" + \"x - 500\" + \", \" + \"x - 500\"))"],[1000,"antoniovandresomapolinomios(\"31.6227766017\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0158113883008\" + \", \" + \"x - 1000\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000039528470752\" + \", \" + \"x - 1000\" + \", \" + \"x - 1000\"))"],[1500,"antoniovandresomapolinomios(\"38.7298334621\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0129099444874\" + \", \" + \"x - 1500\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000021516574146\" + \", \" + \"x - 1500\" + \", \" + \"x - 1500\"))"],[2000,"antoniovandresomapolinomios(\"44.72135955\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0111803398875\" + \", \" + \"x - 2000\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0000013975424859\" + \", \" + \"x - 2000\" + \", \" + \"x - 2000\"))"],[3000,"antoniovandresomapolinomios(\"54.7722557505\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00912870929175\" + \", \" + \"x - 3000\"))"],[4000,"antoniovandresomapolinomios(\"63.2455532034\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00790569415042\" + \", \" + \"x - 4000\"))"],[5000,"antoniovandresomapolinomios(\"70.7106781187\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00707106781187\" + \", \" + \"x - 5000\"))"],[7500,"antoniovandresomapolinomios(\"86.6025403784\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0057735026919\" + \", \" + \"x - 7500\"))"],[10000,"antoniovandresomapolinomios(\"100\" + \", \" + antoniovandremultiplicarpolinomios(\"0.005\" + \", \" + \"x - 10000\"))"],[15000,"antoniovandresomapolinomios(\"122.474487139\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00408248290464\" + \", \" + \"x - 15000\"))"],[20000,"antoniovandresomapolinomios(\"141.421356237\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00353553390593\" + \", \" + \"x - 20000\"))"]]],["sen",[["i","i"]],[[-6,"antoniovandresomapolinomios(\"0.279415498199\" + \", \" + antoniovandremultiplicarpolinomios(\"0.96017028665\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.1397077491\" + \", \" + \"x + 6\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.160028381108\" + \", \" + \"x + 6\" + \", \" + \"x + 6\" + \", \" + \"x + 6\"))"],[-5,"antoniovandresomapolinomios(\"0.958924274663\" + \", \" + antoniovandremultiplicarpolinomios(\"0.283662185463\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.479462137332\" + \", \" + \"x + 5\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0472770309105\" + \", \" + \"x + 5\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-4,"antoniovandresomapolinomios(\"0.756802495308\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.653643620864\" + \", \" + \"x + 4\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.378401247654\" + \", \" + \"x + 4\" + \", \" + \"x + 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.108940603477\" + \", \" + \"x + 4\" + \", \" + \"x + 4\" + \", \" + \"x + 4\"))"],[-3,"antoniovandresomapolinomios(\"-0.14112000806\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.9899924966\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.07056000403\" + \", \" + \"x + 3\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.164998749433\" + \", \" + \"x + 3\" + \", \" + \"x + 3\" + \", \" + \"x + 3\"))"],[-2,"antoniovandresomapolinomios(\"-0.909297426826\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.416146836547\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.454648713413\" + \", \" + \"x + 2\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0693578060912\" + \", \" + \"x + 2\" + \", \" + \"x + 2\" + \", \" + \"x + 2\"))"],[-1,"antoniovandresomapolinomios(\"-0.841470984808\" + \", \" + antoniovandremultiplicarpolinomios(\"0.540302305868\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.420735492404\" + \", \" + \"x + 1\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0900503843113\" + \", \" + \"x + 1\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[-0.1,"antoniovandresomapolinomios(\"-0.0998334166468\" + \", \" + antoniovandremultiplicarpolinomios(\"0.995004165278\" + \", \" + \"x + 0.1\"))"],[(-1) * antoniovandreprecisaoreal(5),"((-1) * antoniovandreprecisaoreal(5)).toString()"],[0,"\"0\""],[antoniovandreprecisaoreal(5),"(antoniovandreprecisaoreal(5)).toString()"],[0.1,"antoniovandresomapolinomios(\"0.0998334166468\" + \", \" + antoniovandremultiplicarpolinomios(\"0.995004165278\" + \", \" + \"x - 0.1\"))"],[1,"antoniovandresomapolinomios(\"0.841470984808\" + \", \" + antoniovandremultiplicarpolinomios(\"0.540302305868\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.420735492404\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0900503843113\" + \", \" + \"x + 1\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[2,"antoniovandresomapolinomios(\"0.909297426826\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.416146836547\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.454648713413\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0693578060912\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[3,"antoniovandresomapolinomios(\"0.14112000806\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.9899924966\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.07056000403\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.164998749433\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[4,"antoniovandresomapolinomios(\"-0.756802495308\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.653643620864\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.378401247654\" + \", \" + \"x - 4\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.108940603477\" + \", \" + \"x - 4\" + \", \" + \"x - 4\" + \", \" + \"x - 4\"))"],[5,"antoniovandresomapolinomios(\"-0.958924274663\" + \", \" + antoniovandremultiplicarpolinomios(\"0.283662185463\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.479462137332\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0472770309105\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[6,"antoniovandresomapolinomios(\"-0.279415498199\" + \", \" + antoniovandremultiplicarpolinomios(\"0.96017028665\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"0.1297077491\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.160028381108\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"]]],["cos",[["i","i"]],[[-6,"antoniovandresomapolinomios(\"0.96017028665\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.279415498199\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.480085143325\" + \", \" + \"x + 6\" + \", \" + \"x + 6\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0465692496998\" + \", \" + \"x + 6\" + \", \" + \"x + 6\" + \", \" + \"x + 6\"))"],[-5,"antoniovandresomapolinomios(\"0.283662185463\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.958924274663\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.141831092731\" + \", \" + \"x + 5\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.159820712444\" + \", \" + \"x + 5\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-4,"antoniovandresomapolinomios(\"-0.653643620864\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.756802495308\" + \", \" + \"x + 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.326821810432\" + \", \" + \"x + 4\" + \", \" + \"x + 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.126133749218\" + \", \" + \"x + 4\" + \", \" + \"x + 4\" + \", \" + \"x + 4\"))"],[-3,"antoniovandresomapolinomios(\"-0.9899924966\" + \", \" + antoniovandremultiplicarpolinomios(\"0.14112000806\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.4949962483\" + \", \" + \"x + 3\" + \", \" + \"x + 3\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0235200013433\" + \", \" + \"x + 3\" + \", \" + \"x + 3\" + \", \" + \"x + 3\"))"],[-2,"antoniovandresomapolinomios(\"-0.416146836547\" + \", \" + antoniovandremultiplicarpolinomios(\"0.909297426826\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.208073418274\" + \", \" + \"x + 2\" + \", \" + \"x + 2\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.151549571138\" + \", \" + \"x + 2\" + \", \" + \"x + 2\" + \", \" + \"x + 2\"))"],[-1,"antoniovandresomapolinomios(\"0.540302305868\" + \", \" + antoniovandremultiplicarpolinomios(\"0.841470984808\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.270151152934\" + \", \" + \"x + 1\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.140245164135\" + \", \" + \"x + 1\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[-0.1,"antoniovandresomapolinomios(\"0.995004165278\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0998334166468\" + \", \" + \"x + 0.1\"))"],[(-1) * antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1\" + \", \" + ((-1) * antoniovandreprecisaoreal(5)).toString())"],[0,"\"1\""],[antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1\" + \", \" + ((-1) * antoniovandreprecisaoreal(5)).toString())"],[0.1,"antoniovandresomapolinomios(\"0.995004165278\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.0998334166468\" + \", \" + \"x - 0.1\"))"],[1,"antoniovandresomapolinomios(\"0.540302305868\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.841470984808\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.270151152934\" + \", \" + \"x - 1\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.140245164135\" + \", \" + \"x - 1\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[2,"antoniovandresomapolinomios(\"-0.416146836547\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.909297426826\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.208073418274\" + \", \" + \"x - 2\" + \", \" + \"x - 2\") + \", \" + antoniovandremultiplicarpolinomios(\"0.151549571138\" + \", \" + \"x - 2\" + \", \" + \"x - 2\" + \", \" + \"x - 2\"))"],[3,"antoniovandresomapolinomios(\"-0.9899924966\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.14112000806\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.4949962483\" + \", \" + \"x - 3\" + \", \" + \"x - 3\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0235200013433\" + \", \" + \"x - 3\" + \", \" + \"x - 3\" + \", \" + \"x - 3\"))"],[4,"antoniovandresomapolinomios(\"-0.653643620864\" + \", \" + antoniovandremultiplicarpolinomios(\"0.756802495308\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"0.326821810432\" + \", \" + \"x - 4\" + \", \" + \"x - 4\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.126133749218\" + \", \" + \"x - 4\" + \", \" + \"x - 4\" + \", \" + \"x - 4\"))"],[5,"antoniovandresomapolinomios(\"0.283662185463\" + \", \" + antoniovandremultiplicarpolinomios(\"0.958924274663\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.141831092731\" + \", \" + \"x - 5\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.159820712444\" + \", \" + \"x - 5\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[6,"antoniovandresomapolinomios(\"0.96017028665\" + \", \" + antoniovandremultiplicarpolinomios(\"0.279415498199\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.480085143325\" + \", \" + \"x - 6\" + \", \" + \"x - 6\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0465692496998\" + \", \" + \"x - 6\" + \", \" + \"x - 6\" + \", \" + \"x - 6\"))"]]],["arcsen",[[-1,1]],[[-0.5,"antoniovandresomapolinomios(\"-0.523598775598\" + \", \" + antoniovandremultiplicarpolinomios(\"1.154700053838\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.342133492853\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\"))"],[-0.1,"antoniovandresomapolinomios(\"-0.100167421162\" + \", \" + antoniovandremultiplicarpolinomios(\"1.00503781526\" + \", \" + \"x + 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.050759485619\" + \", \" + \"x + 0.1\" + \", \" + \"x + 0.1\"))"],[(-1) * antoniovandreprecisaoreal(5),"((-1) * antoniovandreprecisaoreal(5)).toString()"],[0,"\"0\""],[antoniovandreprecisaoreal(5),"(antoniovandreprecisaoreal(5)).toString()"],[0.1,"antoniovandresomapolinomios(\"0.100167421162\" + \", \" + antoniovandremultiplicarpolinomios(\"1.00503781526\" + \", \" + \"x - 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.050759485619\" + \", \" + \"x - 0.1\" + \", \" + \"x - 0.1\"))"],[0.5,"antoniovandresomapolinomios(\"0.523598775598\" + \", \" + antoniovandremultiplicarpolinomios(\"1.154700053838\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.342133492853\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"]]],["arccos",[[-1,1]],[[-0.5,"antoniovandresomapolinomios(\"2.09439510239\" + \", \" + antoniovandremultiplicarpolinomios(\"-1.15470053838\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.38490017946\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.513200239282\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\" + \", \" + \"x + 0.5\"))"],[-0.1,"antoniovandresomapolinomios(\"1.67096374796\" + \", \" + antoniovandremultiplicarpolinomios(\"-1.00503781526\" + \", \" + \"x + 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.050759485619\" + \", \" + \"x + 0.1\" + \", \" + \"x + 0.1\"))"],[(-1) * antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1.57079632679\" + \", \" + ((-1) * antoniovandreprecisaoreal(5)).toString())"],[0,"\"1.57079632679\""],[antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1.57079632679\" + \", \" + (antoniovandreprecisaoreal(5)).toString())"],[0.1,"antoniovandresomapolinomios(\"1.47062890563\" + \", \" + antoniovandremultiplicarpolinomios(\"1.00503781526\" + \", \" + \"x - 0.1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.050759485619\" + \", \" + \"x - 0.1\" + \", \" + \"x - 0.1\"))"],[0.5,"antoniovandresomapolinomios(\"1.0471975512\" + \", \" + antoniovandremultiplicarpolinomios(\"-1.15470053838\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.38490017946\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.513200239282\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\" + \", \" + \"x - 0.5\"))"]]],["arctg",[["i","i"]],[[-50,"antoniovandresomapolinomios(\"-1.55079899282\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000399840063974\" + \", \" + \"x + 50\"))"],[-10,"antoniovandresomapolinomios(\"-1.4711276743\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x + 10\") + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-5,"antoniovandresomapolinomios(\"-1.37340076695\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00739644970414\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1,"antoniovandresomapolinomios(\"-0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.25\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[(-1) * antoniovandreprecisaoreal(5),"((-1) * antoniovandreprecisaoreal(5)).toString()"],[0,"\"0\""],[antoniovandreprecisaoreal(5),"(antoniovandreprecisaoreal(5)).toString()"],[1,"antoniovandresomapolinomios(\"0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.25\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"1.37340076695\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00739644970414\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"1.4711276743\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x - 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"-0.000980296049405\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"1.55079899282\" + \", \" + antoniovandremultiplicarpolinomios(\"0.000399840063974\" + \", \" + \"x - 50\"))"]]],["arccotg",[["i","i"]],[[-50,"antoniovandresomapolinomios(\"3.12159531962\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.000399840063974\" + \", \" + \"x + 50\"))"],[-10,"antoniovandresomapolinomios(\"3.0419240011\" + \", \" + antoniovandremultiplicarpolinomios(\"0.00990099009901\" + \", \" + \"x + 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x + 10\" + \", \" + \"x + 10\"))"],[-5,"antoniovandresomapolinomios(\"2.94419709374\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00739644970414\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1,"antoniovandresomapolinomios(\"2.35619449019\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x + 1\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.25\" + \", \" + \"x + 1\" + \", \" + \"x + 1\"))"],[(-1) * antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1.57079632679\" + \", \" + ((-1) * antoniovandreprecisaoreal(5)).toString())"],[0,"\"1.57079632679\""],[antoniovandreprecisaoreal(5),"antoniovandresomapolinomios(\"1.57079632679\" + \", \" + (antoniovandreprecisaoreal(5)).toString())"],[1,"antoniovandresomapolinomios(\"0.785398163397\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.5\" + \", \" + \"x - 1\") + \", \" + antoniovandremultiplicarpolinomios(\"0.25\" + \", \" + \"x - 1\" + \", \" + \"x - 1\"))"],[5,"antoniovandresomapolinomios(\"0.19739555985\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0384615384615\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00739644970414\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"],[10,"antoniovandresomapolinomios(\"0.0996686524912\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.00990099009901\" + \", \" + \"x - 10\")  + \", \" + antoniovandremultiplicarpolinomios(\"0.000980296049405\" + \", \" + \"x - 10\" + \", \" + \"x - 10\"))"],[50,"antoniovandresomapolinomios(\"0.0199973339732\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.000399840063974\" + \", \" + \"x - 50\"))"]]],["arcsec",[["i",-1],[1,"i"]],[[-5,"antoniovandresomapolinomios(\"1.77215424759\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0408248290464\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00499791753433\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1.5,"antoniovandresomapolinomios(\"2.30052398302\" + \", \" + antoniovandremultiplicarpolinomios(\"0.596284794\" + \", \" + \"x + 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0510204081635\" + \", \" + \"x + 1.5\" + \", \" + \"x + 1.5\"))"],[1.5,"antoniovandresomapolinomios(\"0.841068670568\" + \", \" + antoniovandremultiplicarpolinomios(\"0.596284794\" + \", \" + \"x - 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.0510204081635\" + \", \" + \"x - 1.5\" + \", \" + \"x - 1.5\"))"],[5,"antoniovandresomapolinomios(\"1.369438406\" + \", \" + antoniovandremultiplicarpolinomios(\"0.0408248290464\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"-0.00499791753433\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"]]],["arccossec",[["i",-1],[1,"i"]],[[-5,"antoniovandresomapolinomios(\"-0.20135792079\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.0408248290464\" + \", \" + \"x + 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00499791753433\" + \", \" + \"x + 5\" + \", \" + \"x + 5\"))"],[-1.5,"antoniovandresomapolinomios(\"-0.729727656227\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.596284794\" + \", \" + \"x + 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0510204081635\" + \", \" + \"x + 1.5\" + \", \" + \"x + 1.5\"))"],[1.5,"antoniovandresomapolinomios(\"0.729727656227\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.596284794\" + \", \" + \"x - 1.5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.0510204081635\" + \", \" + \"x - 1.5\" + \", \" + \"x - 1.5\"))"],[5,"antoniovandresomapolinomios(\"0.20135792079\" + \", \" + antoniovandremultiplicarpolinomios(\"-0.0408248290464\" + \", \" + \"x - 5\") + \", \" + antoniovandremultiplicarpolinomios(\"0.00499791753433\" + \", \" + \"x - 5\" + \", \" + \"x - 5\"))"]]]];
 	var d;
 	var md;
 	var out;
 	var flag = 0;
 
 	if (avisoanexo == -1)
-		return "Nos polinômios de Taylor precompilados o valor de \"a\" é tomado com o mais próximo dos disponíveis na base de dados. O \"n\" representa o número de derivadas calculadas na precompilação. Aqui não posso aplicar muitas derivadas por limitações do JavaScript nativo.\n\nFunções disponíveis na base de dados (última atualização: 18-11-2019):\n\n\"exp\": exponencial base \"e\", (a, n) em {(-10, 2), (-7, 3), (-5, 3), (-2, 3), (-1, 3), (0, 3), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (13, 3), (15, 3), (17, 3), (20, 3), (22, 3), (25, 3), (30, 1)};\n\n\"ln\": logaritmo natural, (a, n) em {(0.1, 2), (0.25, 3), (0.5, 3), (1, 3, (5, 3), (10, 2), (20, 2), (50, 2), (100, 2), (150, 2), (200, 2), (300, 1), (400, 1), (500, 1), (1000, 1), (1500, 1), (2000, 1), (2500, 1), (5000, 1), (10000, 1), (20000, 1), (50000, 1), (100000, 1), (500000, 1), (1000000, 1)};\n\n\"sqrt\": raiz quadrada, (a, n) em {(1, 3), (2, 3), (10, 3), (50, 3), (100, 2), (500, 2), (1000, 2), (1500, 2), (2000, 2), (3000, 1), (4000, 1), (5000, 1), (7500, 1), (10000, 1), (15000, 1), (20000, 1)};\n\n\"sen\": seno, (a, n) em {(-6, 3), (-3, 3), (0, 3), (3, 3), (6, 3)};\n\n\"cos\": cosseno, (a, n) em {(-6, 3), (-3, 3), (0, 2), (3, 3), (6, 3)};\n\n\"arcsen\": arco-seno, (a, n) em {(-0.5, 3), (0, 3), (0.5, 3)};\n\n\"arccos\": arco-cosseno, (a, n) em {(-0.5, 3), (0, 3), (0.5, 3)};\n\n\"arctg\": arco-tangente, (a, n) em {(-50, 1), (-10, 2), (-5, 2), (-1, 2), (0, 2), (1, 2), (5, 2), (10, 2), (50, 1)};\n\n\"arccotg\": arco-cotangente, (a, n) em {(-50, 1), (-10, 2), (-5, 2), (-1, 2), (0, 2), (1, 2), (5, 2), (10, 2), (50, 1)};\n\n\"arcsec\": arco-secante, (a, n) em {(-5, 2), (-1.5, 2), (1.5, 2), (5, 2)};\n\n\"arccossec\": arco-cossecante, (a, n) em {(-5, 2), (-1.5, 2), (1.5, 2), (5, 2)}.";
+		return "Nos polinômios de Taylor precompilados o valor de \"a\" é tomado com o mais próximo dos disponíveis na base de dados. O \"n\" representa o número de derivadas calculadas na precompilação. Aqui não posso aplicar muitas derivadas por limitações do JavaScript nativo.\n\nFunções disponíveis na base de dados (última atualização: 08-03-2020):\n\n\"exp\": exponencial base \"e\", (a, n) em {(-10, 2), (-7, 3), (-5, 3), (-2, 3), (-1, 3), (0, 3), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3), (7, 3), (8, 3), (9, 3), (10, 3), (13, 3), (15, 3), (17, 3), (20, 3), (22, 3), (25, 3), (30, 1)};\n\n\"ln\": logaritmo natural, (a, n) em {(0.1, 2), (0.25, 3), (0.5, 3), (1, 3, (5, 3), (10, 2), (20, 2), (50, 2), (100, 2), (150, 2), (200, 2), (300, 1), (400, 1), (500, 1), (1000, 1), (1500, 1), (2000, 1), (2500, 1), (5000, 1), (10000, 1), (20000, 1), (50000, 1), (100000, 1), (500000, 1), (1000000, 1)};\n\n\"sqrt\": raiz quadrada, (a, n) em {(1, 3), (2, 3), (10, 3), (50, 3), (100, 2), (500, 2), (1000, 2), (1500, 2), (2000, 2), (3000, 1), (4000, 1), (5000, 1), (7500, 1), (10000, 1), (15000, 1), (20000, 1)};\n\n\"sen\": seno, (a, n) em {(-6, 3), (-5, 3), (-4, 3), (-3, 3), (-2, 3), (-1, 3), (-0.1, 1), (0, 0), (0.1, 1), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3)};\n\n\"cos\": cosseno, (a, n) em {(-6, 3), (-5, 3), (-4, 3), (-3, 3), (-2, 3), (-1, 3), (-0.1, 1), (0, 0), (0.1, 1), (1, 3), (2, 3), (3, 3), (4, 3), (5, 3), (6, 3)};\n\n\"arcsen\": arco-seno, (a, n) em {(-0.5, 3), (-0.1, 2), (0, 0), (0.1, 2), (0.5, 3)};\n\n\"arccos\": arco-cosseno, (a, n) em {(-0.5, 3), (-0.1, 2), (0, 0), (0.1, 2), (0.5, 3)};\n\n\"arctg\": arco-tangente, (a, n) em {(-50, 1), (-10, 2), (-5, 2), (-1, 2), (0, 0), (1, 2), (5, 2), (10, 2), (50, 1)};\n\n\"arccotg\": arco-cotangente, (a, n) em {(-50, 1), (-10, 2), (-5, 2), (-1, 2), (0, 0), (1, 2), (5, 2), (10, 2), (50, 1)};\n\n\"arcsec\": arco-secante, (a, n) em {(-5, 2), (-1.5, 2), (1.5, 2), (5, 2)};\n\n\"arccossec\": arco-cossecante, (a, n) em {(-5, 2), (-1.5, 2), (1.5, 2), (5, 2)}.";
 
 	if (antoniovandrenumeroreal(v.toString()) == "e")
 		return "e";
@@ -4379,10 +4385,10 @@ function antoniovandrepotencia(a, b)
 
 			b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-			return exp(eval(b.toString()) * ln(eval(a).toString()));
+			return antoniovandreexp(eval(b.toString()) * antoniovandreln(eval(a).toString()));
 			}
 		else
-			return exp(eval(b * ln(eval(a).toString())));
+			return antoniovandreexp(eval(b * antoniovandreln(eval(a).toString())));
 		}
 	else
 		{
@@ -4395,10 +4401,10 @@ function antoniovandrepotencia(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				return exp(eval(b.toString()) * ln(a));
+				return antoniovandreexp(eval(b.toString()) * antoniovandreln(a));
 				}
 			else
-				return exp(b * ln(a));
+				return antoniovandreexp(b * antoniovandreln(a));
 			}
 		else
 			{
@@ -4410,34 +4416,34 @@ function antoniovandrepotencia(a, b)
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
 				if (eval(b) % 2 == 0)
-					return exp(eval(eval(b) * ln(modulo(a))))
+					return antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 				else
 					{
 					if ((eval(b) - 1) % 2 == 0)
-						return (-1) * exp(eval(eval(b) * ln(modulo(a))))
+						return (-1) * antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 					else
 						{
 						if (antoniovandrefracaogeratriz(eval(b), 1)[1] % 2 == 0)
 							return "O resultado da potência não é um número real."
 						else
-							return (-1) * exp(eval(eval(b) * ln(modulo(a))))
+							return (-1) * antoniovandreexp(eval(eval(b) * antoniovandreln(antoniovandremodulo(a))))
 						}
 					}
 				}
 			else
 				{
 				if (b % 2 == 0)
-					return exp(eval(b * ln(modulo(a))))
+					return antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 				else
 					{
 					if ((b - 1) % 2 == 0)
-						return (-1) * exp(eval(b * ln(modulo(a))))
+						return (-1) * antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 					else
 						{
 						if (antoniovandrefracaogeratriz(b, 1)[1] % 2 == 0)
 							return "O resultado da potência não é um número real."
 						else
-							return (-1) * exp(eval(b * ln(modulo(a))))
+							return (-1) * antoniovandreexp(eval(b * antoniovandreln(antoniovandremodulo(a))))
 						}
 					}
 				}
@@ -4466,10 +4472,10 @@ function antoniovandresqrtn(x, n)
 
 			n = antoniovandretraduzirexpressaofuncional(n, 0)
 
-			return potencia(eval(x), 1 / eval(n));
+			return antoniovandrepotencia(eval(x), 1 / eval(n));
 			}
 		else
-			return potencia(eval(x), 1 / n)
+			return antoniovandrepotencia(eval(x), 1 / n)
 		}
 	else
 		{
@@ -4480,10 +4486,10 @@ function antoniovandresqrtn(x, n)
 
 			n = antoniovandretraduzirexpressaofuncional(n, 0)
 
-			return potencia(x, 1 / eval(n));
+			return antoniovandrepotencia(x, 1 / eval(n));
 			}
 		else
-			return potencia(x, 1 / n)
+			return antoniovandrepotencia(x, 1 / n)
 		}
 	}
 
@@ -4546,21 +4552,21 @@ function antoniovandrelog10(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var n = ln(eval(x));
+		var n = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(10);
+			return  n / antoniovandreln(10);
 		}
 	else
 		{
-		var n = ln(x);
+		var n = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(10);
+			return  n / antoniovandreln(10);
 		}
 	}
 
@@ -4578,21 +4584,21 @@ function antoniovandrelog2(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var n = ln(eval(x));
+		var n = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(2);
+			return  n / antoniovandreln(2);
 		}
 	else
 		{
-		var n = ln(x);
+		var n = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(n.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
 		else
-			return  n / ln(2);
+			return  n / antoniovandreln(2);
 		}
 	}
 
@@ -4610,7 +4616,7 @@ function antoniovandrelog(a, b)
 
 		a = antoniovandretraduzirexpressaofuncional(a, 0)
 
-		var la = ln(eval(a));
+		var la = antoniovandreln(eval(a));
 
 		if (antoniovandrenumeroreal(la.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
@@ -4623,7 +4629,7 @@ function antoniovandrelog(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				var lb = ln(eval(b));
+				var lb = antoniovandreln(eval(b));
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4632,7 +4638,7 @@ function antoniovandrelog(a, b)
 				}
 			else
 				{
-				var lb = ln(b);
+				var lb = antoniovandreln(b);
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4643,7 +4649,7 @@ function antoniovandrelog(a, b)
 		}
 	else
 		{
-		var la = ln(a);
+		var la = antoniovandreln(a);
 
 		if (antoniovandrenumeroreal(la.toString()) == "e")
 			return "O logaritimando deve ser um número real positivo."
@@ -4656,7 +4662,7 @@ function antoniovandrelog(a, b)
 
 				b = antoniovandretraduzirexpressaofuncional(b, 0)
 
-				var lb = ln(eval(b));
+				var lb = antoniovandreln(eval(b));
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4665,7 +4671,7 @@ function antoniovandrelog(a, b)
 				}
 			else
 				{
-				var lb = ln(b);
+				var lb = antoniovandreln(b);
 
 				if ((antoniovandrenumeroreal(lb.toString()) == "e") || (lb == 0))
 					return "A base do logaritmo deve ser real positiva e diferente de 1."
@@ -4690,21 +4696,21 @@ function antoniovandresqrt(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		var lx = ln(eval(x));
+		var lx = antoniovandreln(eval(x));
 
 		if (antoniovandrenumeroreal(lx.toString()) == "e")
 			return "O radicando deve ser um número real não negativo."
 		else
-			return exp("0.5 * " + lx.toString());
+			return antoniovandreexp("0.5 * " + lx.toString());
 		}
 	else
 		{
-		var lx = ln(x);
+		var lx = antoniovandreln(x);
 
 		if (antoniovandrenumeroreal(lx.toString()) == "e")
 			return "O radicando deve ser um número real não negativo."
 		else
-			return exp("0.5 * " + lx.toString());
+			return antoniovandreexp("0.5 * " + lx.toString());
 		}
 	}
 
@@ -4722,27 +4728,27 @@ function antoniovandresqrt3(x)
 
 		x = antoniovandretraduzirexpressaofuncional(x, 0)
 
-		return sqrt3(eval(x));
+		return antoniovandresqrt3(eval(x));
 		}
 	else
 		{
 		if (! (antoniovandrenumerorealnaonegativo(x.toString()) == "e"))
 			{
-			var lx = ln(x);
+			var lx = antoniovandreln(x);
 
 			if (antoniovandrenumeroreal(lx.toString()) == "e")
 				return lx;
 
-			return exp("(1/3) * " + lx.toString());
+			return antoniovandreexp("(1/3) * " + lx.toString());
 			}
 		else
 			{
-			var lxn = ln("(-1) * " + x);
+			var lxn = antoniovandreln("(-1) * " + x);
 
 			if (antoniovandrenumeroreal(lxn.toString()) == "e")
 				return lxn;
 
-			return (-1) * exp("(1/3) * " + lxn.toString());
+			return (-1) * antoniovandreexp("(1/3) * " + lxn.toString());
 			}
 		}
 	}
@@ -4751,8 +4757,6 @@ function antoniovandresqrt3(x)
 
 function antoniovandresen(x)
 	{
-	var m = x;
-
 	if (arguments.length != 1)
 		return "e";
 
@@ -4767,6 +4771,8 @@ function antoniovandresen(x)
 		}
 	else
 		{
+		var m = x;
+
 		if (x >= 0)
 			{
 			while (m > 2 * Math.PI)
@@ -4786,8 +4792,6 @@ function antoniovandresen(x)
 
 function antoniovandrecos(x)
 	{
-	var m = x;
-
 	if (arguments.length != 1)
 		return "e";
 
@@ -4802,6 +4806,8 @@ function antoniovandrecos(x)
 		}
 	else
 		{
+		var m = x;
+
 		if (x >= 0)
 			{
 			while (m > 2 * Math.PI)
@@ -4824,13 +4830,13 @@ function antoniovandretg(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var c = cos(x);
+	var c = antoniovandrecos(x);
 
 	if (c == "e")
 		return "e";
 
-	if (c != 0)
-		return sen(x) / c
+	if (Math.abs(c) > antoniovandreprecisaoreal(4))
+		return antoniovandresen(x) / c
 	else
 		return "O argumento da tangente deve ser diferente de pi/2 + k*pi, com k inteiro.";
 	}
@@ -4842,13 +4848,13 @@ function antoniovandrecotg(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var s = sen(x);
+	var s = antoniovandresen(x);
 
 	if (s == "e")
 		return "e";
 
-	if (s != 0)
-		return cos(x) / s
+	if (Math.abs(s) > antoniovandreprecisaoreal(4))
+		return antoniovandrecos(x) / s
 	else
 		return "O argumento da cotangente deve ser diferente de k*pi, com k inteiro.";
 	}
@@ -4860,12 +4866,12 @@ function antoniovandresec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var c = cos(x);
+	var c = antoniovandrecos(x);
 
 	if (c == "e")
 		return "e";
 
-	if (c != 0)
+	if (Math.abs(c) > antoniovandreprecisaoreal(4))
 		return 1 / c
 	else
 		return "O argumento da secante deve ser diferente de pi/2 + k*pi, com k inteiro.";
@@ -4878,12 +4884,12 @@ function antoniovandrecossec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var s = sen(x);
+	var s = antoniovandresen(x);
 
 	if (s == "e")
 		return "e";
 
-	if (s != 0)
+	if (Math.abs(s) > antoniovandreprecisaoreal(4))
 		return 1 / s
 	else
 		return "O argumento da cossecante deve ser diferente de k*pi, com k inteiro.";
@@ -4976,7 +4982,7 @@ function antoniovandrearcsec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return arccos("1 / (" + x + ")");
+	return antoniovandrearccos("1 / (" + x + ")");
 	}
 
 // Arco-cossecante. Retorna a string "e" se um erro genérico ocorre.
@@ -4986,7 +4992,7 @@ function antoniovandrearccossec(x)
 	if (arguments.length != 1)
 		return "e";
 
-	return arcsen("1 / (" + x + ")");
+	return antoniovandrearcsen("1 / (" + x + ")");
 	}
 
 // Seno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
@@ -4996,8 +5002,8 @@ function antoniovandresenh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ex = exp(x);
-	var exn =  exp((-1) * x);
+	var ex = antoniovandreexp(x);
+	var exn =  antoniovandreexp((-1) * x);
 
 	if (antoniovandrenumeroreal(ex.toString()) == "e")
 		return ex;
@@ -5015,8 +5021,8 @@ function antoniovandrecosh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ex = exp(x);
-	var exn =  exp((-1) * x);
+	var ex = antoniovandreexp(x);
+	var exn =  antoniovandreexp((-1) * x);
 
 	if (antoniovandrenumeroreal(ex.toString()) == "e")
 		return ex;
@@ -5034,8 +5040,8 @@ function antoniovandretgh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var shx = senh(x);
-	var chx = cosh(x);
+	var shx = antoniovandresenh(x);
+	var chx = antoniovandrecosh(x);
 
 	if (antoniovandrenumeroreal(shx.toString()) == "e")
 		return shx;
@@ -5053,13 +5059,13 @@ function antoniovandrecotgh(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var sh = senh(x);
+	var sh = antoniovandresenh(x);
 
 	if (antoniovandrenumeroreal(sh.toString()) == "e")
 		return sh;
 
-	if (sh != 0)
-		return cosh(x) / sh;
+	if (Math.abs(sh) > antoniovandreprecisaoreal(4))
+		return antoniovandrecosh(x) / sh;
 	else
 		return "O argumento da cotangente hiperbólica deve ser diferente de 0.";
 	}
@@ -5071,7 +5077,7 @@ function antoniovandresech(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var ch = cosh(x);
+	var ch = antoniovandrecosh(x);
 
 	if (antoniovandrenumeroreal(ch.toString()) == "e")
 		return ch;
@@ -5086,12 +5092,12 @@ function antoniovandrecossech(x)
 	if (arguments.length != 1)
 		return "e";
 
-	var sh = senh(x);
+	var sh = antoniovandresenh(x);
 
 	if (antoniovandrenumeroreal(sh.toString()) == "e")
 		return sh;
 
-	if (sh != 0)
+	if (Math.abs(sh) > antoniovandreprecisaoreal(4))
 		return 1 / sh;
 	else
 		return "O argumento da cossecante hiperbólica deve ser diferente de 0.";
@@ -5821,8 +5827,16 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
-	ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+	if (ponto2 != 0)
+		{
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+		}
+	else
+		{
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+		}
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -5905,7 +5919,10 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	result = (result2 - result1) / (2 * antoniovandreprecisaoreal(2));
+	if (ponto2 != 0)
+		result = (result2 - result1) / (2 * antoniovandreprecisaoreal(2))
+	else
+		result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3))
 
 	if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(5);
@@ -6006,7 +6023,7 @@ function antoniovandretraduzirexpressaofuncional(str, verificacao)
 	return antoniovandresubstituirstrings(str, antoniovandreoperadoresfuncoesconstantes(3));
 	}
 
-// Limite de uma função contínua. Argumentos: primeiro: uma string, separada por ponto e vírgula ";", onde há a expressão da função, que deve ser na variável "x", o ponto do domínio considerado, e o tipo de cálculo: 0 para limite; 1 para limite lateral à esquerda, ou 2 para limite lateral à direita; e, segundo, -1 para exibir o aviso anexo.
+// Limite de uma função contínua. Argumentos: primeiro: uma string, separada por ponto e vírgula ";", onde há a expressão da função, que deve ser na variável "x", o ponto do domínio considerado, e o tipo de cálculo: "definicao" para limite; "esquerda" para limite lateral à esquerda, ou "direita" para limite lateral à direita; e, segundo, -1 para exibir o aviso anexo.
 
 function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 	{
@@ -6014,16 +6031,23 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 	var expressao;
 	var expressaopart;
 	var tipo;
+	var tipon;
 	var ponto;
 	var ponto2;
 	var ponto2inf;
 	var ponto2sup;
+	var ponto2infinf;
+	var ponto2supsup;
 	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
 	var listtam;
 	var result1;
 	var result2;
+	var result3;
+	var result4;
 	var result;
 	var flag = 0;
+	var flag1 = 0;
+	var flag2 = 0;
 
 	if (avisoanexo == -1)
 		return antoniovandreoperadoresfuncoesconstantes(1);
@@ -6032,9 +6056,6 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		return "e";
 
 	tipo = argumentos[2].trim();
-
-	if (antoniovandrenumeronatural(tipo) == "e")
-		return "O tipo de retorno deve ser uma das três opções: 0, 1, ou 2.";
 
 	expressaopart = argumentos[0];
 	ponto = argumentos[1].trim();
@@ -6045,14 +6066,14 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 	if (antoniovandreexpressaofuncaovalida(ponto) == "e")
 		return "e";
 
-		try
-			{
-			ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
-			}
-		catch (error)
-			{
-			return "e";
-			}
+	try
+		{
+		ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
+		}
+	catch (error)
+		{
+		return "e";
+		}
 
 	if (antoniovandrenumeroreal(ponto2.toString()) == "e")
 		return "e"
@@ -6060,8 +6081,20 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
-	ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+	if (ponto2 != 0)
+		{
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
+		ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(2);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+		ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(2);
+		}
+	else
+		{
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+		ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(3);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+		ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(3);
+		}
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -6100,28 +6133,26 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		return "e";
 		}
 
-	if (antoniovandrenumeroreal(result1.toString()) == "e")
+	try
 		{
-		if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(6)) == 1))
-			return antoniovandremensagenserro(6)
-		else
-			{
-			if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(4)) == 1))
-				return antoniovandremensagenserro(4)
-			else
-				{
-				if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(2)) == 1))
-					return antoniovandremensagenserro(2)
-				else
-					{
-					if (antoniovandrecompararstrings(typeof result1, "string") == 1)
-						return result1
-					else
-						return "e";
-					}
-				}
-			}
+		result3 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2infinf.toString()]]));
 		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	try
+		{
+		result4 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2supsup.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(result1.toString()) == "e")
+		flag1 = 1
 	else
 		{
 		if (Math.abs(result1) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -6129,75 +6160,109 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		}
 
 	if (antoniovandrenumeroreal(result2.toString()) == "e")
-		{
-		if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(6)) == 1))
-			return antoniovandremensagenserro(6)
-		else
-			{
-			if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(4)) == 1))
-				return antoniovandremensagenserro(4)
-			else
-				{
-				if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(2)) == 1))
-					return antoniovandremensagenserro(2)
-				else
-					{
-					if (antoniovandrecompararstrings(typeof result2, "string") == 1)
-						return result2
-					else
-						return "e";
-					}
-				}
-			}
-		}
+		flag2 = 1
 	else
 		{
 		if (Math.abs(result2) > parseFloat(antoniovandremaximovalorsaida(1)))
 			return antoniovandremensagenserro(6)
 		}
 
-	switch (parseInt(tipo))
+	if (antoniovandrecompararstrings(tipo, "definicao") == 1)
+		tipon = 0
+	else
+		{
+		if (antoniovandrecompararstrings(tipo, "esquerda") == 1)
+			tipon = 1
+		else
+			{
+			if (antoniovandrecompararstrings(tipo, "direita") == 1)
+				tipon = 2
+			else
+				tipon = -1;
+			}
+		}
+
+	switch (tipon)
 		{
 		case 1:
-			if ((result1 > 0) && (flag == 1))
-				return "+ infinito"
-			else
+			if (flag1 == 0)
 				{
-				if ((result1 < 0) && (flag == 1))
-					return "- infinito"
+				if (((ponto2 == 0) && (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+					{
+					if (flag == 0)
+						return result
+					else
+						return result1
+					}
 				else
-					return result1;
+					{
+					if (result1 > 0)
+						return "+ infinito"
+					else
+						if (result1 < 0)
+							return "- infinito";
+					}
 				}
+			else
+				return "O limite lateral esquerdo no ponto " + ponto + " não existe.";
 
 			break;
 		case 2:
-			if ((result2 > 0) && (flag == 1))
-				return "+ infinito"
-			else
+			if (flag2 == 0)
 				{
-				if ((result2 < 0) && (flag == 1))
-					return "- infinito"
+				if (((ponto2 == 0) && (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+					{
+					if (flag == 0)
+						return result
+					else
+						return result2
+					}
 				else
-					return result2;
+					{
+					if (result2 > 0)
+						return "+ infinito"
+					else
+						if (result2 < 0)
+							return "- infinito"
+					}
 				}
+			else
+				return "O limite lateral direito no ponto " + ponto + " não existe.";
 
 			break;
 		case 0:
-			if (Math.abs(result2 - result1) < antoniovandreprecisaoreal(3))
+			if ((flag1 == 0) && (flag2 == 0))
 				{
-				if ((result1 > 0)  && (flag == 1))
-					return "+ infinito"
-				else
-					if ((result1 < 0)  && (flag == 1))
-						return "- infinito"
+				if (((ponto2 == 0) && (Math.abs(result1 - result2) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result1 - result2) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+					{
+					if (flag == 0)
+						return result
 					else
-						return result1;
+						return result2;
+					}
+				else
+					return "O limite no ponto " + ponto + " não existe.";
 				}
 			else
 				return "O limite no ponto " + ponto + " não existe.";
+
 			break;
 		default:
-			return "O tipo de retorno deve ser uma das três opções: 0, 1, ou 2.";
+			return "O tipo de retorno deve ser uma das três opções: \"definicao\", \"esquerda\", ou \"direita\".";
+		}
+	}
+
+// Coeficientes de aplicações globais.
+
+function antoniovandrecoeficientes(i)
+	{
+	switch (i)
+		{
+		case 1:
+			return 10; // A maior taxa de variação concebida para funções.
+			break;
+		default:
+			return "e";
 		}
 	}
 
