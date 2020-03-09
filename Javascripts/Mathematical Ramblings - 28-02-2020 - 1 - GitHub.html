@@ -2,11 +2,29 @@
 
 Projeto Mathematical Ramblings (mathematicalramblings.blogspot.com).
 
-Calculadora: integral definida, aproximação por soma de Riemann. Versão para GitHub.
+Calculadora: integral definida, aproximação por soma de Riemann, versão com barra de progresso. Versão para GitHub.
 
 -->
 
 <script src="../MathematicalRamblings-GitHub.js"></script>
+
+<style>
+
+#myProgressintegraldefinidaaproximacaosomariemann {
+  width: 100%;
+  background-color: grey;
+  height: 30px;
+}
+
+#myBarintegraldefinidaaproximacaosomariemann {
+  height: 20px;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+</style>
 
 Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo, quanto maior, mais preciso, porém mais demorado e computacionalmente mais exigente.
 <br><br>
@@ -16,33 +34,373 @@ Input: "x; 0; 5; 2".
 <br>
 Output: "12.5".
 <br><br>
-Input: "senh(x + log10(x*x + 2)); -pi; 2.7; 8".
+Input: "x + log10(x*x + 2); -pi; 2.7; 8".
 <br>
-Output: aproximadamente "10.5".
+Output: aproximadamente "2.37".
 <br><br>
 <table border="1" width="100%"><tr><td><input type="text" name="entradaintegraldefinidaaproximacaosomariemann" style="width : 100%"></td></tr></table>
 <br>
-<input type="button" onclick="processarintegraldefinidaaproximacaosomariemann()" value="Calcular">
+<input type="button" onclick="processarintegraldefinidaaproximacaosomariemannout()" value="Calcular">
 <br><br>
 Integral definida, aproximação por soma de Riemann:
 <br>
 <table border="1" width="100%"><tr><td><textarea style="width: 100%;overflow-y: scroll;resize: none" name="resultadointegraldefinidaaproximacaosomariemann" id="resultadointegraldefinidaaproximacaosomariemann" readonly style="width : 100%" rows="5"></textarea></td></tr></table>
 <br>
 <table border="1" width="100%"><tr><td><textarea style="width: 100%;overflow-y: scroll;resize: none" name="resultadointegraldefinidaaproximacaosomariemannavisoanexo" id="resultadointegraldefinidaaproximacaosomariemannavisoanexo" readonly style="width : 100%" rows="5"></textarea></td></tr></table>
+<br>
+<div id="myProgressintegraldefinidaaproximacaosomariemann"><div id="myBarintegraldefinidaaproximacaosomariemann"></div></div>
 
 <script>
 
-document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value =  antoniovandreintegraldefinidaaproximacaosomariemann("", -1);
+var elem = document.getElementById('myBarintegraldefinidaaproximacaosomariemann');
 
-function processarintegraldefinidaaproximacaosomariemann()
+elem.style.width = "100%";
+elem.style.backgroundColor = "grey";
+elem.textContent = "Barra de progresso."
+
+
+document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value = antoniovandreintegraldefinidaaproximacaosomariemannout("", -1);
+
+function processarintegraldefinidaaproximacaosomariemannout()
 	{
 	var str = document.getElementsByName('entradaintegraldefinidaaproximacaosomariemann');
-	var out = antoniovandreintegraldefinidaaproximacaosomariemann(str[0].value, 0);
 
-	if (antoniovandrecompararstrings(out, "e") == "e")
-		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = out
+	document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = "Calculando...";
+
+	antoniovandreintegraldefinidaaproximacaosomariemannout(str[0].value, 0);
+	}
+
+function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
+	{
+	var argumentos = str.split(";");
+	var expressao;
+	var expressaopart;
+	var inf;
+	var sup;
+	var n;
+	var result = 0;
+	var resultpart;
+	var parcela;
+	var n2;
+	var inf2;
+	var sup2;
+	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
+	var listtam;
+	var contador = 0;
+	var flagrepeticao = 0;
+	var flagrepeticao2 = 0;
+
+	if (avisoanexo == -1)
+		return antoniovandreoperadoresfuncoesconstantes(1) + "\n\nQuanto maior o número de elementos a se escolher para a partição, mais demorado será o cálculo, em extremos pode haver freeze ou crash do sistema.";
+
+	if (argumentos.length != 4)
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+
+	expressaopart = argumentos[0];
+	inf = argumentos[1].trim();
+	sup = argumentos[2].trim();
+	n = argumentos[3].trim();
+
+	if (antoniovandrenumeronaturalpositivo(n) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
 	else
-		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandreoperadoresfuncoesconstantes(4) + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em \"x\"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
+		if (parseInt(n) == 1)
+			{
+			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = "O número de elementos da partição deve ser maior que 1.";
+			elem.style.width = "100%";
+			elem.style.backgroundColor = "grey";
+			elem.textContent = "Erro ao calcular."
+			flagrepeticao2 = 1;
+			return;
+			}
+
+	if (Math.abs(parseInt(n)) > antoniovandremaximovalorentrada(1))
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+
+	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+
+	if (antoniovandreexpressaofuncaovalida(inf) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+
+	if (antoniovandreexpressaofuncaovalida(sup) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+
+		try
+			{
+			inf2 = eval(antoniovandretraduzirexpressaofuncional(inf, 0));
+			}
+		catch (error)
+			{
+			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+			elem.style.width = "100%";
+			elem.style.backgroundColor = "grey";
+			elem.textContent = "Erro ao calcular."
+			flagrepeticao2 = 1;
+			return;
+			}
+
+		try
+			{
+			sup2 = eval(antoniovandretraduzirexpressaofuncional(sup, 0));
+			}
+		catch (error)
+			{
+			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+			elem.style.width = "100%";
+			elem.style.backgroundColor = "grey";
+			elem.textContent = "Erro ao calcular."
+			flagrepeticao2 = 1;
+			return;
+			}
+
+
+	n2 = parseInt(n) - 1;
+
+	if (antoniovandrenumeroreal(inf2.toString()) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+	else
+		if (Math.abs(inf2) > antoniovandremaximovalorentrada(1))
+			{
+			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
+			elem.style.width = "100%";
+			elem.style.backgroundColor = "grey";
+			elem.textContent = "Erro ao calcular."
+			flagrepeticao2 = 1;
+			return;
+			}
+
+
+	if (antoniovandrenumeroreal(sup2.toString()) == "e")
+		{
+		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+		elem.style.width = "100%";
+		elem.style.backgroundColor = "grey";
+		elem.textContent = "Erro ao calcular."
+		flagrepeticao2 = 1;
+		return;
+		}
+	else
+		if (Math.abs(sup2) > antoniovandremaximovalorentrada(1))
+			{
+			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
+			elem.style.width = "100%";
+			elem.style.backgroundColor = "grey";
+			elem.textContent = "Erro ao calcular."
+			flagrepeticao2 = 1;
+			return;
+			}
+
+	parcela = (sup2 - inf2) / n2;
+
+	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
+
+	for (var i = 0; i < listtam; i++)
+		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
+
+	expressao = antoniovandresubstituirstrings(expressaopart, list);
+
+	function escoporepeticao()
+		{
+		if (flagrepeticao2 == 0)
+			{
+			var percentualconclusao = Math.trunc(100 * contador / n2);
+			var percentualconclusaostr = percentualconclusao.toString() + "%";
+
+			elem.style.width = percentualconclusaostr;
+			elem.style.backgroundColor = "green";
+			elem.textContent = percentualconclusaostr;
+
+			if ((contador == n2) || (flagrepeticao == 1))
+				{
+				flagrepeticao = 1;
+				return;
+				}
+
+			var x = inf2 + (parcela / 2) + (contador * parcela);
+
+			try
+				{
+				resultpart = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), x.toString()]]));
+				}
+			catch (error)
+				{
+				document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+				elem.style.width = "100%";
+				elem.style.backgroundColor = "grey";
+				elem.textContent = "Erro ao calcular."
+				flagrepeticao2 = 1;
+				return;
+				}
+
+			if (antoniovandrenumeroreal(resultpart.toString()) == "e")
+				{
+				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
+					{
+					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(6);
+					elem.style.width = "100%";
+					elem.style.backgroundColor = "grey";
+					elem.textContent = "Erro ao calcular."
+					flagrepeticao2 = 1;
+					return;
+					}
+				else
+					{
+					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
+						{
+						document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(4);
+						elem.style.width = "100%";
+						elem.style.backgroundColor = "grey";
+						elem.textContent = "Erro ao calcular."
+						flagrepeticao2 = 1;
+						return;
+						}
+					else
+						{
+						if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
+							{
+							document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
+							elem.style.width = "100%";
+							elem.style.backgroundColor = "grey";
+							elem.textContent = "Erro ao calcular."
+							flagrepeticao2 = 1;
+							return;
+							}
+						else
+							{
+							if (antoniovandrecompararstrings(typeof resultpart, "string") == 1)
+								{
+								document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = resultpart;
+								elem.style.width = "100%";
+								elem.style.backgroundColor = "grey";
+								elem.textContent = "Erro ao calcular."
+								flagrepeticao2 = 1;
+								return;
+								}
+							else
+								{
+								document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+								elem.style.width = "100%";
+								elem.style.backgroundColor = "grey";
+								elem.textContent = "Erro ao calcular."
+								flagrepeticao2 = 1;
+								return;
+								}
+							}
+						}
+					}
+				}
+			else
+				{
+				if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
+					{
+					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(6);
+					elem.style.width = "100%";
+					elem.style.backgroundColor = "grey";
+					elem.textContent = "Erro ao calcular."
+					flagrepeticao2 = 1;
+					return;
+					}
+				else
+					result += resultpart * parcela;
+				}
+
+			contador++;
+		}
+	}
+
+	function escoporepeticao2()
+		{
+		if (flagrepeticao2 == 0)
+			{
+			if (flagrepeticao == 1)
+				{
+				if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
+					{
+					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(5);
+					}
+
+				if (antoniovandrecompararstrings(result, "e") == "e")
+					{
+					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = result;
+					}
+				else
+					{
+					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
+					elem.style.width = "100%";
+					elem.style.backgroundColor = "grey";
+					elem.textContent = "Erro ao calcular."
+					}
+
+				flagrepeticao2 = 1;
+				return;
+				}
+			}
+		}
+
+	var rep = setInterval(escoporepeticao, 10);
+	var rep2 = setInterval(escoporepeticao2, 10);
+
+	if (flagrepeticao2 == 1)
+		return;
+	}
+
+function integraldefinidaaproximacaosomariemannmensagemerro()
+	{
+	return antoniovandreoperadoresfuncoesconstantes(4) + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em \"x\"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
+
+	elem.style.width = "100%";
+	elem.style.backgroundColor = "grey";
+	elem.textContent = "Erro ao calcular."
 	}
 
 </script>
