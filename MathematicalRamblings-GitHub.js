@@ -1639,7 +1639,7 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001; // Utilizada na formatação de números reais no JavaScript.
 			break;
 		case 2:
-			return 0.01; // A variação no domínio das funções para o cálculo de limites e derivadas quando o ponto central não é 0.
+			return 0; // Slot vago.
 			break;
 		case 3:
 			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas quando o ponto central é 0.
@@ -5827,16 +5827,8 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	if (ponto2 != 0)
-		{
-		ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
-		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
-		}
-	else
-		{
-		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
-		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
-		}
+	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -5919,10 +5911,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	if (ponto2 != 0)
-		result = (result2 - result1) / (2 * antoniovandreprecisaoreal(2))
-	else
-		result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3))
+	result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3));
 
 	if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(5);
@@ -6081,20 +6070,10 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	if (ponto2 != 0)
-		{
-		ponto2inf = ponto2 - antoniovandreprecisaoreal(2);
-		ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(2);
-		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
-		ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(2);
-		}
-	else
-		{
-		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
-		ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(3);
-		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
-		ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(3);
-		}
+	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+	ponto2infinf = ponto2 - 2 * antoniovandreprecisaoreal(3);
+	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+	ponto2supsup = ponto2 + 2 * antoniovandreprecisaoreal(3);
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -6187,7 +6166,7 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		case 1:
 			if (flag1 == 0)
 				{
-				if (((ponto2 == 0) && (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+				if (Math.abs(result1 - result3) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))
 					{
 					if (flag == 0)
 						return result
@@ -6210,7 +6189,7 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		case 2:
 			if (flag2 == 0)
 				{
-				if (((ponto2 == 0) && (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+				if (Math.abs(result2 - result4) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))
 					{
 					if (flag == 0)
 						return result
@@ -6233,7 +6212,7 @@ function antoniovandrelimitefuncaocontinua(str, avisoanexo)
 		case 0:
 			if ((flag1 == 0) && (flag2 == 0))
 				{
-				if (((ponto2 == 0) && (Math.abs(result1 - result2) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))) || ((ponto2 != 0) && (Math.abs(result1 - result2) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(2))))
+				if (Math.abs(result1 - result2) < antoniovandrecoeficientes(1) * antoniovandreprecisaoreal(3))
 					{
 					if (flag == 0)
 						return result
