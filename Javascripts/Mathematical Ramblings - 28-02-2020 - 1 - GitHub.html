@@ -52,11 +52,11 @@ Integral definida, aproximação por soma de Riemann:
 
 <script>
 
-var elem = document.getElementById('myBarintegraldefinidaaproximacaosomariemann');
+var elemintegraldefinidaaproximacaosomariemann = document.getElementById('myBarintegraldefinidaaproximacaosomariemann');
 
-elem.style.width = "100%";
-elem.style.backgroundColor = "grey";
-elem.textContent = "Barra de progresso."
+elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+elemintegraldefinidaaproximacaosomariemann.textContent = "Barra de progresso."
 
 
 document.getElementById('resultadointegraldefinidaaproximacaosomariemannavisoanexo').value = antoniovandreintegraldefinidaaproximacaosomariemannout("", -1);
@@ -96,9 +96,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (argumentos.length != 4)
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -111,9 +111,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandrenumeronaturalpositivo(n) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -121,9 +121,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 		if (parseInt(n) == 1)
 			{
 			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = "O número de elementos da partição deve ser maior que 1.";
-			elem.style.width = "100%";
-			elem.style.backgroundColor = "grey";
-			elem.textContent = "Erro ao calcular."
+			elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+			elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 			flagrepeticao2 = 1;
 			return;
 			}
@@ -131,9 +131,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (Math.abs(parseInt(n)) > antoniovandremaximovalorentrada(1))
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -141,9 +141,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -151,9 +151,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandreexpressaofuncaovalida(inf) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -161,9 +161,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandreexpressaofuncaovalida(sup) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -175,9 +175,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 		catch (error)
 			{
 			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-			elem.style.width = "100%";
-			elem.style.backgroundColor = "grey";
-			elem.textContent = "Erro ao calcular."
+			elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+			elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 			flagrepeticao2 = 1;
 			return;
 			}
@@ -189,9 +189,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 		catch (error)
 			{
 			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-			elem.style.width = "100%";
-			elem.style.backgroundColor = "grey";
-			elem.textContent = "Erro ao calcular."
+			elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+			elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 			flagrepeticao2 = 1;
 			return;
 			}
@@ -202,9 +202,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandrenumeroreal(inf2.toString()) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -212,9 +212,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 		if (Math.abs(inf2) > antoniovandremaximovalorentrada(1))
 			{
 			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
-			elem.style.width = "100%";
-			elem.style.backgroundColor = "grey";
-			elem.textContent = "Erro ao calcular."
+			elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+			elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 			flagrepeticao2 = 1;
 			return;
 			}
@@ -223,9 +223,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 	if (antoniovandrenumeroreal(sup2.toString()) == "e")
 		{
 		document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-		elem.style.width = "100%";
-		elem.style.backgroundColor = "grey";
-		elem.textContent = "Erro ao calcular."
+		elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+		elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+		elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 		flagrepeticao2 = 1;
 		return;
 		}
@@ -233,9 +233,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 		if (Math.abs(sup2) > antoniovandremaximovalorentrada(1))
 			{
 			document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
-			elem.style.width = "100%";
-			elem.style.backgroundColor = "grey";
-			elem.textContent = "Erro ao calcular."
+			elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+			elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 			flagrepeticao2 = 1;
 			return;
 			}
@@ -256,9 +256,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 			var percentualconclusao = Math.trunc(100 * contador / n2);
 			var percentualconclusaostr = percentualconclusao.toString() + "%";
 
-			elem.style.width = percentualconclusaostr;
-			elem.style.backgroundColor = "green";
-			elem.textContent = percentualconclusaostr;
+			elemintegraldefinidaaproximacaosomariemann.style.width = percentualconclusaostr;
+			elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "green";
+			elemintegraldefinidaaproximacaosomariemann.textContent = percentualconclusaostr;
 
 			if ((contador == n2) || (flagrepeticao == 1))
 				{
@@ -275,9 +275,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 			catch (error)
 				{
 				document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-				elem.style.width = "100%";
-				elem.style.backgroundColor = "grey";
-				elem.textContent = "Erro ao calcular."
+				elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+				elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+				elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 				flagrepeticao2 = 1;
 				return;
 				}
@@ -287,9 +287,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
 					{
 					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(6);
-					elem.style.width = "100%";
-					elem.style.backgroundColor = "grey";
-					elem.textContent = "Erro ao calcular."
+					elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+					elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+					elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 					flagrepeticao2 = 1;
 					return;
 					}
@@ -298,9 +298,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
 						{
 						document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(4);
-						elem.style.width = "100%";
-						elem.style.backgroundColor = "grey";
-						elem.textContent = "Erro ao calcular."
+						elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+						elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+						elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 						flagrepeticao2 = 1;
 						return;
 						}
@@ -309,9 +309,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 						if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
 							{
 							document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(2);
-							elem.style.width = "100%";
-							elem.style.backgroundColor = "grey";
-							elem.textContent = "Erro ao calcular."
+							elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+							elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+							elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 							flagrepeticao2 = 1;
 							return;
 							}
@@ -320,18 +320,18 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 							if (antoniovandrecompararstrings(typeof resultpart, "string") == 1)
 								{
 								document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = resultpart;
-								elem.style.width = "100%";
-								elem.style.backgroundColor = "grey";
-								elem.textContent = "Erro ao calcular."
+								elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+								elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+								elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 								flagrepeticao2 = 1;
 								return;
 								}
 							else
 								{
 								document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-								elem.style.width = "100%";
-								elem.style.backgroundColor = "grey";
-								elem.textContent = "Erro ao calcular."
+								elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+								elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+								elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 								flagrepeticao2 = 1;
 								return;
 								}
@@ -344,9 +344,9 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 				if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
 					{
 					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = antoniovandremensagenserro(6);
-					elem.style.width = "100%";
-					elem.style.backgroundColor = "grey";
-					elem.textContent = "Erro ao calcular."
+					elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+					elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+					elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 					flagrepeticao2 = 1;
 					return;
 					}
@@ -355,8 +355,8 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 				}
 
 			contador++;
+			}
 		}
-	}
 
 	function escoporepeticao2()
 		{
@@ -376,13 +376,13 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 				else
 					{
 					document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = integraldefinidaaproximacaosomariemannmensagemerro();
-					elem.style.width = "100%";
-					elem.style.backgroundColor = "grey";
-					elem.textContent = "Erro ao calcular."
+					elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+					elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+					elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 					}
 
 				flagrepeticao2 = 1;
-				return;
+					return;
 				}
 			}
 		}
@@ -398,9 +398,9 @@ function integraldefinidaaproximacaosomariemannmensagemerro()
 	{
 	return antoniovandreoperadoresfuncoesconstantes(4) + " Entre com uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em \"x\"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: o número de elementos da partição que será utilizada no cálculo.";
 
-	elem.style.width = "100%";
-	elem.style.backgroundColor = "grey";
-	elem.textContent = "Erro ao calcular."
+	elemintegraldefinidaaproximacaosomariemann.style.width = "100%";
+	elemintegraldefinidaaproximacaosomariemann.style.backgroundColor = "grey";
+	elemintegraldefinidaaproximacaosomariemann.textContent = "Erro ao calcular."
 	}
 
 </script>
