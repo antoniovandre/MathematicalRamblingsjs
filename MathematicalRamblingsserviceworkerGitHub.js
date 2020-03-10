@@ -11,7 +11,7 @@ var urlsToCache = [
   'MathematicalRamblings-GitHub.js',
   'Javascripts/Mathematical Ramblings - 03-08-2019 - 2 - GitHub.html',
   'Javascripts/Mathematical Ramblings - 28-02-2020 - 1 - GitHub.html',
-  'Mathematical Ramblings logo 1000p.png'
+  'MathematicalRamblingsjslogo200p.png'
 ];
 
 self.addEventListener('install', function (event) {
