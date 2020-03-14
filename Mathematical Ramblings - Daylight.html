@@ -8,10 +8,29 @@ Daylight widget.
 
 <html>
 <head>
+<script onerror="$('#framemrchat').html('Erro ao carregar jQuery.');" src='http://code.jquery.com/jquery-latest.js'></script>
+<script>
+var contador = 0;
+
+setInterval(function(){
+
+ if (contador % 2 == 0)
+  $('#divdaylight').html("<img width='100%' height='100%' allowtransparency='true' src='https://www.timeanddate.com/scripts/sunmap.php?earth=1'/>")
+ else
+  $('#divdaylight').html("<img width='100%' height='100%' allowtransparency='true' src='https://www.timeanddate.com/scripts/sunmap.php?earth=0'/>");
+
+ if (contador == 9999)
+  contador = 1
+ else
+  contador++;
+
+}, 60000);
+
+</script>
 </head>
 <body>
-<div width="100%" height="100%">
-<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="100%" allowtransparency="true" src="https://www.timeanddate.com/scripts/sunmap.php?earth=1" onerror="$('#framemrchat').html('Erro ao carregar Daylight.');"></iframe>
+<div id="divdaylight" width="100%" height="100%">
+<img width='100%' height='100%' allowtransparency='true' src='https://www.timeanddate.com/scripts/sunmap.php?earth=1
 </div>
 </body>
 </html>
