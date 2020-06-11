@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 10-06-2020.
+// Última atualização: 11-06-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -6364,11 +6364,11 @@ function antoniovandremoduloargumentoprincipalcomplexo(arr)
 		if (argumento1 >= 0 && argumento2 >= 0) argumento = argumento1;
 		if (argumento1 >= 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
 		if (argumento1 < 0 && argumento2 >= 0) argumento = argumento1;
-		if (argumento1 < 0 && argumento2 < 0) argumento = 3.14159265359 + argumento1;
+		if (argumento1 < 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
 		}
 
 	if (flag == 0)
-		return "Módulo: " + modulo.toString() + "\nArgumento principal: " + argumento.toString()
+		return "Módulo: " + antoniovandreformatarreal(modulo).toString() + "\nArgumento principal: " + antoniovandreformatarreal(argumento).toString()
 	else
 		return "e";
 	}
