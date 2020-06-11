@@ -6245,6 +6245,134 @@ function antoniovandrecoeficientes(i)
 		}
 	}
 
+// Verifica se a string argumento é um número complexo. Retorna o número complexo ou a string "e" se não for um número complexo na forma "a, b", com "a" real e "b" real.
+
+function antoniovandrenumerocomplexo(arr)
+	{
+	var bufferverificacaonumerica = arr.trim().split(",");
+	var flag = 0;
+
+	if (bufferverificacaonumerica.length != 2)
+		flag = 1
+	else
+		if (antoniovandrenumeroreal(bufferverificacaonumerica[0]) == "e" || antoniovandrenumeroreal(bufferverificacaonumerica[1]) == "e")
+			flag = 1;
+
+	if (flag == 0)
+		return bufferverificacaonumerica[0] + ", " + bufferverificacaonumerica[1]
+	else
+		return "e";
+	}
+
+// Soma de números complexos. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+
+function antoniovandresomacomplexos(arr)
+	{
+	var numeros = arr.trim().split(";");
+	var soma = [];
+	var flag = 0;
+
+	soma.push(0); soma.push(0);
+
+	for (var i = 0; i < numeros.length; i++)
+		if (antoniovandrenumerocomplexo(numeros[i]) == "e")
+			{
+			flag = 1;
+			break;
+			}
+		else
+			{
+			var parcela = numeros[i].trim().split(",");
+
+			soma[0] += parseFloat(parcela[0]);
+			soma[1] += parseFloat(parcela[1]);
+			}
+
+	if (flag == 0)
+		return antoniovandreformatarreal(soma[0]).toString() + ", " + antoniovandreformatarreal(soma[1]).toString()
+	else
+		return "e";
+	}
+
+// Produto de números complexos. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+
+function antoniovandreprodutocomplexos(arr)
+	{
+	var numeros = arr.trim().split(";");
+	var produto = [];
+	var flag = 0;
+
+	produto.push(1); produto.push(0);
+
+	for (var i = 0; i < numeros.length; i++)
+		if (antoniovandrenumerocomplexo(numeros[i]) == "e")
+			{
+			flag = 1;
+			break;
+			}
+		else
+			{
+			var fator = numeros[i].trim().split(",");
+
+			var preal = parseFloat(produto[0]) * parseFloat(fator[0]) - parseFloat(produto[1]) * parseFloat(fator[1]);
+			var pimg = parseFloat(produto[0]) * parseFloat(fator[1]) + parseFloat(produto[1]) * parseFloat(fator[0]);
+
+			produto[0] = preal; produto[1] = pimg;
+			}
+
+	if (flag == 0)
+		return antoniovandreformatarreal(produto[0]).toString() + ", " + antoniovandreformatarreal(produto[1]).toString()
+	else
+		return "e";
+	}
+
+// Módulo e argumento principal de um número complexo. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+
+function antoniovandremoduloargumentoprincipalcomplexo(arr)
+	{
+	var modulo;
+	var argumento;
+	var argumento1;
+	var argumento2;
+	var flag = 0;
+
+	if (antoniovandrenumerocomplexo(arr.trim()) == "e")
+		flag = 1
+	else
+		{
+		var numero = arr.trim().split(",");
+
+		modulo = antoniovandresqrt(parseFloat(numero[0]) * parseFloat(numero[0]) + parseFloat(numero[1]) * parseFloat(numero[1]));
+
+		if (parseFloat(numero[0]) > modulo)
+			argumento1 = 0
+		else
+			if (parseFloat(numero[0]) < (-1) * modulo)
+				argumento1 = 3.14159265359
+			else
+				argumento1 = antoniovandrearccos(parseFloat(numero[0]) / modulo);
+
+		if (parseFloat(numero[1]) > modulo)
+			argumento2 = 1.57079632679
+		else
+			if (parseFloat(numero[1]) < (-1) * modulo)
+				argumento2 = 4.71238898038
+			else
+				argumento2 = antoniovandrearcsen(parseFloat(numero[1]) / modulo);
+
+
+		if (argumento1 >= 0 && argumento2 >= 0) argumento = argumento1;
+		if (argumento1 >= 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
+		if (argumento1 < 0 && argumento2 >= 0) argumento = argumento1;
+		if (argumento1 < 0 && argumento2 < 0) argumento = 3.14159265359 + argumento1;
+		}
+
+	if (flag == 0)
+		return "Módulo: " + modulo.toString() + "\nArgumento principal: " + argumento.toString()
+	else
+		return "e";
+	}
+
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
 // Início escopos desenvolvidos por terceiros.
