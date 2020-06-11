@@ -6342,29 +6342,34 @@ function antoniovandremoduloargumentoprincipalcomplexo(arr)
 		{
 		var numero = arr.trim().split(",");
 
-		modulo = antoniovandresqrt(parseFloat(numero[0]) * parseFloat(numero[0]) + parseFloat(numero[1]) * parseFloat(numero[1]));
-
-		if (parseFloat(numero[0]) > modulo)
-			argumento1 = 0
+		if (parseFloat(numero[0]) == 0 && parseFloat(numero[1]) == 0)
+			flag = 1
 		else
-			if (parseFloat(numero[0]) < (-1) * modulo)
-				argumento1 = 3.14159265359
+			{
+			modulo = antoniovandresqrt(parseFloat(numero[0]) * parseFloat(numero[0]) + parseFloat(numero[1]) * parseFloat(numero[1]));
+
+			if (parseFloat(numero[0]) > modulo)
+				argumento1 = 0
 			else
-				argumento1 = antoniovandrearccos(parseFloat(numero[0]) / modulo);
+				if (parseFloat(numero[0]) < (-1) * modulo)
+					argumento1 = 3.14159265359
+				else
+					argumento1 = antoniovandrearccos(parseFloat(numero[0]) / modulo);
 
-		if (parseFloat(numero[1]) > modulo)
-			argumento2 = 1.57079632679
-		else
-			if (parseFloat(numero[1]) < (-1) * modulo)
-				argumento2 = 4.71238898038
+			if (parseFloat(numero[1]) > modulo)
+				argumento2 = 1.57079632679
 			else
-				argumento2 = antoniovandrearcsen(parseFloat(numero[1]) / modulo);
+				if (parseFloat(numero[1]) < (-1) * modulo)
+					argumento2 = 4.71238898038
+				else
+					argumento2 = antoniovandrearcsen(parseFloat(numero[1]) / modulo);
 
 
-		if (argumento1 >= 0 && argumento2 >= 0) argumento = argumento1;
-		if (argumento1 >= 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
-		if (argumento1 < 0 && argumento2 >= 0) argumento = argumento1;
-		if (argumento1 < 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
+			if (argumento1 >= 0 && argumento2 >= 0) argumento = argumento1;
+			if (argumento1 >= 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
+			if (argumento1 < 0 && argumento2 >= 0) argumento = argumento1;
+			if (argumento1 < 0 && argumento2 < 0) argumento = 6.28318530718 - argumento1;
+			}
 		}
 
 	if (flag == 0)
