@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 11-06-2020.
+// Última atualização: 12-06-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -2149,7 +2149,10 @@ function antoniovandredeterminante(M)
 			if (antoniovandrecompararstrings(typeof M, "string") == 1)
 				{
 				var linhas = M.split(";");
-				var M2 = [...Array(linhas.length)].map(x=>[]);
+				var M2 = [];
+
+				for (var i = 0; i < linhas.length; i++)
+					M2.push([]);
 
 				for (var i = 0; i < linhas.length; i++)
 					{
@@ -2198,7 +2201,10 @@ function antoniovandreremoverlinhacoluna(M, i, j, saida)
 		{
 		var linhas = M.split(";");
 		var colunas;
-		var M2 = [...Array(linhas.length)].map(x=>[]);
+		var M2 = [];
+
+		for (var k = 0; k < linhas.length; k++)
+			M2.push([]);
 
 		for (var k = 0; k < linhas.length; k++)
 			{
@@ -2218,8 +2224,11 @@ function antoniovandreremoverlinhacoluna(M, i, j, saida)
 
 			if (M2.length > 1 || M2[0].length > 1)
 				{
-				var Mt = [...Array(M2.length)].map(x=>[]);
 				var t;
+				var Mt = [];
+
+				for (var k = 0; k < M2.length; k++)
+					Mt.push([]);
 
 				for (var k = 0; k < M2.length; k++)
 					for (var l = 0; l < M2[k].length; l++)
@@ -2277,8 +2286,11 @@ function antoniovandreremoverlinhacoluna(M, i, j, saida)
 			{
 			if (M.length > 1 || M[0].length > 1)
 				{
-				var Mt = [...Array(M.length)].map(x=>[]);
 				var t;
+				var Mt = [];
+
+				for (var k = 0; k < M.length; k++)
+					Mt.push([]);
 
 				for (var k = 0; k < M.length; k++)
 					for (var l = 0; l < M[k].length; l++)
@@ -2347,7 +2359,7 @@ function antoniovandremultiplicacaomatrizes(strM, saida)
 	var passos;
 	var m1 = [];
 	var m2 = [];
-	var r;
+	var r = [];
 	var resultstr = "";
 
 	if (matrizes.length != 2)
@@ -2389,7 +2401,8 @@ function antoniovandremultiplicacaomatrizes(strM, saida)
 	if (passos != linhas1.length)
 		return "O número de colunas da primeira matriz deve ser igual ao número de linhas da segunda matriz.";
 
-	r = [...Array(m1.length)].map(x=>[])
+	for (var i = 0; i < m1.length; i++)
+		r.push([]);
 
 	for (var i = 0; i < m1.length; i++)
 		for (var j = 0; j < m2[0].length; j++)
@@ -2601,7 +2614,7 @@ function antoniovandrematriztransposta(M, saida)
 		var colunas;
 		var col = 0;
 		var Mt = [];
-		var Mr;
+		var Mr = [];
 		var t;
 		var flag = 0;
 
@@ -2633,10 +2646,12 @@ function antoniovandrematriztransposta(M, saida)
 		if (flag == 1)
 			return "As linhas devem ter o mesmo tamanho.";
 
-		Mr = [...Array(col)].map(x=>[]);
+		for (var i = 0; i < col; i++)
+			Mr.push([]);
 
 		for (var i = 0; i < col; i++)
-			Mr[i] = [...Array(linhas.length)].map(x=>[]);
+			for (var j = 0; j < linhas.length; j++)
+				Mr[i].push([]);
 
 		for (var i = 0; i < linhas.length; i++)
 			for (var j = 0; j < col; j++)
