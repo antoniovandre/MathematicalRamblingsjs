@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 12-06-2020.
+// Última atualização: 16-06-2020.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -5777,7 +5777,7 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 	switch (i)
 		{
 		case 1:
-			return "Operadores, funções e constantes disponíveis na base de dados (última atualização: 06-03-2020):\n\n\"+\": operador soma;\n\"-\": operador subtração;\n\"*\": operador multiplicação;\n\"/\": operador divisão;\n\"exp()\": função exponencial base \"e\";\n\"potencia(a, b)\": função potência (\"a\" elevado a \"b\");\n\"modulo()\": função módulo;\n\"ln()\": função logaritmo natural;\n\"log10()\": função logaritmo de base 10;\n\"log2()\": função logaritmo de base 2;\n\"log(a, b)\": função logaritmo (logaritmo de \"a\" na base \"b\");\n\"sqrt()\": função raiz quadrada;\n\"sqrt3()\": função raiz cúbica;\n\"sqrtn(x, n)\": função raiz enésima de \"x\";\n\"sen()\": função seno;\n\"cos()\": função cosseno;\n\"tg()\": função tangente;\n\"cotg()\": função cotangente;\n\"sec()\": função secante;\n\"cossec()\": função cossecante;\n\"arcsen()\": função arco-seno;\n\"arccos()\": função arco-cosseno;\n\"arctg()\": função arco-tangente;\n\"arccotg()\": função arco-cotangente;\n\"arcsec()\": função arco-secante;\n\"arccossec()\": função arco-cossecante;\n\"senh()\": função seno hiperbólico;\n\"cosh()\": função cosseno hiperbólico;\n\"tgh()\": função tangente hiperbólica;\n\"cotgh()\": função cotangente hiperbólica;\n\"sech()\": função secante hiperbólica;\n\"cossech()\": função cossecante hiperbólica;\n\"fatorial()\": função fatorial;\n\"pi\": constante \"pi\";\n\"T\": constante \"T\" (tal), o dobro de \"pi\";\n\"e\": constante \"e\", base dos logaritmos naturais\;\n\"Ge11\": constante da gravitação universal de Newton, vezes 10^11, no SI;\n\"c\": velocidade da luz no vácuo, no SI;\n\"he34\": constante de Planck, vezes 10^34, no SI;\n\"ke23\": constante de Boltzmann, vezes 10^23, no SI;\n\"NAe-23\": número de Avogadro, vezes 10^(-23);\n\"mee31\": massa do elétron, vezes 10^31, no SI;\n\"mpe27\": massa do próton, vezes 10^27, no SI;\n\"qee19\": carga elementar, vezes 10^19, no SI.\n\nPara algumas funções, os fatores podem retornar como valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
+			return "Operadores, funções e constantes disponíveis na base de dados (última atualização: 06-03-2020):\n\n\"+\": operador soma;\n\"-\": operador subtração;\n\"*\": operador multiplicação;\n\"/\": operador divisão;\n\"exp()\": função exponencial base \"e\";\n\"potencia(a, b)\": função potência (\"a\" elevado a \"b\");\n\"modulo()\": função módulo;\n\"ln()\": função logaritmo natural;\n\"log10()\": função logaritmo de base 10;\n\"log2()\": função logaritmo de base 2;\n\"log(a, b)\": função logaritmo (logaritmo de \"a\" na base \"b\");\n\"sqrt()\": função raiz quadrada;\n\"sqrt3()\": função raiz cúbica;\n\"sqrtn(x, n)\": função raiz enésima de \"x\";\n\"sen()\": função seno;\n\"cos()\": função cosseno;\n\"tg()\": função tangente;\n\"cotg()\": função cotangente;\n\"sec()\": função secante;\n\"cossec()\": função cossecante;\n\"arcsen()\": função arco-seno;\n\"arccos()\": função arco-cosseno;\n\"arctg()\": função arco-tangente;\n\"arccotg()\": função arco-cotangente;\n\"arcsec()\": função arco-secante;\n\"arccossec()\": função arco-cossecante;\n\"senh()\": função seno hiperbólico;\n\"cosh()\": função cosseno hiperbólico;\n\"tgh()\": função tangente hiperbólica;\n\"cotgh()\": função cotangente hiperbólica;\n\"sech()\": função secante hiperbólica;\n\"cossech()\": função cossecante hiperbólica;\n\"fatorial()\": função fatorial;\n\"pi\": constante \"pi\";\n\"T\": constante \"T\" (tal), o dobro de \"pi\";\n\"e\": constante \"e\", base dos logaritmos naturais\;\n\"Ge11\": constante da gravitação universal de Newton, vezes 10^11, no SI;\n\"c\": velocidade da luz no vácuo, no SI;\n\"he34\": constante de Planck, vezes 10^34, no SI;\n\"ke23\": constante de Boltzmann, vezes 10^23, no SI;\n\"NAe-23\": número de Avogadro, vezes 10^(-23);\n\"mee31\": massa do elétron, vezes 10^31, no SI;\n\"mpe27\": massa do próton, vezes 10^27, no SI;\n\"qee19\": carga elementar, vezes 10^19, no SI.\n\nAlgumas funções podem retornar valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
 			break;
 		case 2:
 			return "exp,potencia,modulo,ln,log10,log2,log,sqrt,sqrt3,sqrtn,sen,cos,tg,cotg,sec,cossec,arcsen,arccos,arctg,arccotg,arcsec,arccossec,senh,cosh,tgh,cotgh,sech,cossech,fatorial,antoniovandreexp,antoniovandrepotencia,antoniovandremodulo,antoniovandreln,antoniovandrelog10,antoniovandrelog2,antoniovandrelog,antoniovandresqrt,antoniovandresqrt3,antoniovandresqrtn,antoniovandresen,antoniovandrecos,antoniovandretg,antoniovandrecotg,antoniovandresec,antoniovandrecossec,antoniovandrearcsen,antoniovandrearccos,antoniovandrearctg,antoniovandrearccotg,antoniovandrearcsec,antoniovandrearccossec,antoniovandresenh,antoniovandrecosh,antoniovandretgh,antoniovandrecotgh,antoniovandresech,antoniovandrecossech,antoniovandrefatorial,pi,T,e,Ge11,c,he34,ke23,NAe-23,mee31,mpe27,qee19";
@@ -5790,6 +5790,9 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 			break;
 		case 5:
 			return "antoniovandrereferenciavariavel";
+			break;
+		case 6:
+			return "Algumas funções podem retornar valores aproximados ou demasiadamente discrepantes, pois, em suas implementações, das funções elementares, aplica-se a fórmula de Taylor em apenas alguns pontos e com um limitado número de derivadas.\n\nGradativamente vou refinando as funções para que sejam mais precisas.";
 			break;
 		default:
 		}
@@ -6279,7 +6282,7 @@ function antoniovandrenumerocomplexo(arr)
 		return "e";
 	}
 
-// Soma de números complexos. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+// Soma de números complexos. Argumento: uma string contendo um número complexo na forma "a, b", com "a" e "b" números reais. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
 
 function antoniovandresomacomplexos(arr)
 	{
@@ -6309,7 +6312,7 @@ function antoniovandresomacomplexos(arr)
 		return "e";
 	}
 
-// Produto de números complexos. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+// Produto de números complexos. Argumento: uma string contendo um número complexo na forma "a, b", com "a" e "b" números reais. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
 
 function antoniovandreprodutocomplexos(arr)
 	{
@@ -6341,15 +6344,18 @@ function antoniovandreprodutocomplexos(arr)
 		return "e";
 	}
 
-// Módulo e argumento principal de um número complexo. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
+// Módulo e argumento principal de um número complexo. Argumentos: primeiro: uma string contendo um número complexo na forma "a, b", com "a" e "b" números reais; e, segundo, -1 para exibir o aviso anexo. Retorna o número complexo soma ou a string "e" se ocorre um erro genérico.
 
-function antoniovandremoduloargumentoprincipalcomplexo(arr)
+function antoniovandremoduloargumentoprincipalcomplexo(arr, avisoanexo)
 	{
 	var modulo;
 	var argumento;
 	var argumento1;
 	var argumento2;
 	var flag = 0;
+
+	if (avisoanexo == -1)
+		return antoniovandreoperadoresfuncoesconstantes(6);
 
 	if (antoniovandrenumerocomplexo(arr.trim()) == "e")
 		flag = 1
