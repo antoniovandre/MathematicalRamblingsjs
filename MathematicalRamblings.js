@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 16-06-2020.
+// Última atualização: 19-06-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -1493,6 +1493,21 @@ function antoniovandreescalonarmatriz(M, saida)
 				if (! f)
 					f = 1;
 
+				for (var l = 0; l < nl; l++)
+					{
+					for (var m = 0; m < nc; m++)
+						{
+						outputstr = outputstr + Mep[l][m].toString();
+						if (m < nc - 1)
+							outputstr = outputstr + " ";
+						}
+
+					if (l < nl - 1)
+						outputstr = outputstr + "\n";
+					}
+
+					outputstr = outputstr + "\n_____\n\n";
+
 				for (var j = 0; j < nc; j++)
 					if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
 						return antoniovandremensagenserro(6)
@@ -1518,13 +1533,43 @@ function antoniovandreescalonarmatriz(M, saida)
 				if (! f)
 					f = 1;
 
-				for (var j = 0; j < nc; j++)
-					if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
-						return antoniovandremensagenserro(6)
-					else
-						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
+				for (var l = 0; l < nl; l++)
+					{
+					for (var m = 0; m < nc; m++)
+						{
+						outputstr = outputstr + Mep[l][m].toString();
+						if (m < nc - 1)
+							outputstr = outputstr + " ";
+						}
+
+					if (l < nl - 1)
+						outputstr = outputstr + "\n";
+					}
+
+					outputstr = outputstr + "\n_____\n\n";
+
+					for (var j = 0; j < nc; j++)
+						if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
+							return antoniovandremensagenserro(6)
+						else
+							Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
 				}
 
+		for (var l = 0; l < nl; l++)
+			{
+			for (var m = 0; m < nc; m++)
+				{
+				outputstr = outputstr + Mep[l][m].toString();
+				if (m < nc - 1)
+					outputstr = outputstr + " ";
+				}
+
+			if (l < nl - 1)
+				outputstr = outputstr + "\n";
+			}
+
+		if (i < nl - 1)
+			outputstr = outputstr + "\n_____\n\n";
 		}
 
 	for (var i = 0; i < nl; i++)
@@ -1573,19 +1618,6 @@ function antoniovandreescalonarmatriz(M, saida)
 			switch (saida)
 				{
 				case 0:
-					for (var i = 0; i < nl; i++)
-						{
-						for (var j = 0; j < nc; j++)
-							{
-							outputstr = outputstr + Mep2[i][j].toString();
-							if (j < nc - 1)
-								outputstr = outputstr + " ";
-							}
-
-						if (i < nl - 1)
-							outputstr = outputstr + "\n";
-						}
-
 					return outputstr;
 
 					break;
@@ -2055,7 +2087,7 @@ function antoniovandrearrayindices(index, colunas, valorminimo, valormaximo)
 			M[i] += valorminimo;
 
 		return M;
-		}			
+		}
 	}
 
 // Elementos químicos. Argumento: "-1" para o tamanho da matriz ou um número natural para retornar a array de dois elementos, o primeiro o elemento químico e o segundo o peso atômico considerando os isótopos, número natural o número atômico do elemento químico. Retorna a string "e" se um erro ocorre.
@@ -4219,7 +4251,7 @@ function antoniovandrederivadapolinomio(str)
 	return antoniovandreordenartermospolinomio(pol2, "d");
 	}
 
-// Número de vezes que o caractere c encontra-se na string str. Argumentos, separados por vírgula ",": a string e, depois, o caractere. Retorna a string "e" caso um erro ocorra. 
+// Número de vezes que o caractere c encontra-se na string str. Argumentos, separados por vírgula ",": a string e, depois, o caractere. Retorna a string "e" caso um erro ocorra.
 
 function antoniovandrenumerocaracteres(str, c)
 	{
