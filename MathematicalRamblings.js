@@ -5865,9 +5865,9 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 		}
 	}
 
-// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; terceiro: "0", "1" ou "2", caso deseje se encontrar a derivada 0, 1, ou 2, respectivamente; o segundo argumento, global, se "-1", retorna o aviso anexo.
+// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; terceiro: "0", "1" ou "2", caso deseje se encontrar a derivada 0, 1, ou 2, respectivamente; o segundo argumento, global, "0" para retornar string, ou "1" para retornar número real; o terceiro argumento, global, se "-1", retorna o aviso anexo.
 
-function antoniovandrederivadaemumponto(str, avisoanexo)
+function antoniovandrederivadaemumponto(str, retorno, avisoanexo)
 	{
 	var argumentos = str.split(";");
 	var expressao;
@@ -5934,7 +5934,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 
 	expressao = antoniovandresubstituirstrings(expressaopart, list);
 
-	try
+	if ((nder == 2) || (nder == 0)) try
 		{
 		resultt = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2.toString()]]));
 		}
@@ -5943,7 +5943,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		return "e";
 		}
 
-	try
+	if (nder == 1) try
 		{
 		result1 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2inf.toString()]]));
 		}
@@ -5952,7 +5952,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		return "e";
 		}
 
-	try
+	if ((nder == 2) || (nder == 1)) try
 		{
 		result2 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2sup.toString()]]));
 		}
@@ -5961,7 +5961,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		return "e";
 		}
 
-	try
+	if (nder == 2) try
 		{
 		result22 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2sup2.toString()]]));
 		}
@@ -5970,7 +5970,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		return "e";
 		}
 
-	if (antoniovandrenumeroreal(resultt.toString()) == "e")
+	if ((nder == 2) || (nder == 0))if (antoniovandrenumeroreal(resultt.toString()) == "e")
 		{
 		if ((antoniovandrecompararstrings(resultt, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultt, antoniovandremensagenserro(6)) == 1))
 			return antoniovandremensagenserro(6)
@@ -5998,7 +5998,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	if (antoniovandrenumeroreal(result1.toString()) == "e")
+	if (nder == 1) if (antoniovandrenumeroreal(result1.toString()) == "e")
 		{
 		if ((antoniovandrecompararstrings(result1, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result1, antoniovandremensagenserro(6)) == 1))
 			return antoniovandremensagenserro(6)
@@ -6026,7 +6026,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	if (antoniovandrenumeroreal(result2.toString()) == "e")
+	if ((nder == 2) || (nder == 1)) if (antoniovandrenumeroreal(result2.toString()) == "e")
 		{
 		if ((antoniovandrecompararstrings(result2, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result2, antoniovandremensagenserro(6)) == 1))
 			return antoniovandremensagenserro(6)
@@ -6054,7 +6054,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	if (antoniovandrenumeroreal(result22.toString()) == "e")
+	if (nder == 2) if (antoniovandrenumeroreal(result22.toString()) == "e")
 		{
 		if ((antoniovandrecompararstrings(result22, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result22, antoniovandremensagenserro(6)) == 1))
 			return antoniovandremensagenserro(6)
@@ -6100,7 +6100,16 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 	if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(5);
 
-	return antoniovandreformatarreal(result);
+	switch (retorno) {
+		case 0:
+			return antoniovandreformatarreal(result);
+			break;
+		case 1:
+			return result;
+			break;
+		default:
+			return "e"
+		}
 	}
 
 // Fração geratriz. Argumentos: primeiro: um número real; segundo: o tipo de saída: 0 para string, 1 patra array. Retorna a string "e" caso um erro ocorra.
