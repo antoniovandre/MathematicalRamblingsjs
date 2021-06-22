@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 21-06-2021.
+// Última atualização: 22-06-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "21-06-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "22-06-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -5865,31 +5865,36 @@ function antoniovandreoperadoresfuncoesconstantes(i)
 		}
 	}
 
-// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; o segundo argumento, se "-1", retorna o aviso anexo.
+// Derivada de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula, onde o primeiro argumento é a expressão da função, deve estar em termos de x; segundo: o ponto, uma expressão que retorna um real; terceiro: "0", "1" ou "2", caso deseje se encontrar a derivada 0, 1, ou 2, respectivamente; o segundo argumento, global, se "-1", retorna o aviso anexo.
 
 function antoniovandrederivadaemumponto(str, avisoanexo)
 	{
 	var argumentos = str.split(";");
 	var expressao;
 	var expressaopart;
+	var nder;
 	var ponto;
 	var ponto2;
 	var ponto2inf;
 	var ponto2sup;
+	var ponto2sup2;
 	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
 	var listtam;
+	var resultt;
 	var result1;
 	var result2;
+	var result22;
 	var result;
 
 	if (avisoanexo == -1)
 		return antoniovandreoperadoresfuncoesconstantes(1);
 
-	if (argumentos.length != 2)
+	if (argumentos.length != 3)
 		return "e";
 
 	expressaopart = argumentos[0];
 	ponto = argumentos[1].trim();
+	nder = argumentos[2].trim();
 
 	if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(expressaopart, antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
 		return "e";
@@ -5897,14 +5902,20 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 	if (antoniovandreexpressaofuncaovalida(ponto) == "e")
 		return "e";
 
-		try
-			{
-			ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
-			}
-		catch (error)
-			{
-			return "e";
-			}
+	if (antoniovandrenumeronatural(nder) == "e")
+		return "e"
+	else
+		if (parseInt(nder) > 2)
+			return "e"
+
+	try
+		{
+		ponto2 = eval(antoniovandretraduzirexpressaofuncional(ponto, 0));
+		}
+	catch (error)
+		{
+		return "e";
+		}
 
 	if (antoniovandrenumeroreal(ponto2.toString()) == "e")
 		return "e"
@@ -5914,6 +5925,7 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 
 	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
 	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+	ponto2sup2 = ponto2 + 2 * antoniovandreprecisaoreal(3);
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -5921,6 +5933,15 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
 
 	expressao = antoniovandresubstituirstrings(expressaopart, list);
+
+	try
+		{
+		resultt = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
 
 	try
 		{
@@ -5938,6 +5959,43 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 	catch (error)
 		{
 		return "e";
+		}
+
+	try
+		{
+		result22 = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), ponto2sup2.toString()]]));
+		}
+	catch (error)
+		{
+		return "e";
+		}
+
+	if (antoniovandrenumeroreal(resultt.toString()) == "e")
+		{
+		if ((antoniovandrecompararstrings(resultt, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultt, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(resultt, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultt, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(resultt, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultt, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof resultt, "string") == 1)
+						return resultt
+					else
+						return "e";
+					}
+				}
+			}
+		}
+	else
+		{
+		if (Math.abs(resultt) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
 		}
 
 	if (antoniovandrenumeroreal(result1.toString()) == "e")
@@ -5996,7 +6054,48 @@ function antoniovandrederivadaemumponto(str, avisoanexo)
 			return antoniovandremensagenserro(6)
 		}
 
-	result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3));
+	if (antoniovandrenumeroreal(result22.toString()) == "e")
+		{
+		if ((antoniovandrecompararstrings(result22, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result22, antoniovandremensagenserro(6)) == 1))
+			return antoniovandremensagenserro(6)
+		else
+			{
+			if ((antoniovandrecompararstrings(result22, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(result22, antoniovandremensagenserro(4)) == 1))
+				return antoniovandremensagenserro(4)
+			else
+				{
+				if ((antoniovandrecompararstrings(result22, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(result22, antoniovandremensagenserro(2)) == 1))
+					return antoniovandremensagenserro(2)
+				else
+					{
+					if (antoniovandrecompararstrings(typeof result22, "string") == 1)
+						return result22
+					else
+						return "e";
+					}
+				}
+			}
+		}
+	else
+		{
+		if (Math.abs(result22) > parseFloat(antoniovandremaximovalorsaida(1)))
+			return antoniovandremensagenserro(6)
+		}
+
+	switch (nder)
+		{
+		case "0":
+			result = resultt;
+			break;
+		case "1":
+			result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3));
+			break;
+		case "2":
+			result = (result22 - 2 * result2 + resultt) / (antoniovandrepotencia(antoniovandreprecisaoreal(3), 2));
+			break;
+		default:
+			return "e"
+		}
 
 	if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(5);
