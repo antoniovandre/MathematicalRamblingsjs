@@ -5061,10 +5061,20 @@ function antoniovandrearccossec(x)
 
 function antoniovandrearccord(x)
 	{
+	var result;
+
 	if (arguments.length != 1)
 		return "e";
 
-	return antoniovandrearccos("1 - (" + x + "*" + x + ") / 2");
+	var c = antoniovandrearccos("1 - (" + x + "*" + x + ") / 2");
+
+	if (antoniovandrestringpresente(c, "fora do domínio da função") == "0")
+		{
+		result = x + " fora do domínio da função arccord."
+		return result;
+		}
+
+	return c;
 	}
 
 // Seno hiperbólico. Retorna a string "e" se um erro genérico ocorre.
