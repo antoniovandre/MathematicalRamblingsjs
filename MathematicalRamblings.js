@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 22-06-2021.
+// Última atualização: 29-06-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "22-06-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "29-06-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1671,10 +1671,10 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001; // Utilizada na formatação de números reais no JavaScript.
 			break;
 		case 2:
-			return 0; // Slot vago.
+			return 0.15; // A variação no domínio das funções para o cálculo de limites e derivadas. Pouca precisão.
 			break;
 		case 3:
-			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas.
+			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas. Maior precisão.
 			break;
 		case 4:
 			return 0.001; // A margem de erro para resultados nulos das funções.
@@ -5923,9 +5923,22 @@ function antoniovandrederivadaemumponto(str, retorno, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
-	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
-	ponto2sup2 = ponto2 + 2 * antoniovandreprecisaoreal(3);
+
+	switch (nder)
+	{
+	case "0":
+		break;
+	case "1":
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+		break;
+	case "2":
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+		ponto2sup2 = ponto2 + 2 * antoniovandreprecisaoreal(2);
+		break;
+	default:
+		return "e"
+	}
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -6091,7 +6104,7 @@ function antoniovandrederivadaemumponto(str, retorno, avisoanexo)
 			result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3));
 			break;
 		case "2":
-			result = (result22 - 2 * result2 + resultt) / (antoniovandrepotencia(antoniovandreprecisaoreal(3), 2));
+			result = (result22 - 2 * result2 + resultt) / (antoniovandrepotencia(antoniovandreprecisaoreal(2), 2));
 			break;
 		default:
 			return "e"
