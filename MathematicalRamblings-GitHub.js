@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 22-06-2021.
+// Última atualização: 30-06-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "22-06-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "30-06-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1671,10 +1671,10 @@ function antoniovandreprecisaoreal(i)
 			return 0.0000000000000000001; // Utilizada na formatação de números reais no JavaScript.
 			break;
 		case 2:
-			return 0; // Slot vago.
+			return 0.15; // A variação no domínio das funções para o cálculo de limites e derivadas. Pouca precisão.
 			break;
 		case 3:
-			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas.
+			return 0.06; // A variação no domínio das funções para o cálculo de limites e derivadas. Maior precisão.
 			break;
 		case 4:
 			return 0.001; // A margem de erro para resultados nulos das funções.
@@ -5923,9 +5923,22 @@ function antoniovandrederivadaemumponto(str, retorno, avisoanexo)
 		if (Math.abs(ponto2) > antoniovandremaximovalorentrada(1))
 			return antoniovandremensagenserro(2);
 
-	ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
-	ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
-	ponto2sup2 = ponto2 + 2 * antoniovandreprecisaoreal(3);
+
+	switch (nder)
+	{
+	case "0":
+		break;
+	case "1":
+		ponto2inf = ponto2 - antoniovandreprecisaoreal(3);
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(3);
+		break;
+	case "2":
+		ponto2sup = ponto2 + antoniovandreprecisaoreal(2);
+		ponto2sup2 = ponto2 + 2 * antoniovandreprecisaoreal(2);
+		break;
+	default:
+		return "e"
+	}
 
 	listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
 
@@ -6091,7 +6104,7 @@ function antoniovandrederivadaemumponto(str, retorno, avisoanexo)
 			result = (result2 - result1) / (2 * antoniovandreprecisaoreal(3));
 			break;
 		case "2":
-			result = (result22 - 2 * result2 + resultt) / (antoniovandrepotencia(antoniovandreprecisaoreal(3), 2));
+			result = (result22 - 2 * result2 + resultt) / (antoniovandrepotencia(antoniovandreprecisaoreal(2), 2));
 			break;
 		default:
 			return "e"
@@ -6572,6 +6585,27 @@ function antoniovandremoduloargumentoprincipalcomplexo(arr, avisoanexo)
 		return "Módulo: " + antoniovandreformatarreal(modulo).toString() + "\nArgumento principal: " + antoniovandreformatarreal(argumento).toString()
 	else
 		return "e";
+	}
+
+// Raio de curvatura de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula ";", tendo como primeira parte uma função em "x", e a segunda parte um número real para "x"; segundo: -1 para exibir o aviso anexo. Retorna um número real raio (aproximado) da função para o "x" dado, ou a string "e" caso ocorra um erro.
+
+function antoniovandreraiocurvaturafuncao(str, avisoanexo)
+	{
+	var argumentos = str.split(";");
+	var primeiraderivada;
+	var segundaderivada;
+
+	if (avisoanexo == -1) return antoniovandreoperadoresfuncoesconstantes(1);
+
+	if (argumentos.length != 2) return "e";
+
+	if ((argumentos[0].trim() == "") || (argumentos[1].trim() == "")) return "e";
+
+	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + ";1", 1, 0);
+
+	segundaderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + ";2", 1, 0);
+
+	return antoniovandremodulo(antoniovandrepotencia(1 + antoniovandrepotencia(primeiraderivada, 2), 1.5) / segundaderivada);
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
