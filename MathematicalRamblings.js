@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 29-06-2021.
+// Última atualização: 30-06-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "29-06-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "30-06-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -6585,6 +6585,27 @@ function antoniovandremoduloargumentoprincipalcomplexo(arr, avisoanexo)
 		return "Módulo: " + antoniovandreformatarreal(modulo).toString() + "\nArgumento principal: " + antoniovandreformatarreal(argumento).toString()
 	else
 		return "e";
+	}
+
+// Raio de curvatura de uma função em um ponto dado. Argumentos: primeiro: uma string separada por ponto e vírgula ";", tendo como primeira parte uma função em "x", e a segunda parte um número real para "x"; segundo: -1 para exibir o aviso anexo. Retorna um número real raio (aproximado) da função para o "x" dado, ou a string "e" caso ocorra um erro.
+
+function antoniovandreraiocurvaturafuncao(str, avisoanexo)
+	{
+	var argumentos = str.split(";");
+	var primeiraderivada;
+	var segundaderivada;
+
+	if (avisoanexo == -1) return antoniovandreoperadoresfuncoesconstantes(1);
+
+	if (argumentos.length != 2) return "e";
+
+	if ((argumentos[0].trim() == "") || (argumentos[1].trim() == "")) return "e";
+
+	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + ";1", 1, 0);
+
+	segundaderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + ";2", 1, 0);
+
+	return antoniovandremodulo(antoniovandrepotencia(1 + antoniovandrepotencia(primeiraderivada, 2), 1.5) / segundaderivada);
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
