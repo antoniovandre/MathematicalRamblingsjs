@@ -1683,7 +1683,7 @@ function antoniovandreprecisaoreal(i)
 			return 0.000001; // Menor valor atribuído ao domínio na matriz dos polinômios de Taylor.
 			break;
 		case 6:
-			return 0.001; // Valor de shift para quando conveniente.
+			return 0.01; // Valor de shift para quando conveniente.
 			break;
 		default:
 			return "e";
