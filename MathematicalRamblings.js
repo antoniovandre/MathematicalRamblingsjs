@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 01-07-2021.
+// Última atualização: 02-07-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "01-07-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "02-07-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1683,7 +1683,7 @@ function antoniovandreprecisaoreal(i)
 			return 0.000001; // Menor valor atribuído ao domínio na matriz dos polinômios de Taylor.
 			break;
 		case 6:
-			return 0.01; // Valor de shift para quando conveniente.
+			return 0.001; // Valor de shift para quando conveniente.
 			break;
 		default:
 			return "e";
@@ -6606,7 +6606,11 @@ function antoniovandreraiocurvaturafuncao(str, avisoanexo)
 
 	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";1", 1, 0);
 
+	if (antoniovandrenumeroreal(primeiraderivada.toString()) == "e") return "e";
+
 	segundaderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[1].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";2", 1, 0);
+
+	if (antoniovandrenumeroreal(segundaderivada.toString()) == "e") return "e";
 
 	return antoniovandremodulo(antoniovandrepotencia(1 + antoniovandrepotencia(primeiraderivada, 2), 1.5) / segundaderivada);
 	}
@@ -6682,7 +6686,11 @@ function antoniovandrevelocidadeantoniovandre(str, avisoanexo)
 
 	derivadazero = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[4].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";0", 1, 0);
 
+	if (antoniovandrenumeroreal(derivadazero.toString()) == "e") return "e";
+
 	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[4].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";1", 1, 0);
+
+	if (antoniovandrenumeroreal(primeiraderivada.toString()) == "e") return "e";
 
 	return (velocidade * ((ponto - abscissa) + (derivadazero - ordenada) * primeiraderivada) / antoniovandrepotencia((antoniovandrepotencia(ponto - abscissa, 2) + antoniovandrepotencia(derivadazero - ordenada, 2) * (1 + antoniovandrepotencia(primeiraderivada, 2))), 0.5));
 	}
@@ -6782,10 +6790,14 @@ function antoniovandrevelocidadeangularantoniovandre(str, avisoanexo)
 	if (antoniovandrenumeroreal(ponto.toString()) == "e")
 		return "e"
 
-	derivadazero = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[6].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";0", 1, 0);
+	derivadazero = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[6].trim() + ";0", 1, 0);
 
-	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[6].trim() + "+" + antoniovandreprecisaoreal(6).toString() + ";1", 1, 0);
-	
+	if (antoniovandrenumeroreal(derivadazero.toString()) == "e") return "e";
+
+	primeiraderivada = antoniovandrederivadaemumponto(argumentos[0].trim() + ";" + argumentos[6].trim() + ";1", 1, 0);
+
+	if (antoniovandrenumeroreal(primeiraderivada.toString()) == "e") return "e";
+
 	abscissa1 += antoniovandreprecisaoreal(6);
 	ordenada1 += antoniovandreprecisaoreal(6);
 	derivadazero += antoniovandreprecisaoreal(6);
