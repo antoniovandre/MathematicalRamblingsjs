@@ -6946,7 +6946,7 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 
 	for (var i = 0; i < n2; i++)
 	{
-		var x = inf2 + (parcela / 2) + (i * parcela);
+		var x = inf2 + (i * parcela);
 
 		try
 			{
