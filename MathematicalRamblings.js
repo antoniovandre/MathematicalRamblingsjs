@@ -6885,9 +6885,6 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 
 	if (antoniovandrenumeronaturalpositivo(n) == "e")
 		return "e"
-	else
-		if (parseInt(n) == 1)
-			return "A resolução deve ser maior que 1.";
 
 	if (Math.abs(parseInt(n)) > antoniovandremaximovalorentrada(1))
 		return antoniovandremensagenserro(2);
@@ -6920,7 +6917,7 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 			}
 
 
-	n2 = parseInt(n) - 1;
+	n2 = parseInt(n);
 
 	if (antoniovandrenumeroreal(inf2.toString()) == "e")
 		return "e"
@@ -6944,7 +6941,7 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 
 	expressao = antoniovandresubstituirstrings(expressaopart, list);
 
-	for (var i = 0; i < n2; i++)
+	for (var i = 0; i <= n2; i++)
 	{
 		var x = inf2 + (i * parcela);
 
