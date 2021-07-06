@@ -1476,6 +1476,11 @@ function antoniovandreescalonarmatriz(M, saida)
 			{
 			var d = parseFloat(Mep[i][l]);
 
+			for (var j = 0; j < nc; j++)
+				Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
+
+			outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
+
 			for (var m = 0; m < nl; m++)
 				{
 				for (var n = 0; n < nc; n++)
@@ -1489,12 +1494,8 @@ function antoniovandreescalonarmatriz(M, saida)
 					outputstr = outputstr + "\n";
 				}
 
-			if (i == 0) outputstr = outputstr + "\n_____\n\n";
+			outputstr = outputstr + "\n_____\n\n";
 
-			for (var j = 0; j < nc; j++)
-				Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
-
-			outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
 			}
 
 		for (var k = i + 1; k < nl; k++)
