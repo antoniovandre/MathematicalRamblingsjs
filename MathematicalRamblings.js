@@ -1476,11 +1476,11 @@ function antoniovandreescalonarmatriz(M, saida)
 			{
 			var d = parseFloat(Mep[i][l]);
 
-			for (var l = 0; l < nl; l++)
+			for (var ll = 0; ll < nl; ll++)
 				{
 				for (var m = 0; m < nc; m++)
 					{
-					outputstr = outputstr + Mep[l][m].toString();
+					outputstr = outputstr + Mep[ll][m].toString();
 					if (m < nc - 1)
 						outputstr = outputstr + " ";
 					}
