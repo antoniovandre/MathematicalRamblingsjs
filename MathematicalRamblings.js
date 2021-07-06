@@ -1489,12 +1489,12 @@ function antoniovandreescalonarmatriz(M, saida)
 					outputstr = outputstr + "\n";
 				}
 
-			if (i > 0) outputstr = outputstr + "\n_____\n\n";
+			outputstr = outputstr + "\n_____\n\n";
 
 			for (var j = 0; j < nc; j++)
 				Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
 
-			outputstr = outputstr + "Dividindo a linha " + i.toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
+			outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
 			}
 
 		for (var k = i + 1; k < nl; k++)
@@ -1531,7 +1531,8 @@ function antoniovandreescalonarmatriz(M, saida)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
 
-						outputstr = outputstr + "Somando à linha " + k.toString() + " a linha " + i.toString() + "multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";				}
+						outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+				}
 
 		for (var k = 0; k < i; k++)
 			if (parseFloat(Mep[k][l]) != 0)
@@ -1572,7 +1573,7 @@ function antoniovandreescalonarmatriz(M, saida)
 						else
 							Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
 
-					outputstr = outputstr + "Somando à linha " + k.toString() + " a linha " + i.toString() + "multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 				}
 
 		for (var l = 0; l < nl; l++)
