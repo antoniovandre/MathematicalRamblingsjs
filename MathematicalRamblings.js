@@ -1403,7 +1403,7 @@ function antoniovandreescalonarmatriz(M, saida)
 		Me.push(Ml[i].split(","));
 
 	for (var i = 0; i < Me.length; i++)
-		Me[i] = Me[i].trim();
+		Me[i] = Me[i].map(function(a){return a.trim()});
 
 	var Mep = [];
 	var Mep2 = [];
