@@ -1402,6 +1402,9 @@ function antoniovandreescalonarmatriz(M, saida)
 	for (var i = 0; i < Ml.length; i++)
 		Me.push(Ml[i].split(","));
 
+	for (var i = 0; i < Me.length; i++)
+		Me[i] = Me[i].trim();
+
 	var Mep = [];
 	var Mep2 = [];
 	var nl = Me.length;
@@ -1459,7 +1462,7 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				if (l == arrol[i])
 					{
-					Mep.push(Me[j].trim());
+					Mep.push(Me[j]);
 					linhasvistas.push(j);
 					}
 				}
