@@ -1476,20 +1476,20 @@ function antoniovandreescalonarmatriz(M, saida)
 			{
 			var d = parseFloat(Mep[i][l]);
 
-			for (var ll = 0; ll < nl; ll++)
+			for (var m = 0; m < nl; m++)
 				{
-				for (var m = 0; m < nc; m++)
+				for (var n = 0; n < nc; n++)
 					{
-					outputstr = outputstr + Mep[ll][m].toString();
-					if (m < nc - 1)
+					outputstr = outputstr + Mep[m][n].toString();
+					if (n < nc - 1)
 						outputstr = outputstr + " ";
 					}
 
-				if (l < nl - 1)
+				if (m < nl - 1)
 					outputstr = outputstr + "\n";
 				}
 
-			outputstr = outputstr + "\n_____\n\n";
+			if (i == 0) outputstr = outputstr + "\n_____\n\n";
 
 			for (var j = 0; j < nc; j++)
 				Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
