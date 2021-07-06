@@ -1459,7 +1459,7 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				if (l == arrol[i])
 					{
-					Mep.push(Me[j]);
+					Mep.push(Me[j].trim());
 					linhasvistas.push(j);
 					}
 				}
@@ -1480,22 +1480,6 @@ function antoniovandreescalonarmatriz(M, saida)
 				Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
 
 			outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
-
-			for (var m = 0; m < nl; m++)
-				{
-				for (var n = 0; n < nc; n++)
-					{
-					outputstr = outputstr + Mep[m][n].toString();
-					if (n < nc - 1)
-						outputstr = outputstr + " ";
-					}
-
-				if (m < nl - 1)
-					outputstr = outputstr + "\n";
-				}
-
-			outputstr = outputstr + "\n_____\n\n";
-
 			}
 
 		for (var k = i + 1; k < nl; k++)
