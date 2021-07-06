@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 03-07-2021.
+// Última atualização: 06-07-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "03-07-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "06-07-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -5625,7 +5625,7 @@ function antoniovandreintegraldefinidaaproximacaosomariemann(str, avisoanexo)
 			}
 		else
 			{
-			if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
+			if ((Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1))) || (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1))))
 				return antoniovandremensagenserro(6)
 			else
 				result += resultpart * parcela;
@@ -6978,7 +6978,7 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 			}
 		else
 			{
-			if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
+			if ((Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1))) || (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1))))
 				return antoniovandremensagenserro(6)
 			else
 				result += resultpart;
