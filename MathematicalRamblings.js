@@ -1512,6 +1512,8 @@ function antoniovandreescalonarmatriz(M, saida)
 
 			if ((f == 0) || (f2 == 0)) continue;
 
+			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+
 			for (var l = 0; l < nl; l++)
 				{
 				for (var m = 0; m < nc; m++)
@@ -1529,8 +1531,6 @@ function antoniovandreescalonarmatriz(M, saida)
 				flag5 = 1;
 			else
 				outputstr = outputstr + "\n_____\n\n";
-
-			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 
 			for (var j = 0; j < nc; j++)
 				if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -1551,7 +1551,9 @@ function antoniovandreescalonarmatriz(M, saida)
 				var f2 = parseFloat(Mep[i][l2]);
 		
 				if ((f == 0) || (f2 == 0)) continue;
-		
+
+				outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+
 				for (var l = 0; l < nl; l++)
 					{
 					for (var m = 0; m < nc; m++)
@@ -1569,8 +1571,6 @@ function antoniovandreescalonarmatriz(M, saida)
 					flag5 = 1;
 				else
 					outputstr = outputstr + "\n_____\n\n";
-
-				outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 
 				for (var j = 0; j < nc; j++)
 					if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -1619,6 +1619,8 @@ function antoniovandreescalonarmatriz(M, saida)
 					}
 				}
 			}
+
+	outputstr.substring(0, outputstr.length - 8);
 
 	for (var i = 0; i < nl; i++)
 			for (var j = 0; j < nc; j++)
