@@ -1481,13 +1481,13 @@ function antoniovandreescalonarmatriz(M, saida)
 			{
 			var d = parseFloat(Mep[i][l]);
 
+			if (flag5 == 0)
+				flag5 = 1;
+			else
+				outputstr = outputstr + "\n_____\n\n";
+
 			if (d != 1)
 				{
-				if (flag5 == 0)
-					flag5 = 1;
-				else
-					outputstr = outputstr + "\n_____\n\n";
-
 				for (var j = 0; j < nc; j++)
 					Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
 
@@ -1508,8 +1508,9 @@ function antoniovandreescalonarmatriz(M, saida)
 				}
 
 			var f = parseFloat(Mep[k][l2]);
+			var f2 = parseFloat(Mep[i][l2]);
 
-			if (! f) continue;
+			if ((f == 0) || (f2 == 0)) continue;
 
 			for (var l = 0; l < nl; l++)
 				{
@@ -1528,14 +1529,14 @@ function antoniovandreescalonarmatriz(M, saida)
 				flag5 = 1;
 			else
 				outputstr = outputstr + "\n_____\n\n";
-		
+
+			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+
 			for (var j = 0; j < nc; j++)
 				if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
 					return antoniovandremensagenserro(6)
 				else
 					Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
-
-			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 			}
 
 		for (var k = i + 1; k < nl; k++)
@@ -1547,9 +1548,10 @@ function antoniovandreescalonarmatriz(M, saida)
 					l2++;
 
 				var f = parseFloat(Mep[k][l2]);
-
-				if (! f) continue;
-
+				var f2 = parseFloat(Mep[i][l2]);
+		
+				if ((f == 0) || (f2 == 0)) continue;
+		
 				for (var l = 0; l < nl; l++)
 					{
 					for (var m = 0; m < nc; m++)
@@ -1567,14 +1569,14 @@ function antoniovandreescalonarmatriz(M, saida)
 					flag5 = 1;
 				else
 					outputstr = outputstr + "\n_____\n\n";
-		
+
+				outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+
 				for (var j = 0; j < nc; j++)
 					if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
 						return antoniovandremensagenserro(6)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
-
-					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 				}
 		}
 
