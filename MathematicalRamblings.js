@@ -1514,19 +1514,6 @@ function antoniovandreescalonarmatriz(M, saida)
 
 			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 
-			for (var l = 0; l < nl; l++)
-				{
-				for (var m = 0; m < nc; m++)
-					{
-					outputstr = outputstr + Mep[l][m].toString();
-					if (m < nc - 1)
-						outputstr = outputstr + " ";
-					}
-
-				if (l < nl - 1)
-					outputstr = outputstr + "\n";
-				}
-
 			if (flag5 == 0)
 				flag5 = 1;
 			else
@@ -1537,6 +1524,19 @@ function antoniovandreescalonarmatriz(M, saida)
 					return antoniovandremensagenserro(6)
 				else
 					Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
+
+			for (var l = 0; l < nl; l++)
+				{
+				for (var m = 0; m < nc; m++)
+					{
+					outputstr = outputstr + Mep[l][m].toString();
+					if (m < nc - 1)
+						outputstr = outputstr + " ";
+					}
+	
+				if (l < nl - 1)
+					outputstr = outputstr + "\n";
+				}
 			}
 
 		for (var k = i + 1; k < nl; k++)
@@ -1554,19 +1554,6 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 
-				for (var l = 0; l < nl; l++)
-					{
-					for (var m = 0; m < nc; m++)
-						{
-						outputstr = outputstr + Mep[l][m].toString();
-						if (m < nc - 1)
-							outputstr = outputstr + " ";
-						}
-
-					if (l < nl - 1)
-						outputstr = outputstr + "\n";
-					}
-
 				if (flag5 == 0)
 					flag5 = 1;
 				else
@@ -1577,6 +1564,20 @@ function antoniovandreescalonarmatriz(M, saida)
 						return antoniovandremensagenserro(6)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
+
+					for (var l = 0; l < nl; l++)
+						{
+						for (var m = 0; m < nc; m++)
+							{
+							outputstr = outputstr + Mep[l][m].toString();
+							if (m < nc - 1)
+								outputstr = outputstr + " ";
+							}
+	
+						if (l < nl - 1)
+							outputstr = outputstr + "\n";
+						}
+	
 				}
 		}
 
@@ -1619,8 +1620,6 @@ function antoniovandreescalonarmatriz(M, saida)
 					}
 				}
 			}
-
-	outputstr.substring(0, outputstr.length - 8);
 
 	for (var i = 0; i < nl; i++)
 			for (var j = 0; j < nc; j++)
