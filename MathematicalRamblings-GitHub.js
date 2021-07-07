@@ -1507,7 +1507,7 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				var f = parseFloat(Mep[k][l2]);
 
-				if (! f)
+				if (f == 0)
 					{
 					flag4 = 1;
 					continue;
@@ -1555,7 +1555,7 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				var f = parseFloat(Mep[k][l2]);
 
-				if (! f)
+				if (f == 0)
 					{
 					flag4 = 1;
 					continue;
