@@ -1544,12 +1544,10 @@ function antoniovandreescalonarmatriz(M, saida)
 			if (parseFloat(Mep[k][l]) != 0)
 				{
 				var l2 = 0;
-				var flag2 = 0;
 
-				while (((parseFloat(Mep[k][l2]) == 0 || parseFloat(Mep[k][l2]) == 1) && flag2 == 0) || (parseFloat(Mep[k][l2]) == 0 && flag2 == 1))
+				while ((parseFloat(Mep[k][l2]) == 0) || (parseFloat(Mep[k][l2]) == 1))
 					{
-					if (parseFloat(Mep[k][l2]) == 1)
-						flag2 = 1;
+					if (parseFloat(Mep[k][l2]) == 1) {l2++; break;}
 					l2++;
 					}
 
