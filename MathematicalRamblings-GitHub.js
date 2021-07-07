@@ -1414,7 +1414,6 @@ function antoniovandreescalonarmatriz(M, saida)
 	var arrol;
 	var flag = 0;
 	var flag4 = 0;
-	var flag5 = 0;
 
 	for (var i = 0; i < nl; i++)
 		if (nc != Me[i].length)
@@ -1501,11 +1500,7 @@ function antoniovandreescalonarmatriz(M, saida)
 						outputstr = outputstr + "\n";
 					}
 
-				if (flag5 == 0)
-					flag5 = 1;
-				else
-					outputstr = outputstr + "\n_____\n\n";
-	
+				outputstr = outputstr + "\n_____\n\n";
 				}
 			}
 
@@ -1547,10 +1542,7 @@ function antoniovandreescalonarmatriz(M, saida)
 					outputstr = outputstr + "\n";
 				}
 
-			if (flag5 == 0)
-				flag5 = 1;
-			else
-				outputstr = outputstr + "\n_____\n\n";
+			outputstr = outputstr + "\n_____\n\n";
 			}
 
 		for (var k = i + 1; k < nl; k++)
@@ -1587,10 +1579,7 @@ function antoniovandreescalonarmatriz(M, saida)
 							outputstr = outputstr + "\n";
 						}
 
-				if (flag5 == 0)
-					flag5 = 1;
-				else
-					outputstr = outputstr + "\n_____\n\n";
+				outputstr = outputstr + "\n_____\n\n";
 				}
 		}
 
