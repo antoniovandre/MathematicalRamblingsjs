@@ -1513,8 +1513,14 @@ function antoniovandreescalonarmatriz(M, saida)
 				{
 				if (parseFloat(Mep[k][l2]) == 1)
 					flag2 = 1;
-				l2++;
+
+				if (l2 == nc)
+					break
+				else
+					l2++;
 				}
+
+			if (l2 == nc) continue;
 
 			var f = parseFloat(Mep[k][l2]);
 			var f2 = parseFloat(Mep[i][l2]);
@@ -1550,8 +1556,10 @@ function antoniovandreescalonarmatriz(M, saida)
 				{
 				var l2 = 0;
 
-				while (parseFloat(Mep[k][l2]) == 0)
+				while ((parseFloat(Mep[k][l2]) == 0) && (l2 < nc))
 					l2++;
+
+				if (l2 == nc) continue;
 
 				var f = parseFloat(Mep[k][l2]);
 				var f2 = parseFloat(Mep[i][l2]);
