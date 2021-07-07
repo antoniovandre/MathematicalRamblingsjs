@@ -1507,17 +1507,12 @@ function antoniovandreescalonarmatriz(M, saida)
 		for (var k = 0; k < i; k++)
 			{
 			var l2 = 0;
-			var flag2 = 0;
 
-			while (((parseFloat(Mep[k][l2]) == 0 || parseFloat(Mep[k][l2]) == 1) && flag2 == 0) || (parseFloat(Mep[k][l2]) == 0 && flag2 == 1))
+			while ((parseFloat(Mep[k][l2]) == 0) || (parseFloat(Mep[k][l2]) == 1))
 				{
-				if (parseFloat(Mep[k][l2]) == 1)
-					flag2 = 1;
-
-				if (l2 == nc)
-					break
-				else
-					l2++;
+				if (l2 == nc) break;
+				l2++;
+				if (parseFloat(Mep[k][l2]) == 1) break;
 				}
 
 			if (l2 == nc) continue;
@@ -1574,18 +1569,18 @@ function antoniovandreescalonarmatriz(M, saida)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
 
-					for (var l = 0; l < nl; l++)
+				for (var l = 0; l < nl; l++)
+					{
+					for (var m = 0; m < nc; m++)
 						{
-						for (var m = 0; m < nc; m++)
-							{
-							outputstr = outputstr + Mep[l][m].toString();
-							if (m < nc - 1)
-								outputstr = outputstr + " ";
-							}
-	
-						if (l < nl - 1)
-							outputstr = outputstr + "\n";
+						outputstr = outputstr + Mep[l][m].toString();
+						if (m < nc - 1)
+							outputstr = outputstr + " ";
 						}
+	
+					if (l < nl - 1)
+						outputstr = outputstr + "\n";
+					}
 
 				outputstr = outputstr + "\n_____\n\n";
 				}
