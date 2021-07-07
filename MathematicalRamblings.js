@@ -1413,6 +1413,7 @@ function antoniovandreescalonarmatriz(M, saida)
 	var str = "";
 	var arrol;
 	var flag = 0;
+	var flag4 = 0;
 
 	for (var i = 0; i < nl; i++)
 		if (nc != Me[i].length)
@@ -1496,7 +1497,10 @@ function antoniovandreescalonarmatriz(M, saida)
 				var f = parseFloat(Mep[k][l2]);
 
 				if (! f)
+					{
+					flag4 = 1;
 					continue;
+					}
 
 				for (var l = 0; l < nl; l++)
 					{
@@ -1538,7 +1542,10 @@ function antoniovandreescalonarmatriz(M, saida)
 				var f = parseFloat(Mep[k][l2]);
 
 				if (! f)
+					{
+					flag4 = 1;
 					continue;
+					}
 
 				for (var l = 0; l < nl; l++)
 					{
@@ -1620,6 +1627,24 @@ function antoniovandreescalonarmatriz(M, saida)
 					}
 				}
 			}
+
+	if (flag4 == 1)
+		{
+		outputstr = outputstr + "\n_____\n\nReordenando as linhas:\n\n";
+
+		for (var l = 0; l < nl; l++)
+			{
+			for (var m = 0; m < nc; m++)
+				{
+				outputstr = outputstr + Mep2[l][m].toString();
+				if (m < nc - 1)
+					outputstr = outputstr + " ";
+				}
+
+			if (l < nl - 1)
+				outputstr = outputstr + "\n";
+			}
+		}
 
 	switch (flag)
 		{
