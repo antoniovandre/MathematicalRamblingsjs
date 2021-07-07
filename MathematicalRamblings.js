@@ -1491,8 +1491,12 @@ function antoniovandreescalonarmatriz(M, saida)
 					{
 					for (var m = 0; m < nc; m++)
 						{
-						outputstr = outputstr + Mep[l][m].toString();
-						if (m < nc - 1)
+						if (antoniovandrecompararstrings(typeof Mep[l][m], "String") == "e")
+							outputstr = outputstr + Mep[l][m].toString()
+						else
+							outputstr = outputstr + Mep[l][m];
+
+							if (m < nc - 1)
 							outputstr = outputstr + " ";
 						}
 		
@@ -1573,7 +1577,11 @@ function antoniovandreescalonarmatriz(M, saida)
 					{
 					for (var m = 0; m < nc; m++)
 						{
-						outputstr = outputstr + Mep[l][m].toString();
+						if (antoniovandrecompararstrings(typeof Mep[l][m], "String") == "e")
+							outputstr = outputstr + Mep[l][m].toString()
+						else
+							outputstr = outputstr + Mep[l][m];
+
 						if (m < nc - 1)
 							outputstr = outputstr + " ";
 						}
