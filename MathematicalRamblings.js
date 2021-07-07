@@ -1514,11 +1514,6 @@ function antoniovandreescalonarmatriz(M, saida)
 
 			outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
 
-			if (flag5 == 0)
-				flag5 = 1;
-			else
-				outputstr = outputstr + "\n_____\n\n";
-
 			for (var j = 0; j < nc; j++)
 				if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
 					return antoniovandremensagenserro(6)
@@ -1537,6 +1532,11 @@ function antoniovandreescalonarmatriz(M, saida)
 				if (l < nl - 1)
 					outputstr = outputstr + "\n";
 				}
+
+			if (flag5 == 0)
+				flag5 = 1;
+			else
+				outputstr = outputstr + "\n_____\n\n";
 			}
 
 		for (var k = i + 1; k < nl; k++)
@@ -1553,11 +1553,6 @@ function antoniovandreescalonarmatriz(M, saida)
 				if ((f == 0) || (f2 == 0)) continue;
 
 				outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
-
-				if (flag5 == 0)
-					flag5 = 1;
-				else
-					outputstr = outputstr + "\n_____\n\n";
 
 				for (var j = 0; j < nc; j++)
 					if (Math.abs(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -1577,7 +1572,11 @@ function antoniovandreescalonarmatriz(M, saida)
 						if (l < nl - 1)
 							outputstr = outputstr + "\n";
 						}
-	
+
+				if (flag5 == 0)
+					flag5 = 1;
+				else
+					outputstr = outputstr + "\n_____\n\n";
 				}
 		}
 
@@ -1620,6 +1619,8 @@ function antoniovandreescalonarmatriz(M, saida)
 					}
 				}
 			}
+
+	outputstr = outputstr.substring(0, outputstr.length - 8);
 
 	for (var i = 0; i < nl; i++)
 			for (var j = 0; j < nc; j++)
