@@ -1485,6 +1485,11 @@ function antoniovandreescalonarmatriz(M, saida)
 
 			outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d).toString() + ":\n\n";
 			}
+		else
+			{
+			flag4 = 1;
+			continue;
+			}
 
 		for (var k = i + 1; k < nl; k++)
 			if (parseFloat(Mep[k][l]) != 0)
