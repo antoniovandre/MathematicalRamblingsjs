@@ -1401,7 +1401,8 @@ function antoniovandreescalonarmatriz(M, saida)
 
 	for (var i = 0; i < Ml.length; i++)
 		{
-		if (Ml[i].map(function(a){return a.trim()}).length == 0) return "e";
+		var strtemp = Ml[i].map(function(a){return a.trim()});
+		if (strtemp.length == 0) return "e";
 		Me.push(Ml[i].split(","));
 		}
 
