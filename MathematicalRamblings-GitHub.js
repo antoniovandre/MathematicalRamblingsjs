@@ -1672,7 +1672,10 @@ function antoniovandreescalonarmatriz(M, saida)
 			switch (saida)
 				{
 				case 0:
-					return outputstr;
+					if (outputstr == "")
+						return "A matriz já se encontra escalonada."
+					else
+						return outputstr;
 
 					break;
 				case 1:
