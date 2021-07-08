@@ -1414,10 +1414,12 @@ function antoniovandreescalonarmatriz(M, saida)
 	var nl = Me.length;
 	var nc = Me[0].length;;
 	var linhasvistas;
-	var str = "";
+	var str;
 	var arrol;
 	var flag = 0;
 	var flag4;
+	var flag5 = 0;
+	var contador = 0;
 
 	for (var i = 0; i < nl; i++)
 		if (nc != Me[i].length)
@@ -1432,6 +1434,8 @@ function antoniovandreescalonarmatriz(M, saida)
 				else
 					if (Math.abs(parseFloat(Me[i][j])) > antoniovandremaximovalorentrada(1))
 						return antoniovandremensagenserro(2);
+
+	str = "";
 
 	for (var i = 0; i < nl; i++)
 		{
@@ -1475,12 +1479,12 @@ function antoniovandreescalonarmatriz(M, saida)
 
 	flag4 = 0;
 
-	for (var i = 0; i < nl; i++)
+	label: for (var i = 0; i < nl; i++)
 		for (var j = 0; j < nc; j++)
 			if (Me[i][j] != Mep[i][j])
 				{
 				flag4 = 1;
-				break;
+				break label;
 				}
 
 	if (flag4 == 1)
@@ -1503,6 +1507,7 @@ function antoniovandreescalonarmatriz(M, saida)
 		outputstr = outputstr + "\n_____\n\n";
 		}
 
+	while (flag5 == 0) {flag5 = 1;
 
 	for (var i = 0; i < nl; i++)
 		{
@@ -1546,10 +1551,10 @@ function antoniovandreescalonarmatriz(M, saida)
 
 		for (var k = 0; k < i; k++)
 			{
-			while ((parseFloat(Mep[k][l2]) == 0) || (parseFloat(Mep[k][l2]) == 1))
+			while ((parseFloat(Mep[i][l2]) == 0) || (parseFloat(Mep[i][l2]) == 1))
 				{
 				if (l2 == nc) break;
-				if (parseFloat(Mep[k][l2]) == 1) {l2++; break;}
+				if (parseFloat(Mep[i][l2]) == 1) break;
 				l2++;
 				}
 
@@ -1622,6 +1627,8 @@ function antoniovandreescalonarmatriz(M, saida)
 			}
 		}
 
+	str = "";
+
 	for (var i = 0; i < nl; i++)
 		{
 		var l = 0;
@@ -1663,21 +1670,19 @@ function antoniovandreescalonarmatriz(M, saida)
 				}
 			}
 
-	outputstr = outputstr.substring(0, outputstr.length - 8);
-
 	flag4 = 0;
 
-	for (var i = 0; i < nl; i++)
+	label: for (var i = 0; i < nl; i++)
 			for (var j = 0; j < nc; j++)
 				if (Mep[i][j] != Mep2[i][j])
 					{
 					flag4 = 1;
-					break;
+					break label;
 					}
 
 	if (flag4 == 1)
 		{
-		outputstr = outputstr + "\n_____\n\nReordenando as linhas:\n\n";
+		outputstr = outputstr + "Reordenando as linhas:\n\n";
 
 		for (var l = 0; l < nl; l++)
 			{
@@ -1691,7 +1696,18 @@ function antoniovandreescalonarmatriz(M, saida)
 			if (l < nl - 1)
 				outputstr = outputstr + "\n";
 			}
+
+		outputstr = outputstr + "\n_____\n\n";
+
+		for (var i = 0; i < nl; i++)
+			for (var j = 0; j < nc; j++)
+				Mep[i][j] = Mep2[i][j];
+
+		flag5 = 0; contador++;
 		}
+	}
+
+	outputstr = outputstr.substring(0, outputstr.length - 8);
 
 	switch (flag)
 		{
@@ -1706,7 +1722,7 @@ function antoniovandreescalonarmatriz(M, saida)
 
 					break;
 				case 1:
-					return Mep2;
+					return Mep;
 
 					break;
 				default:
