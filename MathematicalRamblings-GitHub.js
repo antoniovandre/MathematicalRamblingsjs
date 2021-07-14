@@ -7113,13 +7113,15 @@ function antoniovandrematrizalfanumericaposicao(t)
 
 function antoniovandrematrizalfanumericatermo(i)
 {
-var tamanho = antoniovandrematrizalfanumerica.length;
+	var tamanho = antoniovandrematrizalfanumerica.length;
 
-if (antoniovandrenumeronatural (i.toString()) == "e") return "e";
+	if (antoniovandrenumeronatural (i.toString()) == "e") return "e";
 
-if (i > tamanho) return "e_";
+	if (isnan(antoniovandrematrizalfanumerica[i][0]))
+		return "e_"
+	else
+		return antoniovandrematrizalfanumerica[i][0];
 
-return antoniovandrematrizalfanumerica[i][0];
 }
 
 // Posição em ordem crescente. Argumentos: primeiro: uma string alfanumérica contendo os elementos que serão utilizados como universo; segundo: uma string alfanumérica da qual se saberá a posição que ocupa; terceiro: "r" para permitir repetição de termos, ou "nr" para contabilizar palavras alfanuméricas em que não há repetição de termos; quarto: "a" para processar apenas letras, ou "t" para processar letras e números. Retorna a string "e" caso um erro genérico ocorra.
@@ -7155,6 +7157,14 @@ function antoniovandreposicaostring(args)
 		flag = 1
 	else
 		flag = 0;
+
+	for (var i = 0; i < t1; i++)
+		if (antoniovandrematrizalfanumericaposicao(stru[i]) == "e")
+			return "A string universo não suporta alguns caracteres."
+
+	for (var i = 0; i < t2; i++)
+		if (antoniovandrematrizalfanumericaposicao(str[i]) == "e")
+			return "A string a analisar não suporta alguns caracteres."
 
 	for (var i = 0; i < t1; i++)
 		if ((flag == 1) && (antoniovandrenumeronatural(stru[i]) != "e"))
