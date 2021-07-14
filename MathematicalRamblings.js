@@ -7186,12 +7186,16 @@ function antoniovandreposicaostring(args)
 		for (var i = 0; i < t2; i++)
 			{
 			var fator = 0;
+			var fator2 = 1;
 
 			for (var j = 0; j < t1; j++)
 				if (antoniovandrematrizalfanumericaposicao(stru[j]) < antoniovandrematrizalfanumericaposicao(str[i]))
 					fator++;
 
-			contador += fator * antoniovandrepotencia(t1, t2 - i - 1).toFixed();
+			for (var j = 1; j <= t2 - i - 1; j++)
+				fator2 *= t1;
+
+			contador += fator * fator2;
 			}
 		}
 	else
