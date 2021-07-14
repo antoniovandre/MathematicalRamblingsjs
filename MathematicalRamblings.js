@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 08-07-2021.
+// Última atualização: 14-07-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "08-07-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "14-07-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -6953,7 +6953,7 @@ function antoniovandrevelocidadeangularantoniovandre(str, avisoanexo)
 		return result;
 	}
 
-// Média de Antonio Vandré. Argumentos: primeiro: uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: a resolução que será utilizada no cálculo; segundo: "-1" para retornar o aviso anexo.
+// Média de Antonio Vandré. Argumentos: primeiro: uma string contendo, separados por ponto e vírgula: primeiro: a expressão da função da qual se deseja obter o valor da integral, deve ser uma função em "x"; segundo: um número real como valor inferior; terceiro: um número real como valor superior; quarto: a resolução que será utilizada no cálculo; segundo: "-1" para retornar o aviso anexo. Retorna a string "e" caso um erro genérico ocorra.
 
 function antoniovandremediaantoniovandre(str, avisoanexo)
 	{
@@ -7091,6 +7091,135 @@ function antoniovandremediaantoniovandre(str, avisoanexo)
 		return antoniovandremensagenserro(5);
 
 	return antoniovandreformatarreal(result);
+	}
+
+// Matriz alfanumerica.
+
+var antoniovandrematrizalfanumerica = [["0",0],["1",1],["2",2],["3",3],["4",4],["5",5],["6",6],["7",7],["8",8],["9",9],["a",10],["b",11],["c",12],["d",13],["e",14],["f",15],["g",16],["h",17],["i",18],["j", 19],["k",20],["l",21],["m",22],["n",23],["o",24],["p",25],["q",26],["r",27],["s",28],["t",29],["u",30],["v",31],["w",32],["x",33],["y",34],["z",35]]
+
+// Retorna a posição de um termo na matriz alfanumérica. Retorna a string "e" caso um erro genérico ocorra.
+
+function antoniovandrematrizalfanumericaposicao(t)
+	{
+	var tamanho = antoniovandrematrizalfanumerica.length;
+
+	for (var i = 0; i < tamanho; i++)
+		if (antoniovandrematrizalfanumerica[i][0] == t) return antoniovandrematrizalfanumerica[i][1];
+
+	return "e";
+	}
+
+// Retorna o termo cuja posição é dada na matriz alfanumérica. Retorna a string "e_" caso um erro genérico ocorra.
+
+function antoniovandrematrizalfanumericatermo(i)
+{
+var tamanho = antoniovandrematrizalfanumerica.length;
+
+if (antoniovandrenumeronatural (i.toString()) == "e") return "e";
+
+if (i > tamanho) return "e_";
+
+return antoniovandrematrizalfanumerica[i][0];
+}
+
+// Posição em ordem crescente. Argumentos: primeiro: uma string alfanumérica contendo os elementos que serão utilizados como universo; segundo: uma string alfanumérica da qual se saberá a posição que ocupa; terceiro: "r" para permitir repetição de termos, ou "nr" para contabilizar palavras alfanuméricas em que não há repetição de termos; quarto: "a" para processar apenas letras, ou "t" para processar letras e números. Retorna a string "e" caso um erro genérico ocorra.
+
+function antoniovandreposicaostring(args)
+	{
+	var argumentos = [];
+	var argumentos = args.split(",");
+	var stru = argumentos[0];
+	var str = argumentos[1];
+	var rep = argumentos[2];
+	var alpha = argumentos[3];
+	var contador = 0;
+	var flag;
+
+	if (argumentos.length != 4) return "e";
+
+	stru = stru.trim();
+	str = str.trim();
+	rep = rep.trim();
+	alpha = alpha.trim();
+
+	var t1 = stru.length;
+	var t2 = str.length;
+
+	if ((antoniovandrecompararstrings(rep, "r") == "e") && (antoniovandrecompararstrings(rep, "nr") == "e"))
+		return "e";
+
+	if ((antoniovandrecompararstrings(alpha, "a") == "e") && (antoniovandrecompararstrings(alpha, "t") == "e"))
+		return "e";
+
+	if (antoniovandrecompararstrings(alpha, "a") == 1)
+		flag = 1
+	else
+		flag = 0;
+
+	for (var i = 0; i < t1; i++)
+		if ((flag == 1) && (antoniovandrenumeronatural(stru[i]) != "e"))
+			return "Elementos numéricos na string universo.";
+
+	 for (var i = 0; i < t2; i++)
+		if ((flag == 1) && (antoniovandrenumeronatural(str[i]) != "e"))
+			return "Elementos numéricos na string a analisar.";
+ 
+	for (var i = 0; i < t1; i++)
+		for (var j = 0; j < t1; j++)
+			if (i != j)
+				if (stru[i] == stru[j])
+					return "Elementos repetidos na string universo.";
+
+	for (var i = 0; i < t2; i++)
+		{
+		var flag2 = 0;
+
+		for (var j = 0; j < t1; j++)
+			if (str[i] == stru[j])
+				{flag2 = 1; break;}
+
+		if (flag2 == 0) return "Elementos na string a analisar não presentes na string universo.";
+		}
+			 
+	if (rep == "r")
+		{
+		for (var i = 0; i < t2; i++)
+			{
+			var fator = 0;
+
+			for (var j = 0; j < t1; j++)
+				if (antoniovandrematrizalfanumericaposicao(stru[j]) < antoniovandrematrizalfanumericaposicao(str[i]))
+					fator++;
+
+			contador += fator * antoniovandrepotencia(t1, t2 - i - 1).toFixed();
+			}
+		}
+	else
+		{
+		for (var i = 0; i < t2; i++)
+			for (var j = 0; j < t2; j++)
+				if (i != j)
+					if (str[j] == str[i])
+						return "Elementos repetidos na string a analisar.";
+
+		for (var i = 0; i < t2; i++)
+			{
+			var fator = 0;
+
+			for (var j = 0; j < t1; j++)
+				if (antoniovandrematrizalfanumericaposicao(stru[j]) < antoniovandrematrizalfanumericaposicao(str[i]))
+					fator++;
+
+			contador += (fator * antoniovandrefatorial(t1 - i - 1) / antoniovandrefatorial (t1 - t2));
+			}
+		}
+
+	contador++;
+
+	if (Math.abs(contador) > antoniovandremaximovalorsaida(1))
+		return antoniovandremensagenserro(5)
+	else
+		return contador;
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
