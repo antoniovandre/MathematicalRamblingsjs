@@ -7236,6 +7236,130 @@ function antoniovandreposicaostring(args)
 		return contador;
 	}
 
+// Função mais próxima. Argumentos: primeiro global: uma string dividida em duas partes por ponto e vírgula ";": primeiro: uma string com funções em "x" separadas por vírgula; segundo: os pontos, separados por vírgula, com abscissa e ordenada separadas por dois pontos ":"; segundo global: -1 para exibir o aviso anexo.
+
+function antoniovandrefuncaomaisproxima(str, avisoanexo)
+	{
+	var arr = [];
+	var arr = str.split(";")
+	var funcoes = [];
+	var pontos = [];
+	var result = [];
+	var mini;
+
+	if (avisoanexo == -1) return antoniovandreoperadoresfuncoesconstantes(1);
+
+	if (arr.length != 2) return "e";
+
+	funcoes = arr[0].split(",");
+	pontos = arr[1].split(",");
+
+	for (var k = 0; k < funcoes.length; k++)
+		{
+		funcoes[k] = funcoes[k].trim();
+		result.push(0);
+
+		if (antoniovandrecompararstrings(antoniovandreremoverletrasstring(antoniovandreremoverstrings(funcoes[k], antoniovandreoperadoresfuncoesconstantes(2) + ",x")), antoniovandreremoverstrings(funcoes[k], antoniovandreoperadoresfuncoesconstantes(2) + ",x")) == "e")
+			return "e";
+
+		for (var i = 0; i < pontos.length; i++)
+			{
+			var pontost = [];
+			pontost = pontos[i].split(":");
+			var abscissa;
+			var ordenada;
+			var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
+			var listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
+			var expressao;
+			var resultpart;
+
+			if (pontost.length != 2) return "e";
+
+			pontost[0] = pontost[0].trim();
+			pontost[1] = pontost[1].trim();
+
+			if ((antoniovandreexpressaofuncaovalida(pontost[0]) == "e") || (antoniovandreexpressaofuncaovalida(pontost[1]) == "e"))
+				return "e";
+
+			try
+				{
+				abscissa = eval(antoniovandretraduzirexpressaofuncional(pontost[0], 0));
+				}
+			catch (error)
+				{
+				return "e";
+				}
+
+			try
+				{
+				ordenada = eval(antoniovandretraduzirexpressaofuncional(pontost[1], 0));
+				}
+			catch (error)
+				{
+				return "e";
+				}
+
+			for (var j = 0; j < listtam; j++)
+				list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[j]);
+
+			expressao = antoniovandresubstituirstrings(funcoes[k], list);
+
+			try
+				{
+				resultpart = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), abscissa.toString()]]));
+				}
+			catch (error)
+				{
+				return "e";
+				}
+
+			if (antoniovandrenumeroreal(resultpart.toString()) == "e")
+				{
+				if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(6)) == 1))
+					return antoniovandremensagenserro(6)
+				else
+					{
+					if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(3)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(4)) == 1))
+						return antoniovandremensagenserro(4)
+					else
+						{
+						if ((antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(1)) == 1) || (antoniovandrecompararstrings(resultpart, antoniovandremensagenserro(2)) == 1))
+							return antoniovandremensagenserro(2)
+						else
+							{
+							if (antoniovandrecompararstrings(typeof resultpart, "string") == "e")
+								return "e"
+							else
+								resultpart = Math.abs(resultpart - ordenada);
+							}
+						}
+					}
+				}
+			else
+				{
+				if (Math.abs(resultpart) > parseFloat(antoniovandremaximovalorsaida(1)))
+					return antoniovandremensagenserro(6)
+				else
+					result[k] += Math.abs(resultpart - ordenada);
+
+				if (Math.abs(result[k]) > parseFloat(antoniovandremaximovalorsaida(1)))
+					return antoniovandremensagenserro(6)
+				}
+			}
+		}
+
+	var min = antoniovandremaximovalorsaida(1);
+
+	for (var i = 0; i < result.length; i++)
+		if (result[i] < min)
+			{
+			min = result[i];
+			mini = i;
+			}
+
+	return funcoes[mini];
+	}
+
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
 // Início escopos desenvolvidos por terceiros.
