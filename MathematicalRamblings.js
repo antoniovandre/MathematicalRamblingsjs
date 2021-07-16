@@ -7379,6 +7379,7 @@ function antoniovandreanalisetexto(str)
 	var npalavras = 0;
 	var nletras = 0;
 	var npont = 0;
+	var nnum = 0;
 	var freqletrasstr = "";
 	var freqpalavrasstr = "";
 	var maxchar = 0;
@@ -7428,12 +7429,15 @@ function antoniovandreanalisetexto(str)
 			npalavras++;
 
 	for (var i = 0; i < strt.length; i++)
-		if ((strt[i] != " ") && (strt[i] != "-")) nletras++;
+		if ((strt[i] != " ") && (strt[i] != "-") && (strt[i] != "0") && (strt[i] != "1") && (strt[i] != "2") && (strt[i] != "3") && (strt[i] != "4") && (strt[i] != "5") && (strt[i] != "6") && (strt[i] != "7") && (strt[i] != "8") && (strt[i] != "9")) nletras++;
+
+	for (var i = 0; i < strt.length; i++)
+		if ((strt[i] == "0") || (strt[i] == "1") || (strt[i] == "2") || (strt[i] == "3") || (strt[i] == "4") || (strt[i] == "5") || (strt[i] == "6") || (strt[i] == "7") || (strt[i] == "8") || (strt[i] == "9")) nnum++;
 
 	temp4.push([strt[0], 0]);
 
 	for (var i = 0; i < strt.length; i++)
-		if ((strt[i] != " ") && (strt[i] != "-"))
+		if ((strt[i] != " ") && (strt[i] != "-") && (strt[i] != "0") && (strt[i] != "1") && (strt[i] != "2") && (strt[i] != "3") && (strt[i] != "4") && (strt[i] != "5") && (strt[i] != "6") && (strt[i] != "7") && (strt[i] != "8") && (strt[i] != "9"))
 			{
 			var flag = 0;
 
@@ -7460,7 +7464,7 @@ function antoniovandreanalisetexto(str)
 	temp5.push([temp3[0], 0]);
 
 	for (var i = 0; i < temp3.length; i++)
-		if (temp3[i] != "")
+		if (isNaN(temp3[i]))
 			{
 			var flag = 0;
 
@@ -7521,7 +7525,7 @@ function antoniovandreanalisetexto(str)
 			maxwordsstr = maxwordsstr + ".";
 		}
 
-	return "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + "\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + "\n\nLetras mais citados:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
+	return "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de números: " + nnum.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + ".\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + ".\n\nLetras mais citadas:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
