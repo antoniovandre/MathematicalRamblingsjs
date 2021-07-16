@@ -7402,7 +7402,7 @@ function antoniovandreanalisetexto(str)
 
 	temp = strt.length;
 
-	strt = str.replace(/[^0-9a-z.,;:!?\n\t\- ]/gi, '');
+	strt = str.replace(/[^0-9a-z.,;:!?\n\t\-áãâàéêíóõô ]/gi, '');
 
 	temp2 = strt.length;
 
