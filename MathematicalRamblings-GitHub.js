@@ -7386,6 +7386,9 @@ function antoniovandreanalisetexto(str)
 	var maxword = 0;
 	var maxwordsstr = "";
 
+	if (Math.abs(str.length) > parseFloat(antoniovandremaximovalorsaida(1)))
+		return antoniovandremensagenserro(6)
+
 	for (var i = 0; i < str.length; i++)
 		if ((str[i] != " ") && (str[i] != "\n") && (str[i] != "\t")) nchar++;
 
