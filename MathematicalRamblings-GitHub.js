@@ -7425,7 +7425,7 @@ function antoniovandreanalisetexto(str)
 	temp3= strt.split(" ");
 
 	for (var i = 0; i < temp3.length; i++)
-		if (temp3[i] != "")
+		if ((isNaN(temp3[i]) && (temp3[i]) != ""))
 			npalavras++;
 
 	for (var i = 0; i < strt.length; i++)
@@ -7464,7 +7464,7 @@ function antoniovandreanalisetexto(str)
 	temp5.push([temp3[0], 0]);
 
 	for (var i = 0; i < temp3.length; i++)
-		if (isNaN(temp3[i]))
+		if ((isNaN(temp3[i]) && (temp3[i]) != ""))
 			{
 			var flag = 0;
 
