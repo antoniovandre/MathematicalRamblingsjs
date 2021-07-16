@@ -7423,15 +7423,17 @@ function antoniovandreanalisetexto(str)
 
 	temp3= strt.split(" ");
 
-	npalavras = temp3.length;
+	for (var i = 0; i < temp3.length; i++)
+		if (temp3[i] != "")
+			npalavras++;
 
 	for (var i = 0; i < strt.length; i++)
-		if (strt[i] != " ") nletras++;
+		if ((strt[i] != " ") && (strt[i] != "-")) nletras++;
 
 	temp4.push([strt[0], 0]);
 
 	for (var i = 0; i < strt.length; i++)
-		if (strt[i] != " ")
+		if ((strt[i] != " ") && (strt[i] != "-"))
 			{
 			var flag = 0;
 
@@ -7519,7 +7521,7 @@ function antoniovandreanalisetexto(str)
 			maxwordsstr = maxwordsstr + ".";
 		}
 
-	return "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + "\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + "\n\nCaracteres mais citados:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
+	return "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + "\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + "\n\nLetras mais citados:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
