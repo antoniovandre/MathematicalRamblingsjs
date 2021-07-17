@@ -7388,7 +7388,7 @@ function antoniovandreanalisetexto(str, avisoanexo)
 	var maxwordsstr = "";
 
 	if (avisoanexo == -1)
-		return "Para textos escritos em Português.";
+		return "Para textos escritos em Português segundo as normas vigentes em 16 de julho de 2021.";
 
 	if (Math.abs(str.length) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(6)
