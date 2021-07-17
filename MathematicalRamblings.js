@@ -7362,7 +7362,7 @@ function antoniovandrefuncaomaisproxima(str, avisoanexo)
 
 // Análise de texto. Argumento: uma string de texto. Retorna a string "e" caso um erro genérico ocorra.
 
-function antoniovandreanalisetexto(str)
+function antoniovandreanalisetexto(str, avisoanexo)
 	{
 	var nchar = 0;
 	var nlinhas = 1;
@@ -7387,6 +7387,9 @@ function antoniovandreanalisetexto(str)
 	var maxword = 0;
 	var maxwordsstr = "";
 
+	if (avisoanexo == -1)
+		return "Para textos escritos em Português.";
+
 	if (Math.abs(str.length) > parseFloat(antoniovandremaximovalorsaida(1)))
 		return antoniovandremensagenserro(6)
 
@@ -7406,7 +7409,7 @@ function antoniovandreanalisetexto(str)
 
 	temp = strt.length;
 
-	strt = str.replace(/[^0-9a-z.,;:!?\n\t\-áãâàéêíóõô ]/gi, '');
+	strt = str.replace(/[^0-9a-z.,;:!?\n\t\-áãâàéêíóõôç ]/gi, '');
 
 	temp2 = strt.length;
 
