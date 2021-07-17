@@ -7409,7 +7409,7 @@ function antoniovandreanalisetexto(str, avisoanexo)
 
 	temp = strt.length;
 
-	strt = str.replace(/[^0-9a-z.,;:!?\n\t\-áãâàéêíóõôç ]/gi, '');
+	strt = str.replace(/[^0-9a-z.,;:!?\n\t\-áãâàéêíóõôúç ]/gi, '');
 
 	temp2 = strt.length;
 
