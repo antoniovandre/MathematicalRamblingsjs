@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 16-07-2021.
+// Última atualização: 17-07-2021.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js.
 
-function antoniovandremathematicalramblingsjsversao(){return "16-07-2021";}
+function antoniovandremathematicalramblingsjsversao(){return "17-07-2021";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -7386,6 +7386,7 @@ function antoniovandreanalisetexto(str, avisoanexo)
 	var maxcharsstr = "";
 	var maxword = 0;
 	var maxwordsstr = "";
+	var outputstr = "";
 
 	if (avisoanexo == -1)
 		return "Para textos escritos em Português segundo as normas vigentes em 16 de julho de 2021.";
@@ -7437,98 +7438,105 @@ function antoniovandreanalisetexto(str, avisoanexo)
 	for (var i = 0; i < strt.length; i++)
 		if ((strt[i] == "0") || (strt[i] == "1") || (strt[i] == "2") || (strt[i] == "3") || (strt[i] == "4") || (strt[i] == "5") || (strt[i] == "6") || (strt[i] == "7") || (strt[i] == "8") || (strt[i] == "9")) nnum++;
 
-	temp4.push([strt[0], 0]);
+	outputstr = outputstr = "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de números: " + nnum.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + ".\n\nNúmero de pontuações: " + npont.toString() + "\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + ".";
 
-	for (var i = 0; i < strt.length; i++)
-		if ((strt[i] != " ") && (strt[i] != "-") && (strt[i] != "0") && (strt[i] != "1") && (strt[i] != "2") && (strt[i] != "3") && (strt[i] != "4") && (strt[i] != "5") && (strt[i] != "6") && (strt[i] != "7") && (strt[i] != "8") && (strt[i] != "9"))
+	if (nletras > 0)
+		{
+		temp4.push([strt[0], 0]);
+
+		for (var i = 0; i < strt.length; i++)
+			if ((strt[i] != " ") && (strt[i] != "-") && (strt[i] != "0") && (strt[i] != "1") && (strt[i] != "2") && (strt[i] != "3") && (strt[i] != "4") && (strt[i] != "5") && (strt[i] != "6") && (strt[i] != "7") && (strt[i] != "8") && (strt[i] != "9"))
+				{
+				var flag = 0;
+
+				for (var j = 0; j < temp4.length; j++)
+					if (strt[i] == temp4[j][0])
+						{
+						temp4[j][1]++;
+						flag = 1;
+						}
+				if (flag == 0)
+					temp4.push([strt[i], 1]);
+				}
+
+		for (var i = 0; i < temp4.length; i++)
 			{
-			var flag = 0;
+			freqletrasstr = freqletrasstr + temp4[i][0] + ": " + temp4[i][1].toString();
 
-			for (var j = 0; j < temp4.length; j++)
-				if (strt[i] == temp4[j][0])
-					{
-					temp4[j][1]++;
-					flag = 1;
-					}
-			if (flag == 0)
-				temp4.push([strt[i], 1]);
+			if (i < temp4.length - 1)
+				freqletrasstr = freqletrasstr + ";\n"
+			else
+				freqletrasstr = freqletrasstr + ".";
 			}
 
-	for (var i = 0; i < temp4.length; i++)
-		{
-		freqletrasstr = freqletrasstr + temp4[i][0] + ": " + temp4[i][1].toString();
+		temp5.push([temp3[0], 0]);
 
-		if (i < temp4.length - 1)
-			freqletrasstr = freqletrasstr + ";\n"
-		else
-			freqletrasstr = freqletrasstr + ".";
-		}
+		for (var i = 0; i < temp3.length; i++)
+			if ((isNaN(temp3[i]) && (temp3[i]) != ""))
+				{
+				var flag = 0;
 
-	temp5.push([temp3[0], 0]);
+				for (var j = 0; j < temp5.length; j++)
+					if (antoniovandrecompararstrings(temp3[i], temp5[j][0]) == 1)
+						{
+						temp5[j][1]++;
+						flag = 1;
+						}
 
-	for (var i = 0; i < temp3.length; i++)
-		if ((isNaN(temp3[i]) && (temp3[i]) != ""))
+				if (flag == 0)
+					temp5.push([temp3[i], 1]);
+				}
+
+		for (var i = 0; i < temp5.length; i++)
 			{
-			var flag = 0;
+			freqpalavrasstr = freqpalavrasstr + temp5[i][0] + ": " + temp5[i][1].toString();
 
-			for (var j = 0; j < temp5.length; j++)
-				if (antoniovandrecompararstrings(temp3[i], temp5[j][0]) == 1)
-					{
-					temp5[j][1]++;
-					flag = 1;
-					}
-
-			if (flag == 0)
-				temp5.push([temp3[i], 1]);
+			if (i < temp5.length - 1)
+				freqpalavrasstr = freqpalavrasstr + ";\n"
+			else
+				freqpalavrasstr = freqpalavrasstr + ".";
 			}
 
-	for (var i = 0; i < temp5.length; i++)
-		{
-		freqpalavrasstr = freqpalavrasstr + temp5[i][0] + ": " + temp5[i][1].toString();
+		for (var i = 0; i < temp4.length; i++)
+			if (temp4[i][1] >= maxchar)
+				maxchar = temp4[i][1];
 
-		if (i < temp5.length - 1)
-			freqpalavrasstr = freqpalavrasstr + ";\n"
-		else
-			freqpalavrasstr = freqpalavrasstr + ".";
-		}
-
-	for (var i = 0; i < temp4.length; i++)
-		if (temp4[i][1] >= maxchar)
-			maxchar = temp4[i][1];
-
-	for (var i = 0; i < temp4.length; i++)
-		if (temp4[i][1] == maxchar)
-			temp6.push(temp4[i]);
+		for (var i = 0; i < temp4.length; i++)
+			if (temp4[i][1] == maxchar)
+				temp6.push(temp4[i]);
+			
+		for (var i = 0; i < temp6.length; i++)
+			{
+			maxcharsstr = maxcharsstr + temp6[i][0] + ": " + temp6[i][1].toString();
 		
-	for (var i = 0; i < temp6.length; i++)
-		{
-		maxcharsstr = maxcharsstr + temp6[i][0] + ": " + temp6[i][1].toString();
-	
-		if (i < temp6.length - 1)
-			maxcharsstr = maxcharsstr + ";\n"
-		else
-			maxcharsstr = maxcharsstr + ".";
-		}
+			if (i < temp6.length - 1)
+				maxcharsstr = maxcharsstr + ";\n"
+			else
+				maxcharsstr = maxcharsstr + ".";
+			}
 
-	for (var i = 0; i < temp5.length; i++)
-		if (temp5[i][1] >= maxword)
-			maxword = temp5[i][1];
+		for (var i = 0; i < temp5.length; i++)
+			if (temp5[i][1] >= maxword)
+				maxword = temp5[i][1];
 
-	for (var i = 0; i < temp5.length; i++)
-		if (temp5[i][1] == maxword)
-			temp7.push(temp5[i]);
+		for (var i = 0; i < temp5.length; i++)
+			if (temp5[i][1] == maxword)
+				temp7.push(temp5[i]);
+			
+		for (var i = 0; i < temp7.length; i++)
+			{
+			maxwordsstr = maxwordsstr + temp7[i][0] + ": " + temp7[i][1].toString();
 		
-	for (var i = 0; i < temp7.length; i++)
-		{
-		maxwordsstr = maxwordsstr + temp7[i][0] + ": " + temp7[i][1].toString();
-	
-		if (i < temp7.length - 1)
-			maxwordsstr = maxwordsstr + ";\n"
-		else
-			maxwordsstr = maxwordsstr + ".";
+			if (i < temp7.length - 1)
+				maxwordsstr = maxwordsstr + ";\n"
+			else
+				maxwordsstr = maxwordsstr + ".";
+			}
+
+		outputstr = outputstr + "\n\nLetras mais citadas:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
 		}
 
-	return "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de números: " + nnum.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + ".\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + ".\n\nLetras mais citadas:\n\n" + maxcharsstr + "\n\nPalavras mais citadas:\n\n" + maxwordsstr + "\n\nFrequências das letras:\n\n" + freqletrasstr + "\n\nFrequências das palavras:\n\n" + freqpalavrasstr;
+	return outputstr;
 	}
 
 // Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
