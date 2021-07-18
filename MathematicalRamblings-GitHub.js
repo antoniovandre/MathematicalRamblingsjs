@@ -7539,7 +7539,7 @@ function antoniovandreanalisetexto(str, avisoanexo)
 	return outputstr;
 	}
 
-// Possíveis raízes de uma função. Argumentos: primeiro: uma string separada em três partes por ponto e vírgula ";", a primeira com uma função em "x", a segunda com o intervalo de pesquisa, o inferior e o superior separados por vírgula, a terceira a precisão de busca; segundo: 0 para retornar string ou 1 para retornar array; terceiro: -1 para exibir o aviso anexo.
+// Possíveis raízes de uma função. Argumentos: primeiro: uma string separada em três partes por ponto e vírgula ";", a primeira com uma função em "x", a segunda com o intervalo de pesquisa, o inferior e o superior separados por vírgula, a terceira a precisão, um inteiro positivo, de busca; segundo: 0 para retornar string ou 1 para retornar array; terceiro: -1 para exibir o aviso anexo.
 
 function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 	{
@@ -7550,6 +7550,10 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 	var precisao;
 	var list = [["x", antoniovandreoperadoresfuncoesconstantes(5)]];
 	var listtam = antoniovandreoperadoresfuncoesconstantes(3).length;
+	var valor1;
+	var valor2;
+	var flag = 0;
+	var flag2 = 0;
 
 	if (avisoanexo == -1) return antoniovandreoperadoresfuncoesconstantes(1);
 
@@ -7590,15 +7594,14 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 	if ((antoniovandrenumeroreal(inf.toString()) == "e") || (antoniovandrenumeroreal(sup.toString()) == "e") || (antoniovandrenumeronaturalpositivo(str[2]) == "e"))
 		return "e";
 
-	precisao = parseFloat(str[2]);
-	precisao = (sup - inf) / precisao;
+	precisao = parseInt(str[2]);
 
 	if (inf >= sup) return "e";
 
 	for (var i = 0; i < listtam; i++)
 		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
 
-	for (var i = inf; i < sup; i += precisao)
+	for (var i = 0; i <= precisao; i ++)
 			{
 			var expressao;
 			var result;
@@ -7607,7 +7610,7 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 
 			try
 				{
-				result = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), i.toString()]]));
+				result = eval(antoniovandresubstituirstrings(expressao, [[antoniovandreoperadoresfuncoesconstantes(5), (inf + (sup - inf) * (i / precisao)).toString()]]));
 				}
 			catch (error)
 				{
@@ -7616,7 +7619,6 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 
 			if (antoniovandrenumeroreal(result.toString()) == "e")
 				{
-				console.log(result);
 				if ((antoniovandrecompararstrings(result, antoniovandremensagenserro(5)) == 1) || (antoniovandrecompararstrings(result, antoniovandremensagenserro(6)) == 1))
 					return antoniovandremensagenserro(6)
 				else
@@ -7642,8 +7644,42 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 				if (Math.abs(result) > parseFloat(antoniovandremaximovalorsaida(1)))
 					return antoniovandremensagenserro(6)
 				else
+					{
 					if (Math.abs(result) < antoniovandreprecisaoreal(4))
-						raizes.push(i);
+						{
+						if (flag == 0)
+							{
+							valor1 = inf + (sup - inf) * (i / precisao);
+							flag = 1;
+							flag2 = 0;
+							}
+						else
+							{
+							valor2 = inf + (sup - inf) * (i / precisao);
+							flag2 = 1;
+							}
+
+						if (i == precisao)
+							{
+							if (flag2 == 1)
+									raizes.push((valor1 + valor2) / 2)
+								else
+									raizes.push(valor1);
+							}
+						}
+					else
+						{
+						if (flag == 1)
+							{
+							if (flag2 == 1)
+								raizes.push((valor1 + valor2) / 2)
+							else
+								raizes.push(valor1);
+							}
+
+						flag = 0;
+						}
+					}
 				}
 			}
 
@@ -7663,7 +7699,7 @@ function antoniovandrepossiveisraizes(arr, retorno, avisoanexo)
 				}
 
 			if (outputstr == "")
-				return "Raízes não encontradas."
+				return "Candidatos a raízes não encontrados."
 			else
 				return outputstr;
 
