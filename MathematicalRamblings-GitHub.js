@@ -7438,7 +7438,7 @@ function antoniovandreanalisetexto(str, avisoanexo)
 	for (var i = 0; i < strt.length; i++)
 		if ((strt[i] == "0") || (strt[i] == "1") || (strt[i] == "2") || (strt[i] == "3") || (strt[i] == "4") || (strt[i] == "5") || (strt[i] == "6") || (strt[i] == "7") || (strt[i] == "8") || (strt[i] == "9")) nnum++;
 
-	outputstr = outputstr = "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de números: " + nnum.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + ".\n\nNúmero de pontuações: " + npont.toString() + "\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + ".";
+	outputstr = outputstr = "Número de caracteres: " + nchar.toString() + ".\n\nNúmero de letras: " + nletras.toString() + ".\n\nNúmero de números: " + nnum.toString() + ".\n\nNúmero de caracteres especiais: " + nschar.toString() + ".\n\nNúmero de pontuações: " + npont.toString() + ".\n\nNúmero de palavras: " + npalavras.toString() + ".\n\nNúmero de linhas: " + nlinhas.toString() + ".\n\nNúmero de tabulações: " + ntab.toString() + ".";
 
 	if (nletras > 0)
 		{
