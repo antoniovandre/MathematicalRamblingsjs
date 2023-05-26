@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js. Não considerando alterações em macros.
 
-function antoniovandremathematicalramblingsjsversao(){return "29-01-2023";}
+function antoniovandremathematicalramblingsjsversao(){return "26-05-2023";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1367,7 +1367,7 @@ function antoniovandremensagenserro(i)
 		case 8:
 			return "Limite de computação atingido.";
 		case 9:
-			return "Número comprido demais para ser corretamente trabalhado no JavaScript.";
+			return "Um número comprido demais para ser corretamente trabalhado no JavaScript nativo.";
 	
 		default:
 			return "Erro.";
