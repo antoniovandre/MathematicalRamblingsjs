@@ -6,7 +6,7 @@
 
 // Sugestão ou comunicar erro: "a.vandre.g@gmail.com".
 
-// Última atualização: 26-05-2023.
+// Última atualização: 08-06-2024.
 
 // Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
 
@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js. Não considerando alterações em macros.
 
-function antoniovandremathematicalramblingsjsversao(){return "26-05-2023";}
+function antoniovandremathematicalramblingsjsversao(){return "08-06-2024";}
 
 // Fim mensagem de inicialização no console.log.
 
@@ -1101,10 +1101,13 @@ function antoniovandreremovernumerosstring(str)
 	return buffer;
 	}
 
-// Conversão de números naturais de uma base de sistema de numeração para outra. Argumento: string de valores separados por vírgula, o primeiro valor é o número a ser convertido, o segundo valor é a base do sistema de numeração em que está escrito, e o terceiro valor é a base do sistema de numeração para a qual se deseja converter o número. Retorna a string "e" se um erro ocorre.
+// Conversão de números naturais de uma base de sistema de numeração para outra. Primeiro argumento; string de valores separados por vírgula, o primeiro valor é o número a ser convertido, o segundo valor é a base do sistema de numeração em que está escrito, e o terceiro valor é a base do sistema de numeração para a qual se deseja converter o número. Segundo argumento: -1 para retornar aviso anexo. Retorna a string "e" se um erro ocorre.
 
-function antoniovandrecnb(arr)
+function antoniovandrecnb(arr, avisoanexo)
 	{
+	if (avisoanexo == -1)
+		return "Símbolos disponíveis em ordem crescente de valor:\n\n0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.";
+
 	var nstr = arr.split(",");
 	var nb = 0;
 	var s = "";
@@ -1222,7 +1225,7 @@ function antoniovandrenb(n)
 		return "e_";
 	}
 
-// Valores máximos de entrada. Argumento: "1" para procedimentos sem muito crescimento, "2" para procedimentos de muito crescimento, e "3" para procedimentos de muito processamento. Função necessária pois o JavaScript nativo tem limitações de memória. Retorna a string "e" se um erro ocorre.
+// Valores máximos de entrada. Argumento: "1" para procedimentos sem muito crescimento, "2" para procedimentos de muito crescimento, e "3" para procedimentos de muito processamento, "4" para o máximo tamanho de um número para processamento de frações geratrizes. Função necessária pois o JavaScript nativo tem limitações de memória. Retorna a string "e" se um erro ocorre.
 
 function antoniovandremaximovalorentrada(i)
 	{
@@ -1234,6 +1237,8 @@ function antoniovandremaximovalorentrada(i)
 			return 20;
 		case 3:
 			return 700000;
+		case 4:
+			return 20;
 		default:
 			return "e";
 		}
@@ -1638,7 +1643,7 @@ function antoniovandreescalonarmatriz(M, saida)
 				break label;
 				}
 
-	if (flag4 == 1)
+	if (saida == 0) if (flag4 == 1)
 		{
 		outputstr = outputstr + "Reordenando as linhas:\n\n";
 
@@ -1646,10 +1651,12 @@ function antoniovandreescalonarmatriz(M, saida)
 			{
 			for (var m = 0; m < nc; m++)
 				{
-				if (antoniovandrenumerointeiro(antoniovandreformatarreal(Mep[l][m].toString()).toString()) == "e")
-					outputstr = outputstr + antoniovandrefracaogeratriz(antoniovandreformatarreal(Mep[l][m].toString()), 0).replaceAll(" ", "")
+				var coefs = antoniovandrefracaogeratriz(antoniovandreformatarreal(Mep[l][m].toString()), 1)
+	
+				if (coefs[1] != 1)
+					resultstr = resultstr + coefs[0].toString() + "/" + coefs[1].toString()
 				else
-					outputstr = outputstr + antoniovandreformatarreal(Mep[l][m].toString());
+					outputstr = outputstr + coefs[0].toString();
 
 				if (m < nc - 1)
 					outputstr = outputstr + " ";
@@ -1680,15 +1687,18 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				if (d != 1)
 					{
-					if (antoniovandrenumerointeiro(antoniovandreformatarreal(d.toString()).toString()) == "e")
-						outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandrefracaogeratriz(antoniovandreformatarreal(d.toString()), 0).replaceAll(" ", "") + ":\n\n"
-					else
-						outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d.toString()).toString() + ":\n\n"
+					if (saida == 1)
+						{
+						if (antoniovandrenumerointeiro(antoniovandreformatarreal(d.toString()).toString()) == "e")
+							outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandrefracaogeratriz(antoniovandreformatarreal(d.toString()), 0).replaceAll(" ", "") + ":\n\n"
+						else
+							outputstr = outputstr + "Dividindo a linha " + (i + 1).toString() + " por " + antoniovandreformatarreal(d.toString()).toString() + ":\n\n"
+						}
 
 					for (var j = 0; j < nc; j++)
 						Mep[i][j] = antoniovandreformatarreal(parseFloat(Mep[i][j]) / d);
 
-					for (var l = 0; l < nl; l++)
+					if (saida == 0) for (var l = 0; l < nl; l++)
 						{
 						for (var m = 0; m < nc; m++)
 							{
@@ -1715,7 +1725,7 @@ function antoniovandreescalonarmatriz(M, saida)
 							outputstr = outputstr + "\n";
 						}
 
-					outputstr = outputstr + "\n_____\n\n";
+					if (saida == 0) outputstr = outputstr + "\n_____\n\n";
 					}
 				}
 
@@ -1739,10 +1749,13 @@ function antoniovandreescalonarmatriz(M, saida)
 
 				if ((f == 0) || (f2 == 0)) continue;
 
-				if (antoniovandrenumerointeiro(antoniovandreformatarreal(((-1) * f).toString()).toString()) == "e")
-					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandrefracaogeratriz(antoniovandreformatarreal((-1) * f).toString(), 0).replaceAll(" ", "") + ":\n\n"
-				else
-					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+				if (saida == 0)
+					{
+					if (antoniovandrenumerointeiro(antoniovandreformatarreal(((-1) * f).toString()).toString()) == "e")
+						outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandrefracaogeratriz(antoniovandreformatarreal((-1) * f).toString(), 0).replaceAll(" ", "") + ":\n\n"
+					else
+						outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f).toString() + ":\n\n";
+					}
 
 				for (var j = 0; j < nc; j++)
 					if (antoniovandremodulo(parseFloat(Mep[i][j]) * f) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -1750,7 +1763,7 @@ function antoniovandreescalonarmatriz(M, saida)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f);
 
-				for (var l = iv; l < nl; l++)
+				if (saida == 0) for (var l = iv; l < nl; l++)
 					{
 					for (var m = 0; m < nc; m++)
 						{
@@ -1767,7 +1780,7 @@ function antoniovandreescalonarmatriz(M, saida)
 						outputstr = outputstr + "\n";
 					}
 
-				outputstr = outputstr + "\n_____\n\n";
+				if (saida == 0) outputstr = outputstr + "\n_____\n\n";
 				}
 
 			for (var k = i + 1; k < nl; k++)
@@ -1779,10 +1792,13 @@ function antoniovandreescalonarmatriz(M, saida)
 			
 				if ((f == 0) || (f2 == 0)) continue;
 
-				if (antoniovandrenumerointeiro(antoniovandreformatarreal(((-1) * f / f2).toString()).toString()) == "e")
-					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandrefracaogeratriz(antoniovandreformatarreal((-1) * f / f2).toString(), 0).replaceAll(" ", "") + ":\n\n"
-				else
-					outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f / f2).toString() + ":\n\n";
+				if (saida == 0)
+					{
+					if (antoniovandrenumerointeiro(antoniovandreformatarreal(((-1) * f / f2).toString()).toString()) == "e")
+						outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandrefracaogeratriz(antoniovandreformatarreal((-1) * f / f2).toString(), 0).replaceAll(" ", "") + ":\n\n"
+					else
+						outputstr = outputstr + "Somando à linha " + (k + 1).toString() + " a linha " + (i + 1).toString() + " multiplicada por " + antoniovandreformatarreal((-1) * f / f2).toString() + ":\n\n";
+					}
 
 				for (var j = 0; j < nc; j++)
 					if (antoniovandremodulo(parseFloat(Mep[i][j]) * f / f2) > parseFloat(antoniovandremaximovalorsaida(1)))
@@ -1790,7 +1806,7 @@ function antoniovandreescalonarmatriz(M, saida)
 					else
 						Mep[k][j] = antoniovandreformatarreal(parseFloat(Mep[k][j]) - parseFloat(Mep[i][j]) * f / f2);
 
-				for (var l = 0; l < nl; l++)
+				if (saida == 0) for (var l = 0; l < nl; l++)
 					{
 					for (var m = 0; m < nc; m++)
 						{
@@ -1817,7 +1833,7 @@ function antoniovandreescalonarmatriz(M, saida)
 						outputstr = outputstr + "\n";
 					}
 
-					outputstr = outputstr + "\n_____\n\n";
+				if (saida == 0) outputstr = outputstr + "\n_____\n\n";
 				}
 			}
 
@@ -1876,16 +1892,18 @@ function antoniovandreescalonarmatriz(M, saida)
 
 		if (flag4 == 1)
 			{
-			outputstr = outputstr + "Reordenando as linhas:\n\n";
+			if (saida == 0) outputstr = outputstr + "Reordenando as linhas:\n\n";
 
-			for (var l = 0; l < nl; l++)
+			if (saida == 0) for (var l = 0; l < nl; l++)
 				{
 				for (var m = 0; m < nc; m++)
 					{
-					if (antoniovandrenumerointeiro(antoniovandreformatarreal(Mep2[l][m].toString().toString())) == "e")
-						outputstr = outputstr + antoniovandrefracaogeratriz(antoniovandreformatarreal(Mep2[l][m].toString()), 0).replaceAll(" ", "")
+					var coefs = antoniovandrefracaogeratriz(antoniovandreformatarreal(Mep2[l][m].toString()), 1)
+		
+					if (coefs[1] != 1)
+						resultstr = resultstr + coefs[0].toString() + "/" + coefs[1].toString()
 					else
-						outputstr = outputstr + antoniovandreformatarreal(Mep2[l][m].toString()).toString();
+						outputstr = outputstr + coefs[0].toString();
 
 					if (m < nc - 1)
 						outputstr = outputstr + " ";
@@ -1895,7 +1913,7 @@ function antoniovandreescalonarmatriz(M, saida)
 					outputstr = outputstr + "\n";
 				}
 
-			outputstr = outputstr + "\n_____\n\n";
+			if (saida == 0) outputstr = outputstr + "\n_____\n\n";
 
 			for (var i = 0; i < nl; i++)
 				for (var j = 0; j < nc; j++)
@@ -1905,7 +1923,7 @@ function antoniovandreescalonarmatriz(M, saida)
 			}
 	}
 
-	outputstr = outputstr.substring(0, outputstr.length - 8);
+	if (saida == 0) outputstr = outputstr.substring(0, outputstr.length - 8);
 
 	switch (flag)
 		{
@@ -2031,8 +2049,6 @@ function antoniovandrebalancearequacaoquimica(str, saida)
 		var strM;
 		var soma;
 		var flag3;
-		var flag4;
-		var flag5;
 		var contador;
 		var indexc;
 
@@ -2077,6 +2093,12 @@ function antoniovandrebalancearequacaoquimica(str, saida)
 				{
 				var el = formula[j].trim().split(":");
 				var flag2 = 0;
+
+				if (el.length != 2)
+					return "e";
+
+				if (antoniovandrenumeronaturalpositivo(el[1]) == "e")
+					return "e"
 
 				for (var k = 0; k < antoniovandreelementosquimicos(-1); k++)
 					if (antoniovandrecompararstrings(el[0].trim(), antoniovandreelementosquimicos(k)[0]) == 1)
@@ -7506,7 +7528,7 @@ function antoniovandrefracaogeratriz(x, tiporetorno)
 	else
 		num = parseFloat(x);
 
-	if (x.toString().length > antoniovandremaximovalorentrada(1).toString().length - 1)
+	if (x.toString().length > antoniovandremaximovalorentrada(4))
 		return antoniovandremensagemerro(9);
 
 	if (num == 0)
