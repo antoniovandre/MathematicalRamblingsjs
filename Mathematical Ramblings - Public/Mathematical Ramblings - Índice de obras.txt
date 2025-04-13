@@ -2,8 +2,11 @@ Projeto Mathematical Ramblings.
 
 Índice de obras.
 
-Última atualização: 23-03-2025.
-____________________
+Última atualização: 13-04-2025.
+
+As sessões são separadas por "_____", as subseções por "__".
+
+Na primeira subseção há o enunciado e/ou título do conteúdo, na segunda o caminho dentro do diretório "Mathematical Ramblings - Public", na terceira, se existir, se o conteúdo está publicado em "mathematicalramblings.blogspot.com".____________________
 
 Determinante de matrizes de elementos consecutivos.
 _____
@@ -7481,20 +7484,8 @@ __
 Media/Memes/Mathematical Ramblings - 31-12-2024 - 1.png
 _____
 
-Sejam $A_1, \dots , A_r$ vetores não nulos perpendiculares dois a dois, $\{A_1, \dots , A_r\}$ é linearmente independente.
+Distância de um ponto a um plano no 3-espaço..
 __
 
-Artigos/Mathematical Ramblings - 21-03-2025 - 1.pdf
-_____
-
-Seja $\theta$ o ângulo entre dois vetores não nulos $u$ e $v$, se $\cos \theta = 1$, $u$ e $v$ possuem o mesmo sentido; se $\cos \theta = -1$, $u$ e $v$ possuem sentidos opostos.
-__
-
-Artigos/Mathematical Ramblings - 22-03-2025 - 1.pdf
-_____
-
-Sejam $A$, $B$ e $C$ pontos, e $d(Y, X) = ||Y - X||$ a distância entre os pontos $Y$ e $X$, $d(B, A) \le d(C, B) + d(C, A)$.
-__
-
-Artigos/Mathematical Ramblings - 23-03-2025 - 1.pdf
+Artigos/Mathematical Ramblings - 13-04-2025 - 1.pdf
 _____
