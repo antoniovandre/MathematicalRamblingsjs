@@ -2,7 +2,7 @@ Projeto Mathematical Ramblings.
 
 Índice de obras.
 
-Última atualização: 13-04-2025.
+Última atualização: 14-04-2025.
 
 As sessões são separadas por "_____", as subseções por "__".
 
@@ -7488,4 +7488,10 @@ Distância de um ponto a um plano no 3-espaço..
 __
 
 Artigos/Mathematical Ramblings - 13-04-2025 - 1.pdf
+_____
+
+O conjunto $F$ das funções reais tais que a imagem de $0$ é igual à imagem de $1$ é espaço vetorial.
+__
+
+Artigos/Mathematical Ramblings - 14-04-2025 - 1.pdf
 _____
