@@ -2,7 +2,7 @@ Projeto Mathematical Ramblings.
 
 Índice de obras.
 
-Última atualização: 14-04-2025.
+Última atualização: 17-04-2025.
 
 As sessões são separadas por "_____", as subseções por "__".
 
@@ -7494,4 +7494,16 @@ O conjunto $F$ das funções reais tais que a imagem de $0$ é igual à imagem d
 __
 
 Artigos/Mathematical Ramblings - 14-04-2025 - 1.pdf
+_____
+
+Pontos de um segmento que o dividem na razão $\dfrac{1}{3}$ e $\dfrac{2}{3}$.
+__
+
+Artigos/Mathematical Ramblings - 14-04-2025 - 2.pdf
+_____
+
+$e^{\theta i}$ e os números complexos.
+__
+
+Artigos/Mathematical Ramblings - 17-04-2025 - 1.pdf
 _____
