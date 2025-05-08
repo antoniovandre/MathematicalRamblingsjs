@@ -2,7 +2,7 @@ Projeto Mathematical Ramblings.
 
 Índice de obras.
 
-Última atualização: 17-04-2025.
+Última atualização: 08-05-2025.
 
 As sessões são separadas por "_____", as subseções por "__".
 
@@ -7506,4 +7506,10 @@ $e^{\theta i}$ e os números complexos.
 __
 
 Artigos/Mathematical Ramblings - 17-04-2025 - 1.pdf
+_____
+
+Meme: Após calcular o determinante de um operador linear.
+__
+
+Media/Memes/Mathematical Ramblings - 08-05-2025 - 1.png
 _____
