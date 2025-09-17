@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+
+Projeto Mathematical Ramblings.
+
+Arquivo index.html no GitHub.
+
+Última atualização: 13-09-2025.
+
+Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
+
+-->
+
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Cache-control" content="public">
+
+<script src="https://antoniovandre.github.io/MathematicalRamblingsjs/HackTimer.js"></script>
+
+<script src="https://antoniovandre.github.io/MathematicalRamblingsjs/plotly-3.1.0.js"></script>
+
+<script id="MathJax-script" async src="https://antoniovandre.github.io/MathematicalRamblingsjs/tex-mml-chtml.js"></script>
+
+<script src="https://antoniovandre.github.io/MathematicalRamblingsjs/jquery-3.7.1.js"></script>
+
+<script src="https://antoniovandre.github.io/MathematicalRamblingsjs/math.js"></script>
+
+<script src="https://antoniovandre.github.io/MathematicalRamblingsjs/MathematicalRamblings.js"></script>
+
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/LZWEncoder.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/NeuQuant.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/GIFEncoder.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/b64.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/DynamicByteArray.js"></script>
+
+<style>
+
+html {
+  font-family: "Courier New";
+  font-size: 20pt;
+  background: url(Mathematical%20Ramblings%20logo%20-%20White.png) repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+color: rgba(0, 0, 0, 0.8);
+}
+
+img {
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+opacity: 0.9;
+}
+
+h1 {
+width: 90%;
+padding: 5px;
+text-align: center;
+border: 1px solid;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0);
+background: linear-gradient(to right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -moz-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -webkit-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(192, 192, 192, 0.9)), color-stop(100%,rgba(128, 128, 128, 0.9)));
+background: -o-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+}
+
+h2 {
+padding: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+background-color: rgba(255, 255, 255, 0);
+background: linear-gradient(to right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -moz-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -webkit-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(192, 192, 192, 0.9)), color-stop(100%,rgba(128, 128, 128, 0.9)));
+background: -o-linear-gradient(right, rgba(192, 192, 192, 0.9) 0%, rgba(128, 128, 128, 0.9) 100%);
+}
+
+table {
+border-collapse: separate;
+border: 0px solid;
+-webkit-border-radius: 5px !important;
+-moz-border-radius: 5px !important;
+-ms-border-radius: 5px !important;
+-o-border-radius: 5px !important;
+border-radius: 5px !important;
+padding-top: 0px;
+padding-right: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+}
+
+table tr {
+-webkit-border-radius: 5px !important;
+-moz-border-radius: 5px !important;
+-ms-border-radius: 5px !important;
+-o-border-radius: 5px !important;
+border-radius: 5px !important;
+}
+
+table td {
+border: 0px solid;
+-webkit-border-radius: 5px !important;
+-moz-border-radius: 5px !important;
+-ms-border-radius: 5px !important;
+-o-border-radius: 5px !important;
+border-radius: 5px !important;
+}
+
+textarea {
+border: 1px solid;
+box-sizing: border-box;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+
+input {
+border: 1px solid;
+box-sizing: border-box;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+
+a:link {
+color: black;
+}
+
+a:visited {
+color: black;
+}
+
+a:hover {
+color: black;
+font-weight: bold;
+}
+
+a:active {
+color: black;
+font-weight: bold;
+}
+
+p2 {
+border: 1px solid;
+padding: 10px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-ms-border-radius: 5px;
+-o-border-radius: 5px;
+border-radius: 5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>MR - Calculadoras JavaScript</h1>
+<br>
+<h2>
+<a href="https://antoniovandre.github.io/MathematicalRamblingsjs/MR%20-%20Calculadoras.html">MR - Calculadoras - 1</a>
+</h2>
+<br>
+<h2>
+<a href="https://antoniovandre.github.io/MathematicalRamblingsjs/MR%20-%20Calculadoras%20-%202.html">MR - Calculadoras - 2</a>
+</h2>
+<br><br><br>
+<h1>Outras publicações</h1>
+<br>
+<h2>
+<a href="https://antoniovandre.github.io/MathematicalRamblingsjs/Mathematical%20Ramblings%20-%20Public/Mathematical Ramblings%20-%20Índice%20de%20obras.html" target="_blank">Mathematical Ramblings - Índice de obras</a>
+</h2>
+<br><br><br>
+<hr>
+<div align="right"><table><tr><td><a href="https://github.com/antoniovandre/MathematicalRamblingsjs/tree/main/Mathematical%20Ramblings%20-%20Public/Softwares/apks/antoniovandre_eval%20app"><img src="https://antoniovandre.github.io/MathematicalRamblingsjs/antoniovandre_eval%20-%20Android%20app%20banner.png" width="400px"/></a></td><td><div id="download_android_app"></div></td></tr></table></div>
+<br><br><br>
+<div align="right">Antonio Vandré Pedrosa Furtunato Gomes<br><br><a href="https://github.com/antoniovandre">github.com/antoniovandre</a><br><a href="https://sourceforge.net/u/antoniovandre">sourceforge.net/u/antoniovandre</a></div>
+<br><br><br>
+<script>
+
+if (window.navigator.userAgent != "mathematicalramblings_android_app") document.getElementById("download_android_app").innerHTML = " <a href=\"https://github.com/antoniovandre/MathematicalRamblingsjs/blob/main/Mathematical%20Ramblings%20-%20Public/Softwares/apks/MathematicalRamblings.apk\"><img src=\"https://antoniovandre.github.io/MathematicalRamblingsjs/Mathematical%20Ramblings%20-%20Android%20app%20banner.png\" width=\"400px\"/></a>";
+
+</script>
+
+</body>
+</html>
