@@ -1,0 +1,5 @@
+Requisitos para antoniovandre_eval app.
+
+Para perfeito funcionamento das implementações básicas: 8 Gb RAM.
+
+Para que todas as implementações sejam habilitadas: 16 Gb RAM.

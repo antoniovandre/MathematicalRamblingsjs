@@ -1,0 +1,16 @@
+/*
+
+Script Maxima de conversão de um complexo na forma algébrica para trigonométrica.
+*/
+
+print ("");
+
+print ("Script Maxima de conversão de um complexo na forma algébrica para trigonométrica.");
+
+z: read ("Entre com o complexo:");
+
+print ("Módulo: ", abs (z));
+
+print ("Argumento: ", carg (z));
+
+kill (z);
