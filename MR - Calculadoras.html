@@ -25,11 +25,10 @@ Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 
 <script src="https://antoniovandre.github.io/MathematicalRamblingsjs/MathematicalRamblings.js"></script>
 
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/LZWEncoder.js"></script>
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/NeuQuant.js"></script>
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/GIFEncoder.js"></script>
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/b64.js"></script>
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/DynamicByteArray.js"></script>
+<script type="text/javascript" src="LZWEncoder.js"></script>
+<script type="text/javascript" src="NeuQuant.js"></script>
+<script type="text/javascript" src="GIFEncoder.js"></script>
+<script type="text/javascript" src="b64.js"></script>
 
 <script>
 
@@ -3389,7 +3388,6 @@ function antoniovandreprodutorioout(str, avisoanexo)
 
 	inf2 = parseInt(inf);
 	sup2 = parseInt(sup);
-
 
 	for (var i = 0; i < listtam; i++)
 		list.unshift(antoniovandreoperadoresfuncoesconstantes(3)[i]);
@@ -12078,7 +12076,7 @@ function animacaorotacaograficotridimensionalfuncao()
 	else
 		divisorframe = 400;
 		
-	if (trotgraficotridimensionalfuncao >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotgraficotridimensionalfuncao >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifgraficotridimensionalfuncao == 1)
 			{
@@ -14674,7 +14672,7 @@ function animacaorotacaocurvatridimensionalcoordenadaparametrica()
 	else
 		divisorframe = 400;
 		
-	if (trotcurvatridimensionalcoordenadaparametrica >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotcurvatridimensionalcoordenadaparametrica >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifcurvatridimensionalcoordenadaparametrica == 1)
 			{
@@ -15772,7 +15770,7 @@ function animacaorotacaosuperficietridimensionalcoordenadasparametricas()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficietridimensionalcoordenadasparametricas >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficietridimensionalcoordenadasparametricas >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficietridimensionalcoordenadasparametricas == 1)
 			{
@@ -16734,7 +16732,7 @@ function animacaorotacaosuperficietridimensionalcoordenadaspolares()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficietridimensionalcoordenadaspolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficietridimensionalcoordenadaspolares >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficietridimensionalcoordenadaspolares == 1)
 			{
@@ -19588,7 +19586,7 @@ function animacaorotacaosuperficieregiaorelacao()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficieregiaorelacao >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficieregiaorelacao >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficieregiaorelacao == 1)
 			{
@@ -36335,7 +36333,6 @@ function processardivisaointeirospositivospassoapasso()
 	var divisor = parseInt(argumentos[1].trim());
 	var quociente = "";
 
-
     if (flag == 0)
         {
         if (divisor == 0)
@@ -38263,7 +38260,7 @@ function animacaorotacaosuperficierevolucaograficofuncao()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficierevolucaograficofuncao >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficierevolucaograficofuncao >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficierevolucaograficofuncao == 1)
 			{
@@ -39164,7 +39161,7 @@ function superficierevolucaocurvacoordenadaparametricamensagemerro()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficierevolucaocurvacoordenadaparametrica >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficierevolucaocurvacoordenadaparametrica >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficierevolucaocurvacoordenadaparametrica == 1)
 			{
@@ -40551,7 +40548,7 @@ function animacaorotacaosuperficieregiaorevolucaorelacao()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficieregiaorevolucaorelacao >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficieregiaorevolucaorelacao >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficieregiaorevolucaorelacao == 1)
 			{
@@ -41371,7 +41368,7 @@ function animacaorotacaosuperficierevolucaograficocoordenadaspolares()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficierevolucaograficocoordenadaspolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficierevolucaograficocoordenadaspolares >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficierevolucaograficocoordenadaspolares == 1)
 			{
@@ -44453,7 +44450,6 @@ Código LaTeX renderizado:
 <span hidden>
 <canvas id="resultadocodigolatexrenderizadocanvas"></canvas>
 </span>
-
 
 <script>
 

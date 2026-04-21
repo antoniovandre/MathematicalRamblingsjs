@@ -31,7 +31,6 @@ Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/NeuQuant.js"></script>
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/GIFEncoder.js"></script>
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/b64.js"></script>
-<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/DynamicByteArray.js"></script>
 
 <script>
 
@@ -1042,7 +1041,6 @@ function antoniovandregraficosimetricofuncaopontoout(str)
 
 		return;
 		}
-
 
 	if (antoniovandreexpressaofuncaovalida(ap) == "e")
 		{
@@ -2202,7 +2200,6 @@ function antoniovandregraficosimetricofuncaoretaout(str)
 
 		return;
 		}
-
 
 	if (antoniovandreexpressaofuncaovalida(ar) == "e")
 		{
@@ -8448,7 +8445,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricapontomensagemerro
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto == 1)
 			{
@@ -9722,7 +9719,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricaplanomensagemerro
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano == 1)
 			{
@@ -10896,7 +10893,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaponto == 1)
 			{
@@ -12236,7 +12233,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaplano == 1)
 			{
@@ -13562,7 +13559,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadasparametricasponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadasparametricasponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto == 1)
 			{
@@ -15051,7 +15048,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadasparametricasplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadasparametricasplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano == 1)
 			{
@@ -18009,7 +18006,6 @@ function antoniovandresimetricacurvaregiaorelacaoretaout(str)
 
 
 
-
 						if ((antoniovandrecompararstrings(relacao[indicefuncao], "!=") == 1) && (antoniovandremodulo(resultpart2 - resultpart1) > 1000000 * antoniovandreprecisaoreal(4)))
 							{
 							var xp = x;
@@ -19809,7 +19805,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficieregiaorelacaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficieregiaorelacaoponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficieregiaorelacaoponto == 1)
 			{
@@ -21803,7 +21799,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficieregiaorelacaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficieregiaorelacaoplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficieregiaorelacaoplano == 1)
 			{
@@ -22508,7 +22504,6 @@ function antoniovandresimetricograficotridimensionalfuncaopontoout(str)
             return;
             }
 
-
 	if (antoniovandrenumeroreal(inf2.toString()) == "e")
 		{
 		document.getElementById('resultadosimetricograficotridimensionalfuncaoponto').value = simetricograficotridimensionalfuncaopontomensagemerro();
@@ -23002,7 +22997,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricograficotridimensionalfuncaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricograficotridimensionalfuncaoponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricograficotridimensionalfuncaoponto == 1)
 			{
@@ -24372,7 +24367,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricograficotridimensionalfuncaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricograficotridimensionalfuncaoplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricograficotridimensionalfuncaoplano == 1)
 			{
@@ -28117,7 +28112,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto == 1)
 			{
@@ -29483,7 +29478,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano == 1)
 			{
@@ -30599,7 +30594,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespon
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto == 1)
 			{
@@ -31897,7 +31892,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespla
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano == 1)
 			{
@@ -33011,7 +33006,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficofuncaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficofuncaoponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaograficofuncaoponto == 1)
 			{
@@ -34306,7 +34301,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficofuncaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficofuncaoplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaograficofuncaoplano == 1)
 			{
@@ -36263,7 +36258,7 @@ function animacaorotacaocurvatridimensionalcoordenadasparametricopolares()
 	else
 		divisorframe = 400;
 		
-	if (trotcurvatridimensionalcoordenadasparametricopolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotcurvatridimensionalcoordenadasparametricopolares >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifcurvatridimensionalcoordenadasparametricopolares == 1)
 			{
@@ -40008,7 +40003,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto == 1)
 			{
@@ -41343,7 +41338,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano == 1)
 			{
@@ -42620,7 +42615,7 @@ function animacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficierevolucaocurvacoordenadaparametricopolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficierevolucaocurvacoordenadaparametricopolares >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsuperficierevolucaocurvacoordenadaparametricopolares == 1)
 			{
@@ -45253,7 +45248,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto == 1)
 			{
@@ -46982,7 +46977,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / (divisorframe - 1))
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano == 1)
 			{
