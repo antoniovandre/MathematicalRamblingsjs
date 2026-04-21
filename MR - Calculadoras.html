@@ -29,6 +29,7 @@ Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/NeuQuant.js"></script>
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/GIFEncoder.js"></script>
 <script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/b64.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/DynamicByteArray.js"></script>
 
 <script>
 
@@ -230,7 +231,7 @@ padding: 10px;
 <br><br>
 Link: <a href="https://antoniovandre.github.io/MathematicalRamblingsjs/MR%20-%20Calculadoras%20-%202.html">Página 2</a>.
 <br><br>
-<table border="1" width="100%"><tr><td style="color: rgba(255, 255, 255, 0.9); background-color: rgba(128, 128, 128, 0.9); padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">Certifique-se de que seu computador seja veloz e tenha muita memória.<br><br>Sugestões ou comunicar erros: <b>a.vandre.g@gmail.com</b></td><td><img width="100px" src="Mathematical Ramblings logo.png"/></td></tr></table>
+<table border="1" width="100%"><tr><td style="color: rgba(255, 255, 255, 0.9); background-color: rgba(128, 128, 128, 0.9); padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">Certifique-se de que seu computador seja veloz e tenha muita memória.<br><br>Sugestões ou comunicar erros: <b>a.vandre.g@gmail.com</b></td><td><img width="100px" src="Firefox compatible attachment.png"/></td></tr></table>
 <br><br>
 Índice:
 <br><br>
@@ -11283,7 +11284,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-graficotridimensionalfuncao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-graficotridimensionalfuncao-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaograficotridimensionalfuncao"></div></td><td> <div class="cancelarrotacaograficotridimensionalfuncao"></div></td><td> <div class="downloadgifrotacaograficotridimensionalfuncao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -13903,7 +13904,7 @@ Carregar arquivo .mrctcpar:
 <img width=800 height=800 id="dot-chart-curvatridimensionalcoordenadaparametrica-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-curvatridimensionalcoordenadaparametrica-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaocurvatridimensionalcoordenadaparametrica"></div></td><td> <div class="cancelarrotacaocurvatridimensionalcoordenadaparametrica"></div></td><td> <div class="downloadgifrotacaocurvatridimensionalcoordenadaparametrica"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -14745,9 +14746,6 @@ function rotacaocapturargifcurvatridimensionalcoordenadaparametricaout()
 
 function downloadgifrotacaocurvatridimensionalcoordenadaparametricaout()
 	{
-	var binary_gif = curvatridimensionalcoordenadaparametricaencoder.stream().getData();
-	var data_url = 'data:image/gif;base64,'+encode64(binary_gif);
-
 	curvatridimensionalcoordenadaparametricaencoder.download("Mathematical Ramblings - ctpcpar - " + document.getElementsByName("entradacurvatridimensionalcoordenadaparametrica")[0].value.replaceAll(" ", "").replaceAll(";", "[pv]").replaceAll(",", "[v]").replaceAll(":", "[dp]").replaceAll("|", "[bv]").replaceAll("*", "[mult]").replaceAll("/", "[div]").replaceAll(">=", "[mai]").replaceAll("<=", "[mei]").replaceAll("!=", "[dif]").replaceAll(">", "[ma]").replaceAll("<", "[me]").replaceAll("=", "[ig]") + ".gif");
 	}
 
@@ -14852,7 +14850,7 @@ Carregar arquivo .mrstcpar:
 <img width=800 height=800 id="dot-chart-superficietridimensionalcoordenadasparametricas-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficietridimensionalcoordenadasparametricas-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficietridimensionalcoordenadasparametricas"></div></td><td> <div class="cancelarrotacaosuperficietridimensionalcoordenadasparametricas"></div></td><td> <div class="downloadgifrotacaosuperficietridimensionalcoordenadasparametricas"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -15940,7 +15938,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficietridimensionalcoordenadaspolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficietridimensionalcoordenadaspolares-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficietridimensionalcoordenadaspolares"></div></td><td> <div class="cancelarrotacaosuperficietridimensionalcoordenadaspolares"></div></td><td> <div class="downloadgifrotacaosuperficietridimensionalcoordenadaspolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -18415,7 +18413,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficieregiaorelacao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficieregiaorelacao-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficieregiaorelacao"></div></td><td> <div class="cancelarrotacaosuperficieregiaorelacao"></div></td><td> <div class="downloadgifrotacaosuperficieregiaorelacao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -37584,7 +37582,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaograficofuncao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaograficofuncao-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaograficofuncao"></div></td><td> <div class="cancelarrotacaosuperficierevolucaograficofuncao"></div></td><td> <div class="downloadgifrotacaosuperficierevolucaograficofuncao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -38404,7 +38402,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametrica-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametrica-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td><td> <div class="cancelarrotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td><td><div class="downloadgifrotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -39301,7 +39299,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficieregiaorevolucaorelacao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficieregiaorevolucaorelacao-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficieregiaorevolucaorelacao"></div></td><td> <div class="cancelarrotacaosuperficieregiaorevolucaorelacao"></div></td><td> <div class="downloadgifrotacaosuperficieregiaorevolucaorelacao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -40692,7 +40690,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaograficocoordenadaspolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaograficocoordenadaspolares-esperacanvas"></canvas>
 </span>
-<br><br>
+<br><br><br><br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaograficocoordenadaspolares"></div></td><td> <div class="cancelarrotacaosuperficierevolucaograficocoordenadaspolares"></div></td><td> <div class="downloadgifrotacaosuperficierevolucaograficocoordenadaspolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
