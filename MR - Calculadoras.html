@@ -14745,6 +14745,9 @@ function rotacaocapturargifcurvatridimensionalcoordenadaparametricaout()
 
 function downloadgifrotacaocurvatridimensionalcoordenadaparametricaout()
 	{
+	var binary_gif = curvatridimensionalcoordenadaparametricaencoder.stream().getData();
+	var data_url = 'data:image/gif;base64,'+encode64(binary_gif);
+
 	curvatridimensionalcoordenadaparametricaencoder.download("Mathematical Ramblings - ctpcpar - " + document.getElementsByName("entradacurvatridimensionalcoordenadaparametrica")[0].value.replaceAll(" ", "").replaceAll(";", "[pv]").replaceAll(",", "[v]").replaceAll(":", "[dp]").replaceAll("|", "[bv]").replaceAll("*", "[mult]").replaceAll("/", "[div]").replaceAll(">=", "[mai]").replaceAll("<=", "[mei]").replaceAll("!=", "[dif]").replaceAll(">", "[ma]").replaceAll("<", "[me]").replaceAll("=", "[ig]") + ".gif");
 	}
 
