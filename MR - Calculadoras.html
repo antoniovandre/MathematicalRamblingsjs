@@ -8,7 +8,7 @@ Compilação das calculadoras JavaScript do Mathematical Ramblings. Página 1 / 
 
 Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 
-Última atualização: 21-04-2026.
+Última atualização: 22-04-2026.
 
 -->
 
@@ -11282,7 +11282,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-graficotridimensionalfuncao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-graficotridimensionalfuncao-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaograficotridimensionalfuncao"></div></td><td> <div class="cancelarrotacaograficotridimensionalfuncao"></div></td><td> <div class="downloadgifrotacaograficotridimensionalfuncao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -11984,7 +11984,7 @@ function antoniovandregraficotridimensionalfuncaoout(str)
 				$(".dot-chart-graficotridimensionalfuncao-espera").empty();
 				Plotly.newPlot('dot-chart-graficotridimensionalfuncao', data, layout);
 
-				$(".rotacaograficotridimensionalfuncao").append("<input type=\"button\" onclick=\"rotacaograficotridimensionalfuncaoout()\" value=\"Rotação automática\">");
+				$(".rotacaograficotridimensionalfuncao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaograficotridimensionalfuncaoout()\" value=\"Rotação automática\">");
 
 				flagplotly3D = 1;
 
@@ -12047,14 +12047,16 @@ function animacaorotacaograficotridimensionalfuncao()
 
 							flaggifcontextgraficotridimensionalfuncao = 1;
 							}
-
-						async function graficotridimensionalfuncaocapturarframe()
+						else
 							{
-							await graficotridimensionalfuncaocontext.drawImage(document.getElementById('dot-chart-graficotridimensionalfuncao-esperagif'), 0, 0);
-							try {await graficotridimensionalfuncaoencoder.addFrame(graficotridimensionalfuncaocontext);} catch (e){};
-							}
+							async function graficotridimensionalfuncaocapturarframe()
+								{
+								await graficotridimensionalfuncaocontext.drawImage(document.getElementById('dot-chart-graficotridimensionalfuncao-esperagif'), 0, 0);
+								try {await graficotridimensionalfuncaoencoder.addFrame(graficotridimensionalfuncaocontext);} catch (e){};
+								}
 
-						graficotridimensionalfuncaocapturarframe();
+							graficotridimensionalfuncaocapturarframe();
+							}
 						});
 					}
 
@@ -12130,7 +12132,7 @@ function rotacaograficotridimensionalfuncaoout()
 		if (flaggifgraficotridimensionalfuncao == 0)
 			{
 			$(".downloadgifrotacaograficotridimensionalfuncao").empty();
-			$(".downloadgifrotacaograficotridimensionalfuncao").append("<input type=\"button\" onclick=\"rotacaocapturargifgraficotridimensionalfuncaoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaograficotridimensionalfuncao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifgraficotridimensionalfuncaoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaograficotridimensionalfuncao = 1;
@@ -13902,7 +13904,7 @@ Carregar arquivo .mrctcpar:
 <img width=800 height=800 id="dot-chart-curvatridimensionalcoordenadaparametrica-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-curvatridimensionalcoordenadaparametrica-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaocurvatridimensionalcoordenadaparametrica"></div></td><td> <div class="cancelarrotacaocurvatridimensionalcoordenadaparametrica"></div></td><td> <div class="downloadgifrotacaocurvatridimensionalcoordenadaparametrica"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -14587,7 +14589,7 @@ function antoniovandrecurvatridimensionalcoordenadaparametricaout(str)
 				$(".dot-chart-curvatridimensionalcoordenadaparametrica-espera").empty();
 				Plotly.newPlot('dot-chart-curvatridimensionalcoordenadaparametrica-espera', data, layout);
 
-				$(".rotacaocurvatridimensionalcoordenadaparametrica").append("<input type=\"button\" onclick=\"rotacaocurvatridimensionalcoordenadaparametricaout()\" value=\"Rotação automática\">");
+				$(".rotacaocurvatridimensionalcoordenadaparametrica").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocurvatridimensionalcoordenadaparametricaout()\" value=\"Rotação automática\">");
 
 				flagplotlycurvatridimensionalcoordenadaparametrica = 1;
 
@@ -14638,20 +14640,27 @@ function animacaorotacaocurvatridimensionalcoordenadaparametrica()
 						
 						if (flaggifcontextcurvatridimensionalcoordenadaparametrica == 0)
 							{
-								try {
-								curvatridimensionalcoordenadaparametricacontext = document.getElementById('dot-chart-curvatridimensionalcoordenadaparametrica-esperacanvas').getContext("2d");
-								curvatridimensionalcoordenadaparametricaencoder = new GIFEncoder();
-								curvatridimensionalcoordenadaparametricaencoder.setRepeat(0);
-								curvatridimensionalcoordenadaparametricaencoder.setDelay(40);
-								curvatridimensionalcoordenadaparametricaencoder.start();
-								} catch (e){};
+							try {
+							curvatridimensionalcoordenadaparametricacontext = document.getElementById('dot-chart-curvatridimensionalcoordenadaparametrica-esperacanvas').getContext("2d");
+							curvatridimensionalcoordenadaparametricaencoder = new GIFEncoder();
+							curvatridimensionalcoordenadaparametricaencoder.setRepeat(0);
+							curvatridimensionalcoordenadaparametricaencoder.setDelay(40);
+							curvatridimensionalcoordenadaparametricaencoder.start();
+							} catch (e){};
 
 							flaggifcontextcurvatridimensionalcoordenadaparametrica = 1;
 							}
+						else
+							{
+							async function curvatridimensionalcoordenadaparametricacapturarframe ()
+								{
+								await curvatridimensionalcoordenadaparametricacontext.drawImage(document.getElementById('dot-chart-curvatridimensionalcoordenadaparametrica-esperagif'), 0, 0);
+								try {await curvatridimensionalcoordenadaparametricaencoder.addFrame(curvatridimensionalcoordenadaparametricacontext);} catch (e){};
+								}
 
-					curvatridimensionalcoordenadaparametricacontext.drawImage(document.getElementById('dot-chart-curvatridimensionalcoordenadaparametrica-esperagif'), 0, 0);
-					try {curvatridimensionalcoordenadaparametricaencoder.addFrame(curvatridimensionalcoordenadaparametricacontext);} catch (e){};
-					});
+							curvatridimensionalcoordenadaparametricacapturarframe ();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaocurvatridimensionalcoordenadaparametrica);
@@ -14726,7 +14735,7 @@ function rotacaocurvatridimensionalcoordenadaparametricaout()
 		if (flaggifcurvatridimensionalcoordenadaparametrica == 0)
 			{
 			$(".downloadgifrotacaocurvatridimensionalcoordenadaparametrica").empty();
-			$(".downloadgifrotacaocurvatridimensionalcoordenadaparametrica").append("<input type=\"button\" onclick=\"rotacaocapturargifcurvatridimensionalcoordenadaparametricaout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaocurvatridimensionalcoordenadaparametrica").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifcurvatridimensionalcoordenadaparametricaout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaocurvatridimensionalcoordenadaparametrica = 1;
@@ -14848,7 +14857,7 @@ Carregar arquivo .mrstcpar:
 <img width=800 height=800 id="dot-chart-superficietridimensionalcoordenadasparametricas-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficietridimensionalcoordenadasparametricas-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficietridimensionalcoordenadasparametricas"></div></td><td> <div class="cancelarrotacaosuperficietridimensionalcoordenadasparametricas"></div></td><td> <div class="downloadgifrotacaosuperficietridimensionalcoordenadasparametricas"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -15677,7 +15686,7 @@ function antoniovandresuperficietridimensionalcoordenadasparametricasout(str)
 				$(".dot-chart-3d-superficietridimensionalcoordenadasparametricas-espera").empty();
 				Plotly.newPlot('dot-chart-3d-superficietridimensionalcoordenadasparametricas-espera', data, layout);
 
-				$(".rotacaosuperficietridimensionalcoordenadasparametricas").append("<input type=\"button\" onclick=\"rotacaosuperficietridimensionalcoordenadasparametricasout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficietridimensionalcoordenadasparametricas").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficietridimensionalcoordenadasparametricasout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsuperficietridimensionalcoordenadasparametricas = 1;
 
@@ -15740,15 +15749,17 @@ function animacaorotacaosuperficietridimensionalcoordenadasparametricas()
 
 							flaggifcontextsuperficietridimensionalcoordenadasparametricas = 1;
 							}
-
-						async function superficietridimensionalcoordenadasparametricascapturarframe()
+						else
 							{
-							await superficietridimensionalcoordenadasparametricascontext.drawImage(document.getElementById('dot-chart-superficietridimensionalcoordenadasparametricas-esperagif'), 0, 0);
+							async function superficietridimensionalcoordenadasparametricascapturarframe()
+								{
+								await superficietridimensionalcoordenadasparametricascontext.drawImage(document.getElementById('dot-chart-superficietridimensionalcoordenadasparametricas-esperagif'), 0, 0);
 
-							try {await superficietridimensionalcoordenadasparametricasencoder.addFrame(superficietridimensionalcoordenadasparametricascontext)} catch (e){};
+								try {await superficietridimensionalcoordenadasparametricasencoder.addFrame(superficietridimensionalcoordenadasparametricascontext)} catch (e){};
+								}
+
+								superficietridimensionalcoordenadasparametricascapturarframe();
 							}
-
-							superficietridimensionalcoordenadasparametricascapturarframe();
 						});
 					}
 
@@ -15824,7 +15835,7 @@ function rotacaosuperficietridimensionalcoordenadasparametricasout()
 		if (flaggifsuperficietridimensionalcoordenadasparametricas == 0)
 			{
 			$(".downloadgifrotacaosuperficietridimensionalcoordenadasparametricas").empty();
-			$(".downloadgifrotacaosuperficietridimensionalcoordenadasparametricas").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficietridimensionalcoordenadasparametricasout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficietridimensionalcoordenadasparametricas").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficietridimensionalcoordenadasparametricasout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficietridimensionalcoordenadasparametricas = 1;
@@ -15936,7 +15947,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficietridimensionalcoordenadaspolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficietridimensionalcoordenadaspolares-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficietridimensionalcoordenadaspolares"></div></td><td> <div class="cancelarrotacaosuperficietridimensionalcoordenadaspolares"></div></td><td> <div class="downloadgifrotacaosuperficietridimensionalcoordenadaspolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -16639,7 +16650,7 @@ function antoniovandresuperficietridimensionalcoordenadaspolaresout(str)
 				$(".dot-chart-3d-superficietridimensionalcoordenadaspolares-espera").empty();
 				Plotly.newPlot('dot-chart-3d-superficietridimensionalcoordenadaspolares-espera', data, layout);
 
-				$(".rotacaosuperficietridimensionalcoordenadaspolares").append("<input type=\"button\" onclick=\"rotacaosuperficietridimensionalcoordenadaspolaresout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficietridimensionalcoordenadaspolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficietridimensionalcoordenadaspolaresout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsuperficietridimensionalcoordenadaspolares = 1;
 
@@ -16702,15 +16713,17 @@ function animacaorotacaosuperficietridimensionalcoordenadaspolares()
 
 							flaggifcontextsuperficietridimensionalcoordenadaspolares = 1;
 							}
-
-						async function superficietridimensionalcoordenadaspolarescapturarframe()
+						else
 							{
-							await superficietridimensionalcoordenadaspolarescontext.drawImage(document.getElementById('dot-chart-superficietridimensionalcoordenadaspolares-esperagif'), 0, 0);
+							async function superficietridimensionalcoordenadaspolarescapturarframe()
+								{
+								await superficietridimensionalcoordenadaspolarescontext.drawImage(document.getElementById('dot-chart-superficietridimensionalcoordenadaspolares-esperagif'), 0, 0);
 
-							try {await superficietridimensionalcoordenadaspolaresencoder.addFrame(superficietridimensionalcoordenadaspolarescontext);} catch (e){};
+								try {await superficietridimensionalcoordenadaspolaresencoder.addFrame(superficietridimensionalcoordenadaspolarescontext);} catch (e){};
+								}
+
+							superficietridimensionalcoordenadaspolarescapturarframe();
 							}
-
-						superficietridimensionalcoordenadaspolarescapturarframe();
 						});
 					}
 
@@ -16786,7 +16799,7 @@ function rotacaosuperficietridimensionalcoordenadaspolaresout()
 		if (flaggifsuperficietridimensionalcoordenadaspolares == 0)
 			{
 			$(".downloadgifrotacaosuperficietridimensionalcoordenadaspolares").empty();
-			$(".downloadgifrotacaosuperficietridimensionalcoordenadaspolares").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficietridimensionalcoordenadaspolaresout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficietridimensionalcoordenadaspolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficietridimensionalcoordenadaspolaresout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficietridimensionalcoordenadaspolares = 1;
@@ -18411,7 +18424,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficieregiaorelacao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficieregiaorelacao-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficieregiaorelacao"></div></td><td> <div class="cancelarrotacaosuperficieregiaorelacao"></div></td><td> <div class="downloadgifrotacaosuperficieregiaorelacao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -19490,7 +19503,7 @@ function antoniovandresuperficieregiaorelacaoout(str)
 				$(".dot-chart-superficieregiaorelacao-espera").empty();
 				Plotly.newPlot('dot-chart-superficieregiaorelacao-espera', data, layout);
 
-				$(".rotacaosuperficieregiaorelacao").append("<input type=\"button\" onclick=\"rotacaosuperficieregiaorelacaoout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficieregiaorelacao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficieregiaorelacaoout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficieregiaorelacao = 1;
 
@@ -19557,15 +19570,17 @@ function animacaorotacaosuperficieregiaorelacao()
 
 							flaggifcontextsuperficieregiaorelacao = 1;
 							}
+						else
+							{
+							async function superficieregiaorelacaocapturarframe()
+								{
+								await superficieregiaorelacaocontext.drawImage(document.getElementById('dot-chart-superficieregiaorelacao-esperagif'), 0, 0);
+								try {await superficieregiaorelacaoencoder.addFrame(superficieregiaorelacaocontext);} catch (e){};
+								}
 
-					async function superficieregiaorelacaocapturarframe()
-						{
-						await superficieregiaorelacaocontext.drawImage(document.getElementById('dot-chart-superficieregiaorelacao-esperagif'), 0, 0);
-						try {await superficieregiaorelacaoencoder.addFrame(superficieregiaorelacaocontext);} catch (e){};
-						}
-
-					superficieregiaorelacaocapturarframe();
-					});
+							superficieregiaorelacaocapturarframe();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosuperficieregiaorelacao);
@@ -19640,7 +19655,7 @@ function rotacaosuperficieregiaorelacaoout()
 		if (flaggifsuperficieregiaorelacao == 0)
 			{
 			$(".downloadgifrotacaosuperficieregiaorelacao").empty();
-			$(".downloadgifrotacaosuperficieregiaorelacao").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficieregiaorelacaoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficieregiaorelacao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficieregiaorelacaoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficieregiaorelacao = 1;
@@ -37579,7 +37594,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaograficofuncao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaograficofuncao-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaograficofuncao"></div></td><td> <div class="cancelarrotacaosuperficierevolucaograficofuncao"></div></td><td> <div class="downloadgifrotacaosuperficierevolucaograficofuncao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -38168,7 +38183,7 @@ function antoniovandresuperficierevolucaograficofuncaoout(str)
 				$(".dot-chart-superficierevolucaograficofuncao-espera").empty();
 				Plotly.newPlot('dot-chart-superficierevolucaograficofuncao-espera', data, layout);
 
-				$(".rotacaosuperficierevolucaograficofuncao").append("<input type=\"button\" onclick=\"rotacaosuperficierevolucaograficofuncaoout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficierevolucaograficofuncao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficierevolucaograficofuncaoout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficierevolucaograficofuncao = 1;
 
@@ -38231,14 +38246,16 @@ function animacaorotacaosuperficierevolucaograficofuncao()
 
 							flaggifcontextsuperficierevolucaograficofuncao = 1;
 							}
-
-						async function superficierevolucaograficofuncaoencodercapturarframe()
+						else
 							{
-							await superficierevolucaograficofuncaocontext.drawImage(document.getElementById('dot-chart-superficierevolucaograficofuncao-esperagif'), 0, 0);
-							try {await superficierevolucaograficofuncaoencoder.addFrame(superficierevolucaograficofuncaocontext);} catch (e){};
-							}
+							async function superficierevolucaograficofuncaoencodercapturarframe()
+								{
+								await superficierevolucaograficofuncaocontext.drawImage(document.getElementById('dot-chart-superficierevolucaograficofuncao-esperagif'), 0, 0);
+								try {await superficierevolucaograficofuncaoencoder.addFrame(superficierevolucaograficofuncaocontext);} catch (e){};
+								}
 
-						superficierevolucaograficofuncaoencodercapturarframe();
+							superficierevolucaograficofuncaoencodercapturarframe();
+							}
 						});
 					}
 
@@ -38314,7 +38331,7 @@ function rotacaosuperficierevolucaograficofuncaoout()
 		if (flaggifsuperficierevolucaograficofuncao == 0)
 			{
 			$(".downloadgifrotacaosuperficierevolucaograficofuncao").empty();
-			$(".downloadgifrotacaosuperficierevolucaograficofuncao").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaograficofuncaoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficierevolucaograficofuncao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaograficofuncaoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficierevolucaograficofuncao = 1;
@@ -38399,7 +38416,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametrica-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametrica-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td><td> <div class="cancelarrotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td><td><div class="downloadgifrotacaosuperficierevolucaocurvacoordenadaparametrica"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -39069,7 +39086,7 @@ function antoniovandresuperficierevolucaocurvacoordenadaparametricaout(str)
 				$(".dot-chart-superficierevolucaocurvacoordenadaparametrica-espera").empty();
 				Plotly.newPlot('dot-chart-superficierevolucaocurvacoordenadaparametrica-espera', data, layout);
 
-				$(".rotacaosuperficierevolucaocurvacoordenadaparametrica").append("<input type=\"button\" onclick=\"rotacaosuperficierevolucaocurvacoordenadaparametricaout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficierevolucaocurvacoordenadaparametrica").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficierevolucaocurvacoordenadaparametricaout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficierevolucaocurvacoordenadaparametrica = 1;
 
@@ -39132,14 +39149,16 @@ function superficierevolucaocurvacoordenadaparametricamensagemerro()
 
 							flaggifcontextsuperficierevolucaocurvacoordenadaparametrica = 1;
 							}
-
-						async function superficierevolucaocurvacoordenadaparametricacapturarframe()
+						else
 							{
-							await superficierevolucaocurvacoordenadaparametricacontext.drawImage(document.getElementById('dot-chart-superficierevolucaocurvacoordenadaparametrica-esperagif'), 0, 0);
-							try {await superficierevolucaocurvacoordenadaparametricaencoder.addFrame(superficierevolucaocurvacoordenadaparametricacontext);} catch (e){};
-							}
+							async function superficierevolucaocurvacoordenadaparametricacapturarframe()
+								{
+								await superficierevolucaocurvacoordenadaparametricacontext.drawImage(document.getElementById('dot-chart-superficierevolucaocurvacoordenadaparametrica-esperagif'), 0, 0);
+								try {await superficierevolucaocurvacoordenadaparametricaencoder.addFrame(superficierevolucaocurvacoordenadaparametricacontext);} catch (e){};
+								}
 
-						superficierevolucaocurvacoordenadaparametricacapturarframe();
+							superficierevolucaocurvacoordenadaparametricacapturarframe();
+							}
 						});
 					}
 
@@ -39215,7 +39234,7 @@ function rotacaosuperficierevolucaocurvacoordenadaparametricaout()
 		if (flaggifsuperficierevolucaocurvacoordenadaparametrica == 0)
 			{
 			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametrica").empty();
-			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametrica").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaocurvacoordenadaparametricaout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametrica").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaocurvacoordenadaparametricaout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficierevolucaocurvacoordenadaparametrica = 1;
@@ -39296,7 +39315,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficieregiaorevolucaorelacao-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficieregiaorevolucaorelacao-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficieregiaorevolucaorelacao"></div></td><td> <div class="cancelarrotacaosuperficieregiaorevolucaorelacao"></div></td><td> <div class="downloadgifrotacaosuperficieregiaorevolucaorelacao"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -40450,7 +40469,7 @@ function antoniovandresuperficieregiaorevolucaorelacaoout(str)
 				$(".dot-chart-superficieregiaorevolucaorelacao-espera").empty();
 				Plotly.newPlot('dot-chart-superficieregiaorevolucaorelacao-espera', data, layout);
 
-				$(".rotacaosuperficieregiaorevolucaorelacao").append("<input type=\"button\" onclick=\"rotacaosuperficieregiaorevolucaorelacaoout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficieregiaorevolucaorelacao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficieregiaorevolucaorelacaoout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficieregiaorevolucaorelacao = 1;
 
@@ -40519,15 +40538,17 @@ function animacaorotacaosuperficieregiaorevolucaorelacao()
 
 							flaggifcontextsuperficieregiaorevolucaorelacao = 1;
 							}
+						else
+							{
+							async function superficieregiaorevolucaorelacaocapturarframe()
+								{
+								await superficieregiaorevolucaorelacaocontext.drawImage(document.getElementById('dot-chart-superficieregiaorevolucaorelacao-esperagif'), 0, 0);
+								try {await superficieregiaorevolucaorelacaoencoder.addFrame(superficieregiaorevolucaorelacaocontext);} catch (e){};
+								}
 
-					async function superficieregiaorevolucaorelacaocapturarframe()
-						{
-						await superficieregiaorevolucaorelacaocontext.drawImage(document.getElementById('dot-chart-superficieregiaorevolucaorelacao-esperagif'), 0, 0);
-						try {await superficieregiaorevolucaorelacaoencoder.addFrame(superficieregiaorevolucaorelacaocontext);} catch (e){};
-						}
-
-					superficieregiaorevolucaorelacaocapturarframe();
-					});
+							superficieregiaorevolucaorelacaocapturarframe();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosuperficieregiaorevolucaorelacao);
@@ -40602,7 +40623,7 @@ function rotacaosuperficieregiaorevolucaorelacaoout()
 		if (flaggifsuperficieregiaorevolucaorelacao == 0)
 			{
 			$(".downloadgifrotacaosuperficieregiaorevolucaorelacao").empty();
-			$(".downloadgifrotacaosuperficieregiaorevolucaorelacao").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficieregiaorevolucaorelacaoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficieregiaorevolucaorelacao").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficieregiaorevolucaorelacaoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficieregiaorevolucaorelacao = 1;
@@ -40687,7 +40708,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaograficocoordenadaspolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaograficocoordenadaspolares-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaograficocoordenadaspolares"></div></td><td> <div class="cancelarrotacaosuperficierevolucaograficocoordenadaspolares"></div></td><td> <div class="downloadgifrotacaosuperficierevolucaograficocoordenadaspolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -41276,7 +41297,7 @@ function antoniovandresuperficierevolucaograficocoordenadaspolaresout(str)
 				$(".dot-chart-superficierevolucaograficocoordenadaspolares-espera").empty();
 				Plotly.newPlot('dot-chart-superficierevolucaograficocoordenadaspolares-espera', data, layout);
 
-				$(".rotacaosuperficierevolucaograficocoordenadaspolares").append("<input type=\"button\" onclick=\"rotacaosuperficierevolucaograficocoordenadaspolaresout()\" value=\"Rotação automática\">");
+				$(".rotacaosuperficierevolucaograficocoordenadaspolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficierevolucaograficocoordenadaspolaresout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficierevolucaograficocoordenadaspolares = 1;
 
@@ -41339,14 +41360,16 @@ function animacaorotacaosuperficierevolucaograficocoordenadaspolares()
 
 							flaggifcontextsuperficierevolucaograficocoordenadaspolares = 1;
 							}
-
-						async function superficiegraficocoordenadaspolarcapturarframe()
+						else
 							{
-							await superficierevolucaograficocoordenadaspolarescontext.drawImage(document.getElementById('dot-chart-superficierevolucaograficocoordenadaspolares-esperagif'), 0, 0);
-							try {await superficierevolucaograficocoordenadaspolaresencoder.addFrame(superficierevolucaograficocoordenadaspolarescontext);} catch (e){};
-							}
+							async function superficiegraficocoordenadaspolarcapturarframe()
+								{
+								await superficierevolucaograficocoordenadaspolarescontext.drawImage(document.getElementById('dot-chart-superficierevolucaograficocoordenadaspolares-esperagif'), 0, 0);
+								try {await superficierevolucaograficocoordenadaspolaresencoder.addFrame(superficierevolucaograficocoordenadaspolarescontext);} catch (e){};
+								}
 
-						superficiegraficocoordenadaspolarcapturarframe();
+							superficiegraficocoordenadaspolarcapturarframe();
+							}
 						});
 					}
 
@@ -41422,7 +41445,7 @@ function rotacaosuperficierevolucaograficocoordenadaspolaresout()
 		if (flaggifsuperficierevolucaograficocoordenadaspolares == 0)
 			{
 			$(".downloadgifrotacaosuperficierevolucaograficocoordenadaspolares").empty();
-			$(".downloadgifrotacaosuperficierevolucaograficocoordenadaspolares").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaograficocoordenadaspolaresout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficierevolucaograficocoordenadaspolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaograficocoordenadaspolaresout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficierevolucaograficocoordenadaspolares = 1;

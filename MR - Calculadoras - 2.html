@@ -8,7 +8,7 @@ Compilação das calculadoras JavaScript do Mathematical Ramblings. Página 2 / 
 
 Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 
-Última atualização: 21-04-2026.
+Última atualização: 22-04-2026.
 
 -->
 
@@ -7480,7 +7480,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto"></div></td><td><div class="downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -8353,7 +8353,7 @@ function antoniovandresimetricasuperficierevolucaocurvacoordenadaparametricapont
 				$(".dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricapontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricapontoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricaponto = 1;
 
@@ -8416,14 +8416,16 @@ function simetricasuperficierevolucaocurvacoordenadaparametricapontomensagemerro
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 1;
 							}
-
-						async function simetricasuperficierevolucaocurvacoordenadaparametricapontocapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaocurvacoordenadaparametricapontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricapontocontext);} catch (e){};
-							}
+							async function simetricasuperficierevolucaocurvacoordenadaparametricapontocapturarframe()
+								{
+								await simetricasuperficierevolucaocurvacoordenadaparametricapontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricapontocontext);} catch (e){};
+								}
 
-						simetricasuperficierevolucaocurvacoordenadaparametricapontocapturarframe();
+							simetricasuperficierevolucaocurvacoordenadaparametricapontocapturarframe();
+							}
 						});
 					}
 
@@ -8499,7 +8501,7 @@ function rotacaosimetricasuperficierevolucaocurvacoordenadaparametricapontoout()
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricapontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricapontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto = 1;
@@ -8584,7 +8586,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano"></div></td><td><div class="downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -9626,7 +9628,7 @@ function antoniovandresimetricasuperficierevolucaocurvacoordenadaparametricaplan
 				$(".dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplanoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
 
@@ -9687,17 +9689,19 @@ function simetricasuperficierevolucaocurvacoordenadaparametricaplanomensagemerro
 							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.setDelay(10);
 							} catch (e){};
 
-						flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
-						}
-
-						async function simetricasuperficierevolucaocurvacoordenadaparametricaplanocapturarframe()
-							{
-							await simetricasuperficierevolucaocurvacoordenadaparametricaplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-esperagif'), 0, 0);
-
-							try {await simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricaplanocontext);} catch (e){};
+							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
 							}
+						else
+							{
+							async function simetricasuperficierevolucaocurvacoordenadaparametricaplanocapturarframe()
+								{
+								await simetricasuperficierevolucaocurvacoordenadaparametricaplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-esperagif'), 0, 0);
 
-						simetricasuperficierevolucaocurvacoordenadaparametricaplanocapturarframe();
+								try {await simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricaplanocontext);} catch (e){};
+								}
+
+							simetricasuperficierevolucaocurvacoordenadaparametricaplanocapturarframe();
+							}
 						});
 					}
 
@@ -9773,7 +9777,7 @@ function rotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplanoout()
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricaplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricaplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
@@ -9854,7 +9858,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricacurvatridimensionalcoordenadaparametricaponto"></div></td><td> <div class="cancelarrotacaosimetricacurvatridimensionalcoordenadaparametricaponto"></div></td><td> <div class="downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -10808,7 +10812,7 @@ function antoniovandresimetricacurvatridimensionalcoordenadaparametricapontoout(
 				$(".dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-espera', data, layout);
 
-				$(".rotacaosimetricacurvatridimensionalcoordenadaparametricaponto").append("<input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadaparametricapontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricacurvatridimensionalcoordenadaparametricaponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadaparametricapontoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricacurvatridimensionalcoordenadaparametricaponto = 1;
 
@@ -10869,10 +10873,17 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto()
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaponto = 1;
 							}
+						else
+							{
+							async function simetricacurvatridimensionalcoordenadaparametricapontocapturarframe ()
+								{
+								await simetricacurvatridimensionalcoordenadaparametricapontocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-esperagif'), 0, 0);
+								try {await simetricacurvatridimensionalcoordenadaparametricapontoencoder.addFrame(simetricacurvatridimensionalcoordenadaparametricapontocontext);} catch (e){};
+								}
 
-					simetricacurvatridimensionalcoordenadaparametricapontocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-esperagif'), 0, 0);
-					try {simetricacurvatridimensionalcoordenadaparametricapontoencoder.addFrame(simetricacurvatridimensionalcoordenadaparametricapontocontext);} catch (e){};
-					});
+							simetricacurvatridimensionalcoordenadaparametricapontocapturarframe ();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto);
@@ -10947,7 +10958,7 @@ function rotacaosimetricacurvatridimensionalcoordenadaparametricapontoout()
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaponto == 0)
 			{
 			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto").empty();
-			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricapontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricapontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto = 1;
@@ -11028,7 +11039,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricacurvatridimensionalcoordenadaparametricaplano"></div></td><td> <div class="cancelarrotacaosimetricacurvatridimensionalcoordenadaparametricaplano"></div></td><td> <div class="downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -12148,7 +12159,7 @@ function antoniovandresimetricacurvatridimensionalcoordenadaparametricaplanoout(
 				$(".dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-espera', data, layout);
 
-				$(".rotacaosimetricacurvatridimensionalcoordenadaparametricaplano").append("<input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadaparametricaplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricacurvatridimensionalcoordenadaparametricaplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadaparametricaplanoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricacurvatridimensionalcoordenadaparametricaplano = 1;
 
@@ -12209,10 +12220,18 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano()
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaplano = 1;
 							}
+						else
+							{
+							async function simetricacurvatridimensionalcoordenadaparametricaplanocapturarframe ()
+								{
 
-					simetricacurvatridimensionalcoordenadaparametricaplanocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-esperagif'), 0, 0);
-					try {simetricacurvatridimensionalcoordenadaparametricaplanoencoder.addFrame(simetricacurvatridimensionalcoordenadaparametricaplanocontext);} catch (e){};
-					});
+								await simetricacurvatridimensionalcoordenadaparametricaplanocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-esperagif'), 0, 0);
+								try {await simetricacurvatridimensionalcoordenadaparametricaplanoencoder.addFrame(simetricacurvatridimensionalcoordenadaparametricaplanocontext);} catch (e){};
+								}
+
+							simetricacurvatridimensionalcoordenadaparametricaplanocapturarframe ();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano);
@@ -12287,7 +12306,7 @@ function rotacaosimetricacurvatridimensionalcoordenadaparametricaplanoout()
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaplano == 0)
 			{
 			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano").empty();
-			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricaplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricaplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano = 1;
@@ -12368,7 +12387,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadasparametricasponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadasparametricasponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficietridimensionalcoordenadasparametricasponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -13466,7 +13485,7 @@ function antoniovandresimetricasuperficietridimensionalcoordenadasparametricaspo
 				$(".dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasponto-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadasparametricaspontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadasparametricaspontoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficietridimensionalcoordenadasparametricasponto = 1;
 
@@ -13529,15 +13548,17 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasponto = 1;
 							}
-
-						async function simetricasuperficietridimensionalcoordenadasparametricaspontocapturarframe()
+						else
 							{
-							await simetricasuperficietridimensionalcoordenadasparametricaspontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadasparametricasponto-esperagif'), 0, 0);
+							async function simetricasuperficietridimensionalcoordenadasparametricaspontocapturarframe()
+								{
+								await simetricasuperficietridimensionalcoordenadasparametricaspontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadasparametricasponto-esperagif'), 0, 0);
 
-							try {await simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.addFrame(simetricasuperficietridimensionalcoordenadasparametricaspontocontext);} catch (e){};
+								try {await simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.addFrame(simetricasuperficietridimensionalcoordenadasparametricaspontocontext);} catch (e){};
+								}
+
+							simetricasuperficietridimensionalcoordenadasparametricaspontocapturarframe();
 							}
-
-						simetricasuperficietridimensionalcoordenadasparametricaspontocapturarframe();
 						});
 					}
 
@@ -13613,7 +13634,7 @@ function rotacaosimetricasuperficietridimensionalcoordenadasparametricaspontoout
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").empty();
-			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametricaspontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametricaspontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasponto = 1;
@@ -13694,7 +13715,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadasparametricasplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadasparametricasplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficietridimensionalcoordenadasparametricasplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -14955,7 +14976,7 @@ function antoniovandresimetricasuperficietridimensionalcoordenadasparametricaspl
 				$(".dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasplano-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadasparametricasplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadasparametricasplanoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficietridimensionalcoordenadasparametricasplano = 1;
 
@@ -15018,15 +15039,17 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasplano = 1;
 							}
-
-						async function simetricasuperficietridimensionalcoordenadasparametricasplanocapturarframe()
+						else
 							{
-							await simetricasuperficietridimensionalcoordenadasparametricasplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadasparametricasplano-esperagif'), 0, 0);
+							async function simetricasuperficietridimensionalcoordenadasparametricasplanocapturarframe()
+								{
+								await simetricasuperficietridimensionalcoordenadasparametricasplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadasparametricasplano-esperagif'), 0, 0);
 
-							try {await simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.addFrame(simetricasuperficietridimensionalcoordenadasparametricasplanocontext);} catch (e){};
+								try {await simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.addFrame(simetricasuperficietridimensionalcoordenadasparametricasplanocontext);} catch (e){};
+								}
+
+							simetricasuperficietridimensionalcoordenadasparametricasplanocapturarframe();
 							}
-
-						simetricasuperficietridimensionalcoordenadasparametricasplanocapturarframe();
 						});
 					}
 
@@ -15102,7 +15125,7 @@ function rotacaosimetricasuperficietridimensionalcoordenadasparametricasplanoout
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").empty();
-			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametricasplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametricasplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasplano = 1;
@@ -18216,7 +18239,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficieregiaorelacaoponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficieregiaorelacaoponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficieregiaorelacaoponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficieregiaorelacaoponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficieregiaorelacaoponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -19709,7 +19732,7 @@ function antoniovandresimetricasuperficieregiaorelacaopontoout(str)
 				$(".dot-chart-simetricasuperficieregiaorelacaoponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficieregiaorelacaoponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficieregiaorelacaoponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficieregiaorelacaopontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficieregiaorelacaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficieregiaorelacaopontoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficieregiaoponto = 1;
 
@@ -19776,15 +19799,17 @@ function animacaorotacaosimetricasuperficieregiaorelacaoponto()
 
 							flaggifcontextsimetricasuperficieregiaorelacaoponto = 1;
 							}
+						else
+							{
+							async function simetricasuperficieregiaorelacaopontocapturarframe()
+								{
+								await simetricasuperficieregiaorelacaopontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficieregiaorelacaoponto-esperagif'), 0, 0);
+								try {await simetricasuperficieregiaorelacaopontoencoder.addFrame(simetricasuperficieregiaorelacaopontocontext);} catch (e){};
+								}
 
-					async function simetricasuperficieregiaorelacaopontocapturarframe()
-						{
-						await simetricasuperficieregiaorelacaopontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficieregiaorelacaoponto-esperagif'), 0, 0);
-						try {await simetricasuperficieregiaorelacaopontoencoder.addFrame(simetricasuperficieregiaorelacaopontocontext);} catch (e){};
-						}
-
-					simetricasuperficieregiaorelacaopontocapturarframe();
-					});
+							simetricasuperficieregiaorelacaopontocapturarframe();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosimetricasuperficieregiaorelacaoponto);
@@ -19859,7 +19884,7 @@ function rotacaosimetricasuperficieregiaorelacaopontoout()
 		if (flaggifsimetricasuperficieregiaorelacaoponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoponto").empty();
-			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficieregiaorelacaopontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficieregiaorelacaopontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficieregiaorelacaoponto = 1;
@@ -19940,7 +19965,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficieregiaorelacaoplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficieregiaorelacaoplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficieregiaorelacaoplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficieregiaorelacaoplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficieregiaorelacaoplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -21703,7 +21728,7 @@ function antoniovandresimetricasuperficieregiaorelacaoplanoout(str)
 				$(".dot-chart-simetricasuperficieregiaorelacaoplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficieregiaorelacaoplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficieregiaorelacaoplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficieregiaorelacaoplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficieregiaorelacaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficieregiaorelacaoplanoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficieregiaoplano = 1;
 
@@ -21770,15 +21795,17 @@ function animacaorotacaosimetricasuperficieregiaorelacaoplano()
 
 							flaggifcontextsimetricasuperficieregiaorelacaoplano = 1;
 							}
+						else
+							{
+							async function simetricasuperficieregiaorelacaoplanocapturarframe()
+								{
+								await simetricasuperficieregiaorelacaoplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficieregiaorelacaoplano-esperagif'), 0, 0);
+								try {await simetricasuperficieregiaorelacaoplanoencoder.addFrame(simetricasuperficieregiaorelacaoplanocontext);} catch (e){};
+								}
 
-					async function simetricasuperficieregiaorelacaoplanocapturarframe()
-						{
-						await simetricasuperficieregiaorelacaoplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficieregiaorelacaoplano-esperagif'), 0, 0);
-						try {await simetricasuperficieregiaorelacaoplanoencoder.addFrame(simetricasuperficieregiaorelacaoplanocontext);} catch (e){};
-						}
-
-					simetricasuperficieregiaorelacaoplanocapturarframe();
-					});
+							simetricasuperficieregiaorelacaoplanocapturarframe();
+							}
+						});
 					}
 
 				requestAnimationFrame(animacaorotacaosimetricasuperficieregiaorelacaoplano);
@@ -21853,7 +21880,7 @@ function rotacaosimetricasuperficieregiaorelacaoplanoout()
 		if (flaggifsimetricasuperficieregiaorelacaoplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoplano").empty();
-			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficieregiaorelacaoplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficieregiaorelacaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficieregiaorelacaoplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficieregiaorelacaoplano = 1;
@@ -21934,7 +21961,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricograficotridimensionalfuncaoponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricograficotridimensionalfuncaoponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricograficotridimensionalfuncaoponto"></div></td><td> <div class="cancelarrotacaosimetricograficotridimensionalfuncaoponto"></div></td><td> <div class="downloadgifrotacaosimetricograficotridimensionalfuncaoponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -22905,7 +22932,7 @@ function antoniovandresimetricograficotridimensionalfuncaopontoout(str)
 				$(".dot-chart-simetricograficotridimensionalfuncaoponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricograficotridimensionalfuncaoponto', data, layout);
 
-				$(".rotacaosimetricograficotridimensionalfuncaoponto").append("<input type=\"button\" onclick=\"rotacaosimetricograficotridimensionalfuncaopontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricograficotridimensionalfuncaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricograficotridimensionalfuncaopontoout()\" value=\"Rotação automática\">");
 
 				flagplotly3D = 1;
 
@@ -22968,14 +22995,16 @@ function animacaorotacaosimetricograficotridimensionalfuncaoponto()
 
 							flaggifcontextsimetricograficotridimensionalfuncaoponto = 1;
 							}
-
-						async function simetricograficotridimensionalfuncaopontocapturarframe()
+						else
 							{
-							await simetricograficotridimensionalfuncaopontocontext.drawImage(document.getElementById('dot-chart-simetricograficotridimensionalfuncaoponto-esperagif'), 0, 0);
-							try {await simetricograficotridimensionalfuncaopontoencoder.addFrame(simetricograficotridimensionalfuncaopontocontext);} catch (e){};
-							}
+							async function simetricograficotridimensionalfuncaopontocapturarframe()
+								{
+								await simetricograficotridimensionalfuncaopontocontext.drawImage(document.getElementById('dot-chart-simetricograficotridimensionalfuncaoponto-esperagif'), 0, 0);
+								try {await simetricograficotridimensionalfuncaopontoencoder.addFrame(simetricograficotridimensionalfuncaopontocontext);} catch (e){};
+								}
 
-						simetricograficotridimensionalfuncaopontocapturarframe();
+							simetricograficotridimensionalfuncaopontocapturarframe();
+							}
 						});
 					}
 
@@ -23051,7 +23080,7 @@ function rotacaosimetricograficotridimensionalfuncaopontoout()
 		if (flaggifsimetricograficotridimensionalfuncaoponto == 0)
 			{
 			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoponto").empty();
-			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricograficotridimensionalfuncaopontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricograficotridimensionalfuncaopontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricograficotridimensionalfuncaoponto = 1;
@@ -23132,7 +23161,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricograficotridimensionalfuncaoplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricograficotridimensionalfuncaoplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricograficotridimensionalfuncaoplano"></div></td><td> <div class="cancelarrotacaosimetricograficotridimensionalfuncaoplano"></div></td><td> <div class="downloadgifrotacaosimetricograficotridimensionalfuncaoplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -24275,7 +24304,7 @@ function antoniovandresimetricograficotridimensionalfuncaoplanoout(str)
 				$(".dot-chart-simetricograficotridimensionalfuncaoplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricograficotridimensionalfuncaoplano', data, layout);
 
-				$(".rotacaosimetricograficotridimensionalfuncaoplano").append("<input type=\"button\" onclick=\"rotacaosimetricograficotridimensionalfuncaoplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricograficotridimensionalfuncaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricograficotridimensionalfuncaoplanoout()\" value=\"Rotação automática\">");
 
 				flagplotly3D = 1;
 
@@ -24338,14 +24367,16 @@ function animacaorotacaosimetricograficotridimensionalfuncaoplano()
 
 							flaggifcontextsimetricograficotridimensionalfuncaoplano = 1;
 							}
-
-						async function simetricograficotridimensionalfuncaoplanocapturarframe()
+						else
 							{
-							await simetricograficotridimensionalfuncaoplanocontext.drawImage(document.getElementById('dot-chart-simetricograficotridimensionalfuncaoplano-esperagif'), 0, 0);
-							try {await simetricograficotridimensionalfuncaoplanoencoder.addFrame(simetricograficotridimensionalfuncaoplanocontext);} catch (e){};
-							}
+							async function simetricograficotridimensionalfuncaoplanocapturarframe()
+								{
+								await simetricograficotridimensionalfuncaoplanocontext.drawImage(document.getElementById('dot-chart-simetricograficotridimensionalfuncaoplano-esperagif'), 0, 0);
+								try {await simetricograficotridimensionalfuncaoplanoencoder.addFrame(simetricograficotridimensionalfuncaoplanocontext);} catch (e){};
+								}
 
-						simetricograficotridimensionalfuncaoplanocapturarframe();
+							simetricograficotridimensionalfuncaoplanocapturarframe();
+							}
 						});
 					}
 
@@ -24421,7 +24452,7 @@ function rotacaosimetricograficotridimensionalfuncaoplanoout()
 		if (flaggifsimetricograficotridimensionalfuncaoplano == 0)
 			{
 			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoplano").empty();
-			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricograficotridimensionalfuncaoplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricograficotridimensionalfuncaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricograficotridimensionalfuncaoplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricograficotridimensionalfuncaoplano = 1;
@@ -27050,7 +27081,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadaspolaresponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadaspolaresponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficietridimensionalcoordenadaspolaresponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -28019,7 +28050,7 @@ function antoniovandresimetricasuperficietridimensionalcoordenadaspolarespontoou
 				$(".dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresponto-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadaspolarespontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadaspolarespontoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficietridimensionalcoordenadaspolaresponto = 1;
 
@@ -28082,15 +28113,17 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresponto = 1;
 							}
-
-						async function simetricasuperficietridimensionalcoordenadaspolarespontocapturarframe()
+						else
 							{
-							await simetricasuperficietridimensionalcoordenadaspolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadaspolaresponto-esperagif'), 0, 0);
+							async function simetricasuperficietridimensionalcoordenadaspolarespontocapturarframe()
+								{
+								await simetricasuperficietridimensionalcoordenadaspolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadaspolaresponto-esperagif'), 0, 0);
 
-							try {await simetricasuperficietridimensionalcoordenadaspolarespontoencoder.addFrame(simetricasuperficietridimensionalcoordenadaspolarespontocontext);} catch (e){};
+								try {await simetricasuperficietridimensionalcoordenadaspolarespontoencoder.addFrame(simetricasuperficietridimensionalcoordenadaspolarespontocontext);} catch (e){};
+								}
+
+							simetricasuperficietridimensionalcoordenadaspolarespontocapturarframe();
 							}
-
-						simetricasuperficietridimensionalcoordenadaspolarespontocapturarframe();
 						});
 					}
 
@@ -28166,7 +28199,7 @@ function rotacaosimetricasuperficietridimensionalcoordenadaspolarespontoout()
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").empty();
-			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolarespontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolarespontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto = 1;
@@ -28247,7 +28280,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadaspolaresplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficietridimensionalcoordenadaspolaresplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficietridimensionalcoordenadaspolaresplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -29385,7 +29418,7 @@ function antoniovandresimetricasuperficietridimensionalcoordenadaspolaresplanoou
 				$(".dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresplano-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadaspolaresplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficietridimensionalcoordenadaspolaresplanoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricasuperficietridimensionalcoordenadaspolaresplano = 1;
 
@@ -29448,15 +29481,17 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresplano = 1;
 							}
-
-						async function simetricasuperficietridimensionalcoordenadaspolaresplanocapturarframe()
+						else
 							{
-							await simetricasuperficietridimensionalcoordenadaspolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadaspolaresplano-esperagif'), 0, 0);
+							async function simetricasuperficietridimensionalcoordenadaspolaresplanocapturarframe()
+								{
+								await simetricasuperficietridimensionalcoordenadaspolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficietridimensionalcoordenadaspolaresplano-esperagif'), 0, 0);
 
-							try {await simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.addFrame(simetricasuperficietridimensionalcoordenadaspolaresplanocontext);} catch (e){};
+								try {await simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.addFrame(simetricasuperficietridimensionalcoordenadaspolaresplanocontext);} catch (e){};
+								}
+
+							simetricasuperficietridimensionalcoordenadaspolaresplanocapturarframe();
 							}
-
-						simetricasuperficietridimensionalcoordenadaspolaresplanocapturarframe();
 						});
 					}
 
@@ -29532,7 +29567,7 @@ function rotacaosimetricasuperficietridimensionalcoordenadaspolaresplanoout()
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").empty();
-			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolaresplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolaresplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano = 1;
@@ -29617,7 +29652,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -30502,7 +30537,7 @@ function antoniovandresimetricasuperficierevolucaograficocoordenadaspolaresponto
 				$(".dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficocoordenadaspolarespontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficocoordenadaspolarespontoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaograficocoordenadaspolaresponto = 1;
 
@@ -30565,14 +30600,16 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespon
 
 							flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresponto = 1;
 							}
-
-						async function superficiegraficocoordenadaspolarcapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaograficocoordenadaspolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.addFrame(simetricasuperficierevolucaograficocoordenadaspolarespontocontext);} catch (e){};
-							}
+							async function superficiegraficocoordenadaspolarcapturarframe()
+								{
+								await simetricasuperficierevolucaograficocoordenadaspolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.addFrame(simetricasuperficierevolucaograficocoordenadaspolarespontocontext);} catch (e){};
+								}
 
-						superficiegraficocoordenadaspolarcapturarframe();
+							superficiegraficocoordenadaspolarcapturarframe();
+							}
 						});
 					}
 
@@ -30648,7 +30685,7 @@ function rotacaosimetricasuperficierevolucaograficocoordenadaspolarespontoout()
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolarespontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolarespontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto = 1;
@@ -30733,7 +30770,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -31800,7 +31837,7 @@ function antoniovandresimetricasuperficierevolucaograficocoordenadaspolaresplano
 				$(".dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplanoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaograficocoordenadaspolaresplano = 1;
 
@@ -31863,14 +31900,16 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespla
 
 							flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresplano = 1;
 							}
-
-						async function superficiegraficocoordenadaspolarcapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaograficocoordenadaspolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.addFrame(simetricasuperficierevolucaograficocoordenadaspolaresplanocontext);} catch (e){};
-							}
+							async function superficiegraficocoordenadaspolarcapturarframe()
+								{
+								await simetricasuperficierevolucaograficocoordenadaspolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.addFrame(simetricasuperficierevolucaograficocoordenadaspolaresplanocontext);} catch (e){};
+								}
 
-						superficiegraficocoordenadaspolarcapturarframe();
+							superficiegraficocoordenadaspolarcapturarframe();
+							}
 						});
 					}
 
@@ -31946,7 +31985,7 @@ function rotacaosimetricasuperficierevolucaograficocoordenadaspolaresplanoout()
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolaresplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolaresplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano = 1;
@@ -32031,7 +32070,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficofuncaoponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficofuncaoponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaograficofuncaoponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaograficofuncaoponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -32914,7 +32953,7 @@ function antoniovandresimetricasuperficierevolucaograficofuncaopontoout(str)
 				$(".dot-chart-simetricasuperficierevolucaograficofuncaoponto-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaograficofuncaoponto-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaograficofuncaoponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficofuncaopontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaograficofuncaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficofuncaopontoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaograficofuncaoponto = 1;
 
@@ -32977,14 +33016,16 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoponto()
 
 							flaggifcontextsimetricasuperficierevolucaograficofuncaoponto = 1;
 							}
-
-						async function simetricasuperficierevolucaograficofuncaopontoencodercapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaograficofuncaopontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficofuncaoponto-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaograficofuncaopontoencoder.addFrame(simetricasuperficierevolucaograficofuncaopontocontext);} catch (e){};
-							}
+							async function simetricasuperficierevolucaograficofuncaopontoencodercapturarframe()
+								{
+								await simetricasuperficierevolucaograficofuncaopontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficofuncaoponto-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaograficofuncaopontoencoder.addFrame(simetricasuperficierevolucaograficofuncaopontocontext);} catch (e){};
+								}
 
-						simetricasuperficierevolucaograficofuncaopontoencodercapturarframe();
+							simetricasuperficierevolucaograficofuncaopontoencodercapturarframe();
+							}
 						});
 					}
 
@@ -33060,7 +33101,7 @@ function rotacaosimetricasuperficierevolucaograficofuncaopontoout()
 		if (flaggifsimetricasuperficierevolucaograficofuncaoponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficofuncaopontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficofuncaopontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoponto = 1;
@@ -33145,7 +33186,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficofuncaoplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaograficofuncaoplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaograficofuncaoplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaograficofuncaoplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -34209,7 +34250,7 @@ function antoniovandresimetricasuperficierevolucaograficofuncaoplanoout(str)
 				$(".dot-chart-simetricasuperficierevolucaograficofuncaoplano-espera").empty();
 				Plotly.newPlot('dot-chart-simetricasuperficierevolucaograficofuncaoplano-espera', data, layout);
 
-				$(".rotacaosimetricasuperficierevolucaograficofuncaoplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficofuncaoplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricasuperficierevolucaograficofuncaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaograficofuncaoplanoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaograficofuncaoplano = 1;
 
@@ -34272,14 +34313,16 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoplano()
 
 							flaggifcontextsimetricasuperficierevolucaograficofuncaoplano = 1;
 							}
-
-						async function simetricasuperficierevolucaograficofuncaoplanoencodercapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaograficofuncaoplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficofuncaoplano-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaograficofuncaoplanoencoder.addFrame(simetricasuperficierevolucaograficofuncaoplanocontext);} catch (e){};
-							}
+							async function simetricasuperficierevolucaograficofuncaoplanoencodercapturarframe()
+								{
+								await simetricasuperficierevolucaograficofuncaoplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaograficofuncaoplano-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaograficofuncaoplanoencoder.addFrame(simetricasuperficierevolucaograficofuncaoplanocontext);} catch (e){};
+								}
 
-						simetricasuperficierevolucaograficofuncaoplanoencodercapturarframe();
+							simetricasuperficierevolucaograficofuncaoplanoencodercapturarframe();
+							}
 						});
 					}
 
@@ -34355,7 +34398,7 @@ function rotacaosimetricasuperficierevolucaograficofuncaoplanoout()
 		if (flaggifsimetricasuperficierevolucaograficofuncaoplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficofuncaoplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaograficofuncaoplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoplano = 1;
@@ -35478,7 +35521,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-curvatridimensionalcoordenadasparametricopolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-curvatridimensionalcoordenadasparametricopolares-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaocurvatridimensionalcoordenadasparametricopolares"></div></td><td> <div class="cancelarrotacaocurvatridimensionalcoordenadasparametricopolares"></div></td><td> <div class="downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -36165,7 +36208,7 @@ function antoniovandrecurvatridimensionalcoordenadasparametricopolaresout(str)
 				$(".dot-chart-3d-curvatridimensionalcoordenadasparametricopolares-espera").empty();
 				Plotly.newPlot('dot-chart-3d-curvatridimensionalcoordenadasparametricopolares-espera', data, layout);
 
-				$(".rotacaocurvatridimensionalcoordenadasparametricopolares").append("<input type=\"button\" onclick=\"rotacaocurvatridimensionalcoordenadasparametricopolaresout()\" value=\"Rotação automática\">");
+				$(".rotacaocurvatridimensionalcoordenadasparametricopolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocurvatridimensionalcoordenadasparametricopolaresout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dcurvatridimensionalcoordenadasparametricopolares = 1;
 
@@ -36228,15 +36271,17 @@ function animacaorotacaocurvatridimensionalcoordenadasparametricopolares()
 
 							flaggifcontextcurvatridimensionalcoordenadasparametricopolares = 1;
 							}
-
-						async function curvatridimensionalcoordenadasparametricopolarescapturarframe()
+						else
 							{
-							await curvatridimensionalcoordenadasparametricopolarescontext.drawImage(document.getElementById('dot-chart-curvatridimensionalcoordenadasparametricopolares-esperagif'), 0, 0);
+							async function curvatridimensionalcoordenadasparametricopolarescapturarframe()
+								{
+								await curvatridimensionalcoordenadasparametricopolarescontext.drawImage(document.getElementById('dot-chart-curvatridimensionalcoordenadasparametricopolares-esperagif'), 0, 0);
 
-							try {await curvatridimensionalcoordenadasparametricopolaresencoder.addFrame(curvatridimensionalcoordenadasparametricopolarescontext)} catch (e){};
+								try {await curvatridimensionalcoordenadasparametricopolaresencoder.addFrame(curvatridimensionalcoordenadasparametricopolarescontext)} catch (e){};
+								}
+
+							curvatridimensionalcoordenadasparametricopolarescapturarframe();
 							}
-
-						curvatridimensionalcoordenadasparametricopolarescapturarframe();
 						});
 					}
 
@@ -36312,7 +36357,7 @@ function rotacaocurvatridimensionalcoordenadasparametricopolaresout()
 		if (flaggifcurvatridimensionalcoordenadasparametricopolares == 0)
 			{
 			$(".downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares").empty();
-			$(".downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares").append("<input type=\"button\" onclick=\"rotacaocapturargifcurvatridimensionalcoordenadasparametricopolaresout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifcurvatridimensionalcoordenadasparametricopolaresout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaocurvatridimensionalcoordenadasparametricopolares = 1;
@@ -38950,7 +38995,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto"></div></td><td> <div class="cancelarrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto"></div></td><td> <div class="downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -39910,7 +39955,7 @@ function antoniovandresimetricacurvatridimensionalcoordenadasparametricopolaresp
 				$(".dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresponto-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresponto-espera', data, layout);
 
-				$(".rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").append("<input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadasparametricopolarespontoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadasparametricopolarespontoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 1;
 
@@ -39973,15 +40018,17 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 1;
 							}
-
-						async function simetricacurvatridimensionalcoordenadasparametricopolarespontocapturarframe()
+						else
 							{
-							await simetricacurvatridimensionalcoordenadasparametricopolarespontocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresponto-esperagif'), 0, 0);
+							async function simetricacurvatridimensionalcoordenadasparametricopolarespontocapturarframe()
+								{
+								await simetricacurvatridimensionalcoordenadasparametricopolarespontocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresponto-esperagif'), 0, 0);
 
-							try {await simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.addFrame(simetricacurvatridimensionalcoordenadasparametricopolarespontocontext)} catch (e){};
+								try {await simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.addFrame(simetricacurvatridimensionalcoordenadasparametricopolarespontocontext)} catch (e){};
+								}
+
+							simetricacurvatridimensionalcoordenadasparametricopolarespontocapturarframe();
 							}
-
-						simetricacurvatridimensionalcoordenadasparametricopolarespontocapturarframe();
 						});
 					}
 
@@ -40057,7 +40104,7 @@ function rotacaosimetricacurvatridimensionalcoordenadasparametricopolarespontoou
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto == 0)
 			{
 			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").empty();
-			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopolarespontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopolarespontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto = 1;
@@ -40138,7 +40185,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano"></div></td><td> <div class="cancelarrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano"></div></td><td> <div class="downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -41245,7 +41292,7 @@ function antoniovandresimetricacurvatridimensionalcoordenadasparametricopolaresp
 				$(".dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresplano-espera").empty();
 				Plotly.newPlot('dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresplano-espera', data, layout);
 
-				$(".rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").append("<input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplanoout()\" value=\"Rotação automática\">");
+				$(".rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplanoout()\" value=\"Rotação automática\">");
 
 				flagplotly3Dsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 1;
 
@@ -41308,15 +41355,17 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 1;
 							}
-
-						async function simetricacurvatridimensionalcoordenadasparametricopolaresplanocapturarframe()
+						else
 							{
-							await simetricacurvatridimensionalcoordenadasparametricopolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresplano-esperagif'), 0, 0);
+							async function simetricacurvatridimensionalcoordenadasparametricopolaresplanocapturarframe()
+								{
+								await simetricacurvatridimensionalcoordenadasparametricopolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadasparametricopolaresplano-esperagif'), 0, 0);
 
-							try {await simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.addFrame(simetricacurvatridimensionalcoordenadasparametricopolaresplanocontext)} catch (e){};
+								try {await simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.addFrame(simetricacurvatridimensionalcoordenadasparametricopolaresplanocontext)} catch (e){};
+								}
+
+							simetricacurvatridimensionalcoordenadasparametricopolaresplanocapturarframe();
 							}
-
-						simetricacurvatridimensionalcoordenadasparametricopolaresplanocapturarframe();
 						});
 					}
 
@@ -41392,7 +41441,7 @@ function rotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplanoou
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano == 0)
 			{
 			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").empty();
-			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopolaresplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopolaresplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano = 1;
@@ -41477,7 +41526,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametricopolares-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-superficierevolucaocurvacoordenadaparametricopolares-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosuperficierevolucaocurvacoordenadaparametricopolares"></div></td><td> <div class="cancelarrotacaosuperficierevolucaocurvacoordenadaparametricopolares"></div></td><td> <div class="downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -42523,7 +42572,7 @@ function antoniovandresuperficierevolucaocurvacoordenadaparametricopolaresout(st
 				$(".dot-chart-superficierevolucaocurvacoordenadaparametricopolares-espera").empty();
 				Plotly.newPlot("dot-chart-superficierevolucaocurvacoordenadaparametricopolares-espera", data, layout);
 
-                $(".rotacaosuperficierevolucaocurvacoordenadaparametricopolares").append("<input type=\"button\" onclick=\"rotacaosuperficierevolucaocurvacoordenadaparametricopolaresout()\" value=\"Rotação automática\">");
+                $(".rotacaosuperficierevolucaocurvacoordenadaparametricopolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosuperficierevolucaocurvacoordenadaparametricopolaresout()\" value=\"Rotação automática\">");
 
 				flagplotlysuperficierevolucaocurvacoordenadaparametricopolares = 1;
 
@@ -42586,14 +42635,16 @@ function animacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares()
 
 							flaggifcontextsuperficierevolucaocurvacoordenadaparametricopolares = 1;
 							}
-
-						async function superficierevolucaocurvacoordenadaparametricopolaresencodercapturarframe()
+						else
 							{
-							await superficierevolucaocurvacoordenadaparametricopolarescontext.drawImage(document.getElementById('dot-chart-superficierevolucaocurvacoordenadaparametricopolares-esperagif'), 0, 0);
-							try {await superficierevolucaocurvacoordenadaparametricopolaresencoder.addFrame(superficierevolucaocurvacoordenadaparametricopolarescontext);} catch (e){};
-							}
+							async function superficierevolucaocurvacoordenadaparametricopolaresencodercapturarframe()
+								{
+								await superficierevolucaocurvacoordenadaparametricopolarescontext.drawImage(document.getElementById('dot-chart-superficierevolucaocurvacoordenadaparametricopolares-esperagif'), 0, 0);
+								try {await superficierevolucaocurvacoordenadaparametricopolaresencoder.addFrame(superficierevolucaocurvacoordenadaparametricopolarescontext);} catch (e){};
+								}
 
-						superficierevolucaocurvacoordenadaparametricopolaresencodercapturarframe();
+							superficierevolucaocurvacoordenadaparametricopolaresencodercapturarframe();
+							}
 						});
 					}
 
@@ -42669,7 +42720,7 @@ function rotacaosuperficierevolucaocurvacoordenadaparametricopolaresout()
 		if (flaggifsuperficierevolucaocurvacoordenadaparametricopolares == 0)
 			{
 			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares").empty();
-			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares").append("<input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaocurvacoordenadaparametricopolaresout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsuperficierevolucaocurvacoordenadaparametricopolaresout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares = 1;
@@ -43847,7 +43898,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -45156,7 +45207,7 @@ function antoniovandresimetricasuperficierevolucaocurvacoordenadaparametricopola
 				$(".dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-espera").empty();
 				Plotly.newPlot("dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-espera", data, layout);
 
-                $(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespontoout()\" value=\"Rotação automática\">");
+                $(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespontoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 1;
 
@@ -45219,14 +45270,16 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 1;
 							}
-
-						async function simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencodercapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaocurvacoordenadaparametricopolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricopolarespontocontext);} catch (e){};
-							}
+							async function simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencodercapturarframe()
+								{
+								await simetricasuperficierevolucaocurvacoordenadaparametricopolarespontocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricopolarespontocontext);} catch (e){};
+								}
 
-						simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencodercapturarframe();
+							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencodercapturarframe();
+							}
 						});
 					}
 
@@ -45302,7 +45355,7 @@ function rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespon
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 1;
@@ -45387,7 +45440,7 @@ Entre com uma string contendo, separados por ponto e vírgula "<span class="notr
 <img width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-esperagif"/>
 <canvas width=800 height=800 id="dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-esperacanvas"></canvas>
 </span>
-<br><br><br><br><br>
+<br>
 <table><tr><td><table><tr><td><div class="rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano"></div></td><td> <div class="cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano"></div></td><td> <div class="downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano"></div></td></tr></table></td></tr></table>
 <br>
 Log:
@@ -46885,7 +46938,7 @@ function antoniovandresimetricasuperficierevolucaocurvacoordenadaparametricopola
 				$(".dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-espera").empty();
 				Plotly.newPlot("dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-espera", data, layout);
 
-                $(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").append("<input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoout()\" value=\"Rotação automática\">");
+                $(".rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoout()\" value=\"Rotação automática\">");
 
 				flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 1;
 
@@ -46948,14 +47001,16 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 1;
 							}
-
-						async function simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencodercapturarframe()
+						else
 							{
-							await simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-esperagif'), 0, 0);
-							try {await simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanocontext);} catch (e){};
-							}
+							async function simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencodercapturarframe()
+								{
+								await simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanocontext.drawImage(document.getElementById('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-esperagif'), 0, 0);
+								try {await simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.addFrame(simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanocontext);} catch (e){};
+								}
 
-						simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencodercapturarframe();
+							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencodercapturarframe();
+							}
 						});
 					}
 
@@ -47031,7 +47086,7 @@ function rotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespla
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano == 0)
 			{
 			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").empty();
-			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").append("<input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoout()\" value=\"Capturar gif animado\">");
+			$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").append("<br><br><br><br><br><br><input type=\"button\" onclick=\"rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoout()\" value=\"Capturar gif animado\">");
 			}
 
 		flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 1;
