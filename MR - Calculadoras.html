@@ -25,10 +25,10 @@ Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 
 <script src="https://antoniovandre.github.io/MathematicalRamblingsjs/MathematicalRamblings.js"></script>
 
-<script type="text/javascript" src="LZWEncoder.js"></script>
-<script type="text/javascript" src="NeuQuant.js"></script>
-<script type="text/javascript" src="GIFEncoder.js"></script>
-<script type="text/javascript" src="b64.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/LZWEncoder.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/NeuQuant.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/GIFEncoder.js"></script>
+<script type="text/javascript" src="https://antoniovandre.github.io/MathematicalRamblingsjs/b64.js"></script>
 
 <script>
 
@@ -14655,7 +14655,7 @@ function animacaorotacaocurvatridimensionalcoordenadaparametrica()
 							async function curvatridimensionalcoordenadaparametricacapturarframe ()
 								{
 								await curvatridimensionalcoordenadaparametricacontext.drawImage(document.getElementById('dot-chart-curvatridimensionalcoordenadaparametrica-esperagif'), 0, 0);
-								try {await curvatridimensionalcoordenadaparametricaencoder.addFrame(curvatridimensionalcoordenadaparametricacontext);} catch (e){};
+								try {await curvatridimensionalcoordenadaparametricaencoder.addFrame(curvatridimensionalcoordenadaparametricacontext, true);} catch (e){};
 								}
 
 							curvatridimensionalcoordenadaparametricacapturarframe ();
