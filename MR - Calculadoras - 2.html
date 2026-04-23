@@ -7530,6 +7530,7 @@ var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricaponto2 = 
 var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricapontot = 0;
 var flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 var trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
+var trotsimetricasuperficierevolucaocurvacoordenadaparametricapontobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 var flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 var flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
@@ -7563,6 +7564,7 @@ function processarsimetricasuperficierevolucaocurvacoordenadaparametricapontoout
 	cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricapontoout();
 
 	trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
+	trotsimetricasuperficierevolucaocurvacoordenadaparametricapontobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
@@ -8410,11 +8412,13 @@ function simetricasuperficierevolucaocurvacoordenadaparametricapontomensagemerro
 							simetricasuperficierevolucaocurvacoordenadaparametricapontocontext.canvas.height = 800;
 							simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder = new GIFEncoder();
 							simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.start();
-							simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.setRepeat(-1);
+							simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.setRepeat(0);
 							simetricasuperficierevolucaocurvacoordenadaparametricapontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 1;
+
+							trotsimetricasuperficierevolucaocurvacoordenadaparametricapontobak = trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto;
 							}
 						else
 							{
@@ -8447,7 +8451,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricapontomensagemerro
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto - trotsimetricasuperficierevolucaocurvacoordenadaparametricapontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto == 1)
 			{
@@ -8461,7 +8465,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricapontomensagemerro
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto), z: 1.5}});
 
-		trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
+		trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto = trotsimetricasuperficierevolucaocurvacoordenadaparametricapontobak;
 		}
 	else
 		{
@@ -8513,7 +8517,6 @@ function rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametric
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaponto = 1;
 	}
@@ -8648,6 +8651,7 @@ var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricaplano2 = 
 var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricaplanot = 0;
 var flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 var trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
+var trotsimetricasuperficierevolucaocurvacoordenadaparametricaplanobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 var flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 var flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
@@ -8681,6 +8685,7 @@ function processarsimetricasuperficierevolucaocurvacoordenadaparametricaplanoout
 	cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplanoout();
 
 	trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
+	trotsimetricasuperficierevolucaocurvacoordenadaparametricaplanobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
@@ -9686,11 +9691,14 @@ function simetricasuperficierevolucaocurvacoordenadaparametricaplanomensagemerro
 							simetricasuperficierevolucaocurvacoordenadaparametricaplanocontext.canvas.height = 800;
 							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder = new GIFEncoder();
 							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.start();
-							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.setRepeat(-1);
+							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.setRepeat(0);
 							simetricasuperficierevolucaocurvacoordenadaparametricaplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
+
+
+							trotsimetricasuperficierevolucaocurvacoordenadaparametricaplanobak = trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano;
 							}
 						else
 							{
@@ -9724,7 +9732,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricaplanomensagemerro
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano - trotsimetricasuperficierevolucaocurvacoordenadaparametricaplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano == 1)
 			{
@@ -9738,7 +9746,7 @@ function simetricasuperficierevolucaocurvacoordenadaparametricaplanomensagemerro
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricaplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano), z: 1.5}});
 
-		trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
+		trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano = trotsimetricasuperficierevolucaocurvacoordenadaparametricaplanobak;
 		}
 	else
 		{
@@ -9790,7 +9798,6 @@ function rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametric
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricaplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricaplano = 1;
 	}
@@ -9913,6 +9920,7 @@ var flagrepeticaosimetricacurvatridimensionalcoordenadaparametricaponto2 = 0;
 var flagrepeticaosimetricacurvatridimensionalcoordenadaparametricapontot = 0;
 var flagplotlysimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 var trotsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
+var trotsimetricacurvatridimensionalcoordenadaparametricapontobak = 0;
 var flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 var flaggifsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 var flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
@@ -9944,6 +9952,7 @@ function processarsimetricacurvatridimensionalcoordenadaparametricapontoout()
 	cancelarrotacaosimetricacurvatridimensionalcoordenadaparametricapontoout();
 
 	trotsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
+	trotsimetricacurvatridimensionalcoordenadaparametricapontobak = 0;
 	flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 	flaggifsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
@@ -10868,12 +10877,14 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto()
 								try {
 								simetricacurvatridimensionalcoordenadaparametricapontocontext = document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-esperacanvas').getContext("2d");
 								simetricacurvatridimensionalcoordenadaparametricapontoencoder = new GIFEncoder();
-								simetricacurvatridimensionalcoordenadaparametricapontoencoder.setRepeat(-1);
+								simetricacurvatridimensionalcoordenadaparametricapontoencoder.setRepeat(0);
 								simetricacurvatridimensionalcoordenadaparametricapontoencoder.setDelay(40);
 								simetricacurvatridimensionalcoordenadaparametricapontoencoder.start();
 								} catch (e){};
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaponto = 1;
+
+							trotsimetricacurvatridimensionalcoordenadaparametricapontobak = trotsimetricacurvatridimensionalcoordenadaparametricaponto;
 							}
 						else
 							{
@@ -10906,7 +10917,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadaparametricaponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadaparametricaponto - trotsimetricacurvatridimensionalcoordenadaparametricapontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaponto == 1)
 			{
@@ -10920,7 +10931,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaponto()
 
 		Plotly.relayout('dot-chart-simetricacurvatridimensionalcoordenadaparametricaponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricacurvatridimensionalcoordenadaparametricaponto), y: 1.5 * antoniovandresen(trotsimetricacurvatridimensionalcoordenadaparametricaponto), z: 1.5}});
 
-		trotsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
+		trotsimetricacurvatridimensionalcoordenadaparametricaponto = trotsimetricacurvatridimensionalcoordenadaparametricapontobak;
 		}
 	else
 		{
@@ -10972,7 +10983,6 @@ function rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricapont
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto").empty();
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaponto = 0;
 	flaggifsimetricacurvatridimensionalcoordenadaparametricaponto = 1;
 	}
@@ -11106,6 +11116,7 @@ var flagrepeticaosimetricacurvatridimensionalcoordenadaparametricaplano2 = 0;
 var flagrepeticaosimetricacurvatridimensionalcoordenadaparametricaplanot = 0;
 var flagplotlysimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 var trotsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
+var trotsimetricacurvatridimensionalcoordenadaparametricaplanobak = 0;
 var flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 var flaggifsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 var flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
@@ -11137,6 +11148,7 @@ function processarsimetricacurvatridimensionalcoordenadaparametricaplanoout()
 	cancelarrotacaosimetricacurvatridimensionalcoordenadaparametricaplanoout();
 
 	trotsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
+	trotsimetricacurvatridimensionalcoordenadaparametricaplanobak = 0;
 	flaganimacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 	flaggifsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
@@ -12216,12 +12228,14 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano()
 								try {
 								simetricacurvatridimensionalcoordenadaparametricaplanocontext = document.getElementById('dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-esperacanvas').getContext("2d");
 								simetricacurvatridimensionalcoordenadaparametricaplanoencoder = new GIFEncoder();
-								simetricacurvatridimensionalcoordenadaparametricaplanoencoder.setRepeat(-1);
+								simetricacurvatridimensionalcoordenadaparametricaplanoencoder.setRepeat(0);
 								simetricacurvatridimensionalcoordenadaparametricaplanoencoder.setDelay(40);
 								simetricacurvatridimensionalcoordenadaparametricaplanoencoder.start();
 								} catch (e){};
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaplano = 1;
+
+							trotsimetricacurvatridimensionalcoordenadaparametricaplanobak = trotsimetricacurvatridimensionalcoordenadaparametricaplano;
 							}
 						else
 							{
@@ -12255,7 +12269,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadaparametricaplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadaparametricaplano - trotsimetricacurvatridimensionalcoordenadaparametricaplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadaparametricaplano == 1)
 			{
@@ -12269,7 +12283,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadaparametricaplano()
 
 		Plotly.relayout('dot-chart-simetricacurvatridimensionalcoordenadaparametricaplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricacurvatridimensionalcoordenadaparametricaplano), y: 1.5 * antoniovandresen(trotsimetricacurvatridimensionalcoordenadaparametricaplano), z: 1.5}});
 
-		trotsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
+		trotsimetricacurvatridimensionalcoordenadaparametricaplano = trotsimetricacurvatridimensionalcoordenadaparametricaplanobak;
 		}
 	else
 		{
@@ -12321,7 +12335,6 @@ function rotacaocapturargifsimetricacurvatridimensionalcoordenadaparametricaplan
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano").empty();
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadaparametricaplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadaparametricaplano = 0;
 	flaggifsimetricacurvatridimensionalcoordenadaparametricaplano = 1;
 	}
@@ -12449,6 +12462,7 @@ var flagrepeticaosimetricasuperficietridimensionalcoordenadasparametricasponto2 
 var flagrepeticaosimetricasuperficietridimensionalcoordenadasparametricaspontot = 0;
 var flagplotly3Dsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 var trotsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
+var trotsimetricasuperficietridimensionalcoordenadasparametricaspontobak = 0;
 var flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 var flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 var flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
@@ -12482,6 +12496,7 @@ function processarsimetricasuperficietridimensionalcoordenadasparametricaspontoo
 	cancelarrotacaosimetricasuperficietridimensionalcoordenadasparametricaspontoout();
 
 	trotsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
+	trotsimetricasuperficietridimensionalcoordenadasparametricaspontobak = 0;
 	flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
@@ -13546,11 +13561,13 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 							simetricasuperficietridimensionalcoordenadasparametricaspontocontext.canvas.height = 800;
 							simetricasuperficietridimensionalcoordenadasparametricaspontoencoder = new GIFEncoder();
 							simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.start();
-							simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.setRepeat(-1);
+							simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.setRepeat(0);
 							simetricasuperficietridimensionalcoordenadasparametricaspontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasponto = 1;
+
+							trotsimetricasuperficietridimensionalcoordenadasparametricaspontobak = trotsimetricasuperficietridimensionalcoordenadasparametricasponto;
 							}
 						else
 							{
@@ -13584,7 +13601,8 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadasparametricasponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadasparametricasponto - 	trotsimetricasuperficietridimensionalcoordenadasparametricaspontobak = 0;
+ >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto == 1)
 			{
@@ -13598,7 +13616,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 
 		Plotly.relayout('dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficietridimensionalcoordenadasparametricasponto), y: 1.5 * antoniovandresen(trotsimetricasuperficietridimensionalcoordenadasparametricasponto), z: 1.5}});
 
-		trotsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
+		trotsimetricasuperficietridimensionalcoordenadasparametricasponto = trotsimetricasuperficietridimensionalcoordenadasparametricaspontobak;
 		}
 	else
 		{
@@ -13650,7 +13668,6 @@ function rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametri
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").empty();
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasponto = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadasparametricasponto = 1;
 	}
@@ -13786,6 +13803,7 @@ var flagrepeticaosimetricasuperficietridimensionalcoordenadasparametricasplano2 
 var flagrepeticaosimetricasuperficietridimensionalcoordenadasparametricasplanot = 0;
 var flagplotly3Dsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 var trotsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
+var trotsimetricasuperficietridimensionalcoordenadasparametricasplanobak = 0;
 var flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 var flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 var flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
@@ -13819,6 +13837,7 @@ function processarsimetricasuperficietridimensionalcoordenadasparametricasplanoo
 	cancelarrotacaosimetricasuperficietridimensionalcoordenadasparametricasplanoout();
 
 	trotsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
+	trotsimetricasuperficietridimensionalcoordenadasparametricasplanobak = 0;
 	flaganimacaorotacaosimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
@@ -15038,11 +15057,13 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 							simetricasuperficietridimensionalcoordenadasparametricasplanocontext.canvas.height = 800;
 							simetricasuperficietridimensionalcoordenadasparametricasplanoencoder = new GIFEncoder();
 							simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.start();
-							simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.setRepeat(-1);
+							simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.setRepeat(0);
 							simetricasuperficietridimensionalcoordenadasparametricasplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasplano = 1;
+
+							trotsimetricasuperficietridimensionalcoordenadasparametricasplanobak = trotsimetricasuperficietridimensionalcoordenadasparametricasplano;
 							}
 						else
 							{
@@ -15076,7 +15097,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadasparametricasplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadasparametricasplano - trotsimetricasuperficietridimensionalcoordenadasparametricasplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano == 1)
 			{
@@ -15090,7 +15111,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadasparametricas
 
 		Plotly.relayout('dot-chart-3d-simetricasuperficietridimensionalcoordenadasparametricasplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficietridimensionalcoordenadasparametricasplano), y: 1.5 * antoniovandresen(trotsimetricasuperficietridimensionalcoordenadasparametricasplano), z: 1.5}});
 
-		trotsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
+		trotsimetricasuperficietridimensionalcoordenadasparametricasplano = trotsimetricasuperficietridimensionalcoordenadasparametricasplanobak;
 		}
 	else
 		{
@@ -15142,7 +15163,6 @@ function rotacaocapturargifsimetricasuperficietridimensionalcoordenadasparametri
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").empty();
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadasparametricasplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadasparametricasplano = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadasparametricasplano = 1;
 	}
@@ -18312,6 +18332,7 @@ var flagrepeticaosimetricasuperficieregiaorelacaoponto2 = 0;
 var flagrepeticaosimetricasuperficieregiaorelacaopontot = 0;
 var flagplotly3Dsimetricasuperficieregiaoponto = 0;
 var trotsimetricasuperficieregiaorelacaoponto = 0;
+var trotsimetricasuperficieregiaorelacaopontobak = 0;
 var flaganimacaorotacaosimetricasuperficieregiaorelacaoponto = 0;
 var flaggifsimetricasuperficieregiaorelacaoponto = 0;
 var flaggifcontextsimetricasuperficieregiaorelacaoponto = 0;
@@ -18346,6 +18367,7 @@ function processarsimetricasuperficieregiaorelacaopontoout()
 	cancelarrotacaosimetricasuperficieregiaorelacaopontoout();
 
 	trotsimetricasuperficieregiaorelacaoponto = 0;
+	trotsimetricasuperficieregiaorelacaopontobak = 0;
 	flaganimacaorotacaosimetricasuperficieregiaorelacaoponto = 0;
 	flaggifsimetricasuperficieregiaorelacaoponto = 0;
 	flaggifcontextsimetricasuperficieregiaorelacaoponto = 0;
@@ -19799,11 +19821,13 @@ function animacaorotacaosimetricasuperficieregiaorelacaoponto()
 							simetricasuperficieregiaorelacaopontocontext.canvas.height = 800;
 							simetricasuperficieregiaorelacaopontoencoder = new GIFEncoder();
 							simetricasuperficieregiaorelacaopontoencoder.start();
-							simetricasuperficieregiaorelacaopontoencoder.setRepeat(-1);
+							simetricasuperficieregiaorelacaopontoencoder.setRepeat(0);
 							simetricasuperficieregiaorelacaopontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficieregiaorelacaoponto = 1;
+
+							trotsimetricasuperficieregiaorelacaopontobak = trotsimetricasuperficieregiaorelacaoponto;
 							}
 						else
 							{
@@ -19836,7 +19860,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficieregiaorelacaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficieregiaorelacaoponto - trotsimetricasuperficieregiaorelacaopontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficieregiaorelacaoponto == 1)
 			{
@@ -19850,7 +19874,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoponto()
 
 		Plotly.relayout('dot-chart-simetricasuperficieregiaorelacaoponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficieregiaorelacaoponto), y: 1.5 * antoniovandresen(trotsimetricasuperficieregiaorelacaoponto), z: 1.5}});
 
-		trotsimetricasuperficieregiaorelacaoponto = 0;
+		trotsimetricasuperficieregiaorelacaoponto = trotsimetricasuperficieregiaorelacaopontobak;
 		}
 	else
 		{
@@ -19902,7 +19926,6 @@ function rotacaocapturargifsimetricasuperficieregiaorelacaopontoout()
 	$(".downloadgifrotacaosimetricasuperficieregiaorelacaoponto").empty();
 	$(".downloadgifrotacaosimetricasuperficieregiaorelacaoponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficieregiaorelacaoponto = 0;
 	flaggifcontextsimetricasuperficieregiaorelacaoponto = 0;
 	flaggifsimetricasuperficieregiaorelacaoponto = 1;
 	}
@@ -20050,6 +20073,7 @@ var flagrepeticaosimetricasuperficieregiaorelacaoplano2 = 0;
 var flagrepeticaosimetricasuperficieregiaorelacaoplanot = 0;
 var flagplotly3Dsimetricasuperficieregiaoplano = 0;
 var trotsimetricasuperficieregiaorelacaoplano = 0;
+var trotsimetricasuperficieregiaorelacaoplanobak = 0;
 var flaganimacaorotacaosimetricasuperficieregiaorelacaoplano = 0;
 var flaggifsimetricasuperficieregiaorelacaoplano = 0;
 var flaggifcontextsimetricasuperficieregiaorelacaoplano = 0;
@@ -20084,6 +20108,7 @@ function processarsimetricasuperficieregiaorelacaoplanoout()
 	cancelarrotacaosimetricasuperficieregiaorelacaoplanoout();
 
 	trotsimetricasuperficieregiaorelacaoplano = 0;
+	trotsimetricasuperficieregiaorelacaoplanobak = 0;
 	flaganimacaorotacaosimetricasuperficieregiaorelacaoplano = 0;
 	flaggifsimetricasuperficieregiaorelacaoplano = 0;
 	flaggifcontextsimetricasuperficieregiaorelacaoplano = 0;
@@ -21796,11 +21821,13 @@ function animacaorotacaosimetricasuperficieregiaorelacaoplano()
 							simetricasuperficieregiaorelacaoplanocontext.canvas.height = 800;
 							simetricasuperficieregiaorelacaoplanoencoder = new GIFEncoder();
 							simetricasuperficieregiaorelacaoplanoencoder.start();
-							simetricasuperficieregiaorelacaoplanoencoder.setRepeat(-1);
+							simetricasuperficieregiaorelacaoplanoencoder.setRepeat(0);
 							simetricasuperficieregiaorelacaoplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficieregiaorelacaoplano = 1;
+
+							trotsimetricasuperficieregiaorelacaoplanobak = trotsimetricasuperficieregiaorelacaoplano;
 							}
 						else
 							{
@@ -21833,7 +21860,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficieregiaorelacaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficieregiaorelacaoplano - trotsimetricasuperficieregiaorelacaoplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficieregiaorelacaoplano == 1)
 			{
@@ -21847,7 +21874,7 @@ function animacaorotacaosimetricasuperficieregiaorelacaoplano()
 
 		Plotly.relayout('dot-chart-simetricasuperficieregiaorelacaoplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficieregiaorelacaoplano), y: 1.5 * antoniovandresen(trotsimetricasuperficieregiaorelacaoplano), z: 1.5}});
 
-		trotsimetricasuperficieregiaorelacaoplano = 0;
+		trotsimetricasuperficieregiaorelacaoplano = trotsimetricasuperficieregiaorelacaoplanobak;
 		}
 	else
 		{
@@ -21899,7 +21926,6 @@ function rotacaocapturargifsimetricasuperficieregiaorelacaoplanoout()
 	$(".downloadgifrotacaosimetricasuperficieregiaorelacaoplano").empty();
 	$(".downloadgifrotacaosimetricasuperficieregiaorelacaoplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficieregiaorelacaoplano = 0;
 	flaggifcontextsimetricasuperficieregiaorelacaoplano = 0;
 	flaggifsimetricasuperficieregiaorelacaoplano = 1;
 	}
@@ -22021,6 +22047,7 @@ var flagrepeticaosimetricograficotridimensionalfuncaoponto2 = 0;
 var flagrepeticaosimetricograficotridimensionalfuncaopontot = 0;
 var flagplotly3D = 0;
 var trotsimetricograficotridimensionalfuncaoponto = 0;
+var trotsimetricograficotridimensionalfuncaopontobak = 0;
 var flaganimacaorotacaosimetricograficotridimensionalfuncaoponto = 0;
 var flaggifsimetricograficotridimensionalfuncaoponto = 0;
 var flaggifcontextsimetricograficotridimensionalfuncaoponto = 0;
@@ -22054,6 +22081,7 @@ function processarsimetricograficotridimensionalfuncaopontoout()
 	cancelarrotacaosimetricograficotridimensionalfuncaopontoout();
 
 	trotsimetricograficotridimensionalfuncaoponto = 0;
+	trotsimetricograficotridimensionalfuncaopontobak = 0;
 	flaganimacaorotacaosimetricograficotridimensionalfuncaoponto = 0;
 	flaggifsimetricograficotridimensionalfuncaoponto = 0;
 	flaggifcontextsimetricograficotridimensionalfuncaoponto = 0;
@@ -22997,11 +23025,13 @@ function animacaorotacaosimetricograficotridimensionalfuncaoponto()
 							simetricograficotridimensionalfuncaopontocontext.canvas.height = 800;
 							simetricograficotridimensionalfuncaopontoencoder = new GIFEncoder();
 							simetricograficotridimensionalfuncaopontoencoder.start();
-							simetricograficotridimensionalfuncaopontoencoder.setRepeat(-1);
+							simetricograficotridimensionalfuncaopontoencoder.setRepeat(0);
 							simetricograficotridimensionalfuncaopontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricograficotridimensionalfuncaoponto = 1;
+
+							trotsimetricograficotridimensionalfuncaopontobak = trotsimetricograficotridimensionalfuncaoponto;
 							}
 						else
 							{
@@ -23034,7 +23064,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricograficotridimensionalfuncaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricograficotridimensionalfuncaoponto - trotsimetricograficotridimensionalfuncaopontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricograficotridimensionalfuncaoponto == 1)
 			{
@@ -23048,7 +23078,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoponto()
 
 		Plotly.relayout('dot-chart-simetricograficotridimensionalfuncaoponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricograficotridimensionalfuncaoponto), y: 1.5 * antoniovandresen(trotsimetricograficotridimensionalfuncaoponto), z: 1.5}});
 
-		trotsimetricograficotridimensionalfuncaoponto = 0;
+		trotsimetricograficotridimensionalfuncaoponto = trotsimetricograficotridimensionalfuncaopontobak;
 		}
 	else
 		{
@@ -23100,7 +23130,6 @@ function rotacaocapturargifsimetricograficotridimensionalfuncaopontoout()
 	$(".downloadgifrotacaosimetricograficotridimensionalfuncaoponto").empty();
 	$(".downloadgifrotacaosimetricograficotridimensionalfuncaoponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricograficotridimensionalfuncaoponto = 0;
 	flaggifcontextsimetricograficotridimensionalfuncaoponto = 0;
 	flaggifsimetricograficotridimensionalfuncaoponto = 1;
 	}
@@ -23233,6 +23262,7 @@ var flagrepeticaosimetricograficotridimensionalfuncaoplano2 = 0;
 var flagrepeticaosimetricograficotridimensionalfuncaoplanot = 0;
 var flagplotly3D = 0;
 var trotsimetricograficotridimensionalfuncaoplano = 0;
+var trotsimetricograficotridimensionalfuncaoplanobak = 0;
 var flaganimacaorotacaosimetricograficotridimensionalfuncaoplano = 0;
 var flaggifsimetricograficotridimensionalfuncaoplano = 0;
 var flaggifcontextsimetricograficotridimensionalfuncaoplano = 0;
@@ -23266,6 +23296,7 @@ function processarsimetricograficotridimensionalfuncaoplanoout()
 	cancelarrotacaosimetricograficotridimensionalfuncaoplanoout();
 
 	trotsimetricograficotridimensionalfuncaoplano = 0;
+	trotsimetricograficotridimensionalfuncaoplanobak = 0;
 	flaganimacaorotacaosimetricograficotridimensionalfuncaoplano = 0;
 	flaggifsimetricograficotridimensionalfuncaoplano = 0;
 	flaggifcontextsimetricograficotridimensionalfuncaoplano = 0;
@@ -24370,11 +24401,13 @@ function animacaorotacaosimetricograficotridimensionalfuncaoplano()
 								simetricograficotridimensionalfuncaoplanocontext.canvas.height = 800;
 								simetricograficotridimensionalfuncaoplanoencoder = new GIFEncoder();
 								simetricograficotridimensionalfuncaoplanoencoder.start();
-								simetricograficotridimensionalfuncaoplanoencoder.setRepeat(-1);
+								simetricograficotridimensionalfuncaoplanoencoder.setRepeat(0);
 								simetricograficotridimensionalfuncaoplanoencoder.setDelay(10);
 								} catch (e){};
 
 							flaggifcontextsimetricograficotridimensionalfuncaoplano = 1;
+
+							trotsimetricograficotridimensionalfuncaoplanobak = trotsimetricograficotridimensionalfuncaoplano;
 							}
 						else
 							{
@@ -24407,7 +24440,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricograficotridimensionalfuncaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricograficotridimensionalfuncaoplano - trotsimetricograficotridimensionalfuncaoplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricograficotridimensionalfuncaoplano == 1)
 			{
@@ -24421,7 +24454,7 @@ function animacaorotacaosimetricograficotridimensionalfuncaoplano()
 
 		Plotly.relayout('dot-chart-simetricograficotridimensionalfuncaoplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricograficotridimensionalfuncaoplano), y: 1.5 * antoniovandresen(trotsimetricograficotridimensionalfuncaoplano), z: 1.5}});
 
-		trotsimetricograficotridimensionalfuncaoplano = 0;
+		trotsimetricograficotridimensionalfuncaoplano = trotsimetricograficotridimensionalfuncaoplanobak;
 		}
 	else
 		{
@@ -24473,7 +24506,6 @@ function rotacaocapturargifsimetricograficotridimensionalfuncaoplanoout()
 	$(".downloadgifrotacaosimetricograficotridimensionalfuncaoplano").empty();
 	$(".downloadgifrotacaosimetricograficotridimensionalfuncaoplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricograficotridimensionalfuncaoplano = 0;
 	flaggifcontextsimetricograficotridimensionalfuncaoplano = 0;
 	flaggifsimetricograficotridimensionalfuncaoplano = 1;
 	}
@@ -27143,6 +27175,7 @@ var flagrepeticaosimetricasuperficietridimensionalcoordenadaspolaresponto2 = 0;
 var flagrepeticaosimetricasuperficietridimensionalcoordenadaspolarespontot = 0;
 var flagplotly3Dsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 var trotsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
+var trotsimetricasuperficietridimensionalcoordenadaspolarespontobak = 0;
 var flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 var flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 var flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
@@ -27176,6 +27209,7 @@ function processarsimetricasuperficietridimensionalcoordenadaspolarespontoout()
 	cancelarrotacaosimetricasuperficietridimensionalcoordenadaspolarespontoout();
 
 	trotsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
+	trotsimetricasuperficietridimensionalcoordenadaspolarespontobak = 0;
 	flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
@@ -28117,11 +28151,13 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto
 							simetricasuperficietridimensionalcoordenadaspolarespontocontext.canvas.height = 800;
 							simetricasuperficietridimensionalcoordenadaspolarespontoencoder = new GIFEncoder();
 							simetricasuperficietridimensionalcoordenadaspolarespontoencoder.start();
-							simetricasuperficietridimensionalcoordenadaspolarespontoencoder.setRepeat(-1);
+							simetricasuperficietridimensionalcoordenadaspolarespontoencoder.setRepeat(0);
 							simetricasuperficietridimensionalcoordenadaspolarespontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresponto = 1;
+
+							trotsimetricasuperficietridimensionalcoordenadaspolarespontobak = trotsimetricasuperficietridimensionalcoordenadaspolaresponto;
 							}
 						else
 							{
@@ -28155,7 +28191,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadaspolaresponto - trotsimetricasuperficietridimensionalcoordenadaspolarespontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto == 1)
 			{
@@ -28169,7 +28205,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresponto
 
 		Plotly.relayout('dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficietridimensionalcoordenadaspolaresponto), y: 1.5 * antoniovandresen(trotsimetricasuperficietridimensionalcoordenadaspolaresponto), z: 1.5}});
 
-		trotsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
+		trotsimetricasuperficietridimensionalcoordenadaspolaresponto = trotsimetricasuperficietridimensionalcoordenadaspolarespontobak;
 		}
 	else
 		{
@@ -28221,7 +28257,6 @@ function rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolarespo
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").empty();
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresponto = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadaspolaresponto = 1;
 	}
@@ -28354,6 +28389,7 @@ var flagrepeticaosimetricasuperficietridimensionalcoordenadaspolaresplano2 = 0;
 var flagrepeticaosimetricasuperficietridimensionalcoordenadaspolaresplanot = 0;
 var flagplotly3Dsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 var trotsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
+var trotsimetricasuperficietridimensionalcoordenadaspolaresplanobak = 0;
 var flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 var flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 var flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
@@ -28387,6 +28423,7 @@ function processarsimetricasuperficietridimensionalcoordenadaspolaresplanoout()
 	cancelarrotacaosimetricasuperficietridimensionalcoordenadaspolaresplanoout();
 
 	trotsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
+	trotsimetricasuperficietridimensionalcoordenadaspolaresplanobak = 0;
 	flaganimacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
@@ -29486,11 +29523,13 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano
 							simetricasuperficietridimensionalcoordenadaspolaresplanocontext.canvas.height = 800;
 							simetricasuperficietridimensionalcoordenadaspolaresplanoencoder = new GIFEncoder();
 							simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.start();
-							simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.setRepeat(-1);
+							simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.setRepeat(0);
 							simetricasuperficietridimensionalcoordenadaspolaresplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresplano = 1;
+
+							trotsimetricasuperficietridimensionalcoordenadaspolaresplanobak = trotsimetricasuperficietridimensionalcoordenadaspolaresplano;
 							}
 						else
 							{
@@ -29524,7 +29563,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficietridimensionalcoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficietridimensionalcoordenadaspolaresplano - trotsimetricasuperficietridimensionalcoordenadaspolaresplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano == 1)
 			{
@@ -29538,7 +29577,7 @@ function animacaorotacaosimetricasuperficietridimensionalcoordenadaspolaresplano
 
 		Plotly.relayout('dot-chart-3d-simetricasuperficietridimensionalcoordenadaspolaresplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficietridimensionalcoordenadaspolaresplano), y: 1.5 * antoniovandresen(trotsimetricasuperficietridimensionalcoordenadaspolaresplano), z: 1.5}});
 
-		trotsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
+		trotsimetricasuperficietridimensionalcoordenadaspolaresplano = trotsimetricasuperficietridimensionalcoordenadaspolaresplanobak;
 		}
 	else
 		{
@@ -29590,7 +29629,6 @@ function rotacaocapturargifsimetricasuperficietridimensionalcoordenadaspolarespl
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").empty();
 	$(".downloadgifrotacaosimetricasuperficietridimensionalcoordenadaspolaresplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 	flaggifcontextsimetricasuperficietridimensionalcoordenadaspolaresplano = 0;
 	flaggifsimetricasuperficietridimensionalcoordenadaspolaresplano = 1;
 	}
@@ -29712,6 +29750,7 @@ var flagrepeticaosimetricasuperficierevolucaograficocoordenadaspolaresponto2 = 0
 var flagrepeticaosimetricasuperficierevolucaograficocoordenadaspolarespontot = 0;
 var flagplotlysimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 var trotsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
+var trotsimetricasuperficierevolucaograficocoordenadaspolarespontobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 var flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 var flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
@@ -29745,6 +29784,7 @@ function processarsimetricasuperficierevolucaograficocoordenadaspolarespontoout(
 	cancelarrotacaosimetricasuperficierevolucaograficocoordenadaspolarespontoout();
 
 	trotsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
+	trotsimetricasuperficierevolucaograficocoordenadaspolarespontobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 	flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 	flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
@@ -30606,11 +30646,13 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespon
 							superficiegraficocoordenadaspolarcontext.canvas.height = 800;
 							simetricasuperficierevolucaograficocoordenadaspolarespontoencoder = new GIFEncoder();
 							simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.start();
-							simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.setRepeat(-1);
+							simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.setRepeat(0);
 							simetricasuperficierevolucaograficocoordenadaspolarespontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresponto = 1;
+
+							trotsimetricasuperficierevolucaograficocoordenadaspolarespontobak = trotsimetricasuperficierevolucaograficocoordenadaspolaresponto;
 							}
 						else
 							{
@@ -30643,7 +30685,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespon
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresponto - trotsimetricasuperficierevolucaograficocoordenadaspolarespontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto == 1)
 			{
@@ -30657,7 +30699,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespon
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaograficocoordenadaspolaresponto), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaograficocoordenadaspolaresponto), z: 1.5}});
 
-		trotsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
+		trotsimetricasuperficierevolucaograficocoordenadaspolaresponto = trotsimetricasuperficierevolucaograficocoordenadaspolarespontobak;
 		}
 	else
 		{
@@ -30709,7 +30751,6 @@ function rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolares
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 	flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresponto = 0;
 	flaggifsimetricasuperficierevolucaograficocoordenadaspolaresponto = 1;
 	}
@@ -30842,6 +30883,7 @@ var flagrepeticaosimetricasuperficierevolucaograficocoordenadaspolaresplano2 = 0
 var flagrepeticaosimetricasuperficierevolucaograficocoordenadaspolaresplanot = 0;
 var flagplotlysimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 var trotsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
+var trotsimetricasuperficierevolucaograficocoordenadaspolaresplanobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 var flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 var flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
@@ -30875,6 +30917,7 @@ function processarsimetricasuperficierevolucaograficocoordenadaspolaresplanoout(
 	cancelarrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplanoout();
 
 	trotsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
+	trotsimetricasuperficierevolucaograficocoordenadaspolaresplanobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 	flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 	flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
@@ -31907,11 +31950,13 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespla
 							superficiegraficocoordenadaspolarcontext.canvas.height = 800;
 							simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder = new GIFEncoder();
 							simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.start();
-							simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.setRepeat(-1);
+							simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.setRepeat(0);
 							simetricasuperficierevolucaograficocoordenadaspolaresplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresplano = 1;
+
+							trotsimetricasuperficierevolucaograficocoordenadaspolaresplanobak = trotsimetricasuperficierevolucaograficocoordenadaspolaresplano;
 							}
 						else
 							{
@@ -31944,7 +31989,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespla
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficocoordenadaspolaresplano - trotsimetricasuperficierevolucaograficocoordenadaspolaresplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano == 1)
 			{
@@ -31958,7 +32003,7 @@ function animacaorotacaosimetricasuperficierevolucaograficocoordenadaspolarespla
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaograficocoordenadaspolaresplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaograficocoordenadaspolaresplano), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaograficocoordenadaspolaresplano), z: 1.5}});
 
-		trotsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
+		trotsimetricasuperficierevolucaograficocoordenadaspolaresplano = trotsimetricasuperficierevolucaograficocoordenadaspolaresplanobak;
 		}
 	else
 		{
@@ -32010,7 +32055,6 @@ function rotacaocapturargifsimetricasuperficierevolucaograficocoordenadaspolares
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficocoordenadaspolaresplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 	flaggifcontextsimetricasuperficierevolucaograficocoordenadaspolaresplano = 0;
 	flaggifsimetricasuperficierevolucaograficocoordenadaspolaresplano = 1;
 	}
@@ -32132,6 +32176,7 @@ var flagrepeticaosimetricasuperficierevolucaograficofuncaoponto2 = 0;
 var flagrepeticaosimetricasuperficierevolucaograficofuncaopontot = 0;
 var flagplotlysimetricasuperficierevolucaograficofuncaoponto = 0;
 var trotsimetricasuperficierevolucaograficofuncaoponto = 0;
+var trotsimetricasuperficierevolucaograficofuncaopontobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoponto = 0;
 var flaggifsimetricasuperficierevolucaograficofuncaoponto = 0;
 var flaggifcontextsimetricasuperficierevolucaograficofuncaoponto = 0;
@@ -32165,6 +32210,7 @@ function processarsimetricasuperficierevolucaograficofuncaopontoout()
 	cancelarrotacaosimetricasuperficierevolucaograficofuncaopontoout();
 
 	trotsimetricasuperficierevolucaograficofuncaoponto = 0;
+	trotsimetricasuperficierevolucaograficofuncaopontobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoponto = 0;
 	flaggifsimetricasuperficierevolucaograficofuncaoponto = 0;
 	flaggifcontextsimetricasuperficierevolucaograficofuncaoponto = 0;
@@ -33024,11 +33070,13 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoponto()
 							simetricasuperficierevolucaograficofuncaopontocontext.canvas.height = 800;
 							simetricasuperficierevolucaograficofuncaopontoencoder = new GIFEncoder();
 							simetricasuperficierevolucaograficofuncaopontoencoder.start();
-							simetricasuperficierevolucaograficofuncaopontoencoder.setRepeat(-1);
+							simetricasuperficierevolucaograficofuncaopontoencoder.setRepeat(0);
 							simetricasuperficierevolucaograficofuncaopontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaograficofuncaoponto = 1;
+
+							trotsimetricasuperficierevolucaograficofuncaopontobak = trotsimetricasuperficierevolucaograficofuncaoponto;
 							}
 						else
 							{
@@ -33061,7 +33109,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoponto()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficofuncaoponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficofuncaoponto - trotsimetricasuperficierevolucaograficofuncaopontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaograficofuncaoponto == 1)
 			{
@@ -33075,7 +33123,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoponto()
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaograficofuncaoponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaograficofuncaoponto), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaograficofuncaoponto), z: 1.5}});
 
-		trotsimetricasuperficierevolucaograficofuncaoponto = 0;
+		trotsimetricasuperficierevolucaograficofuncaoponto = trotsimetricasuperficierevolucaograficofuncaopontobak;
 		}
 	else
 		{
@@ -33127,7 +33175,6 @@ function rotacaocapturargifsimetricasuperficierevolucaograficofuncaopontoout()
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaograficofuncaoponto = 0;
 	flaggifcontextsimetricasuperficierevolucaograficofuncaoponto = 0;
 	flaggifsimetricasuperficierevolucaograficofuncaoponto = 1;
 	}
@@ -33257,6 +33304,7 @@ var flagrepeticaosimetricasuperficierevolucaograficofuncaoplano2 = 0;
 var flagrepeticaosimetricasuperficierevolucaograficofuncaoplanot = 0;
 var flagplotlysimetricasuperficierevolucaograficofuncaoplano = 0;
 var trotsimetricasuperficierevolucaograficofuncaoplano = 0;
+var trotsimetricasuperficierevolucaograficofuncaoplanobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoplano = 0;
 var flaggifsimetricasuperficierevolucaograficofuncaoplano = 0;
 var flaggifcontextsimetricasuperficierevolucaograficofuncaoplano = 0;
@@ -33290,6 +33338,7 @@ function processarsimetricasuperficierevolucaograficofuncaoplanoout()
 	cancelarrotacaosimetricasuperficierevolucaograficofuncaoplanoout();
 
 	trotsimetricasuperficierevolucaograficofuncaoplano = 0;
+	trotsimetricasuperficierevolucaograficofuncaoplanobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaograficofuncaoplano = 0;
 	flaggifsimetricasuperficierevolucaograficofuncaoplano = 0;
 	flaggifcontextsimetricasuperficierevolucaograficofuncaoplano = 0;
@@ -34322,11 +34371,13 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoplano()
 							simetricasuperficierevolucaograficofuncaoplanocontext.canvas.height = 800;
 							simetricasuperficierevolucaograficofuncaoplanoencoder = new GIFEncoder();
 							simetricasuperficierevolucaograficofuncaoplanoencoder.start();
-							simetricasuperficierevolucaograficofuncaoplanoencoder.setRepeat(-1);
+							simetricasuperficierevolucaograficofuncaoplanoencoder.setRepeat(0);
 							simetricasuperficierevolucaograficofuncaoplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaograficofuncaoplano = 1;
+
+							trotsimetricasuperficierevolucaograficofuncaoplanobak = trotsimetricasuperficierevolucaograficofuncaoplano;
 							}
 						else
 							{
@@ -34359,7 +34410,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoplano()
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaograficofuncaoplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaograficofuncaoplano - trotsimetricasuperficierevolucaograficofuncaoplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaograficofuncaoplano == 1)
 			{
@@ -34373,7 +34424,7 @@ function animacaorotacaosimetricasuperficierevolucaograficofuncaoplano()
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaograficofuncaoplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaograficofuncaoplano), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaograficofuncaoplano), z: 1.5}});
 
-		trotsimetricasuperficierevolucaograficofuncaoplano = 0;
+		trotsimetricasuperficierevolucaograficofuncaoplano = trotsimetricasuperficierevolucaograficofuncaoplanobak;
 		}
 	else
 		{
@@ -34425,7 +34476,6 @@ function rotacaocapturargifsimetricasuperficierevolucaograficofuncaoplanoout()
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaograficofuncaoplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaograficofuncaoplano = 0;
 	flaggifcontextsimetricasuperficierevolucaograficofuncaoplano = 0;
 	flaggifsimetricasuperficierevolucaograficofuncaoplano = 1;
 	}
@@ -35580,6 +35630,7 @@ var flagrepeticaocurvatridimensionalcoordenadasparametricopolares2 = 0;
 var flagrepeticaocurvatridimensionalcoordenadasparametricopolarest = 0;
 var flagplotly3Dcurvatridimensionalcoordenadasparametricopolares = 0;
 var trotcurvatridimensionalcoordenadasparametricopolares = 0;
+var trotcurvatridimensionalcoordenadasparametricopolaresbak = 0;
 var flaganimacaorotacaocurvatridimensionalcoordenadasparametricopolares = 0;
 var flaggifcurvatridimensionalcoordenadasparametricopolares = 0;
 var flaggifcontextcurvatridimensionalcoordenadasparametricopolares = 0;
@@ -35613,6 +35664,7 @@ function processarcurvatridimensionalcoordenadasparametricopolaresout()
 	cancelarrotacaocurvatridimensionalcoordenadasparametricopolaresout();
 
 	trotcurvatridimensionalcoordenadasparametricopolares = 0;
+	trotcurvatridimensionalcoordenadasparametricopolaresbak = 0;
 	flaganimacaorotacaocurvatridimensionalcoordenadasparametricopolares = 0;
 	flaggifcurvatridimensionalcoordenadasparametricopolares = 0;
 	flaggifcontextcurvatridimensionalcoordenadasparametricopolares = 0;
@@ -36281,11 +36333,13 @@ function animacaorotacaocurvatridimensionalcoordenadasparametricopolares()
 							curvatridimensionalcoordenadasparametricopolarescontext.canvas.height = 800;
 							curvatridimensionalcoordenadasparametricopolaresencoder = new GIFEncoder();
 							curvatridimensionalcoordenadasparametricopolaresencoder.start();
-							curvatridimensionalcoordenadasparametricopolaresencoder.setRepeat(-1);
+							curvatridimensionalcoordenadasparametricopolaresencoder.setRepeat(0);
 							curvatridimensionalcoordenadasparametricopolaresencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextcurvatridimensionalcoordenadasparametricopolares = 1;
+
+							trotcurvatridimensionalcoordenadasparametricopolaresbak = trotcurvatridimensionalcoordenadasparametricopolares;
 							}
 						else
 							{
@@ -36319,7 +36373,7 @@ function animacaorotacaocurvatridimensionalcoordenadasparametricopolares()
 	else
 		divisorframe = 400;
 		
-	if (trotcurvatridimensionalcoordenadasparametricopolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotcurvatridimensionalcoordenadasparametricopolares - trotcurvatridimensionalcoordenadasparametricopolaresbak >= 2 * Math.PI)
 		{
 		if (flaggifcurvatridimensionalcoordenadasparametricopolares == 1)
 			{
@@ -36333,7 +36387,7 @@ function animacaorotacaocurvatridimensionalcoordenadasparametricopolares()
 
 		Plotly.relayout('dot-chart-3d-curvatridimensionalcoordenadasparametricopolares-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotcurvatridimensionalcoordenadasparametricopolares), y: 1.5 * antoniovandresen(trotcurvatridimensionalcoordenadasparametricopolares), z: 1.5}});
 
-		trotcurvatridimensionalcoordenadasparametricopolares = 0;
+		trotcurvatridimensionalcoordenadasparametricopolares = trotcurvatridimensionalcoordenadasparametricopolaresbak;
 		}
 	else
 		{
@@ -36385,7 +36439,6 @@ function rotacaocapturargifcurvatridimensionalcoordenadasparametricopolaresout()
 	$(".downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares").empty();
 	$(".downloadgifrotacaocurvatridimensionalcoordenadasparametricopolares").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotcurvatridimensionalcoordenadasparametricopolares = 0;
 	flaggifcontextcurvatridimensionalcoordenadasparametricopolares = 0;
 	flaggifcurvatridimensionalcoordenadasparametricopolares = 1;
 	}
@@ -39065,6 +39118,7 @@ var flagrepeticaosimetricacurvatridimensionalcoordenadasparametricopolaresponto2
 var flagrepeticaosimetricacurvatridimensionalcoordenadasparametricopolarespontot = 0;
 var flagplotly3Dsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 var trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
+var trotsimetricacurvatridimensionalcoordenadasparametricopolarespontobak = 0;
 var flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 var flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 var flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
@@ -39098,6 +39152,7 @@ function processarsimetricacurvatridimensionalcoordenadasparametricopolaresponto
 	cancelarrotacaosimetricacurvatridimensionalcoordenadasparametricopolarespontoout();
 
 	trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
+	trotsimetricacurvatridimensionalcoordenadasparametricopolarespontobak = 0;
 	flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 	flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
@@ -40029,11 +40084,13 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 							simetricacurvatridimensionalcoordenadasparametricopolarespontocontext.canvas.height = 800;
 							simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder = new GIFEncoder();
 							simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.start();
-							simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.setRepeat(-1);
+							simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.setRepeat(0);
 							simetricacurvatridimensionalcoordenadasparametricopolarespontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 1;
+
+							trotsimetricacurvatridimensionalcoordenadasparametricopolarespontobak = trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto;
 							}
 						else
 							{
@@ -40067,7 +40124,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto - trotsimetricacurvatridimensionalcoordenadasparametricopolarespontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto == 1)
 			{
@@ -40081,7 +40138,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 
 		Plotly.relayout('dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto), y: 1.5 * antoniovandresen(trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto), z: 1.5}});
 
-		trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
+		trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto = trotsimetricacurvatridimensionalcoordenadasparametricopolarespontobak;
 		}
 	else
 		{
@@ -40133,7 +40190,6 @@ function rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopol
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").empty();
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 0;
 	flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresponto = 1;
 	}
@@ -40264,6 +40320,7 @@ var flagrepeticaosimetricacurvatridimensionalcoordenadasparametricopolaresplano2
 var flagrepeticaosimetricacurvatridimensionalcoordenadasparametricopolaresplanot = 0;
 var flagplotly3Dsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 var trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
+var trotsimetricacurvatridimensionalcoordenadasparametricopolaresplanobak = 0;
 var flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 var flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 var flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
@@ -40297,6 +40354,7 @@ function processarsimetricacurvatridimensionalcoordenadasparametricopolaresplano
 	cancelarrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplanoout();
 
 	trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
+	trotsimetricacurvatridimensionalcoordenadasparametricopolaresplanobak = 0;
 	flaganimacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 	flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
@@ -41367,11 +41425,13 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 							simetricacurvatridimensionalcoordenadasparametricopolaresplanocontext.canvas.height = 800;
 							simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder = new GIFEncoder();
 							simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.start();
-							simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.setRepeat(-1);
+							simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.setRepeat(0);
 							simetricacurvatridimensionalcoordenadasparametricopolaresplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 1;
+
+							trotsimetricacurvatridimensionalcoordenadasparametricopolaresplanobak = trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano;
 							}
 						else
 							{
@@ -41405,7 +41465,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano - trotsimetricacurvatridimensionalcoordenadasparametricopolaresplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano == 1)
 			{
@@ -41419,7 +41479,7 @@ function animacaorotacaosimetricacurvatridimensionalcoordenadasparametricopolare
 
 		Plotly.relayout('dot-chart-3d-simetricacurvatridimensionalcoordenadasparametricopolaresplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano), y: 1.5 * antoniovandresen(trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano), z: 1.5}});
 
-		trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
+		trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano = trotsimetricacurvatridimensionalcoordenadasparametricopolaresplanobak;
 		}
 	else
 		{
@@ -41471,7 +41531,6 @@ function rotacaocapturargifsimetricacurvatridimensionalcoordenadasparametricopol
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").empty();
 	$(".downloadgifrotacaosimetricacurvatridimensionalcoordenadasparametricopolaresplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 	flaggifcontextsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 0;
 	flaggifsimetricacurvatridimensionalcoordenadasparametricopolaresplano = 1;
 	}
@@ -41598,6 +41657,7 @@ var flagrepeticaosuperficierevolucaocurvacoordenadaparametricopolares2 = 0;
 var flagrepeticaosuperficierevolucaocurvacoordenadaparametricopolarest = 0;
 var flagplotlysuperficierevolucaocurvacoordenadaparametricopolares = 0;
 var trotsuperficierevolucaocurvacoordenadaparametricopolares = 0;
+var trotsuperficierevolucaocurvacoordenadaparametricopolaresbak = 0;
 var flaganimacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares = 0;
 var flaggifsuperficierevolucaocurvacoordenadaparametricopolares = 0;
 var flaggifcontextsuperficierevolucaocurvacoordenadaparametricopolares = 0;
@@ -41631,6 +41691,7 @@ function processarsuperficierevolucaocurvacoordenadaparametricopolaresout()
 	cancelarrotacaosuperficierevolucaocurvacoordenadaparametricopolaresout();
 
 	trotsuperficierevolucaocurvacoordenadaparametricopolares = 0;
+	trotsuperficierevolucaocurvacoordenadaparametricopolaresbak = 0;
 	flaganimacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares = 0;
 	flaggifsuperficierevolucaocurvacoordenadaparametricopolares = 0;
 	flaggifcontextsuperficierevolucaocurvacoordenadaparametricopolares = 0;
@@ -42648,11 +42709,13 @@ function animacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares()
 							superficierevolucaocurvacoordenadaparametricopolarescontext.canvas.height = 800;
 							superficierevolucaocurvacoordenadaparametricopolaresencoder = new GIFEncoder();
 							superficierevolucaocurvacoordenadaparametricopolaresencoder.start();
-							superficierevolucaocurvacoordenadaparametricopolaresencoder.setRepeat(-1);
+							superficierevolucaocurvacoordenadaparametricopolaresencoder.setRepeat(0);
 							superficierevolucaocurvacoordenadaparametricopolaresencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsuperficierevolucaocurvacoordenadaparametricopolares = 1;
+
+							trotsuperficierevolucaocurvacoordenadaparametricopolaresbak = trotsuperficierevolucaocurvacoordenadaparametricopolares;
 							}
 						else
 							{
@@ -42685,7 +42748,7 @@ function animacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares()
 	else
 		divisorframe = 400;
 		
-	if (trotsuperficierevolucaocurvacoordenadaparametricopolares >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsuperficierevolucaocurvacoordenadaparametricopolares - trotsuperficierevolucaocurvacoordenadaparametricopolaresbak >= 2 * Math.PI)
 		{
 		if (flaggifsuperficierevolucaocurvacoordenadaparametricopolares == 1)
 			{
@@ -42699,7 +42762,7 @@ function animacaorotacaosuperficierevolucaocurvacoordenadaparametricopolares()
 
 		Plotly.relayout('dot-chart-superficierevolucaocurvacoordenadaparametricopolares-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsuperficierevolucaocurvacoordenadaparametricopolares), y: 1.5 * antoniovandresen(trotsuperficierevolucaocurvacoordenadaparametricopolares), z: 1.5}});
 
-		trotsuperficierevolucaocurvacoordenadaparametricopolares = 0;
+		trotsuperficierevolucaocurvacoordenadaparametricopolares = trotsuperficierevolucaocurvacoordenadaparametricopolaresbak;
 		}
 	else
 		{
@@ -42751,7 +42814,6 @@ function rotacaocapturargifsuperficierevolucaocurvacoordenadaparametricopolareso
 	$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares").empty();
 	$(".downloadgifrotacaosuperficierevolucaocurvacoordenadaparametricopolares").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsuperficierevolucaocurvacoordenadaparametricopolares = 0;
 	flaggifcontextsuperficierevolucaocurvacoordenadaparametricopolares = 0;
 	flaggifsuperficierevolucaocurvacoordenadaparametricopolares = 1;
 	}
@@ -43979,6 +44041,7 @@ var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespo
 var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespontot = 0;
 var flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 var trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
+var trotsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 var flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 var flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
@@ -44012,6 +44075,7 @@ function processarsimetricasuperficierevolucaocurvacoordenadaparametricopolaresp
 	cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespontoout();
 
 	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
+	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
@@ -45284,11 +45348,13 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontocontext.canvas.height = 800;
 							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder = new GIFEncoder();
 							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.start();
-							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.setRepeat(-1);
+							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.setRepeat(0);
 							simetricasuperficierevolucaocurvacoordenadaparametricopolarespontoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 1;
+
+							trotsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontobak = trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto;
 							}
 						else
 							{
@@ -45321,7 +45387,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto - trotsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto == 1)
 			{
@@ -45335,7 +45401,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresponto-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto), z: 1.5}});
 
-		trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
+		trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = trotsimetricasuperficierevolucaocurvacoordenadaparametricopolarespontobak;
 		}
 	else
 		{
@@ -45387,7 +45453,6 @@ function rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametric
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresponto = 1;
 	}
@@ -45530,6 +45595,7 @@ var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricopolarespl
 var flagrepeticaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanot = 0;
 var flagplotlysimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 var trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
+var trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanobak = 0;
 var flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 var flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 var flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
@@ -45563,6 +45629,7 @@ function processarsimetricasuperficierevolucaocurvacoordenadaparametricopolaresp
 	cancelarrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoout();
 
 	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
+	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanobak = 0;
 	flaganimacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
@@ -47016,11 +47083,13 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanocontext.canvas.height = 800;
 							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder = new GIFEncoder();
 							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.start();
-							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.setRepeat(-1);
+							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.setRepeat(0);
 							simetricasuperficierevolucaocurvacoordenadaparametricopolaresplanoencoder.setDelay(10);
 							} catch (e){};
 
 							flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 1;
+
+							trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanobak = trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano;
 							}
 						else
 							{
@@ -47053,7 +47122,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 	else
 		divisorframe = 400;
 		
-	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano >= 2 * Math.PI - 2 * Math.PI / divisorframe)
+	if (trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano - trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanobak >= 2 * Math.PI)
 		{
 		if (flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano == 1)
 			{
@@ -47067,7 +47136,7 @@ function animacaorotacaosimetricasuperficierevolucaocurvacoordenadaparametricopo
 
 		Plotly.relayout('dot-chart-simetricasuperficierevolucaocurvacoordenadaparametricopolaresplano-espera', {"scene.camera.eye": {x: 1.5 * antoniovandrecos(trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano), y: 1.5 * antoniovandresen(trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano), z: 1.5}});
 
-		trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
+		trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplanobak;
 		}
 	else
 		{
@@ -47119,7 +47188,6 @@ function rotacaocapturargifsimetricasuperficierevolucaocurvacoordenadaparametric
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").empty();
 	$(".downloadgifrotacaosimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano").append("<br><br><br><br><br><br>Capturando gif animado...");
 
-	trotsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 	flaggifcontextsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 0;
 	flaggifsimetricasuperficierevolucaocurvacoordenadaparametricopolaresplano = 1;
 	}
