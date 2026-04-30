@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         hacktimerjs
 // @namespace    http://tampermonkey.net/
-// @version      1.1.0
+// @version      1.1.0 Modificada por Antonio Vandré Pedrosa Furtunato Gomes (github.com/antoniovandre)
 // @description  浏览器后台
 // @author       turuslan
 // @grant        none
@@ -32,10 +32,7 @@
 	if (typeof(b) !== 'undefined') {
 		try {
 			w = new b(s);
-			console.log('test');
 			o.setInterval = function(c, t) {
-							console.log('tes1t');
-
 				var i = d();
 				f[i] = {
 					c: c,
