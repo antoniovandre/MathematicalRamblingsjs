@@ -8,7 +8,7 @@ Compilação das calculadoras JavaScript do Mathematical Ramblings. Página 1 / 
 
 Licença de uso: Atribuição-NãoComercial-CompartilhaIgual (CC BY-NC-SA).
 
-Última atualização: 30-04-2026.
+Última atualização: 01-05-2026.
 
 -->
 
@@ -2604,19 +2604,7 @@ function antoniovandreintegraldefinidaaproximacaosomariemannout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaointegraldefinidaaproximacaosomariemannt == 1) {flagrepeticaointegraldefinidaaproximacaosomariemann2 = 1; document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = "Cálculo cancelado."; elemintegraldefinidaaproximacaosomariemann.style.width = "100%"; elemintegraldefinidaaproximacaosomariemann.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemintegraldefinidaaproximacaosomariemann.textContent = "Cálculo cancelado."; $(".cancelarintegraldefinidaaproximacaosomariemann").empty(); flagrepeticaointegraldefinidaaproximacaosomariemannt = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaointegraldefinidaaproximacaosomariemann2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarintegraldefinidaaproximacaosomariemann").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaointegraldefinidaaproximacaosomariemannt == 1) {flagrepeticaointegraldefinidaaproximacaosomariemann2 = 1; document.getElementById('resultadointegraldefinidaaproximacaosomariemann').value = "Cálculo cancelado."; elemintegraldefinidaaproximacaosomariemann.style.width = "100%"; elemintegraldefinidaaproximacaosomariemann.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemintegraldefinidaaproximacaosomariemann.textContent = "Cálculo cancelado."; flagrepeticaointegraldefinidaaproximacaosomariemannt = 0; return;} if (flagrepeticaointegraldefinidaaproximacaosomariemann2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarintegraldefinidaaproximacaosomariemann").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarintegraldefinidaaproximacaosomariemannt()
@@ -3089,19 +3077,7 @@ function antoniovandresomatorioout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosomatoriot == 1) {flagrepeticaosomatorio2 = 1; document.getElementById('resultadosomatorio').value = "Cálculo cancelado."; elemsomatorio.style.width = "100%"; elemsomatorio.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsomatorio.textContent = "Cálculo cancelado."; $(".cancelarsomatorio").empty(); flagrepeticaosomatoriot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosomatorio2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsomatorio").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosomatoriot == 1) {flagrepeticaosomatorio2 = 1; document.getElementById('resultadosomatorio').value = "Cálculo cancelado."; elemsomatorio.style.width = "100%"; elemsomatorio.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsomatorio.textContent = "Cálculo cancelado."; flagrepeticaosomatoriot = 0; return;} if (flagrepeticaosomatorio2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsomatorio").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarsomatoriot()
@@ -3574,19 +3550,8 @@ function antoniovandreprodutorioout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaoprodutoriot == 1) {flagrepeticaoprodutorio2 = 1; document.getElementById('resultadoprodutorio').value = "Cálculo cancelado."; elemprodutorio.style.width = "100%"; elemprodutorio.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemprodutorio.textContent = "Cálculo cancelado."; $(".cancelarprodutorio").empty(); flagrepeticaoprodutoriot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaoprodutorio == 2)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarprodutorio").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaoprodutoriot == 1) {flagrepeticaoprodutorio2 = 1; document.getElementById('resultadoprodutorio').value = "Cálculo cancelado."; elemprodutorio.style.width = "100%"; elemprodutorio.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemprodutorio.textContent = "Cálculo cancelado."; flagrepeticaoprodutoriot = 0; return;} if (flagrepeticaoprodutorio == 2) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarprodutorio").empty(); return;}
+}, 10);
 	}
 
 function processarprodutoriot()
@@ -4559,18 +4524,7 @@ function antoniovandremediaantoniovandreout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaomediaantoniovandret == 1) {flagrepeticaomediaantoniovandre2 = 1; document.getElementById('resultadomediaantoniovandre').value = "Cálculo cancelado."; elemmediaantoniovandre.style.width = "100%"; elemmediaantoniovandre.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemmediaantoniovandre.textContent = "Cálculo cancelado."; $(".cancelarmediaantoniovandre").empty(); flagrepeticaomediaantoniovandret = 0; lockcalc = 0; return;}}, 10);
-
-	if (flagrepeticaomediaantoniovandre2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarmediaantoniovandre").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaomediaantoniovandret == 1) {flagrepeticaomediaantoniovandre2 = 1; document.getElementById('resultadomediaantoniovandre').value = "Cálculo cancelado."; elemmediaantoniovandre.style.width = "100%"; elemmediaantoniovandre.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemmediaantoniovandre.textContent = "Cálculo cancelado."; flagrepeticaomediaantoniovandret = 0; return;} if (flagrepeticaomediaantoniovandre2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarmediaantoniovandre").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarmediaantoniovandret()
@@ -7139,19 +7093,7 @@ function antoniovandrepossiveisraizesout(arr, retorno, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaopossiveisraizest == 1) {flagrepeticaopossiveisraizes = 2; document.getElementById('resultadopossiveisraizes').value = "Cálculo cancelado."; elempossiveisraizes.style.width = "100%"; elempossiveisraizes.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elempossiveisraizes.textContent = "Cálculo cancelado."; $(".cancelarpossiveisraizes").empty(); flagrepeticaopossiveisraizest = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaopossiveisraizes == 2)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarpossiveisraizes").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaopossiveisraizest == 1) {flagrepeticaopossiveisraizes = 2; document.getElementById('resultadopossiveisraizes').value = "Cálculo cancelado."; elempossiveisraizes.style.width = "100%"; elempossiveisraizes.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elempossiveisraizes.textContent = "Cálculo cancelado."; flagrepeticaopossiveisraizest = 0; return;} if (flagrepeticaopossiveisraizes == 2) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarpossiveisraizes").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarpossiveisraizest()
@@ -7732,19 +7674,7 @@ function antoniovandredistanciapontofuncaoout(arr)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaodistanciapontofuncaot == 1) {flagrepeticaodistanciapontofuncao2 = 1; document.getElementById('resultadodistanciapontofuncao').value = "Cálculo cancelado."; elemdistanciapontofuncao.style.width = "100%"; elemdistanciapontofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemdistanciapontofuncao.textContent = "Cálculo cancelado."; $(".cancelardistanciapontofuncao").empty(); flagrepeticaodistanciapontofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaodistanciapontofuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelardistanciapontofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaodistanciapontofuncaot == 1) {flagrepeticaodistanciapontofuncao2 = 1; document.getElementById('resultadodistanciapontofuncao').value = "Cálculo cancelado."; elemdistanciapontofuncao.style.width = "100%"; elemdistanciapontofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemdistanciapontofuncao.textContent = "Cálculo cancelado."; flagrepeticaodistanciapontofuncaot = 0; return;} if (flagrepeticaodistanciapontofuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelardistanciapontofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processardistanciapontofuncaot()
@@ -8281,19 +8211,7 @@ function antoniovandredistanciafuncaofuncaoout(arr)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaodistanciafuncaofuncaot == 1) {flagrepeticaodistanciafuncaofuncao2 = 1; document.getElementById('resultadodistanciafuncaofuncao').value = "Cálculo cancelado."; elemdistanciafuncaofuncao.style.width = "100%"; elemdistanciafuncaofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemdistanciafuncaofuncao.textContent = "Cálculo cancelado."; $(".cancelardistanciafuncaofuncao").empty(); flagrepeticaodistanciafuncaofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaodistanciafuncaofuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelardistanciafuncaofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaodistanciafuncaofuncaot == 1) {flagrepeticaodistanciafuncaofuncao2 = 1; document.getElementById('resultadodistanciafuncaofuncao').value = "Cálculo cancelado."; elemdistanciafuncaofuncao.style.width = "100%"; elemdistanciafuncaofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemdistanciafuncaofuncao.textContent = "Cálculo cancelado."; flagrepeticaodistanciafuncaofuncaot = 0; return;} if (flagrepeticaodistanciafuncaofuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelardistanciafuncaofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processardistanciafuncaofuncaot()
@@ -8718,19 +8636,7 @@ function antoniovandretriangulospitagoricosout(arr)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaotriangulospitagoricost == 1) {flagrepeticaotriangulospitagoricos2 = 1; document.getElementById('resultadotriangulospitagoricos').value = "Cálculo cancelado."; elemtriangulospitagoricos.style.width = "100%"; elemtriangulospitagoricos.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemtriangulospitagoricos.textContent = "Cálculo cancelado."; $(".cancelartriangulospitagoricos").empty(); flagrepeticaotriangulospitagoricost = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaotriangulospitagoricos2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelartriangulospitagoricos").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaotriangulospitagoricost == 1) {flagrepeticaotriangulospitagoricos2 = 1; document.getElementById('resultadotriangulospitagoricos').value = "Cálculo cancelado."; elemtriangulospitagoricos.style.width = "100%"; elemtriangulospitagoricos.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemtriangulospitagoricos.textContent = "Cálculo cancelado."; flagrepeticaotriangulospitagoricost = 0; return;} if (flagrepeticaotriangulospitagoricos2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelartriangulospitagoricos").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processartriangulospitagoricost()
@@ -9414,19 +9320,7 @@ function antoniovandreestudosinalfuncaoout(arr, retorno, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaoestudosinalfuncaot == 1) {flagrepeticaoestudosinalfuncao = 2; document.getElementById('resultadoestudosinalfuncao').value = "Cálculo cancelado."; elemestudosinalfuncao.style.width = "100%"; elemestudosinalfuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemestudosinalfuncao.textContent = "Cálculo cancelado."; $(".cancelarestudosinalfuncao").empty(); flagrepeticaoestudosinalfuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaoestudosinalfuncao == 2)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarestudosinalfuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaoestudosinalfuncaot == 1) {flagrepeticaoestudosinalfuncao = 2; document.getElementById('resultadoestudosinalfuncao').value = "Cálculo cancelado."; elemestudosinalfuncao.style.width = "100%"; elemestudosinalfuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemestudosinalfuncao.textContent = "Cálculo cancelado."; flagrepeticaoestudosinalfuncaot = 0; return;} if (flagrepeticaoestudosinalfuncao == 2) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarestudosinalfuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarestudosinalfuncaot()
@@ -11198,19 +11092,7 @@ function antoniovandregraficofuncaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaograficofuncaot == 1) {flagrepeticaograficofuncao2 = 1; document.getElementById('resultadograficofuncao').value = "Cálculo cancelado."; elemgraficofuncao.style.width = "100%"; elemgraficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemgraficofuncao.textContent = "Cálculo cancelado."; $(".cancelargraficofuncao").empty(); flagrepeticaograficofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaograficofuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelargraficofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaograficofuncaot == 1) {flagrepeticaograficofuncao2 = 1; document.getElementById('resultadograficofuncao').value = "Cálculo cancelado."; elemgraficofuncao.style.width = "100%"; elemgraficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemgraficofuncao.textContent = "Cálculo cancelado."; flagrepeticaograficofuncaot = 0; return;} if (flagrepeticaograficofuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelargraficofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function graficofuncaomensagemerro()
@@ -12000,19 +11882,7 @@ function antoniovandregraficotridimensionalfuncaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaograficotridimensionalfuncaot == 1) {flagrepeticaograficotridimensionalfuncao2 = 1; document.getElementById('resultadograficotridimensionalfuncao').value = "Cálculo cancelado."; elemgraficotridimensionalfuncao.style.width = "100%"; elemgraficotridimensionalfuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemgraficotridimensionalfuncao.textContent = "Cálculo cancelado."; $(".cancelargraficotridimensionalfuncao").empty(); flagrepeticaograficotridimensionalfuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaograficotridimensionalfuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelargraficotridimensionalfuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaograficotridimensionalfuncaot == 1) {flagrepeticaograficotridimensionalfuncao2 = 1; document.getElementById('resultadograficotridimensionalfuncao').value = "Cálculo cancelado."; elemgraficotridimensionalfuncao.style.width = "100%"; elemgraficotridimensionalfuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemgraficotridimensionalfuncao.textContent = "Cálculo cancelado."; flagrepeticaograficotridimensionalfuncaot = 0; return;} if (flagrepeticaograficotridimensionalfuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelargraficotridimensionalfuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function graficotridimensionalfuncaomensagemerro()
@@ -12735,19 +12605,7 @@ function antoniovandrecurvacoordenadaspolaresout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocurvacoordenadaspolarest == 1) {flagrepeticaocurvacoordenadaspolares2 = 1; document.getElementById('resultadocurvacoordenadaspolares').value = "Cálculo cancelado."; elemcurvacoordenadaspolares.style.width = "100%"; elemcurvacoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvacoordenadaspolares.textContent = "Cálculo cancelado."; $(".cancelarcurvacoordenadaspolares").empty(); flagrepeticaocurvacoordenadaspolarest = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocurvacoordenadaspolares2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcurvacoordenadaspolares").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocurvacoordenadaspolarest == 1) {flagrepeticaocurvacoordenadaspolares2 = 1; document.getElementById('resultadocurvacoordenadaspolares').value = "Cálculo cancelado."; elemcurvacoordenadaspolares.style.width = "100%"; elemcurvacoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvacoordenadaspolares.textContent = "Cálculo cancelado."; flagrepeticaocurvacoordenadaspolarest = 0; return;} if (flagrepeticaocurvacoordenadaspolares2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcurvacoordenadaspolares").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function curvacoordenadaspolaresmensagemerro()
@@ -13783,19 +13641,7 @@ function antoniovandrecurvacoordenadaparametricaout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocurvacoordenadaparametricat == 1) {flagrepeticaocurvacoordenadaparametrica2 = 1; document.getElementById('resultadocurvacoordenadaparametrica').value = "Cálculo cancelado."; elemcurvacoordenadaparametrica.style.width = "100%"; elemcurvacoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvacoordenadaparametrica.textContent = "Cálculo cancelado."; $(".cancelarcurvacoordenadaparametrica").empty(); flagrepeticaocurvacoordenadaparametricat = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocurvacoordenadaparametrica2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcurvacoordenadaparametrica").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocurvacoordenadaparametricat == 1) {flagrepeticaocurvacoordenadaparametrica2 = 1; document.getElementById('resultadocurvacoordenadaparametrica').value = "Cálculo cancelado."; elemcurvacoordenadaparametrica.style.width = "100%"; elemcurvacoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvacoordenadaparametrica.textContent = "Cálculo cancelado."; flagrepeticaocurvacoordenadaparametricat = 0; return;} if (flagrepeticaocurvacoordenadaparametrica2 == 1){clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcurvacoordenadaparametrica").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function curvacoordenadaparametricamensagemerro()
@@ -14609,19 +14455,7 @@ function antoniovandrecurvatridimensionalcoordenadaparametricaout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocurvatridimensionalcoordenadaparametricat == 1) {flagrepeticaocurvatridimensionalcoordenadaparametrica2 = 1; document.getElementById('resultadocurvatridimensionalcoordenadaparametrica').value = "Cálculo cancelado."; elemcurvatridimensionalcoordenadaparametrica.style.width = "100%"; elemcurvatridimensionalcoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvatridimensionalcoordenadaparametrica.textContent = "Cálculo cancelado."; $(".cancelarcurvatridimensionalcoordenadaparametrica").empty(); flagrepeticaocurvatridimensionalcoordenadaparametricat = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocurvatridimensionalcoordenadaparametrica2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcurvatridimensionalcoordenadaparametrica").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocurvatridimensionalcoordenadaparametricat == 1) {flagrepeticaocurvatridimensionalcoordenadaparametrica2 = 1; document.getElementById('resultadocurvatridimensionalcoordenadaparametrica').value = "Cálculo cancelado."; elemcurvatridimensionalcoordenadaparametrica.style.width = "100%"; elemcurvatridimensionalcoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvatridimensionalcoordenadaparametrica.textContent = "Cálculo cancelado."; flagrepeticaocurvatridimensionalcoordenadaparametricat = 0; return;} if (flagrepeticaocurvatridimensionalcoordenadaparametrica2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcurvatridimensionalcoordenadaparametrica").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function curvatridimensionalcoordenadaparametricamensagemerro()
@@ -15712,19 +15546,7 @@ function antoniovandresuperficietridimensionalcoordenadasparametricasout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficietridimensionalcoordenadasparametricast == 1) {flagrepeticaosuperficietridimensionalcoordenadasparametricas2 = 1; document.getElementById('resultadosuperficietridimensionalcoordenadasparametricas').value = "Cálculo cancelado."; elemsuperficietridimensionalcoordenadasparametricas.style.width = "100%"; elemsuperficietridimensionalcoordenadasparametricas.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficietridimensionalcoordenadasparametricas.textContent = "Cálculo cancelado."; $(".cancelarsuperficietridimensionalcoordenadasparametricas").empty(); flagrepeticaosuperficietridimensionalcoordenadasparametricast = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosuperficietridimensionalcoordenadasparametricas2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsuperficietridimensionalcoordenadasparametricas").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficietridimensionalcoordenadasparametricast == 1) {flagrepeticaosuperficietridimensionalcoordenadasparametricas2 = 1; document.getElementById('resultadosuperficietridimensionalcoordenadasparametricas').value = "Cálculo cancelado."; elemsuperficietridimensionalcoordenadasparametricas.style.width = "100%"; elemsuperficietridimensionalcoordenadasparametricas.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficietridimensionalcoordenadasparametricas.textContent = "Cálculo cancelado."; flagrepeticaosuperficietridimensionalcoordenadasparametricast = 0; return;} if (flagrepeticaosuperficietridimensionalcoordenadasparametricas2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsuperficietridimensionalcoordenadasparametricas").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficietridimensionalcoordenadasparametricasmensagemerro()
@@ -16680,19 +16502,7 @@ function antoniovandresuperficietridimensionalcoordenadaspolaresout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficietridimensionalcoordenadaspolarest == 1) {flagrepeticaosuperficietridimensionalcoordenadaspolares2 = 1; document.getElementById('resultadosuperficietridimensionalcoordenadaspolares').value = "Cálculo cancelado."; elemsuperficietridimensionalcoordenadaspolares.style.width = "100%"; elemsuperficietridimensionalcoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficietridimensionalcoordenadaspolares.textContent = "Cálculo cancelado."; $(".cancelarsuperficietridimensionalcoordenadaspolares").empty(); flagrepeticaosuperficietridimensionalcoordenadaspolarest = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosuperficietridimensionalcoordenadaspolares2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsuperficietridimensionalcoordenadaspolares").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficietridimensionalcoordenadaspolarest == 1) {flagrepeticaosuperficietridimensionalcoordenadaspolares2 = 1; document.getElementById('resultadosuperficietridimensionalcoordenadaspolares').value = "Cálculo cancelado."; elemsuperficietridimensionalcoordenadaspolares.style.width = "100%"; elemsuperficietridimensionalcoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficietridimensionalcoordenadaspolares.textContent = "Cálculo cancelado."; flagrepeticaosuperficietridimensionalcoordenadaspolarest = 0; return;} if (flagrepeticaosuperficietridimensionalcoordenadaspolares2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsuperficietridimensionalcoordenadaspolares").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficietridimensionalcoordenadaspolaresmensagemerro()
@@ -18303,23 +18113,7 @@ function antoniovandrecurvaregiaorelacaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocurvaregiaorelacaot == 1) {flagrepeticaocurvaregiaorelacao2 = 1; document.getElementById('resultadocurvaregiaorelacao').value = "Cálculo cancelado."; elemcurvaregiaorelacao.style.width = "100%"; elemcurvaregiaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvaregiaorelacao.textContent = "Cálculo cancelado."; $(".cancelarcurvaregiaorelacao").empty(); flagrepeticaocurvaregiaorelacaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){try{clearInterval(rep); clearInterval(rep2); clearInterval(rep3);} catch (e){}}; return;}, 60000);
-
-	if (flagrepeticaocurvaregiaorelacao2 == 1)
-		{
-		try {
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-		xarr = [];
-		yarr = [];
-		} catch (e) {}
-
-		$(".cancelarcurvaregiaorelacao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocurvaregiaorelacaot == 1) {flagrepeticaocurvaregiaorelacao2 = 1; document.getElementById('resultadocurvaregiaorelacao').value = "Cálculo cancelado."; elemcurvaregiaorelacao.style.width = "100%"; elemcurvaregiaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvaregiaorelacao.textContent = "Cálculo cancelado."; flagrepeticaocurvaregiaorelacaot = 0; return;} if (flagrepeticaocurvaregiaorelacao2 == 1) {try {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); xarr = []; yarr = [];} catch (e) {} $(".cancelarcurvaregiaorelacao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function curvaregiaorelacaomensagemerro()
@@ -19536,24 +19330,7 @@ function antoniovandresuperficieregiaorelacaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficieregiaorelacaot == 1) {flagrepeticaosuperficieregiaorelacao2 = 1; document.getElementById('resultadosuperficieregiaorelacao').value = "Cálculo cancelado."; elemsuperficieregiaorelacao.style.width = "100%"; elemsuperficieregiaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficieregiaorelacao.textContent = "Cálculo cancelado."; $(".cancelarsuperficieregiaorelacao").empty(); flagrepeticaosuperficieregiaorelacaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){try{clearInterval(rep); clearInterval(rep2); clearInterval(rep3);} catch (e){}}; return;}, 60000);
-
-	if (flagrepeticaosuperficieregiaorelacao2 == 1)
-		{
-		try {
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-		xarr = [];
-		yarr = [];
-		zarr = [];
-		} catch (e){}
-
-		$(".cancelarsuperficieregiaorelacao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficieregiaorelacaot == 1) {flagrepeticaosuperficieregiaorelacao2 = 1; document.getElementById('resultadosuperficieregiaorelacao').value = "Cálculo cancelado."; elemsuperficieregiaorelacao.style.width = "100%"; elemsuperficieregiaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficieregiaorelacao.textContent = "Cálculo cancelado."; flagrepeticaosuperficieregiaorelacaot = 0; return;} if (flagrepeticaosuperficieregiaorelacao2 == 1) {try {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); xarr = []; yarr = []; zarr = [];} catch (e){} $(".cancelarsuperficieregiaorelacao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficieregiaorelacaomensagemerro()
@@ -20113,19 +19890,7 @@ function antoniovandremaximominimofuncaoout(arr, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaomaximominimofuncaot == 1) {flagrepeticaomaximominimofuncao = 2; document.getElementById('resultadomaximominimofuncao').value = "Cálculo cancelado."; elemmaximominimofuncao.style.width = "100%"; elemmaximominimofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemmaximominimofuncao.textContent = "Cálculo cancelado."; $(".cancelarmaximominimofuncao").empty(); flagrepeticaomaximominimofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaomaximominimofuncao == 2)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarmaximominimofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaomaximominimofuncaot == 1) {flagrepeticaomaximominimofuncao = 2; document.getElementById('resultadomaximominimofuncao').value = "Cálculo cancelado."; elemmaximominimofuncao.style.width = "100%"; elemmaximominimofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemmaximominimofuncao.textContent = "Cálculo cancelado."; flagrepeticaomaximominimofuncaot = 0; return;} if (flagrepeticaomaximominimofuncao == 2) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarmaximominimofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarmaximominimofuncaot()
@@ -20925,19 +20690,7 @@ function antoniovandrecomprimentograficofuncaoout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocomprimentograficofuncaot == 1) {flagrepeticaocomprimentograficofuncao2 = 1; document.getElementById('resultadocomprimentograficofuncao').value = "Cálculo cancelado."; elemcomprimentograficofuncao.style.width = "100%"; elemcomprimentograficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentograficofuncao.textContent = "Cálculo cancelado."; $(".cancelarcomprimentograficofuncao").empty(); flagrepeticaocomprimentograficofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocomprimentograficofuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcomprimentograficofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocomprimentograficofuncaot == 1) {flagrepeticaocomprimentograficofuncao2 = 1; document.getElementById('resultadocomprimentograficofuncao').value = "Cálculo cancelado."; elemcomprimentograficofuncao.style.width = "100%"; elemcomprimentograficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentograficofuncao.textContent = "Cálculo cancelado."; flagrepeticaocomprimentograficofuncaot = 0; return;} if (flagrepeticaocomprimentograficofuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcomprimentograficofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarcomprimentograficofuncaot()
@@ -38221,19 +37974,7 @@ function antoniovandresuperficierevolucaograficofuncaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaograficofuncaot == 1) {flagrepeticaosuperficierevolucaograficofuncao2 = 1; document.getElementById('resultadosuperficierevolucaograficofuncao').value = "Cálculo cancelado."; elemsuperficierevolucaograficofuncao.style.width = "100%"; elemsuperficierevolucaograficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaograficofuncao.textContent = "Cálculo cancelado."; $(".cancelarsuperficierevolucaograficofuncao").empty(); flagrepeticaosuperficierevolucaograficofuncaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosuperficierevolucaograficofuncao2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsuperficierevolucaograficofuncao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaograficofuncaot == 1) {flagrepeticaosuperficierevolucaograficofuncao2 = 1; document.getElementById('resultadosuperficierevolucaograficofuncao').value = "Cálculo cancelado."; elemsuperficierevolucaograficofuncao.style.width = "100%"; elemsuperficierevolucaograficofuncao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaograficofuncao.textContent = "Cálculo cancelado."; flagrepeticaosuperficierevolucaograficofuncaot = 0; return;} if (flagrepeticaosuperficierevolucaograficofuncao2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsuperficierevolucaograficofuncao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficierevolucaograficofuncaomensagemerro()
@@ -39128,19 +38869,7 @@ function antoniovandresuperficierevolucaocurvacoordenadaparametricaout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaocurvacoordenadaparametricat == 1) {flagrepeticaosuperficierevolucaocurvacoordenadaparametrica2 = 1; document.getElementById('resultadosuperficierevolucaocurvacoordenadaparametrica').value = "Cálculo cancelado."; elemsuperficierevolucaocurvacoordenadaparametrica.style.width = "100%"; elemsuperficierevolucaocurvacoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaocurvacoordenadaparametrica.textContent = "Cálculo cancelado."; $(".cancelarsuperficierevolucaocurvacoordenadaparametrica").empty(); flagrepeticaosuperficierevolucaocurvacoordenadaparametricat = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosuperficierevolucaocurvacoordenadaparametrica2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsuperficierevolucaocurvacoordenadaparametrica").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaocurvacoordenadaparametricat == 1) {flagrepeticaosuperficierevolucaocurvacoordenadaparametrica2 = 1; document.getElementById('resultadosuperficierevolucaocurvacoordenadaparametrica').value = "Cálculo cancelado."; elemsuperficierevolucaocurvacoordenadaparametrica.style.width = "100%"; elemsuperficierevolucaocurvacoordenadaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaocurvacoordenadaparametrica.textContent = "Cálculo cancelado."; flagrepeticaosuperficierevolucaocurvacoordenadaparametricat = 0; return;} if (flagrepeticaosuperficierevolucaocurvacoordenadaparametrica2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsuperficierevolucaocurvacoordenadaparametrica").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficierevolucaocurvacoordenadaparametricamensagemerro()
@@ -40514,26 +40243,7 @@ function antoniovandresuperficieregiaorevolucaorelacaoout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficieregiaorevolucaorelacaot == 1) {flagrepeticaosuperficieregiaorevolucaorelacao2 = 1; try{clearInterval(igualdadexinterval); clearInterval(igualdadeyinterval); clearInterval(igualdadezinterval); clearInterval(plotinterval);}catch(e){}; document.getElementById('resultadosuperficieregiaorevolucaorelacao').value = "Cálculo cancelado."; elemsuperficieregiaorevolucaorelacao.style.width = "100%"; elemsuperficieregiaorevolucaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficieregiaorevolucaorelacao.textContent = "Cálculo cancelado."; $(".cancelarsuperficieregiaorevolucaorelacao").empty(); flagrepeticaosuperficieregiaorevolucaorelacaot = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){try{clearInterval(rep); clearInterval(rep2); clearInterval(rep3);} catch (e){}}; return;}, 60000);
-
-	if (flagrepeticaosuperficieregiaorevolucaorelacao2 == 1)
-		{
-		try {
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-		xarr = [];
-		yarr = [];
-		zarr = [];
-		xarrn = [];
-		yarrn = [];
-		} catch (e){};
-
-		$(".cancelarsuperficieregiaorevolucaorelacao").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficieregiaorevolucaorelacaot == 1) {flagrepeticaosuperficieregiaorevolucaorelacao2 = 1; try{clearInterval(igualdadexinterval); clearInterval(igualdadeyinterval); clearInterval(igualdadezinterval); clearInterval(plotinterval);}catch(e){}; document.getElementById('resultadosuperficieregiaorevolucaorelacao').value = "Cálculo cancelado."; elemsuperficieregiaorevolucaorelacao.style.width = "100%"; elemsuperficieregiaorevolucaorelacao.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficieregiaorevolucaorelacao.textContent = "Cálculo cancelado."; flagrepeticaosuperficieregiaorevolucaorelacaot = 0; return;} if (flagrepeticaosuperficieregiaorevolucaorelacao2 == 1) {try {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); xarr = []; yarr = []; zarr = []; xarrn = []; yarrn = [];} catch (e){} $(".cancelarsuperficieregiaorevolucaorelacao").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficieregiaorevolucaorelacaomensagemerro()
@@ -41347,19 +41057,7 @@ function antoniovandresuperficierevolucaograficocoordenadaspolaresout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaograficocoordenadaspolarest == 1) {flagrepeticaosuperficierevolucaograficocoordenadaspolares2 = 1; document.getElementById('resultadosuperficierevolucaograficocoordenadaspolares').value = "Cálculo cancelado."; elemsuperficierevolucaograficocoordenadaspolares.style.width = "100%"; elemsuperficierevolucaograficocoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaograficocoordenadaspolares.textContent = "Cálculo cancelado."; $(".cancelarsuperficierevolucaograficocoordenadaspolares").empty(); flagrepeticaosuperficierevolucaograficocoordenadaspolarest = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaosuperficierevolucaograficocoordenadaspolares2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarsuperficierevolucaograficocoordenadaspolares").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaosuperficierevolucaograficocoordenadaspolarest == 1) {flagrepeticaosuperficierevolucaograficocoordenadaspolares2 = 1; document.getElementById('resultadosuperficierevolucaograficocoordenadaspolares').value = "Cálculo cancelado."; elemsuperficierevolucaograficocoordenadaspolares.style.width = "100%"; elemsuperficierevolucaograficocoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemsuperficierevolucaograficocoordenadaspolares.textContent = "Cálculo cancelado."; flagrepeticaosuperficierevolucaograficocoordenadaspolarest = 0; return;} if (flagrepeticaosuperficierevolucaograficocoordenadaspolares2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarsuperficierevolucaograficocoordenadaspolares").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function superficierevolucaograficocoordenadaspolaresmensagemerro()
@@ -43025,19 +42723,7 @@ function antoniovandrecomprimentograficofuncaocoordenadaspolaresout(str, avisoan
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocomprimentograficofuncaocoordenadaspolarest == 1) {flagrepeticaocomprimentograficofuncaocoordenadaspolares2 = 1; document.getElementById('resultadocomprimentograficofuncaocoordenadaspolares').value = "Cálculo cancelado."; elemcomprimentograficofuncaocoordenadaspolares.style.width = "100%"; elemcomprimentograficofuncaocoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentograficofuncaocoordenadaspolares.textContent = "Cálculo cancelado."; $(".cancelarcomprimentograficofuncaocoordenadaspolares").empty(); flagrepeticaocomprimentograficofuncaocoordenadaspolarest = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocomprimentograficofuncaocoordenadaspolares2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcomprimentograficofuncaocoordenadaspolares").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocomprimentograficofuncaocoordenadaspolarest == 1) {flagrepeticaocomprimentograficofuncaocoordenadaspolares2 = 1; document.getElementById('resultadocomprimentograficofuncaocoordenadaspolares').value = "Cálculo cancelado."; elemcomprimentograficofuncaocoordenadaspolares.style.width = "100%"; elemcomprimentograficofuncaocoordenadaspolares.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentograficofuncaocoordenadaspolares.textContent = "Cálculo cancelado."; flagrepeticaocomprimentograficofuncaocoordenadaspolarest = 0; return;} if (flagrepeticaocomprimentograficofuncaocoordenadaspolares2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcomprimentograficofuncaocoordenadaspolares").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarcomprimentograficofuncaocoordenadaspolarest()
@@ -43699,19 +43385,7 @@ function antoniovandrecomprimentocurvaparametricaout(str, avisoanexo)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocomprimentocurvaparametricat == 1) {flagrepeticaocomprimentocurvaparametrica2 = 1; document.getElementById('resultadocomprimentocurvaparametrica').value = "Cálculo cancelado."; elemcomprimentocurvaparametrica.style.width = "100%"; elemcomprimentocurvaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentocurvaparametrica.textContent = "Cálculo cancelado."; $(".cancelarcomprimentocurvaparametrica").empty(); flagrepeticaocomprimentocurvaparametricat = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocomprimentocurvaparametrica2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcomprimentocurvaparametrica").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocomprimentocurvaparametricat == 1) {flagrepeticaocomprimentocurvaparametrica2 = 1; document.getElementById('resultadocomprimentocurvaparametrica').value = "Cálculo cancelado."; elemcomprimentocurvaparametrica.style.width = "100%"; elemcomprimentocurvaparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentocurvaparametrica.textContent = "Cálculo cancelado."; flagrepeticaocomprimentocurvaparametricat = 0; return;} if (flagrepeticaocomprimentocurvaparametrica2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcomprimentocurvaparametrica").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarcomprimentocurvaparametricat()
@@ -44419,19 +44093,7 @@ function antoniovandrecomprimentocurvatridimensionalparametricaout(str, avisoane
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocomprimentocurvatridimensionalparametricat == 1) {flagrepeticaocomprimentocurvatridimensionalparametrica2 = 1; document.getElementById('resultadocomprimentocurvatridimensionalparametrica').value = "Cálculo cancelado."; elemcomprimentocurvatridimensionalparametrica.style.width = "100%"; elemcomprimentocurvatridimensionalparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentocurvatridimensionalparametrica.textContent = "Cálculo cancelado."; $(".cancelarcomprimentocurvatridimensionalparametrica").empty(); flagrepeticaocomprimentocurvatridimensionalparametricat = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocomprimentocurvatridimensionalparametrica2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcomprimentocurvatridimensionalparametrica").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocomprimentocurvatridimensionalparametricat == 1) {flagrepeticaocomprimentocurvatridimensionalparametrica2 = 1; document.getElementById('resultadocomprimentocurvatridimensionalparametrica').value = "Cálculo cancelado."; elemcomprimentocurvatridimensionalparametrica.style.width = "100%"; elemcomprimentocurvatridimensionalparametrica.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcomprimentocurvatridimensionalparametrica.textContent = "Cálculo cancelado."; flagrepeticaocomprimentocurvatridimensionalparametricat = 0; return;} if (flagrepeticaocomprimentocurvatridimensionalparametrica2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcomprimentocurvatridimensionalparametrica").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function processarcomprimentocurvatridimensionalparametricat()
@@ -45806,19 +45468,7 @@ function antoniovandrecurvadirigidaantoniovandreout(str)
 
 	var rep = setInterval(escoporepeticao, 10);
 	var rep2 = setInterval(escoporepeticao2, 10);
-	var rep3 = setInterval(function(){if (flagrepeticaocurvadirigidaantoniovandret == 1) {flagrepeticaocurvadirigidaantoniovandre2 = 1; document.getElementById('resultadocurvadirigidaantoniovandre').value = "Cálculo cancelado."; elemcurvadirigidaantoniovandre.style.width = "100%"; elemcurvadirigidaantoniovandre.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvadirigidaantoniovandre.textContent = "Cálculo cancelado."; $(".cancelarcurvadirigidaantoniovandre").empty(); flagrepeticaocurvadirigidaantoniovandret = 0; lockcalc = 0; return;}}, 10);
-	var antoniovandrelimparrepeticoes = setInterval(function(){if (lockcalc == 0){clearInterval(rep); clearInterval(rep2); clearInterval(rep3);}; return;}, 60000);
-
-	if (flagrepeticaocurvadirigidaantoniovandre2 == 1)
-		{
-		clearInterval(rep);
-		clearInterval(rep2);
-		clearInterval(rep3);
-
-		$(".cancelarcurvadirigidaantoniovandre").empty();
-
-		return;
-		}
+	var rep3 = setInterval(function(){if (flagrepeticaocurvadirigidaantoniovandret == 1) {flagrepeticaocurvadirigidaantoniovandre2 = 1; document.getElementById('resultadocurvadirigidaantoniovandre').value = "Cálculo cancelado."; elemcurvadirigidaantoniovandre.style.width = "100%"; elemcurvadirigidaantoniovandre.style.backgroundImage = "linear-gradient(to right, rgba(128, 128, 128, 0.9) 0%, rgba(64, 64, 64, 0.9) 100%)"; elemcurvadirigidaantoniovandre.textContent = "Cálculo cancelado."; flagrepeticaocurvadirigidaantoniovandret = 0; return;} if (flagrepeticaocurvadirigidaantoniovandre2 == 1) {clearInterval(rep); clearInterval(rep2); clearInterval(rep3); $(".cancelarcurvadirigidaantoniovandre").empty(); lockcalc = 0; return;}}, 10);
 	}
 
 function curvadirigidaantoniovandremensagemerro()
