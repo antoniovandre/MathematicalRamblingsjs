@@ -8,7 +8,7 @@
 
 // Última atualização: 08-06-2024.
 
-// Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
+// Início escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (github.com/antoniovandre).
 
 // Início mensagem de inicialização no console.log.
 
@@ -14416,7 +14416,7 @@ function antoniovandreprimos(i)
 		return "e";
 	}
 
-// Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (bit.ly/antoniovandre_legadoontologico).
+// Fim escopo desenvolvido por Antonio Vandré Pedrosa Furtunato Gomes (github.com/antoniovandre).
 
 // Início escopos desenvolvidos por terceiros.
 
