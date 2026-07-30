@@ -16,7 +16,7 @@ console.log("                                                  \n          .\',;
 
 // Versão do MathematicalRamblings.js. Não considerando alterações em macros.
 
-function antoniovandremathematicalramblingsjsversao(){return "08-06-2024";}
+function antoniovandremathematicalramblingsjsversao(){return "30-07-2026";}
 
 // Fim mensagem de inicialização no console.log.
 
