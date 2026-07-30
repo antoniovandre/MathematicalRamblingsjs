@@ -11200,27 +11200,27 @@ function antoniovandrevelocidadepontocegooxantoniovandre(str, avisoanexo)
 function antoniovandrecompletarquadrado(str)
 	{
 	if (antoniovandrepolinomio(str) == "e")
-		return "\text{O argumento não é um polinômio.}";
+		return "\\text{O argumento não é um polinômio.}";
 
 	if (antoniovandregraupolinomio(str) != 2)
-		return "\text{O argumento não é um polinômio de grau 2.}";
+		return "\\text{O argumento não é um polinômio de grau 2.}";
 
 	var pol = antoniovandrereduzirtermossemelhantes(str);
 
 	if ((antoniovandrepolinomionumerotermos(pol) < 2) || (antoniovandrepolinomionumerotermos(pol) > 3))
-		return "\text{O polinômio deve ser para completar e em \"x\".}";
+		return "\\text{O polinômio deve ser para completar e em \"x\".}";
 
 	if (antoniovandrepolinomionumerotermos(pol) == 2)
 		{
 		if ((antoniovandrecompararstrings(antoniovandreparteliteralmonomio(antoniovandrepolinomiotermo(pol, 0)), "xx") == "e") || (antoniovandrecompararstrings(antoniovandreparteliteralmonomio(antoniovandrepolinomiotermo(pol, 1)), "x") == "e"))
-			return "\text{O polinômio deve ser para completar e em \"x\".}";
+			return "\\text{O polinômio deve ser para completar e em \"x\".}";
 
 		pol = pol + "+ 0";
 		}
 
 	if (antoniovandrepolinomionumerotermos(pol) == 3)
 		if (antoniovandrecompararstrings(antoniovandreparteliteralmonomio(antoniovandrepolinomiotermo(pol, 2)), "") == "e")
-			return "\text{O polinômio deve ser para completar e em \"x\".}";
+			return "\\text{O polinômio deve ser para completar e em \"x\".}";
 
 	var segundotermopart = antoniovandreformatarreal(antoniovandrecoeficientemonomio(antoniovandrepolinomiotermo(pol, 1)) / antoniovandresqrt(antoniovandrecoeficientemonomio(antoniovandrepolinomiotermo(pol, 0))) / 2);
 
